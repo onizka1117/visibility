@@ -358,6 +358,18 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 
 .main_wrap>div.main_left .tit_wrap {margin-top:10px;}
 
+
+.indicator_wrap {font-size:0;}
+.indicator_wrap>li {margin-top:20px; margin-left:20px; width:255px; vertical-align:middle; display:inline-block; font-size:14px;}
+.indicator_wrap>li:nth-child(4n-3) {margin-left:0;}
+/*
+.indicator_wrap>li:nth-child(1), .indicator_wrap>li:nth-child(2), .indicator_wrap>li:nth-child(3), .indicator_wrap>li:nth-child(4) {margin-top:0;}
+*/
+
+.live_wrap {font-size:0;}
+.live_wrap>li {margin-top:20px; width:530px; vertical-align:middle; display:inline-block; font-size:14px;}
+.live_wrap>li:nth-child(2n) {margin-left:20px;}
+
 .main_cols_4 {font-size:0;}
 .main_cols_4>li {width:255px; vertical-align:middle; display:inline-block; font-size:14px;}
 .main_cols_4>li+li {margin-left:20px;}
