@@ -11,8 +11,8 @@ $(function(){
       });
 
     var mdiLi = "<li class='#{tabid}'><a href='#{href}'>#{label}</a> <span class='ui-icon ui-icon-close' role='presentation'>Remove Tab</span></li>";
-    function addTab(mId, mName) {
-      var $mdiLi = $( mdiLi.replace( /#\{href\}/g, mId+".html" ).replace( /#\{label\}/g, mName ).replace(/#\{tabid\}/g, "tab_"+mId) );
+    function addTab(mId, mName, mUrl) {
+      var $mdiLi = $( mdiLi.replace( /#\{href\}/g, mUrl ).replace( /#\{label\}/g, mName ).replace(/#\{tabid\}/g, "tab_"+mId) );
       tab.find( ".ui-tabs-nav" ).append( $mdiLi);
       //tabs.append( "<div id='" + id + "'><p>" + tabContentHtml + "</p></div>" );
       tab.tabs( "refresh" );
@@ -32,8 +32,9 @@ $(function(){
     $(".nav_list a").on("click", function(){
         var mId = $(this).attr("href").replace("#", "");
         var mName = $(this).text();
+        var mUrl = $(this).data("url");
         //addTab(mId);
-        $(".ui-tabs-nav .tab_"+mId).length ? tabShow(mId) : addTab(mId, mName);
+        $(".ui-tabs-nav .tab_"+mId).length ? tabShow(mId) : addTab(mId, mName, mUrl);
         outNav();
     });
 
