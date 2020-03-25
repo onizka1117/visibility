@@ -1,16 +1,8 @@
 @charset "UTF-8";
 
-html,body{width:100%;height:100%;}
-input, select, textarea {vertical-align:middle; font-family:'Gotham', sans-serif; -webkit-appearance:none;-webkit-border-radius:0;font-family:'Noto Sans KR','dotum';}
-
-h1,h2,h3,h4,h5,h6 {padding:0; margin:0;}
-ul, ol, li {margin:0; padding:0; list-style:none;}
-iframe {display:block; }
 body,div,span,iframe,p,blockquote,a,abbr,address,big,cite,code,del,dfn,em,img,ins,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,header,hgroup,footer,nav,section,article,aside,figure,video,audio{margin:0;padding:0;border:0;}
 a{display:inline-block;color:#000;text-decoration:none;}
 a:hover,a:active,a:focus{text-decoration:none;}
-select::-ms-expand {display: none;}
-input::-ms-clear, input::-ms-reveal {display: none;}
 label.blind {display:block;width:0;height:0;font-size:0;text-indent:100%;white-space:nowrap;overflow:hidden;}
 .clear:after {content: '';display: block;clear: both;height: 0;font-size: 0;}
 
