@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOCUMENT</title>
+    <link href="../css/common.css" rel="stylesheet">
+    <link href="../css/content.css" rel="stylesheet">
+    <script src="../script/lib/jquery-3.4.1.min.js"></script>
+    <style>
+        .tab_list {height:50px;border-bottom:1px solid #cad0d7;}
+        .tab_list li {float:left;width:180px;height:50px;}
+        .tab_list li a {display:block;width: 100%;height: 100%;text-align:center;line-height:50px;font-size: 16px;font-weight:500;color: #9298a2;}
+        .tab_list li.current a {border-bottom: 3px solid #0080c6;box-sizing:border-box;}
+        .tab_list li a span {display:inline-block;margin-left:8px;line-height:20px;width: 30px;height: 20px;font-size:11px;border-radius: 10px;border: solid 1px #d5d9df;box-sizing:border-box;}
+        .tab_list li.current a span {color:#fff;background:#0080c6;border:0;}
+    </style>
+</head>
+<body>
+    <div class="tab_wrapper">
+        <ul class='tabs tab_list clear'>
+            <li class="tab-link current" data-tab="tab-1"><a href="javascript:" class='current'>Ocean<span>20</span></a></li>
+            <li class="tab-link" data-tab="tab-2"><a href="javascript:">Air<span>20</span></a></li>
+            <li class="tab-link" data-tab="tab-3"><a href="javascript:">Conole<span>20</span></a></li>
+            <li class="tab-link" data-tab="tab-4"><a href="javascript:">Fowarders<span>20</span></a></li>
+            <li class="tab-link" data-tab="tab-5"><a href="javascript:">Warehouse<span>20</span></a></li>
+            <li class="tab-link" data-tab="tab-6"><a href="javascript:">Package<span>20</span></a></li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        $('ul.tabs li').click(function(){
+            var tab_id = $(this).attr('data-tab');
+            $('ul.tabs li').removeClass('current');
+            $('ul.tabs li a').removeClass('current');
+            $('.tab-content').removeClass('current');
+            $(this).addClass('current');
+            $(this).children('a').addClass('current');
+            $("#"+tab_id).addClass('current');
+        });
+    </script>
+</body>
+</html>
