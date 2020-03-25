@@ -482,4 +482,4 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 
 
 /* ################# Dark ################# */
-body.dark {background-color:#181d23; color:#fff;}
+@import url("dark.css");
