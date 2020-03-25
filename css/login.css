@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+html,body{width:100%;height:100%;}
+input, select, textarea {vertical-align:middle; font-family:'Gotham', sans-serif; -webkit-appearance:none;-webkit-border-radius:0;font-family:'Noto Sans KR','dotum';}
+
+h1,h2,h3,h4,h5,h6 {padding:0; margin:0;}
+ul, ol, li {margin:0; padding:0; list-style:none;}
+iframe {display:block; }
+body,div,span,iframe,p,blockquote,a,abbr,address,big,cite,code,del,dfn,em,img,ins,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,header,hgroup,footer,nav,section,article,aside,figure,video,audio{margin:0;padding:0;border:0;}
+a{display:inline-block;color:#000;text-decoration:none;}
+a:hover,a:active,a:focus{text-decoration:none;}
 select::-ms-expand {display: none;}
 input::-ms-clear, input::-ms-reveal {display: none;}
 label.blind {display:block;width:0;height:0;font-size:0;text-indent:100%;white-space:nowrap;overflow:hidden;}
@@ -10,7 +19,7 @@ label.blind {display:block;width:0;height:0;font-size:0;text-indent:100%;white-s
 .login_wrap .login_inner .logo{position: relative;text-align: center;}
 .login_wrap .login_inner .tit_logo{margin-top:20px;font-size: 52px;font-weight: 400;font-family: 'CJONLYONENEWbodyRegular';text-align: center;color: #fff;}
 
-.login_wrap .login_inner .box_login{margin:36px auto;width:500px;opacity: 0.9;}
+.login_wrap .login_inner .box_login{margin:36px auto;width:500px;}
 .login_wrap .login_inner .box_login .tabs li{display: inline-block;float:left;width:50%;height:68px;margin-top:12px;}
 .login_wrap .login_inner .box_login .tabs li.current{margin-top:0;height:80px;box-sizing: border-box;}
 .login_wrap .login_inner .box_login .tabs li a{position: relative;display:block;width: calc(100% - 12px);height: 100%;font-size: 16px;color: #38424e;padding-left: 8px;padding-top: 28px;box-sizing: border-box;background: #0f1722;text-align: center;}
@@ -53,11 +62,25 @@ label.blind {display:block;width:0;height:0;font-size:0;text-indent:100%;white-s
 .login_wrap .tab-content .box_find {margin-top:12px;}
 .login_wrap .tab-content .box_find .form_find{margin-bottom:12px;width: 100%;font-size: 16px;color:#fff;border:0;padding:19px 24px 22px 22px;box-sizing: border-box;height: 60px;border-radius: 8px;background: #262e38;}
 
-.form_login::-webkit-input-placeholder {font-family: 'Gotham';color:#656f7e;}
+.login_wrap .form_login::-webkit-input-placeholder {font-family: 'Gotham';color:#656f7e;}
 .login_wrap .box_inner .box_sign.btn_search {margin-top:64px;margin-bottom:37px;}
 /* bright */
 .login_wrap.bright {background: #181d23 url(../images/bg_login_wh.jpg) no-repeat;background-size: cover;}
 .login_wrap.bright .tab-content{background:#fff;}
 .login_wrap.bright .login_inner .tit_logo {font-family: 'CJONLYONENEWtitleMedium';font-size: 48px;color:#000;}
+
 .login_wrap.bright .login_inner .box_login .tabs li a{border-top-right-radius: 20px;color: #fff;background: #006ecd;}
 .login_wrap.bright .login_inner .box_login .tabs li a.current{color:#000;font-weight: bold;background: #fff;}
+.login_wrap.bright .login_inner .box_login .tabs li:nth-child(1) a.current:before{z-index: 2;content:'';position: absolute;right:-53px;top:0;width:72px;height:81px;background: url(../images/tab_curve_wh.png) no-repeat;background-size: 103%;}
+.login_wrap.bright .login_inner .box_login .tabs li:nth-child(2) a.current:before{z-index: 2;content:'';position: absolute;left:-71px;top:0;width:72px;height:81px;background: url(../images/tab_curve_wh.png) no-repeat;background-size: 103%;-moz-transform: scaleX(-1);-webkit-transform: scaleX(-1);transform: scaleX(-1);}
+
+.login_wrap.bright .tab-content .form_login {background: #edf7ff;border:1px solid #0080c6;}
+.login_wrap.bright .tab-content .login_id span.on {background: url(../images/id_on_wh.svg) no-repeat 50% 50%;}
+.login_wrap.bright .tab-content .login_pw span.on {background: url(../images/pw_on_wh.svg) no-repeat 50% 50%;}
+
+.login_wrap.bright .form_login::-webkit-input-placeholder {font-family: 'Gotham';color: #a2a9ac;}
+.login_wrap.bright .tab-content .box_search .quick_select {color: #a2a9ac;background: #ecf0f5;}
+.login_wrap.bright .tab-content .form_login.form_find {color: #a2a9ac;background: #ecf0f5;border:0;}
+.login_wrap.bright .tab-content .form_login {color:#a2a9ac;}
+
+.login_wrap.bright .txt_refer {color:rgba(0, 0, 0, 0.46);}
