@@ -1,1 +1,48 @@
 body.dark {background-color:#181d23; color:#fff;}
+body.dark .header .logo a {background: url(../images/logo_bright.svg) no-repeat;background-size:100%;}
+body.dark .header .ctg {color:#fff;}
+
+body.dark .nav {background-color: #181d23;}
+body.dark .nav.on {background-color: rgba(51, 60, 72, 0.9);}
+body.dark .nav.on .btn_nav {background-color: #303844;}
+body.dark .nav.on .btn_nav:hover:before {background-position:-62px 0;}
+
+body.dark .nav_list>li>span{color:#fff;}
+body.dark .sub_list>li>a {color: #8a919d;}
+body.dark .nav_list>li>a, .nav_list>li>span {color:#fff;}
+body.dark .nav_list>li>a:hover {background-color: rgba(19, 22, 26, 0.3);}
+body.dark .sub_list>li>a:hover {background-color: rgba(19, 22, 26, 0.3);}
+
+body.dark .mdi_wrapper.ui-tabs .ui-tabs-nav {background-color: #1f252c;}
+body.dark .mdi_wrapper.ui-tabs .ui-tabs-nav li {background-color: #29323d;border-right:1px solid #000;}
+body.dark .mdi_wrapper.ui-tabs .ui-tabs-nav li.ui-state-active {background-color: #12161a;}
+body.dark .mdi_wrapper.ui-tabs .ui-tabs-nav li.ui-state-active .ui-tabs-anchor:after{background: linear-gradient(90deg, rgb(18,22,26) 0%, rgb(20,21,23) 53%, rgb(0,0,0) 100%)}
+body.dark .mdi_wrapper.ui-tabs .ui-tabs-nav li .ui-tabs-anchor {color: #e6ebf1;}
+body.dark .mdi_wrapper.ui-tabs .ui-tabs-nav li .ui-tabs-anchor:after {background: linear-gradient(90deg, rgba(41,50,61,0) 0%, rgba(41,50,61,0) 53%, rgba(41,50,61,0) 100%);}
+body.dark .mdi_wrapper.ui-tabs .ui-tabs-nav li .ui-icon-close{background-position: -30px -270px;}
+
+body.dark .tit_wrap h2 {color:#fff;}
+body.dark .box {color:#fff;background-color:#333c48;}
+body.dark .box.bg_type1 {background-color: #13161a;}
+body.dark .box.bg_type2 {background-color: #0080c6;}
+body.dark .box.bg_type3 {background-color: #e42f44;}
+body.dark .box.bg_type4 {background-color: #ec8922;}
+
+body.dark .indi_tile .num {color:#cdcdce;}
+body.dark .indi_tile .txt {color:#8b919c;}
+body.dark .sched_wrap .location{color:#cdcdce;}
+body.dark .sched_wrap .tit_month {color:#fff;}
+body.dark .sched_wrap .location:before{background: url(../images/dark/point.svg) no-repeat 0 0;}
+
+body.dark .ip_check label{color:#8b919c;}
+body.dark .list_opt{color:#8b919c;}
+body.dark .sort_list{color:#8b919c;}
+body.dark .ip_check.sm label{color:#fff;background: url(../images/dark/not_checked.svg) no-repeat 0 0;}
+body.dark .ip_check input:checked+label {background-image:url(../images/checked.svg);}
+body.dark .tbl_calendar tbody td a {color:#fff;}
+body.dark .tbl_calendar tbody td.on a {background-color: #242b34;}
+body.dark .tbl_calendar tbody td:nth-child(1) a, body.dark .tbl_calendar tbody td:nth-child(7) a {color:#8b919c;}
+body.dark .event_list>li .txt {color:#fff;}
+body.dark .event_list>li .tit .ctg{color:#8b919c;}
+
+body.dark .sub_box .tit{color:#fff;}

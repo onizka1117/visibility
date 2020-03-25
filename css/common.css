@@ -1,4 +1,7 @@
 @charset "utf-8";
+/* ################# Dark ################# */
+@import url("dark.css");
+
 
 /* font */
 /* CJ ONLY ONE NEW FONT */
@@ -477,9 +480,3 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 .sub_main_wrap>div.main_right {margin-left:45px; width:690px;}
 .sub_main_box {position:relative; height:798px;  background:url(../images/bg_sub_con.png) no-repeat;}
 .sub_main_box:before {content:""; position:absolute; top:50%; left:50%; margin:-45px 0 0 -130px; width:261px; height:91px; background:url(../images/logo_gray.svg) no-repeat;}
-
-
-
-
-/* ################# Dark ################# */
-@import url("dark.css");
