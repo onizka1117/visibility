@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/content.css" rel="stylesheet">
+    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery-ui.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        // tab select
+        $('ul.tab_list li').click(function(){
+          $(this).parent().find(".on").removeClass("on").end().end().addClass("on");
+        });
+      });
+    </script>
+  </head>
+  <body>
+
+    <!-- vendor tab -->
+    <div class="tab_wrapper">
+        <ul class='tab_list'>
+            <li class="on"><a href="javascript:">Ocean<span>20</span></a></li>
+            <li><a href="javascript:">Air<span>20</span></a></li>
+            <li><a href="javascript:">Conole<span>20</span></a></li>
+            <li><a href="javascript:">Fowarders<span>20</span></a></li>
+            <li><a href="javascript:">Warehouse<span>20</span></a></li>
+            <li><a href="javascript:">Package<span>20</span></a></li>
+        </ul>
+    </div>
+    <!--// vendor tab -->
+
+  </body>
+</html>

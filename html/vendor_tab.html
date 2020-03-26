@@ -40,7 +40,7 @@
     <!-- vendor tab -->
     <div class="tab_wrapper">
         <ul class='tabs tab_list'>
-            <li class="tab-link current" data-tab="tab-1"><a href="javascript:" class='current'>Ocean<span>20</span></a></li>
+            <li class="tab-link current" data-tab="tab-1"><a href="javascript:">Ocean<span>20</span></a></li>
             <li class="tab-link" data-tab="tab-2"><a href="javascript:">Air<span>20</span></a></li>
             <li class="tab-link" data-tab="tab-3"><a href="javascript:">Conole<span>20</span></a></li>
             <li class="tab-link" data-tab="tab-4"><a href="javascript:">Fowarders<span>20</span></a></li>
@@ -77,10 +77,8 @@
         $('ul.tabs li').click(function(){
             var tab_id = $(this).attr('data-tab');
             $('ul.tabs li').removeClass('current');
-            $('ul.tabs li a').removeClass('current');
             $('.tab-content').removeClass('current');
             $(this).addClass('current');
-            $(this).children('a').addClass('current');
             $("#"+tab_id).addClass('current');
         });
     </script>
