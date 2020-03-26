@@ -9,7 +9,7 @@
                 <use xlink:href="#prefix__a"/>
             </mask>
             <use fill="#000" fill-rule="nonzero" xlink:href="#prefix__a"/>
-            <g fill="#273142" mask="url(#prefix__b)">
+            <g fill="#8B919C" mask="url(#prefix__b)">
                 <path d="M0 0H28V28H0z" transform="translate(-3 -2)"/>
             </g>
         </g>
