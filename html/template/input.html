@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>폼</title>
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/content.css" rel="stylesheet">
+    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery-ui.js"></script>
+
+    <style type="text/css">
+    table {width:100%; table-layout:fixed; border-collapse:collapse;}
+    td, th {border:1px solid #ccc; padding:5px;}
+    th {background-color:#f1f1f1;}
+    td {background-color:#fff;}
+    </style>
+
+    <script type="text/javascript">
+    $(function(){
+
+      $( "#datepicker" ).datepicker({
+        showOn: "button",
+        buttonImage: "../../images/ip_date.png",
+        buttonImageOnly: true,
+        buttonText: "Select date",
+        dateFormat: "yy/mm/dd"
+      });
+
+    });
+    </script>
+  </head>
+  <body>
+
+
+    <table>
+      <colgroup>
+        <col style="width:20%;">
+        <col style="width:auto;">
+      </colgroup>
+      <tbody>
+        <tr>
+          <th>텍스트입력</th>
+          <td>
+            <input type="text" name="" value="" placeholder="placeholder" class="ip_txt">
+            <input type="text" name="" value="가나다라마바사" disabled="true" class="ip_txt">
+          </td>
+        </tr>
+        <tr>
+          <th>검색</th>
+          <td>
+            <span class="ip_search"><input type="text" name="" value="" placeholder="" class="ip_txt"><a href="#" class="btn_ip_search">검색</a></span>
+          </td>
+        </tr>
+        <tr>
+          <th>문장입력</th>
+          <td>
+            <textarea>문장입력</textarea>
+          </td>
+        </tr>
+        <tr>
+          <th>날짜입력</th>
+          <td>
+            <span class="ip_date"><input type="text" id="datepicker" class="ip_txt"></span>
+          </td>
+        </tr>
+        <tr>
+          <th>셀렉트</th>
+          <td>
+            <select class="select" name="">
+              <option value="">사과</option>
+              <option value="">바나나</option>
+              <option value="">딸기</option>
+            </select>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+  </body>
+</html>
