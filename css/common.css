@@ -160,7 +160,12 @@ ul, ol, li {margin:0; padding:0; list-style:none;}
 iframe {display:block; }
 img {border:0;}
 a {text-decoration:none;}
+table {border-collapse:collapse; border-spacing:0; }
 
 .mt20 {margin-top:20px;}
 .bold {font-weight:500;}
 .sub_txt {color:#8b919c;}
+
+.tar {text-align:right;}
+.tal {text-align:left;}
+.tac {text-align:center;}
