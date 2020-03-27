@@ -12,9 +12,41 @@
     <script src="../../script/ui-common.js"></script>
     <script type="text/javascript">
 
+      var eventList = [
+        {date:"2020-03-01", eventClass:"work meet msg"},
+        {date:"2020-03-02", eventClass:"work"},
+        {date:"2020-03-05", eventClass:"meet"},
+        {date:"2020-03-17", eventClass:"meet msg"},
+        {date:"2020-03-20", eventClass:"work meet"},
+        {date:"2020-03-25", eventClass:"work msg"},
+        {date:"2020-03-30", eventClass:"msg"}
+      ];
+
       $(function(){
         // 스크롤바
         $(".scr_box").mCustomScrollbar();
+
+        // 캘린더
+        $("#datacalendar").datepicker({
+          beforeShowDay : addEvents
+        });
+
+        function addEvents(date) {
+          for(i=0 ; i<eventList.length ; i++) {
+            if(getDate(date) == eventList[i].date) {
+              return [true, eventList[i].eventClass , ""];
+            }
+          }
+          return [true, "test", ""];
+        }
+
+        function getDate(date) {
+          var year = date.getFullYear();
+          var month = date.getMonth()+1;
+          var month2 = month < 10 ? "0"+month : month;
+          var day = date.getDate() < 10 ? "0"+date.getDate() : date.getDate();
+          return year +"-"+ month2 + "-" + day;
+        }
 
       });
 
@@ -39,11 +71,13 @@
           <!--  반복 -->
           <li>
             <a href="#">
+              <!-- tile/ic.html -->
               <div class="indi_tile box rd20 bg_type1">
                 <img src="../../images/img_indi01.png" alt="" class="img_indi">
                 <strong class="num">5</strong>
-                <span class="txt">Booking</span>
+                <span class="txt">Customs Cleared</span>
               </div>
+              <!-- //tile/ic.html -->
             </a>
           </li>
           <!--  //반복 -->
@@ -138,94 +172,8 @@
               <span>Monday,</span>
               <span>17 January</span>
             </div>
-            <div class="calendar_btns">
-              <a href="#" class="btn_prev_month">이전달</a>
-              <a href="#" class="btn_next_month">다음달</a>
-            </div>
             <div class="calendar_wrap">
-              <table class="tbl_calendar">
-                <colgroup>
-                  <col style="width:;">
-                  <col style="width:;">
-                  <col style="width:;">
-                  <col style="width:;">
-                  <col style="width:;">
-                  <col style="width:;">
-                  <col style="width:;">
-                </colgroup>
-                <thead>
-                  <tr>
-                    <th>SUN</th>
-                    <th>MON</th>
-                    <th>TUE</th>
-                    <th>WED</th>
-                    <th>THU</th>
-                    <th>FRI</th>
-                    <th>SAT</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td><a href="#">1</a></td>
-                    <td><a href="#">2</a></td>
-                    <td><a href="#">3</a>
-                      <div class="events">
-                        <span class="meet"></span>
-                        <span class="work"></span>
-                        <span class="msg"></span>
-                      </div>
-                    </td>
-                    <td><a href="#">4</a>
-                      <div class="events">
-                        <span class="more">+3</span>
-                      </div>
-                    </td>
-                    <td><a href="#">5</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">6</a></td>
-                    <td><a href="#">7</a></td>
-                    <td><a href="#">8</a></td>
-                    <td><a href="#">9</a></td>
-                    <td><a href="#">10</a></td>
-                    <td><a href="#">11</a></td>
-                    <td><a href="#">12</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">13</a></td>
-                    <td><a href="#">14</a></td>
-                    <td><a href="#">15</a></td>
-                    <td><a href="#">16</a></td>
-                    <td><a href="#">17</a></td>
-                    <td><a href="#">18</a></td>
-                    <td><a href="#">19</a></td>
-                  </tr>
-                  <tr>
-                    <td class="on"><a href="#">20</a>
-                      <div class="events">
-                        <span class="meet"></span>
-                      </div>
-                    </td>
-                    <td><a href="#">21</a></td>
-                    <td><a href="#">22</a></td>
-                    <td><a href="#">23</a></td>
-                    <td class="today"><a href="#">24</a></td>
-                    <td><a href="#">25</a></td>
-                    <td><a href="#">26</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">27</a></td>
-                    <td><a href="#">28</a></td>
-                    <td><a href="#">29</a></td>
-                    <td><a href="#">30</a></td>
-                    <td><a href="#">31</a></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
+              <div id="datacalendar"></div>
             </div>
 
           </div>
