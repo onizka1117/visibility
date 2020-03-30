@@ -17,6 +17,9 @@
         $(this).toggleClass("desc");
       });
 
+      // 타일 로드 (개발시 삭제)
+      $(".list_sub li").eq(1).load("../tile/sub_live.html");
+
     });
     </script>
   </head>
@@ -87,8 +90,8 @@
               </div>
             </div>
           </li>
-          <li class="alarm">
-            <div class="box rd15 line">
+          <li>
+            <div class="box rd15 line alarm">
               <div class="sub_box">
                 <div class="tit">
                   <strong>부킹 정시성</strong>

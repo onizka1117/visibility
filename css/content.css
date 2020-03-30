@@ -99,8 +99,8 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 .list_sub>li {margin-top:20px; margin-right:20px; display:inline-block; vertical-align:middle; width:330px; box-sizing:border-box;}
 .list_sub>li:nth-child(3n) {margin-right:0;}
 .list_sub>li:nth-child(1),.list_sub>li:nth-child(2), .list_sub>li:nth-child(3) {margin-top:0;}
-.list_sub>li.alarm .box {border-color:#ec8922;}
-.list_sub>li.alarm .box .btn_bell {background-image:url(../images/ico_bell_on.svg)}
+.list_sub>li .box.alarm {border-color:#ec8922;}
+.list_sub>li .box.alarm .btn_bell {background-image:url(../images/ico_bell_on.svg)}
 .list_sub>li.on .box {border-radius:14px; border: solid 4px #0080c6; background-color:#dde2ea; }
 
 
