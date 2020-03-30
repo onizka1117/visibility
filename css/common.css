@@ -45,18 +45,17 @@
 }
 
 /* Gotham */
-/*
+
 @font-face {
 	font-family: 'Gotham';
 	font-style: normal;
-	font-weight: 400;
+	font-weight: 300;
 	src: url(font/gotham/GothamLight.eot);
 	src: url(font/gotham/GothamLight.eot?#iefix) format('embedded-opentype'),
 		url(font/gotham/GothamLight.woff) format('woff'),
 		url(font/gotham/GothamLight.ttf) format('truetype');
 }
 
-*/
 
 @font-face {
 	font-family: 'Gotham';

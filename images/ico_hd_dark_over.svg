@@ -1,17 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
-    <defs>
-        <path id="prefix__a" d="M12.24 23.667c3.599 0 6.885-1.638 9.063-4.32.322-.397-.03-.977-.527-.882-5.66 1.078-10.859-3.262-10.859-8.976 0-3.291 1.762-6.318 4.626-7.948.441-.25.33-.92-.171-1.013-.703-.13-1.417-.195-2.132-.195C5.8.333.573 5.552.573 12c0 6.44 5.219 11.667 11.667 11.667z"/>
-    </defs>
     <g fill="none" fill-rule="evenodd">
         <path d="M0 0H40V40H0z"/>
         <g transform="translate(9 8)">
-            <mask id="prefix__b" fill="#fff">
-                <use xlink:href="#prefix__a"/>
-            </mask>
-            <use fill="#000" fill-rule="nonzero" xlink:href="#prefix__a"/>
-            <g fill="#8B919C" mask="url(#prefix__b)">
-                <path d="M0 0H28V28H0z" transform="translate(-3 -2)"/>
-            </g>
+	    <path fill="#273142" fill-rule="nonzero" d="M12.24 23.667c3.599 0 6.885-1.638 9.063-4.32.322-.397-.03-.977-.527-.882-5.66 1.078-10.859-3.262-10.859-8.976 0-3.291 1.762-6.318 4.626-7.948.441-.25.33-.92-.171-1.013-.703-.13-1.417-.195-2.132-.195C5.8.333.573 5.552.573 12c0 6.44 5.219 11.667 11.667 11.667z"/>
         </g>
     </g>
 </svg>
