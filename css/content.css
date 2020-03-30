@@ -144,7 +144,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 .market_update {overflow:hidden;}
 .market_update>img {float:left; width:180px; height:139px; border-radius:5px;}
 .market_update>.txt {float:right; width:272px; height:146px; font-size:16px; line-height:1.38; color:#7e8184;}
-.market_update .more {display:inline-block; padding-right:15px; position:absolute; right:30px; bottom:30px; font-weight:bold; font-size:13px; color:#7e8184; background:url(../../images/ico_arr_more.svg) no-repeat right center;}
+.market_update .more {display:inline-block; padding-right:15px; position:absolute; right:30px; bottom:30px; font-weight:bold; font-size:13px; color:#7e8184; background:url(../images/ico_arr_more.svg) no-repeat right center;}
 
 .st_tile {padding-top:156px; height:250px; position:relative; color:#fff; font-size:20px; font-weight:500;  text-decoration:none; text-align:center; box-sizing:border-box;}
 .st_tile img {content:""; top:50px; left:78px; position:absolute; display:inline-block; width:100px; height:100px; }
