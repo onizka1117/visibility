@@ -220,7 +220,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 .calendar_wrap .ui-datepicker-next {background:url(../images/btn_next_40.svg) no-repeat;}
 .calendar_wrap .ui-datepicker-calendar thead th {font-size:11px; font-weight:500; color:#8b919c;}
 .calendar_wrap .ui-datepicker-calendar tbody td {height:50px; text-align:center; position:relative;}
-.calendar_wrap .ui-datepicker-calendar tbody td a {display:inline-block; width:42px; height:42px; line-height:42px; font-size:16px; font-weight:500; text-decoration:none; color:#45474e; letter-spacing:0.49px; border-radius:10px;}
+.calendar_wrap .ui-datepicker-calendar tbody td a {display:inline-block; width:42px; height:42px; line-height:42px; font-size:16px; font-weight:500; text-decoration:none; color:#45474e; letter-spacing:0.49px; }
 .calendar_wrap .ui-datepicker-calendar tbody td:nth-child(1) a, .calendar_wrap .ui-datepicker-calendar tbody td:nth-child(7) a {color:#99a1b2;}
 .calendar_wrap .ui-datepicker-calendar tbody td:after {content:""; left:50%; bottom:10px; display:inline-block; position:absolute;}
 .calendar_wrap .ui-datepicker-calendar tbody td.work:after {width:4px; height:4px; margin-left:-2px; background-position:-180px -270px;}

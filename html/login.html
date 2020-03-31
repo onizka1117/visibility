@@ -35,6 +35,33 @@
         to {bottom:-105px; left:159px;}
       }
 
+
+      @keyframes bg7 {
+        from {top:241px; right:310px;}
+        to {top:295px; right:403px;}
+      }
+
+      @keyframes bg8 {
+        from {top:58px; right:127px;}
+        to {top:100px; right:201px;}
+      }
+
+      @keyframes bg9 {
+        from {top:99px; right:-71px;}
+        to {top:142px; right:0px;}
+      }
+
+      @keyframes bg10 {
+        from {top:193px; right:-51px;}
+        to {top:262px; right:71px;}
+      }
+
+      @keyframes bg11 {
+        from {top:187px; right:-199px;}
+        to {top:226px; right:-131px;}
+      }
+
+      /*
       .login_wrap {width:100%; height:100%; position:relative; overflow:hidden;}
       .login_wrap .bg {display:inline-block; position:absolute; background-repeat:no-repeat;}
 
@@ -48,6 +75,7 @@
       .login_wrap .bg.gray_group {width:381px; height:295px; background-image:url(../images/login/bg_gray_group.png);}
       .login_wrap .bg.orange {width:202px; height:195px; background-image:url(../images/login/bg_orange.png);}
 
+*/
       /* left bottom */
       .login_wrap .bg:nth-child(1) {bottom:-46px; left:-246px;  animation-name:bg1; animation-duration:1s;}/* bottom: -78px; left: -301px; */
       .login_wrap .bg:nth-child(2) {bottom:145px; left:91px;  animation-name:bg2; animation-duration:1s;} /* bottom: 75px; left: -31px; */
@@ -57,27 +85,18 @@
       .login_wrap .bg:nth-child(6) {bottom:-105px; left:159px; animation-name:bg6; animation-duration:1s;} /* bottom:-153px; left:75px;*/
 
       /* right top */
-      .login_wrap .bg:nth-child(7) {top:295px; right:403px;}
-      .login_wrap .bg:nth-child(8) {top:100px; right:201px;}
-      .login_wrap .bg:nth-child(9) {top:142px; right:0px;}
-      .login_wrap .bg:nth-child(10) {top:262px; right:71px;}
-      .login_wrap .bg:nth-child(11) {top:226px; right:-131px;}
+      .login_wrap .bg:nth-child(7) {top:295px; right:403px; animation-name:bg7; animation-duration:1s;} /* top: 241px; right: 310px; */
+      .login_wrap .bg:nth-child(8) {top:100px; right:201px; animation-name:bg8; animation-duration:1s;} /* top:58px; right:127px; */
+      .login_wrap .bg:nth-child(9) {top:142px; right:0px; animation-name:bg9; animation-duration:1s;} /* top:99px; right:-71px; */
+      .login_wrap .bg:nth-child(10) {top:262px; right:71px; animation-name:bg10; animation-duration:1s;} /* top:193px; right:-51px; */
+      .login_wrap .bg:nth-child(11) {top:226px; right:-131px; animation-name:bg11; animation-duration:1s;} /*top:187px; right:-199px;*/
       .login_wrap .bg:nth-child(12) {top:588px; right:205px;}
       .login_wrap .bg:nth-child(13) {top:327px; right:-117px;}
 
-
-
-      /*
-      .login_wrap .bg.red {bottom:36px; left:540px; width:202px; height:195px; background-image:url(../images/login/bg_red.png);}
-
-
-
-      .login_wrap .bg.gray_line {width:337px; height:191px; background-image:url(../images/login/bg_gray_line.png);}
-
-*/
-      /* right top */
-
-
+      .tab_con {width:480px; position:absolute; top:50%; left:50%; margin:-200px 0 0 -240px;}
+      .tab_con .tab_inner {height:400px; background-color:#fff;}
+      .tab_con>.bottom {position:relative; width:430px; height:30px; background:#fff;}
+      .tab_con>.bottom:after {content:""; position:absolute; right:-50px; display:inline-block; border-style:solid; border-width:15px 25px; border-color:#fff transparent transparent #fff;}
 
     </style>
   </head>
@@ -97,19 +116,26 @@
       <span class="bg blue"></span>
       <span class="bg gray"></span>
       <span class="bg red"></span>
+      <!--
       <span class="bg gray"></span>
       <span class="bg gray_group"></span>
-      <!--
-      <span class="bg red"></span>
-      <span class="bg red"></span>
-      <span class="bg blue"></span>
-
-      <span class="bg gray"></span>
-
-      <span class="bg orange"></span>
-      <span class="bg"></span>
-      <span class="bg"></span>
       -->
+
+
+      <div class="inner">
+
+        <div class="tab_con">
+          <div class="tab_inner">
+
+          </div>
+          <div class="bottom">
+          </div>
+        </div>
+
+
+      </div>
+
+
     </div>
 
   </body>
