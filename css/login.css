@@ -44,9 +44,9 @@ label.blind {display:block;width:0;height:0;font-size:0;text-indent:100%;white-s
 .login_wrap .tab-content .form_login{margin-bottom:12px;width: 100%;font-size: 16px;color:#fff;border:0;padding:19px 24px 22px 52px;box-sizing: border-box;height: 60px;border-radius: 8px;background: #262e38;}
 .login_wrap .tab-content .icon_login{position: relative;}
 .login_wrap .tab-content .login_id span{position: absolute;left: 20px;top:20px;width:20px;height:20px;background: url(../images/id_default.svg) no-repeat 50% 50%;}
-.login_wrap .tab-content .login_id span.on{background: url(../images/id_on.svg) no-repeat 50% 50%;}
 .login_wrap .tab-content .login_pw span{position: absolute;left: 20px;top:20px;width:20px;height:20px;background: url(../images/pw_default.svg) no-repeat 50% 50%;}
-.login_wrap .tab-content .login_pw span.on{background: url(../images/pw_on.svg) no-repeat 50% 50%;}
+.login_wrap .tab-content .login_id span.on{background-image: url(../images/id_on.svg);}
+.login_wrap .tab-content .login_pw span.on{background-image: url(../images/pw_on.svg);}
 
 .login_wrap #tab-1.tab-content.current {border-top-right-radius:18px;}
 .login_wrap #tab-2.tab-content.current {border-top-left-radius:18px;}
@@ -76,23 +76,20 @@ label.blind {display:block;width:0;height:0;font-size:0;text-indent:100%;white-s
 .login_wrap .box_inner .box_sign.btn_search {margin-top:64px;margin-bottom:37px;}
 
 
-
-
 /* bright */
 .login_wrap.bright {background: #181d23 url(../images/bg_login_wh.jpg) no-repeat;background-size:cover;}
-.login_wrap .login_inner .logo {background-image:url(../images/logo.svg);}
+.login_wrap.bright .login_inner .logo {background-image:url(../images/logo.svg);}
 .login_wrap.bright .login_inner .tit_logo {color:#000;}
-.login_wrap .login_inner .box_login:before {}
-.login_wrap .login_inner .box_login:after {background-image:url(../images/login/bg_w.svg);}
+.login_wrap.bright .login_inner .box_login:before {background-image:url(../images/login/bg_back_w.svg);}
+.login_wrap.bright .login_inner .box_login:after {background-image:url(../images/login/bg_w.svg);}
 
 .login_wrap.bright .login_inner .box_login .tabs li a{border-top-right-radius: 20px;color: #fff;}
-.login_wrap.bright .login_inner .box_login .tabs li a.current{color:#000;font-weight: bold;background: #fff;}
-.login_wrap.bright .login_inner .box_login .tabs li:nth-child(1) a.current:before{z-index: 2;content:'';position: absolute;right:-53px;top:0;width:72px;height:81px;background: url(../images/tab_curve_wh.png) no-repeat;background-size: 103%;}
-.login_wrap.bright .login_inner .box_login .tabs li:nth-child(2) a.current:before{z-index: 2;content:'';position: absolute;left:-71px;top:0;width:72px;height:81px;background: url(../images/tab_curve_wh.png) no-repeat;background-size: 103%;-moz-transform: scaleX(-1);-webkit-transform: scaleX(-1);transform: scaleX(-1);}
+.login_wrap.bright .login_inner .box_login .tabs li a.current{color:#000;font-weight: bold;}
 
-.login_wrap.bright .tab-content .form_login {background: #edf7ff;border:1px solid #0080c6;}
-.login_wrap.bright .tab-content .login_id span.on {background: url(../images/id_on_wh.svg) no-repeat 50% 50%;}
-.login_wrap.bright .tab-content .login_pw span.on {background: url(../images/pw_on_wh.svg) no-repeat 50% 50%;}
+
+.login_wrap.bright .tab-content .form_login {background:#ecf0f5; }
+.login_wrap.bright .tab-content .login_id span.on {background-image:url(../images/id_on_wh.svg) !important;}
+.login_wrap.bright .tab-content .login_pw span.on {background-image:url(../images/pw_on_wh.svg) !important;}
 
 .login_wrap.bright .form_login::-webkit-input-placeholder {font-family: 'Gotham';color: #a2a9ac;}
 .login_wrap.bright .tab-content .box_search .quick_select {color: #a2a9ac;background: #ecf0f5;}
@@ -100,3 +97,105 @@ label.blind {display:block;width:0;height:0;font-size:0;text-indent:100%;white-s
 .login_wrap.bright .tab-content .form_login {color:#a2a9ac;}
 
 .login_wrap.bright .txt_refer {color:rgba(0, 0, 0, 0.46);}
+
+
+
+
+
+
+
+
+/* #### login type1  ### */
+
+@keyframes bg1 {
+  from {bottom: -78px; left: -301px;}
+  to {bottom:-46px; left:-246px;}
+}
+
+@keyframes bg2 {
+  from {bottom: 75px; left: -31px;}
+  to {bottom:145px; left:91px; }
+}
+
+@keyframes bg3 {
+  from {bottom: -81px; left: -112px; }
+  to {bottom:-17px; left:0;}
+}
+
+@keyframes bg4 {
+  from {bottom:-80px; left:336px;}
+  to {bottom:36px; left:540px;}
+}
+
+@keyframes bg5 {
+  from {bottom:-67px; left:90px;}
+  to {bottom:123px; left:422px;}
+}
+
+@keyframes bg6 {
+  from {bottom:-153px; left:75px;}
+  to {bottom:-105px; left:159px;}
+}
+
+
+@keyframes bg7 {
+  from {top:241px; right:310px;}
+  to {top:295px; right:403px;}
+}
+
+@keyframes bg8 {
+  from {top:58px; right:127px;}
+  to {top:100px; right:201px;}
+}
+
+@keyframes bg9 {
+  from {top:99px; right:-71px;}
+  to {top:142px; right:0px;}
+}
+
+@keyframes bg10 {
+  from {top:193px; right:-51px;}
+  to {top:262px; right:71px;}
+}
+
+@keyframes bg11 {
+  from {top:187px; right:-199px;}
+  to {top:226px; right:-131px;}
+}
+
+/*
+.login_wrap {width:100%; height:100%; position:relative; overflow:hidden;}
+.login_wrap .bg {display:inline-block; position:absolute; background-repeat:no-repeat;}
+
+.login_wrap .bg.blue {width:202px; height:195px; background-image:url(../images/login/bg_blue.png);}
+.login_wrap .bg.gray {width:202px; height:195px; background-image:url(../images/login/bg_gray.png);}
+.login_wrap .bg.blue_line {width:337px; height:191px; background-image:url(../images/login/bg_blue_line.png);}
+.login_wrap .bg.orange_sm {width:331px; height:221px; background-image:url(../images/login/bg_orange_sm.png);}
+.login_wrap .bg.red {width:202px; height:195px; background-image:url(../images/login/bg_red.png);}
+.login_wrap .bg.blue_large {width:298px; height:329px; background-image:url(../images/login/bg_blue_lg.png);}
+.login_wrap .bg.gray_line {width:337px; height:191px; background-image:url(../images/login/bg_gray_line.png);}
+.login_wrap .bg.gray_group {width:381px; height:295px; background-image:url(../images/login/bg_gray_group.png);}
+.login_wrap .bg.orange {width:202px; height:195px; background-image:url(../images/login/bg_orange.png);}
+
+*/
+/* left bottom */
+.login_wrap .bg:nth-child(1) {bottom:-46px; left:-246px;  animation-name:bg1; animation-duration:1s;}/* bottom: -78px; left: -301px; */
+.login_wrap .bg:nth-child(2) {bottom:145px; left:91px;  animation-name:bg2; animation-duration:1s;} /* bottom: 75px; left: -31px; */
+.login_wrap .bg:nth-child(3) {bottom:-17px; left:0; animation-name:bg3; animation-duration:1s;} /* bottom: -81px; left: -112px; */
+.login_wrap .bg:nth-child(4) {bottom:36px; left:540px; animation-name:bg4; animation-duration:1s;} /* bottom: -80px; left: 336px; */
+.login_wrap .bg:nth-child(5) {bottom:123px; left:422px; animation-name:bg5; animation-duration:1s;} /*bottom:-67px; left:90px;*/
+.login_wrap .bg:nth-child(6) {bottom:-105px; left:159px; animation-name:bg6; animation-duration:1s;} /* bottom:-153px; left:75px;*/
+
+/* right top */
+.login_wrap .bg:nth-child(7) {top:295px; right:403px; animation-name:bg7; animation-duration:1s;} /* top: 241px; right: 310px; */
+.login_wrap .bg:nth-child(8) {top:100px; right:201px; animation-name:bg8; animation-duration:1s;} /* top:58px; right:127px; */
+.login_wrap .bg:nth-child(9) {top:142px; right:0px; animation-name:bg9; animation-duration:1s;} /* top:99px; right:-71px; */
+.login_wrap .bg:nth-child(10) {top:262px; right:71px; animation-name:bg10; animation-duration:1s;} /* top:193px; right:-51px; */
+.login_wrap .bg:nth-child(11) {top:226px; right:-131px; animation-name:bg11; animation-duration:1s;} /*top:187px; right:-199px;*/
+.login_wrap .bg:nth-child(12) {top:588px; right:205px;}
+.login_wrap .bg:nth-child(13) {top:327px; right:-117px;}
+
+.tab_con {width:480px; position:absolute; top:50%; left:50%; margin:-200px 0 0 -240px;}
+.tab_con .tab_inner {height:400px; background-color:#fff;}
+.tab_con>.bottom {position:relative; width:430px; height:30px; background:#fff;}
+.tab_con>.bottom:after {content:""; position:absolute; right:-50px; display:inline-block; border-style:solid; border-width:15px 25px; border-color:#fff transparent transparent #fff;}
