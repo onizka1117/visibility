@@ -102,10 +102,28 @@ label.blind {display:block;width:0;height:0;font-size:0;text-indent:100%;white-s
 
 
 
-
-
-
 /* #### login type1  ### */
+.login_wrap.type1 .login_inner .box_login:before {background-image:url(../images/login/bg_back_type1.svg);}
+.login_wrap.type1 .login_inner .box_login:after {background-image:url(../images/login/bg_type1.svg);}
+.login_wrap.type1 .login_inner .box_login.on:after {transform:rotateY(0); background-image:url(../images/login/bg2_type1.svg);}
+.login_wrap.type1 .tab-content .form_login {border-radius:0;}
+.login_wrap.type1 .tab-content .box_search .quick_select {border-radius:0;}
+.login_wrap.type1 .box_inner .box_sign {padding:0 20px; border-radius:0; background:none; box-sizing:border-box; position:relative;}
+.login_wrap.type1 .box_inner .box_sign a {background-color:#0080c6;}
+.login_wrap.type1 .box_inner .box_sign a:after {content:""; display:inline-block; width:20px; height:50px; position:absolute; top:0; right:0px; background:#0080c6;}
+.login_wrap.type1 .box_inner .box_sign:before {content:""; display:inline-block; width:20px; height:60px; background:#0080c6; position:absolute; top:0; left:0;}
+.login_wrap.type1 .box_inner .box_sign:after {content:""; display:inline-block; position:absolute; bottom:0; right:0; border-style:solid; border-width:5px 10px; border-color:#0080c6 transparent transparent #0080c6;}
+
+.login_wrap.type1.bright .login_inner .box_login:before {background-image:url(../images/login/bg_back_type1_wh.svg);}
+.login_wrap.type1.bright .login_inner .box_login:after {background-image:url(../images/login/bg_type1_wh.svg);}
+.login_wrap.type1.bright .login_inner .box_login.on:after {background-image:url(../images/login/bg2_type1_wh.svg);}
+
+
+
+
+
+
+
 
 @keyframes bg1 {
   from {bottom: -78px; left: -301px;}
@@ -195,7 +213,9 @@ label.blind {display:block;width:0;height:0;font-size:0;text-indent:100%;white-s
 .login_wrap .bg:nth-child(12) {top:588px; right:205px;}
 .login_wrap .bg:nth-child(13) {top:327px; right:-117px;}
 
+/*
 .tab_con {width:480px; position:absolute; top:50%; left:50%; margin:-200px 0 0 -240px;}
 .tab_con .tab_inner {height:400px; background-color:#fff;}
 .tab_con>.bottom {position:relative; width:430px; height:30px; background:#fff;}
 .tab_con>.bottom:after {content:""; position:absolute; right:-50px; display:inline-block; border-style:solid; border-width:15px 25px; border-color:#fff transparent transparent #fff;}
+*/
