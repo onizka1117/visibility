@@ -127,11 +127,11 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 .sub_box .tit span {display:block; margin-top:5px; font-size:12px;}
 .sub_box .btn_bell {position:absolute; top:18px; right:18px; width:25px; height:25px; background:url(../images/ico_bell.svg) no-repeat;}
 .sub_box .con {margin-top:20px; width:100%; display:table; table-layout:fixed;}
-.sub_box .con>div {display:table-cell;}
+.sub_box .con>div {display:table-cell; vertical-align:top;}
 .sub_box .result {padding-top:10px;}
 .sub_box .result strong {font-size:50px; font-weight:500; }
 .sub_box .result span {font-size:35px; color:#8b919c; font-weight:500; }
-.sub_box .chart_area {height:105px; background:#f1f1f1;}
+.sub_box .chart_area {height:105px; }
 
 .list_sub {font-size:0; margin-top:10px;}
 .list_sub>li {margin-top:20px; margin-right:20px; display:inline-block; vertical-align:middle; width:330px; box-sizing:border-box;}
@@ -139,7 +139,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 .list_sub>li:nth-child(1),.list_sub>li:nth-child(2), .list_sub>li:nth-child(3) {margin-top:0;}
 .list_sub>li .box.alarm {border-color:#ec8922;}
 .list_sub>li .box.alarm .btn_bell {background-image:url(../images/ico_bell_on.svg)}
-.list_sub>li.on .box {border: solid 4px #0080c6; background-color:#dde2ea; }
+.list_sub>li.on .box .sub_box {border:solid 4px #0080c6; background-color:#dde2ea; }
 
 
 /* main */
@@ -190,7 +190,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 .st_tile2 img {width:60px; height:60px; top:10px; right:10px; position:absolute; display:inline-block; }
 .st_tile2.bg_type4 {color:#fff;}
 
-.st_tile2:hover {background-color:#f0f4f8;}
+.st_tile2:hover {background-color:#f0f4f8; box-shadow: 3px 3px 15px 0 rgba(0, 0, 0, 0.1);}
 .st_tile2.bg_type4:hover {background-color:#ec8922;}
 
 

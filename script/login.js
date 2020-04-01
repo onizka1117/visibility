@@ -3,6 +3,8 @@ function openTab() {
     $('ul.tabs li').click(function(){
         var tab_id = $(this).attr('data-tab');
 
+        $(this).parent().parent().toggleClass("on");
+
         $('ul.tabs li').removeClass('current');
         $('ul.tabs li a').removeClass('current');
         $('.tab-content').removeClass('current');
