@@ -14,7 +14,7 @@ label.blind {display:block;width:0;height:0;font-size:0;text-indent:100%;white-s
 .login_wrap.normal .login_bg {display:block;}
 .login_wrap.normal .login_bg1 {display:none;}
 .login_wrap.type1 .login_bg1 {display:block;}
-.login_wrap .login_inner {width: 880px;height: 100%;padding-top:75px;box-sizing: border-box;margin:0 auto;}
+.login_wrap .login_inner {width: 880px;height: 100%;padding-top:75px;box-sizing: border-box;margin:0 auto; position:relative; z-index:1;}
 .login_wrap .login_inner .logo{margin:0 auto; font-size:0; width:172px; height:60px; position:relative; text-align:center; background:url(../images/logo_d.svg) no-repeat; background-size:cover;}
 .login_wrap .login_inner .tit_logo{margin-top:15px;font-size:42px;font-weight:700;text-align: center;color: #fff;}
 
