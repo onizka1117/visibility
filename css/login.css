@@ -233,3 +233,7 @@ label.blind {display:block;width:0;height:0;font-size:0;text-indent:100%;white-s
 .tab_con>.bottom {position:relative; width:430px; height:30px; background:#fff;}
 .tab_con>.bottom:after {content:""; position:absolute; right:-50px; display:inline-block; border-style:solid; border-width:15px 25px; border-color:#fff transparent transparent #fff;}
 */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {font-family: 'Gotham';transition: background-color 5000s ease-in-out 0s;-webkit-transition: background-color 9999s ease-out;-webkit-box-shadow: 0 0 0px 1000px #262e38 inset !important;-webkit-text-fill-color: #fff !important;}
