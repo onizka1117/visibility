@@ -6,7 +6,7 @@
 
 /* input */
 .ip_txt {padding:0 11px; width:100%; height:42px; color:#45474e; font-size:14px; border:solid 1px #dde2ea; background-color:#fff; box-sizing:border-box;}
-.ip_txt::placeholder {font-size:12px; color:#9298a2;}
+.ip_txt::placeholder {font-size:14px; color:#9298a2;}
 .ip_txt:disabled {background-color:#e6ebf1;}
 .ip_search {width:100%; display:inline-block; position:relative;}
 .ip_search .ip_txt {width:100%;}
@@ -26,6 +26,11 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 .select_group .label {position:absolute; text-align:left; left:15px; line-height:38px; color:#8b919c;}
 .select_group select {text-align:left; padding:0 15px; width:60%; font-size:14px; border:0; height:36px; color:#45474e; background:#fff url(../images/ip_select.png) no-repeat right 15px center; box-sizing:border-box; appearance:none; -webkit-appearance:none; }
 .select.sm {padding:0 15px; height:38px;}
+
+.ip_from_to {position:relative; display:inline-block; width:280px; height:42px; border:solid 1px #dde2ea; background-color:#fff; box-sizing:border-box;}
+.ip_from_to .ip_txt {border:0; height:40px; width:120px;}
+.ip_from_to .line {color:#8b919c;}
+.ip_from_to .btn_cal {position:absolute; top:0; right:0; display:inline-block; font-size:0; width:40px; height:40px; background:url(../images/ip_date.png) no-repeat center center;}
 
 .ip_group {display:table; table-layout:fixed; width:100%; font-size:12px; color:#727679;}
 .ip_group>li {display:table-cell;}
@@ -195,15 +200,21 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 .live_tile .tit_area .tit {font-size:22px; font-weight:500; display:inline-block; max-width:100%; overflow:hidden; white-space:nowrap;}
 .live_tile .con {padding:27px 30px 0;}
 .market_update {overflow:hidden;}
-.market_update>img {float:left; width:180px; height:139px; border-radius:5px;}
+.market_update>img {float:left; width:180px; height:139px; }
 .market_update>.txt {float:right; width:272px; height:146px; font-size:16px; line-height:1.38; color:#7e8184;}
 .market_update .more {display:inline-block; padding-right:15px; position:absolute; right:30px; bottom:30px; font-weight:bold; font-size:13px; color:#7e8184; background:url(../images/ico_arr_more.svg) no-repeat right center;}
 
 .st_tile {padding-top:156px; height:250px; position:relative; color:#fff; font-size:20px; font-weight:500;  text-decoration:none; text-align:center; box-sizing:border-box;}
-.st_tile img {content:""; top:50px; left:78px; position:absolute; display:inline-block; width:100px; height:100px; }
+.st_tile:before {content:""; top:50px; left:78px; position:absolute; display:inline-block; width:100px; height:100px; background-repeat:no-repeat;}
+.st_tile.st_tracking:before {background-image:url(../images/ico_static_tracking.svg);}
+.st_tile.st_ebooking:before {background-image:url(../images/ico_static_ebook.svg);}
 .st_tile2 {position:relative; padding:61px 0 0 30px; height:115px; color:#45474e; font-size:20px;  font-weight:500; text-decoration:none; box-sizing:border-box;}
-.st_tile2 img {width:60px; height:60px; top:10px; right:10px; position:absolute; display:inline-block; }
+.st_tile2:before {content:""; width:60px; height:60px; top:10px; right:10px; position:absolute; display:inline-block; background-repeat:no-repeat;}
 .st_tile2.bg_type4 {color:#fff;}
+.st_tile2.st_analytics:before {background-image:url("../images/ico_static_analytics.svg");}
+.st_tile2.st_quotaion:before {background-image:url("../images/ico_static_quotation.svg");}
+.st_tile2.st_kpi:before {background-image:url("../images/ico_static_kpi.svg");}
+.st_tile2.st_dashboard:before {background-image:url("../images/ico_static_dashboard.svg");}
 
 .st_tile2:hover {background-color:#f0f4f8; box-shadow: 3px 3px 15px 0 rgba(0, 0, 0, 0.1);}
 .st_tile2.bg_type4:hover {background-color:#ec8922;}
@@ -246,7 +257,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 .calendar_wrap .ui-datepicker-calendar tbody td.meet.msg:after {width:12px; margin-left:-6px; background-position:-180px -274px;}
 .calendar_wrap .ui-datepicker-calendar tbody td.work.meet.msg:after {width:20px;  margin-left:-10px; background-position:-180px -270px;}
 .calendar_wrap .ui-datepicker-calendar .ui-state-active {background-color:#dde2ea;}
-.calendar_wrap .ui-datepicker-calendar .ui-datepicker-today a {color:#0080c6;}
+.calendar_wrap .ui-datepicker-calendar .ui-datepicker-today a {color:#0080c6 !important;}
 
 .tbl_calendar {margin-top:30px; width:100%; table-layout:fixed; border-collaspe:collapse; }
 .tbl_calendar thead th {font-size:11px; font-weight:500; color:#8b919c;}
