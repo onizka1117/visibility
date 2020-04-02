@@ -14,7 +14,8 @@ function openTab() {
     $('ul.tabs li').click(function(){
         var tab_id = $(this).attr('data-tab');
 
-        $(this).parent().parent().toggleClass("on");
+        $(this).index() == 1 ? $(this).parent().parent().addClass("on") : $(this).parent().parent().removeClass("on");
+        $
 
         $('ul.tabs li').removeClass('current');
         $('ul.tabs li a').removeClass('current');
