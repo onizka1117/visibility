@@ -40,6 +40,9 @@ body.dark .st_tile2.st_kpi:before {background-image:url("../images/dark/ico_stat
 body.dark .st_tile2.st_dashboard:before {background-image:url("../images/dark/ico_static_dashboard.svg");}
 body.dark .st_tile2:hover {background-color:#29333e; box-shadow: 3px 3px 15px 0 rgba(3, 3, 15, 0);}
 body.dark .st_tile2.bg_type4:hover {background-color:#ec8922;}
+body.dark .st_tile2.st_volume:before {background-image:url("../images/dark/ico_static_volume.svg");}
+body.dark .st_tile2.st_schedule:before {background-image:url("../images/dark/ico_static_schedule.svg");}
+body.dark .st_tile2.st_cost:before {background-image:url("../images/dark/ico_static_cost.svg");}
 
 
 body.dark .calendar_wrap .ui-datepicker-calendar tbody td a {color:#fff;}
