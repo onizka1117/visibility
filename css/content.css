@@ -3,7 +3,6 @@
 /* icon */
 .calendar_wrap .ui-datepicker-calendar tbody td:after
 {background-image:url(../images/spr_icon.png);}
-
 /* input */
 .ip_txt {padding:0 11px; width:100%; height:42px; color:#45474e; font-size:14px; border:solid 1px #dde2ea; background-color:#fff; box-sizing:border-box;}
 .ip_txt::placeholder {font-size:14px; color:#9298a2;}
@@ -26,6 +25,12 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 .select_group .label {position:absolute; text-align:left; left:15px; line-height:38px; color:#8b919c;}
 .select_group select {text-align:left; padding:0 15px; width:60%; font-size:14px; border:0; height:36px; color:#45474e; background:#fff url(../images/ip_select.png) no-repeat right 15px center; box-sizing:border-box; appearance:none; -webkit-appearance:none; }
 .select.sm {padding:0 15px; height:38px;}
+.radio_group {display:block; font-size:0;}
+.radio_group>li {margin-right:10px; display:inline-block; vertical-align:middle; position:relative; }
+.radio_group>li:last-child {margin-right:0;}
+.radio_group>li input {position:absolute; opacity:0;}
+.radio_group>li label {display:block; width:125px; height:45px; line-height:43px; font-size:15px; color:#8b919c; text-align:center;border:1px solid #8b919c; box-sizing:border-box;}
+.radio_group>li input:checked+label {color:#fff; border-color:#0080c6; background-color:#0080c6;}
 
 .ip_from_to {position:relative; display:inline-block; width:280px; height:42px; border:solid 1px #dde2ea; background-color:#fff; box-sizing:border-box;}
 .ip_from_to .ip_txt {border:0; height:40px; width:120px;}
@@ -322,3 +327,8 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 
 /* detail */
 .detail_wrap {width:1770px;}
+
+
+
+
+@import "yj.css";

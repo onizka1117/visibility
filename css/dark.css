@@ -1,4 +1,6 @@
 body.dark {background-color:#181d23; color:#fff;}
+body.dark select, body.dark input, body.dark textarea {color:#fff;}
+body.dark option {background-color:#000;}
 body.dark .header .logo a {background: url(../images/logo_bright.svg) no-repeat;background-size:100%;}
 body.dark .header .ctg {color:#fff;}
 
