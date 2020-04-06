@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="../../script/lib/jquery.bxslider.css" rel="stylesheet">
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/content.css" rel="stylesheet">
+    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery-ui.js"></script>
+    <script src="../../script/ui_common.js"></script>
+    <script type="text/javascript">
+    $(function(){
+      // tab select
+      $('ul.tab_list li').click(function(){
+        $(this).parent().find(".on").removeClass("on").end().end().addClass("on");
+      });
+    });
+    </script>
+  </head>
+  <body>
+
+    <div class="detail_wrap">
+
+      <div class="tit_wrap">
+        <div class="tit_left">
+          <h3>Order Management</h3>
+        </div>
+        <div class="tit_right">
+          <div class="btn_list">
+            <a href="#" class="btn">New Order</a>
+            <a href="#" class="btn line">Download</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 검색 -->
+      <div class="search_wrap">
+        <ul class="search_form">
+          <li>
+            <label for="" class="lb_txt">Customer ID</label>
+            <input type="text" name="" value="" class="ip_txt" style="width:200px;">
+            <input type="text" name="" value="" class="ip_txt" disabled="true" style="width:150px;">
+          </li>
+          <li>
+            <label for="" class="lb_txt">EX/IM</label>
+            <select class="select" name="" style="width:220px;">
+              <option value="">사과</option>
+              <option value="">바나나</option>
+              <option value="">딸기</option>
+            </select>
+          </li>
+          <li>
+            <label for="" class="lb_txt">Period</label>
+            <span class="ip_date" style="width:220px;"><input type="text" class="ip_txt"></span>
+          </li>
+          <li>
+            <label for="" class="lb_txt">M. B/L No.</label>
+            <input type="text" name="" value="" class="ip_txt" style="width:220px;">
+          </li>
+          <li class="btns">
+            <a href="#" class="btn lg ico_search">검색</a>
+            <a href="#" class="btn lg line ico_reset">초기화</a>
+          </li>
+        </ul>
+      </div>
+      <!-- //검색 -->
+
+      <!-- vendor tab -->
+      <div class="tab_wrapper">
+        <ul class='tab_list'>
+            <li class="on"><a href="javascript:">Ocean<span>20</span></a></li>
+            <li><a href="javascript:">Air<span>20</span></a></li>
+            <li><a href="javascript:">Conole<span>20</span></a></li>
+            <li><a href="javascript:">Fowarders<span>20</span></a></li>
+            <li><a href="javascript:">Warehouse<span>20</span></a></li>
+            <li><a href="javascript:">Package<span>20</span></a></li>
+        </ul>
+      </div>
+      <!--// vendor tab -->
+
+
+      <div class="vendor_con_wrap">
+        <div class="left">
+          <!--  타이틀 박스 -->
+          <div class="tit_box">
+            <div class="con_area">
+              <div class=""  style="height:276px">
+                그리드영역  height : 276px;
+              </div>
+            </div>
+            <div class="foot_area">
+              <div class="comm_paging">
+                  <!-- select -->
+                  <div class="box_select">
+                      <select class='opt_select'>
+                          <option>5</option>
+                          <option>4</option>
+                          <option>3</option>
+                          <option>2</option>
+                          <option>1</option>
+                      </select>
+                  </div>
+                  <!--// select -->
+                  <!-- pagination -->
+                  <div class="pagination">
+                      <a href="javascript:" class="arr prev first"></a>
+                      <a href="javascript:" class="active">1</a>
+                      <a href="javascript:" class="">2</a>
+                      <a href="javascript:" class="">3</a>
+                      <a href="javascript:" class="">4</a>
+                      <a href="javascript:" class="">5</a>
+                      <a href="javascript:" class="arr next"></a>
+                  </div>
+                  <!--// pagination -->
+              </div>
+            </div>
+          </div>
+          <!--  //타이틀 박스 -->
+
+          <!--  타이틀 박스 -->
+          <div class="tit_box">
+            <div class="tit_area">
+              <div class="tit_left">
+                <span class="tit">Shipment Report</span>
+              </div>
+              <div class="tit_right">
+                <div class="btn_list">
+                  <a href="#" class="btn sm">Save</a>
+                </div>
+              </div>
+            </div>
+            <div class="con_area">
+              <!-- form -->
+              <div class="form_wrap">
+                <table class="tbl_form">
+                  <colgroup>
+                    <col style="width:;">
+                    <col style="width:;">
+                    <col style="width:;">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <label for="" class="lb_txt">취급선사</label>
+                        <input type="text" name="" value="" class="ip_txt">
+                      </td>
+                      <td>
+                        <label for="" class="lb_txt">담당자</label>
+                        <input type="text" name="" value="" class="ip_txt">
+                      </td>
+                      <td>
+                        <label for="" class="lb_txt">BK NO.</label>
+                        <input type="text" name="" value="" class="ip_txt">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label for="" class="lb_txt">PORT</label>
+                        <ul class="ip_group">
+                          <li><span class="ip_search"><input type="text" name="" value="" placeholder="" class="ip_txt"><a href="#" class="btn_ip_search">검색</a></span></li>
+                          <li class="w30 tac"><span class="ico arr_right"></span></li>
+                          <li><span class="ip_search"><input type="text" name="" value="" placeholder="" class="ip_txt"><a href="#" class="btn_ip_search">검색</a></span></li>
+                        </ul>
+                      </td>
+                      <td>
+                        <label for="" class="lb_txt">SHPPER</label>
+                        <input type="text" name="" value="" class="ip_txt">
+                      </td>
+                      <td>
+                        <label for="" class="lb_txt">ETD</label>
+                        <ul class="ip_group">
+                          <li><span class="ip_date"><input type="text" class="ip_txt"></span></li>
+                          <li class="w30 tac">-</li>
+                          <li><span class="ip_date"><input type="text" class="ip_txt"></span></li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label for="" class="lb_txt">작업자</label>
+                        <ul class="ip_group">
+                          <li><input type="text" name="" value="" class="ip_txt"></li>
+                          <li class="w30 tac">-</li>
+                          <li><input type="text" name="" value="" class="ip_txt"></li>
+                        </ul>
+                      </td>
+                      <td>
+                        <label for="" class="lb_txt">V/NAME</label>
+                        <input type="text" name="" value="" class="ip_txt">
+                      </td>
+                      <td>
+                        <label for="" class="lb_txt">공장담당</label>
+                        <input type="text" name="" value="" class="ip_txt">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label for="" class="lb_txt">C/TIME</label>
+                        <input type="text" name="" value="" placeholder="" class="ip_txt">
+                      </td>
+                      <td>
+                        <label for="" class="lb_txt">CNTR</label>
+                        <ul class="ip_group">
+                          <li><input type="text" name="" value="" placeholder="" class="ip_txt"></li>
+                          <li class="w30 tac">X</li>
+                          <li><input type="text" name="" value="" placeholder="" class="ip_txt"></li>
+                        </ul>
+                      </td>
+                      <td>
+                        <label for="" class="lb_txt">DOOR</label>
+                        <span class="ip_date"><input type="text" class="ip_txt"></span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label for="" class="lb_txt">PICK UP</label>
+                        <input type="text" name="" value="" placeholder="" class="ip_txt">
+                      </td>
+                      <td colspan="2">
+                        <label for="" class="lb_txt">반입 CY</label>
+                        <input type="text" name="" value="" placeholder="" class="ip_txt">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="3">
+                        <label for="" class="lb_txt">REMARK</label>
+                        <textarea name="" rows="8" cols="80" style="height:116px;"></textarea>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //form -->
+            </div>
+          </div>
+          <!--  //타이틀 박스 -->
+        </div>
+
+        <div class="right">
+
+          <div class="report_wrap">
+
+          </div>
+
+        </div>
+      </div>
+
+      <!--  타이틀 박스 -->
+      <div class="tit_box">
+        <div class="con_area">
+          <div class=""  style="height:352px">
+            그리드영역  height : 352px;
+          </div>
+        </div>
+        <div class="foot_area">
+          <div class="comm_paging">
+              <!-- select -->
+              <div class="box_select">
+                  <select class='opt_select'>
+                      <option>5</option>
+                      <option>4</option>
+                      <option>3</option>
+                      <option>2</option>
+                      <option>1</option>
+                  </select>
+              </div>
+              <!--// select -->
+              <!-- pagination -->
+              <div class="pagination">
+                  <a href="javascript:" class="arr prev first"></a>
+                  <a href="javascript:" class="active">1</a>
+                  <a href="javascript:" class="">2</a>
+                  <a href="javascript:" class="">3</a>
+                  <a href="javascript:" class="">4</a>
+                  <a href="javascript:" class="">5</a>
+                  <a href="javascript:" class="arr next"></a>
+              </div>
+              <!--// pagination -->
+          </div>
+        </div>
+      </div>
+      <!--  //타이틀 박스 -->
+
+
+
+
+    </div>
+
+  </body>
+</html>

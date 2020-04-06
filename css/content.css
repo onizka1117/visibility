@@ -47,8 +47,8 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 /* form */
 .form_wrap {padding:5px 15px 35px;}
 .tbl_form {width:100%; table-layout:fixed;}
-.tbl_form td {padding:17px 20px 0; height:40px;}
-.lb_txt {height:18px; display:inline-block; margin-bottom:6px; font-size:12px; color:#6b6e72; font-weight:500;}
+.tbl_form td {padding:23px 20px 0; height:40px;}
+.lb_txt {height:20px; display:inline-block; font-size:12px; color:#6b6e72; font-weight:500;}
 
 .tit_wrap+.search_wrap {margin-top:20px;}
 .search_wrap {font-size:0;}
@@ -76,8 +76,12 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 .btn_ico {line-height:20px; display:inline-block; font-size:14px; color:#45474e; background-repeat:no-repeat;}
 .btn_ico.excel {padding-left:22px; background-image:url(../images/ico_bn_excel.svg);}
 
+/* icon */
+.ico {display:inline-block;}
+.ico.arr_right {height:3px; width:20px; background:red;}
 
 /* tab */
+.search_wrap+.tab_wrapper {margin-top:18px;}
 .tab_list {height:50px; border-bottom:1px solid #cad0d7;}
 .tab_list li {display:inline-block; width:180px;height:50px;}
 .tab_list li a {display:block; width:100%; height:100%; text-align:center; line-height:50px; font-size:16px; color: #9298a2;}
@@ -126,7 +130,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 .box.shadow {box-shadow: 3px 3px 15px 0 rgba(0, 0, 0, 0.1);}
 .box.line {border:1px solid #dde2ea;}
 
-.search_wrap+.tit_box {margin-top:30px;}
+.search_wrap+.tit_box, .tit_box+.tit_box, .vendor_con_wrap+.tit_box {margin-top:30px;}
 .tit_box {border:solid 1px #dde2ea; background-color:#fff; }
 .tit_box .tit_area {display:table; width:100%; table-layout:fixed; border-bottom:1px solid #dee2e6;}
 .tit_box .tit_area .tit_left {padding:10px 15px; display:table-cell; height:50px; vertical-align:middle; box-sizing:border-box;}
@@ -330,5 +334,11 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 
 
 
+/* vendor */
+.tab_wrapper+.vendor_con_wrap {margin-top:30px;}
+.vendor_con_wrap {width:1770px;}
+.vendor_con_wrap:after {content:""; display:block; clear:both; width:100%;}
+.vendor_con_wrap>.left {width:960px; float:left;}
+.vendor_con_wrap>.right {width:760px; float:right;}
 
-@import "yj.css";
+.report_wrap {height:1018px; background-color:#e6ebf1;}
