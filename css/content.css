@@ -47,7 +47,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 /* form */
 .form_wrap {padding:5px 15px 35px;}
 .tbl_form {width:100%; table-layout:fixed;}
-.tbl_form td {padding:23px 20px 0; height:40px;}
+.tbl_form td {padding:20px 20px 0; height:40px;}
 .lb_txt {height:20px; display:inline-block; font-size:12px; color:#6b6e72; font-weight:500;}
 
 .tit_wrap+.search_wrap {margin-top:20px;}
