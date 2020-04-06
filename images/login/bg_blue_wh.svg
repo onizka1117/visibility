@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1116" viewBox="0 0 1024 1116">
+    <defs>
+        <linearGradient id="prefix__b" x1="59.156%" x2="57.805%" y1="67.848%" y2="0%">
+            <stop offset="0%" stop-color="#0080C6"/>
+            <stop offset="100%" stop-color="#29A776"/>
+        </linearGradient>
+        <path id="prefix__a" d="M859.112 972.152c88.564-98.774 57.98-387.608-64.194-649.359C672.744 61.202 426.643 12.771 236.611 224.975 48.97 436.861 81.305 722.668 302.08 873.378c221.411 151.188 469.265 196.911 557.033 98.774z"/>
+    </defs>
+    <g fill="none" opacity=".6" transform="rotate(-16 512 558)">
+        <use fill="#006ECD" xlink:href="#prefix__a"/>
+        <use fill="url(#prefix__b)" xlink:href="#prefix__a"/>
+    </g>
+</svg>

@@ -1,7 +1,7 @@
 $(function(){
 
   // 메인 타입
-  var mainClass = ["normal", "bright normal", "type1", "type1 bright"];
+  var mainClass = ["normal", "normal bright", "type1", "type1 bright"];
   var randomNumber = Math.floor(Math.random()*4);
   $(".login_wrap").addClass(mainClass[randomNumber]);
 
@@ -15,7 +15,6 @@ function openTab() {
         var tab_id = $(this).attr('data-tab');
 
         $(this).index() == 1 ? $(this).parent().parent().addClass("on") : $(this).parent().parent().removeClass("on");
-        $
 
         $('ul.tabs li').removeClass('current');
         $('ul.tabs li a').removeClass('current');

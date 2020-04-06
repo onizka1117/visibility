@@ -8,12 +8,12 @@ label.blind {display:block;width:0;height:0;font-size:0;text-indent:100%;white-s
 
 
 .login_wrap {position:relative; min-width:1920px; min-height:938px; width:100%;height:100%;}
-.login_wrap .login_bg {display:none; position:absolute; top:0; left:0; width:100%; height:100%; overflow:hidden; z-index:0; background: #181d23 url(../images/bg_login.jpg) no-repeat;background-size: cover;}
+.login_wrap .login_bg  {display:none; background: #181d23; position:absolute; top:0; left:0; width:100%; height:100%; z-index:0; overflow:hidden;}
 .login_wrap .login_bg1 {display:none; background:#181d23; position:absolute; top:0; left:0; width:100%; height:100%; z-index:0; overflow:hidden;}
 .login_wrap.type1 .login_bg {display:none;}
+.login_wrap.type1 .login_bg1 {display:block;}
 .login_wrap.normal .login_bg {display:block;}
 .login_wrap.normal .login_bg1 {display:none;}
-.login_wrap.type1 .login_bg1 {display:block;}
 .login_wrap .login_inner {width: 880px;height: 100%;padding-top:75px;box-sizing: border-box;margin:0 auto; position:relative; z-index:1;}
 .login_wrap .login_inner .logo{margin:0 auto; font-size:0; width:172px; height:60px; position:relative; text-align:center; background:url(../images/logo_d.svg) no-repeat; background-size:cover;}
 .login_wrap .login_inner .tit_logo{margin-top:15px;font-size:42px;font-weight:700;text-align: center;color: #fff;}
@@ -108,9 +108,6 @@ label.blind {display:block;width:0;height:0;font-size:0;text-indent:100%;white-s
 .login_wrap.bright .txt_refer {color:rgba(0, 0, 0, 0.46);}
 
 
-
-
-
 /* #### login type1  ### */
 .login_wrap.bright .login_bg1 {background:#f0f4f8;}
 
@@ -128,9 +125,6 @@ label.blind {display:block;width:0;height:0;font-size:0;text-indent:100%;white-s
 .login_wrap.type1.bright .login_inner .box_login:before {background-image:url(../images/login/bg_back_type1_wh.svg);}
 .login_wrap.type1.bright .login_inner .box_login:after {background-image:url(../images/login/bg_type1_wh.svg);}
 .login_wrap.type1.bright .login_inner .box_login.on:after {background-image:url(../images/login/bg2_type1_wh.svg);}
-
-
-
 
 
 
@@ -189,12 +183,12 @@ label.blind {display:block;width:0;height:0;font-size:0;text-indent:100%;white-s
 
 @keyframes bg11 {
   from {top:187px; right:-199px;}
-  to {top:226px; right:-131px;}
+right {top:226px; right:-131px;}
 }
 
 /*
 .login_wrap {width:100%; height:100%; position:relative; overflow:hidden;}*/
-.login_bg1 .bg {display:inline-block; position:absolute; background-repeat:no-repeat;}
+.login_bg .bg, .login_bg1 .bg {display:inline-block; position:absolute; background-repeat:no-repeat;}
 
 .login_bg1 .bg.blue {width:202px; height:195px; background-image:url(../images/login/bg_blue.png);}
 .login_bg1 .bg.gray {width:202px; height:195px; background-image:url(../images/login/bg_gray_d.png);}
@@ -237,3 +231,35 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {font-family: 'Gotham';transition: background-color 5000s ease-in-out 0s;-webkit-transition: background-color 9999s ease-out;-webkit-box-shadow: 0 0 0px 1000px #262e38 inset !important;-webkit-text-fill-color: #fff !important;}
+
+/* /////////// bg event normal ///////////// */
+.login_wrap.normal .login_bg .bg.circle_blue   {z-index: 2;width: 840px;height: 984px;background-image: url(../images/login/bg_blue_c.svg);-webkit-transform:rotate(-45deg) scale(1.8);}
+.login_wrap.normal .login_bg .bg.circle_red    {z-index: 2;width: 728px;height: 895px;background-image: url(../images/login/bg_red_c.svg);-webkit-transform:rotate(-45deg) scale(1.8);}
+.login_wrap.normal .login_bg .bg.circle_orange {z-index: 2;width: 820px;height: 840px;background-image: url(../images/login/bg_orange_c.svg);-webkit-transform:rotate(55deg) scale(1.8);}
+.login_wrap.normal .login_bg .bg.s_blue        {z-index: 1;width: 120px;height: 104px;background-image: url(../images/login/bg_bule_s.svg);}
+.login_wrap.normal .login_bg .bg.s_orange      {z-index: 1;width: 234px;height: 222px;background-image: url(../images/login/bg_yellow_s.svg);}
+
+ /* circle event */
+.login_wrap.normal .login_bg .bg.circle_blue   {top:-670px; left:-167px;animation-name:bgc1; animation-duration:0.6s;-webkit-animation-fill-mode:both;}
+.login_wrap.normal .login_bg .bg.circle_red    {bottom:-572px; left:180px;animation-name:bgc2; animation-duration:0.6s;-webkit-animation-fill-mode:both;}
+.login_wrap.normal .login_bg .bg.circle_orange {bottom:-175px; right:-275px;animation-name:bgc3; animation-duration:0.6s;-webkit-animation-fill-mode:both;}
+.login_wrap.normal .login_bg .bg.s_orange      {top:46px; right:331px;}
+.login_wrap.normal .login_bg .bg.s_blue        {bottom:287px; left:415px;}
+
+@keyframes bgc1 {100% {-webkit-transform : translateX(0px) translateY(0px) scale(1);}}
+@keyframes bgc2 {100% {-webkit-transform : translateX(0px) translateY(0px) scale(1);}}
+@keyframes bgc3 {100% {-webkit-transform : translateX(0px) translateY(0px) scale(1);}}
+
+/* bg event bright normal */
+.login_wrap.normal.bright .login_bg {background: #f0f4f8;}
+.login_wrap.normal.bright .login_bg .bg.circle_blue   {z-index: 2;width: 840px;height: 932px;background-image: url(../images/login/bg_blue_wh.svg);background-size:135%;background-position: right;}
+.login_wrap.normal.bright .login_bg .bg.circle_red    {z-index: 2;width: 840px;height: 720px;background-image: url(../images/login/bg_red_w.svg);background-position: 40% 75%;}
+.login_wrap.normal.bright .login_bg .bg.circle_orange {z-index: 2;width: 543px;height: 450px;background-image: url(../images/login/bg_orange_w.svg);background-size:100%;background-position:center 75%;}
+.login_wrap.normal.bright .login_bg .bg.s_blue        {z-index: 1;width: 162px;height: 206px;background-image: url(../images/login/bg_red_wh.svg);background-size:contain;}
+.login_wrap.normal.bright .login_bg .bg.s_orange      {z-index: 1;width: 234px;height: 222px;background-image: url(../images/login/bg_yellow_wh.svg);background-size:contain;}
+
+.login_wrap.normal.bright .login_bg .bg.circle_blue   {top:0;left:-424px;}
+.login_wrap.normal.bright .login_bg .bg.circle_red    {bottom:-480px;left:auto;right:100px;}
+.login_wrap.normal.bright .login_bg .bg.circle_orange {top:-300px;right:0;}
+.login_wrap.normal.bright .login_bg .bg.s_blue        {bottom:200px;left:auto;right:330px;}
+.login_wrap.normal.bright .login_bg .bg.s_orange      {top:140px;left:430px;}
