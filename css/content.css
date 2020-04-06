@@ -108,7 +108,6 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 .tit_wrap .tit {font-size:20px; font-weight:500;}
 .tit_wrap .total {margin-left:7px; vertical-align:middle; width:38px; height:38px; line-height:28px; text-align:center; font-weight:500; font-size:16px; color:#fff; display:inline-block; background-color:#0ac26f; border:5px solid #84e0b7; box-sizing:border-box; border-radius:50%;}
 .tit_wrap .total_items {color:#8b919c; font-size:14px;}
-.tit_wrap h3 {vertical-align:middle; color:#000; font-stretch:normal; font-weight:500; font-size:30px; display:inline-block;}
 .tit_wrap h4 {vertical-align:middle; color:#000; font-stretch:normal; font-weight:500; font-size:20px; line-height:30px; display:inline-block;}
 
 .tit_list>div {height:50px; vertical-align:middle;}
