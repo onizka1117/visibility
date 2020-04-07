@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>메인</title>
+    <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="../../script/lib/jquery.bxslider.css" rel="stylesheet">
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/content.css" rel="stylesheet">
+    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery.bxslider.js"></script>
+    <script src="../../script/lib/jquery-ui.js"></script>
+    <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../script/ui_common.js"></script>
+    <script type="text/javascript">
+
+      var eventList = [
+        {date:"2020-03-01", eventClass:"work meet msg"},
+        {date:"2020-03-02", eventClass:"work"},
+        {date:"2020-03-05", eventClass:"meet"},
+        {date:"2020-03-17", eventClass:"meet msg"},
+        {date:"2020-03-20", eventClass:"work meet"},
+        {date:"2020-03-25", eventClass:"work msg"},
+        {date:"2020-03-30", eventClass:"msg"}
+      ];
+
+      $(function(){
+
+        // 스크롤바
+        $(".scr_box").mCustomScrollbar();
+
+        // 캘린더
+        $("#datacalendar").datepicker({
+          beforeShowDay : addEvents
+        });
+
+        function addEvents(date) {
+          for(i=0 ; i<eventList.length ; i++) {
+            if(getDate(date) == eventList[i].date) {
+              return [true, eventList[i].eventClass , ""];
+            }
+          }
+          return [true, "", ""];
+        }
+
+        function getDate(date) {
+          var year = date.getFullYear();
+          var month = date.getMonth()+1;
+          var month2 = month < 10 ? "0"+month : month;
+          var day = date.getDate() < 10 ? "0"+date.getDate() : date.getDate();
+          return year +"-"+ month2 + "-" + day;
+        }
+
+        // indicator 슬라이드
+        $("#indiSlider").bxSlider({
+          minSlides: 4,
+          maxSlides: 4,
+          moveSlides:1,
+          slideWidth: 255,
+          slideMargin:20,
+          pager : false,
+          infiniteLoop: false
+        });
+
+        // live 슬라이드
+        $("#liveSlider").bxSlider({
+          infiniteLoop: false
+        });
+
+        // 타일 로드 (개발시 삭제)
+        $(".indicator_wrap li").load("../tile/ic.html");
+        $(".live_slider li").load("../tile/live.html");
+
+      });
+
+
+
+    </script>
+  </head>
+  <body>
+
+    <div class="main_wrap">
+      <div class="main_left">
+        <!-- title -->
+        <div class="tit_wrap">
+          <div class="tit_left">
+            <h2>Operation Board</h2>
+          </div>
+        </div>
+        <!-- //title -->
+
+        <!-- indicator -->
+        <div class="indicator_wrap">
+          <ul id="indiSlider" class="indicator_list">
+            <!--  반복 -->
+            <li>
+                <!-- ../tile/ic.html 파일 영역 -->
+            </li>
+            <!--  //반복 -->
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <!-- //indicator -->
+
+        <!-- Live Tiles -->
+        <ul class="live_wrap">
+          <li>
+            <div class="live_tile box bg_type1">
+              <div class="tit_area">
+                <strong class="tit">Market Update : March 18, 2020</strong>
+              </div>
+              <div class="con">
+
+                <div class="market_update">
+                  <img src="../../images/@img_market_update.png" alt="">
+                  <div class="txt">
+                    How will businesses recover from COVID-19?<br>
+                    When will factories start running again? And how can you ensure your cargo is moving when they do?
+                  </div>
+                  <a href="#" class="more">View More</a>
+                </div>
+
+              </div>
+            </div>
+          </li>
+          <li>
+            <ul class="live_slider" id="liveSlider">
+              <!-- 반복 -->
+              <li><!-- ../tile/live.html 파일 영역 --></li>
+              <!-- //반복 -->
+              <li></li>
+              <li></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- //Live Tiles -->
+
+        <!-- Static Tiles -->
+        <ul class="main_cols_2 mt20">
+          <li>
+            <ul class="main_cols_4">
+              <li>
+                <a href="#" class="st_tile box bg_type2 st_tracking">Tracking</a>
+              </li>
+              <li><a href="#" class="st_tile box bg_type3 st_ebooking">E-Booking</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul class="main_cols_4">
+              <li><a href="#" class="st_tile2 box bg_type4 st_analytics"><span>Analytics Tool</span></a></li>
+              <li><a href="#" class="st_tile2 box st_quotaion"><span>New Quotation</span></a></li>
+            </ul>
+            <ul class="main_cols_4 mt20">
+              <li><a href="#" class="st_tile2 box st_kpi"><span>KPI</span></a></li>
+              <li><a href="#" class="st_tile2 box st_dashboard"><span>Dashboard</span></a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- //Static Tiles -->
+
+      </div>
+
+      <div class="main_right">
+        <div class="schedule_box box shadow">
+
+          <div class="sched_wrap">
+            <span class="location">Seoul, South Korea</span>
+            <div class="tit_month">
+              <span>Monday,</span>
+              <span>17 January</span>
+            </div>
+            <div class="calendar_wrap">
+              <div id="datacalendar"></div>
+            </div>
+
+          </div>
+
+          <!-- title -->
+          <div class="tit_wrap">
+            <div class="tit_left">
+              <span class="tit">Reminder</span>
+            </div>
+            <div class="tit_right">
+              <span class="ip_check sm"><input type="checkbox" name="" value="" id="check01"><label for="check01">To do <span class="bold sub_txt">3</span></label></span>
+              <span class="ip_check sm"><input type="checkbox" name="" value="" id="check02"><label for="check02">Message <span class="bold sub_txt">3</span></label></span>
+            </div>
+          </div>
+          <!-- //title -->
+
+          <div class="scr_box">
+            <ul class="event_list">
+              <!-- 반복 -->
+              <li class="work">
+                <a href="#">
+                  <div class="tit">
+                    <span class="ctg">Work</span>
+                    <span class="date">by 2020.01.20 16:00</span>
+                  </div>
+                  <div class="txt">
+                    Send email to Loso Kim
+                  </div>
+                </a>
+              </li>
+              <!-- //반복 -->
+              <li class="msg">
+                <a href="#">
+                  <div class="tit">
+                    <span class="ctg">Loso Kim</span>
+                    <span class="date">by 2020.01.20 16:00</span>
+                  </div>
+                  <div class="txt">
+                    Send email to Loso Kim
+                  </div>
+                </a>
+              </li>
+              <li class="meeting">
+                <a href="#">
+                  <div class="tit">
+                    <span class="ctg">meeting</span>
+                    <span class="date">by 2020.01.20 16:00</span>
+                  </div>
+                  <div class="txt">
+                    Send email to Loso Kim
+                  </div>
+                </a>
+              </li>
+              <li class="meeting">
+                <div class="tit">
+                  <span class="ctg">meeting</span>
+                  <span class="date">by 2020.01.20 16:00</span>
+                </div>
+                <div class="txt">
+                  Send email to Loso Kim
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
