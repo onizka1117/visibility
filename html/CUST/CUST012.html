@@ -3,10 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Cargo Tracking</title>
+    <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
     <link href="../../css/common.css" rel="stylesheet">
     <link href="../../css/content.css" rel="stylesheet">
     <script src="../../script/lib/jquery-3.4.1.min.js"></script>
     <script src="../../script/lib/jquery-ui.js"></script>
+    <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="../../script/ui_common.js"></script>
     <script type="text/javascript">
     $(function(){
@@ -14,6 +16,18 @@
       $(".sort_list").on("click", function(){
         $(this).toggleClass("desc");
       });
+
+      // 아코디언
+      $(".view_item .btn_toggle").on("click", function(){
+        $(this).parent().toggleClass("open");
+      });
+
+      $(".cont_tab a").on("click", function() {
+        $(this).parent().parent().find("a.on").removeClass("on").end().end().end().addClass("on");
+      });
+
+      // 스크롤바
+      $(".pop_con, .cont_list_wrap>.left").mCustomScrollbar();
 
     });
     </script>
@@ -90,11 +104,12 @@
             </ul>
             <div class="status building"><!-- 아이콘 클래스 building | airplane | truck | container  -->
               <div class="txt">
-                <strong>In transit arrival airport</strong>
+                <strong>SHPR</strong>
                 <span> • Weather delay : Air Busan ABL8809</span>
               </div>
               <div class="btns_area">
                 <a href="#" class="btn_map">view map</a>
+                <span class="line"></span>
                 <a href="#" class="btn_download">download</a>
               </div>
             </div>
@@ -151,6 +166,7 @@
               </div>
               <div class="btns_area">
                 <a href="#" class="btn_map">view map</a>
+                <span class="line"></span>
                 <a href="#" class="btn_download">download</a>
               </div>
             </div>
@@ -202,11 +218,12 @@
             </ul>
             <div class="status container">
               <div class="txt">
-                <strong>In transit arrival airport</strong>
-                <span> • Weather delay : Air Busan ABL8809</span>
+                <strong>POL</strong>
+                <span> • Package is arrived <span class="bold">CNSHA</span> at 20-03-25 16:15</span>
               </div>
               <div class="btns_area">
                 <a href="#" class="btn_map">view map</a>
+                <span class="line"></span>
                 <a href="#" class="btn_download">download</a>
               </div>
             </div>
@@ -257,11 +274,11 @@
             </ul>
             <div class="status truck">
               <div class="txt">
-                <strong>In transit arrival airport</strong>
+                <strong>Trucking</strong>
                 <span> • Weather delay : Air Busan ABL8809</span>
               </div>
               <div class="btns_area">
-                <a href="#" class="btn_map">view map</a>
+                <span class="line"></span>
                 <a href="#" class="btn_download">download</a>
               </div>
             </div>
@@ -317,6 +334,7 @@
               </div>
               <div class="btns_area">
                 <a href="#" class="btn_map">view map</a>
+                <span class="line"></span>
                 <a href="#" class="btn_download">download</a>
               </div>
             </div>
@@ -367,11 +385,11 @@
             </ul>
             <div class="status building">
               <div class="txt">
-                <strong>In transit arrival airport</strong>
+                <strong>CNEE</strong>
                 <span> • Weather delay : Air Busan ABL8809</span>
               </div>
               <div class="btns_area">
-                <a href="#" class="btn_map">view map</a>
+                <span class="line"></span>
                 <a href="#" class="btn_download">download</a>
               </div>
             </div>
@@ -412,26 +430,178 @@
       <!-- //tracking list -->
 
 
+    </div>
 
-      <!-- layer -->
-      <div class="layer_pop_wrap">
-        <a href="#" class="btn_closed">닫기</a>
-        <div class="pop_header">
-          <div class="tit">
-            Book-9981475
-          </div>
+
+
+    <!-- layer -->
+    <div class="layer_pop_wrap">
+      <a href="#" class="btn_closed">닫기</a>
+      <div class="pop_header">
+        <div class="tit">
+          Book-9981475
+        </div>
+        <div class="book_btns">
           <a href="#" class="btn_view_map">view map</a>
         </div>
-        <div class="pop_con">
-
-
-
-        </div>
       </div>
-      <!-- //layer -->
+      <div class="pop_con">
+
+        <div class="view_list">
+          <!-- 반복 -->
+          <div class="view_item open">
+            <a href="#" class="btn_toggle">열기/닫기</a>
+            <ul class="row">
+              <li class="tit">Shipper</li>
+              <li class="txt"><span class="bold">Innispree Corporation</span></li>
+            </ul>
+            <div class="view_sub">
+              <div class="addr">111-520, Mapo-gu, Seoul, South Korea</div>
+              <div class="tel">+82 2 5879 5784</div>
+            </div>
+          </div>
+          <!-- //반복 -->
+          <div class="view_item open">
+            <a href="#" class="btn_toggle">열기/닫기</a>
+            <ul class="row">
+              <li class="tit">Consignee </li>
+              <li class="txt"><span class="bold">Amorepacific, Singapore</span></li>
+            </ul>
+            <div class="view_sub">
+              <div class="addr">111-520, Mapo-gu, Seoul, South Korea</div>
+              <div class="tel">+82 2 5879 5784</div>
+            </div>
+          </div>
+          <div class="view_item">
+            <a href="#" class="btn_toggle">열기/닫기</a>
+            <ul class="row">
+              <li class="tit">Notify</li>
+              <li class="txt"><span class="bold">Amorepacific, Seoul</span></li>
+            </ul>
+            <div class="view_sub">
+              <div class="addr">111-520, Mapo-gu, Seoul, South Korea</div>
+              <div class="tel">+82 2 5879 5784</div>
+            </div>
+          </div>
+          <div class="view_item">
+            <ul class="row">
+              <li class="tit">Operator</li>
+              <li class="txt">
+                <span class="bold">Air Busan</span>
+                <span class="sub">ABL8809</span>
+              </li>
+            </ul>
+          </div>
+          <div class="view_item">
+            <ul class="row">
+              <li class="tit">Commodity</li>
+              <li class="txt">
+                <span>Skin care cosmetics</span>
+              </li>
+            </ul>
+          </div>
+          <div class="view_item">
+            <ul class="row">
+              <li class="tit">Package</li>
+              <li class="txt">
+                <span>49</span>
+              </li>
+            </ul>
+          </div>
+          <div class="view_item">
+            <ul class="row">
+              <li class="tit">Weight</li>
+              <li class="txt">
+                <span>68,247</span>
+              </li>
+            </ul>
+          </div>
+          <div class="view_item">
+            <ul class="row">
+              <li class="tit">Container</li>
+            </ul>
+            <div class="cont_list_wrap">
+              <div class="left">
+                <ul class="cont_tab">
+                  <li><a href="#">CKLR474517882</a></li>
+                  <li><a href="#" class="on">CKLR474517882</a></li>
+                  <li><a href="#">CKLR474517882</a></li>
+                  <li><a href="#">CKLR474517882</a></li>
+                  <li><a href="#">CKLR474517882</a></li>
+                  <li><a href="#">CKLR474517882</a></li>
+                  <li><a href="#">CKLR474517882</a></li>
+                  <li><a href="#">CKLR474517882</a></li>
+                  <li><a href="#">CKLR474517882</a></li>
+                  <li><a href="#">CKLR474517882</a></li>
+                  <li><a href="#">CKLR474517882</a></li>
+                  <li><a href="#">CKLR474517882</a></li>
+                  <li><a href="#">CKLR474517882</a></li>
+                </ul>
+              </div>
+              <!-- right -->
+              <div class="right">
+
+                <div class="cont_detail">
+                  <div class="tit_area">
+                    <strong class="tit">Container # 474517882</strong>
+                    <ul class="detail">
+                      <li><span class="tit">Type : </span><span class="txt">F</span></li>
+                      <li><span class="tit">Quantity : </span><span class="txt">30</span></li>
+                      <li><span class="tit">Weight : </span><span class="txt">6,159,000</span><span class="sup">+10</span></li>
+                      <li><span class="tit">CBM : </span><span class="txt">36,000</span></li>
+                    </ul>
+                  </div>
+                  <div class="con_area">
+                    <ul class="cont_step">
+                      <li>
+                        <span class="date">2020-01-02 12:00</span>
+                        <div class="loc">
+                          <span class="addr">CNSHA Shanghai, China</span>
+                          <span class="result">Arrive to POL</span>
+                        </div>
+                      </li>
+                      <li>
+                        <span class="date">2020-01-02 12:00</span>
+                        <div class="loc">
+                          <span class="addr">CNSHA Shanghai, China</span>
+                          <span class="result">Arrive to POL</span>
+                        </div>
+                      </li>
+                      <li>
+                        <span class="date">2020-01-02 12:00</span>
+                        <div class="loc">
+                          <span class="addr">CNSHA Shanghai, China</span>
+                          <span class="result">Arrive to POL</span>
+                        </div>
+                      </li>
+                      <li>
+                        <span class="date">2020-01-02 12:00</span>
+                        <div class="loc">
+                          <span class="addr">CNSHA Shanghai, China</span>
+                          <span class="result">Arrive to POL</span>
+                        </div>
+                      </li>
+                      <li>
+                        <span class="date">2020-01-02 12:00</span>
+                        <div class="loc">
+                          <span class="addr">CNSHA Shanghai, China</span>
+                          <span class="result">Arrive to POL</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+              <!-- //right -->
+            </div>
+          </div>
+        </div>
 
 
+      </div>
     </div>
+    <!-- //layer -->
 
 
   </body>
