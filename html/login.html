@@ -5,11 +5,11 @@
     <title>로그인</title>
     <link href="../css/common.css" rel="stylesheet">
     <link href="../css/login.css" rel="stylesheet">
+    <link href="../css/content.css" rel="stylesheet">
     <script src="../script/lib/jquery-3.4.1.min.js"></script>
     <script src="../script/login.js"></script>
 </head>
 <body>
-
     <div class="login_wrap">
         <div class="login_bg1">
             <span class="bg blue_line"></span>
@@ -73,15 +73,17 @@
                         <div class="box_search">
                             <select class='quick_select'>
                                 <option>H.B/L No.</option>
-                                <option>No.1</option>
-                                <option>No.2</option>
+                                <option>M.B/L No.</option>
+                                <option>Container No.</option>
+                                <option>PO No.</option>
+                                <option>WayBill No.</option>
                             </select>
                         </div>
                         <div class="box_find">
                             <label for="chkPw" class="blind">비밀번호</label>
                             <input type="text" class="form_login form_find" placeholder="Enter Number to Find">
                         </div>
-                        <div class="box_sign btn_search"><a href="javascript:">SEARCH</a></div>
+                        <div class="box_sign btn_search"><a href="javascript:" class="btn_login_search">SEARCH</a></div>
                     </div>
                     <!-- //QUICK SEARCH -->
                 </div>
@@ -93,7 +95,51 @@
                 <span>Copyright 2015 by CJ Logistics Corporation. All rights reserved.</span>
             </div>
         </div>
-
+        <!-- popup -->
+        <div class="login_popup">
+            <div class="cont_popup">
+                <div class="tit_popup">
+                    <span>H. B/L No. 9981475</span>
+                    <h2>In transit arrival airport</h2>
+                    <h4>• Weather delay : Air Busan ABL8809</h4>
+                </div>
+                <div class="desc_popup">
+                    <!-- CUST012 -->
+                    <div class="track_step step1">
+                      <ul class="step_list">
+                        <li>
+                          <div class="txt_area">
+                            <strong class="tit">INNISPREE CORPORATION</strong>
+                            <span class="txt">ATD 2020-03-20 20:10</span>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="txt_area">
+                            <strong class="tit">CNSHA</strong>
+                            <span class="txt">ATD 2020-03-20 20:10</span>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="txt_area">
+                            <strong class="tit">CNSHA</strong>
+                            <span class="txt">ETA 2020-03-20 20:10</span>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="txt_area">
+                            <strong class="tit">AMOREPACIFIC SINGAPORE</strong>
+                            <span class="txt">ETA : 2020-03-25</span>
+                          </div>
+                        </li>
+                      </ul>
+                      <div class="bar airplane"></div>
+                    </div>
+                    <!-- //Tracking -->
+                </div>
+                <a href="javascript:" class="btn_close">닫기</a>
+            </div>
+        </div>
+        <!-- //popup -->
     </div>
 </body>
 </html>

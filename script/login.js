@@ -7,6 +7,8 @@ $(function(){
 
   openTab();
   inputIcon();
+  popupOpenClose();
+
 });
 
 // tab
@@ -32,4 +34,28 @@ function inputIcon() {
     }).blur(function() {
         $(this).next().removeClass('on');
     });
+}
+
+// popup
+function popupOpenClose(){
+    $('.btn_login_search').on('click', function() {
+        $('.login_popup').addClass('open');
+        login_popup();
+    });
+    $('.btn_close').on('click', function() {
+    	$('.login_popup').removeClass('open');
+    });
+}
+
+setInterval('login_popup', 0);
+function login_popup() {
+    var pop = $('.cont_popup');
+    var popHeight = pop.innerHeight();
+    var docHeight = $(window).height();
+
+    pop.css({
+        height: popHeight,
+        marginTop: - (popHeight / 2)
+    });
+
 }
