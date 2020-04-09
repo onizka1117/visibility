@@ -30,13 +30,20 @@
       $(".pop_con, .cont_list_wrap>.left").mCustomScrollbar();
 
       // 상세 팝업
-      $(".track_list .track_box").on("click", function(){
+      $(".track_list .track_box").on("click", function(e){
         $("#popDetail").show();
       });
 
       // 팝업 닫기
-      $("#popDetail .btn_closed").on("click", function(){
+      $("#popDetail .btn_closed").on("click", function(e){
         $("#popDetail").hide();
+      });
+
+      //viewmap, download 선택
+      $(".btns_area a").on("click", function(e){
+        console.log("클릭");
+        e.preventDefault();
+        e.stopPropagation();
       });
 
     });
