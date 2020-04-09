@@ -174,7 +174,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 .comm_paging{text-align: right;padding: 10px 0;}
 
 /* main */
-.main_wrap {padding-left:120px; min-width:1920px; box-sizing:border-box;}
+.main_wrap {padding-left:120px; width:1920px; box-sizing:border-box;}
 .main_wrap:after {content:""; display:block; clear:both; width:100%;}
 .main_wrap>div {float:left;}
 .main_wrap>div.main_left {width:1080px;}
@@ -325,7 +325,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 .layer_pop_wrap .pop_con {padding:0 30px 50px; position:absolute; top:101px; bottom:0; left:0; width:100%; box-sizing:border-box; overflow:auto;}
 
 /* submain */
-.sub_main_wrap {padding-left:120px; min-width:1920px; box-sizing:border-box;}
+.sub_main_wrap {padding-left:120px; width:1920px; box-sizing:border-box;}
 .sub_main_wrap:after {content:""; display:block; clear:both; width:100%;}
 .sub_main_wrap>div {float:left;}
 .sub_main_wrap>div.main_left {width:1030px;}
@@ -345,13 +345,13 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 
 
 /* detail */
-.detail_wrap {padding-left:120px; min-width:1920px; box-sizing:border-box;}
+.detail_wrap {padding-left:120px; padding-right:30px; width:1920px; box-sizing:border-box;}
 
 
 /**/
 .track_list {}
 .track_list .track_box+.track_box {margin-top:5px;}
-.track_box {padding:20px 30px 0; height:100px; border:solid 1px #e6ebf1; background-color:#fff; box-sizing:border-box;}
+.track_box {padding:20px 30px 0; height:100px; border:solid 1px #e6ebf1; cursor:pointer; background-color:#fff; box-sizing:border-box;}
 .track_box:after {content:""; clear:both; display:block;}
 .track_box .track_info {width:580px; float:left;}
 .track_box .tit_area .tit {font-size:15px; font-weight:500; color:#313c49;}
@@ -472,7 +472,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 
 
 .tab_wrapper+.vendor_con_wrap {margin-top:30px;}
-.vendor_con_wrap {padding-left:120px; min-width:1920px; box-sizing:border-box;}
+.vendor_con_wrap {padding-left:120px; padding-right:30px; width:1920px; box-sizing:border-box;}
 .vendor_con_wrap:after {content:""; display:block; clear:both; width:100%;}
 .vendor_con_wrap>.left {width:960px; float:left;}
 .vendor_con_wrap>.right {width:760px; float:right;}
