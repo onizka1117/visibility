@@ -38,12 +38,17 @@ function inputIcon() {
 
 // popup
 function popupOpenClose(){
-    $('.btn_login_search').on('click', function() {
+    $('.btn_login_search').on('click', function(){
         $('.login_popup').addClass('open');
         login_popup();
     });
-    $('.btn_close').on('click', function() {
+    $('.btn_close').on('click', function(){
     	$('.login_popup').removeClass('open');
+    });
+    $('.login_popup').mouseup(function(e){
+        if($(this).has(e.target).length === 0){
+            $('.login_popup').removeClass('open');
+        }
     });
 }
 
