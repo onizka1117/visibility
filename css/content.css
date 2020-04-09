@@ -59,12 +59,18 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 
 /* button */
 .btn {vertical-align:middle; text-align:center; display:inline-block; text-decoration:none; line-height:36px; font-size:14px; font-weight:500; padding:0 22px; color:#fff; height:36px; background-color:#0080c6; box-sizing:border-box;}
+.btn.black {background-color:#45474e;}
 .btn.line {border:1px solid #dde2ea; color:#0080c6; background-color:#fff;}
 .btn.sm {line-height:30px; padding:0 14px; font-size:13px;  height:32px;}
 .btn.sm.ico_add, .btn.sm.ico_remove {width:32px; padding:0; font-size:0; position:relative;}
 .btn.sm.ico_add:before, .btn.sm.ico_remove:before {content:""; position:absolute; top:50%; left:50%; margin:-1px 0 0 -6px; width:12px; height:2px; background:#0080c6;}
 .btn.sm.ico_add:after {content:""; position:absolute; top:50%; left:50%; margin:-6px 0 0 -1px; width:2px; height:12px; background:#0080c6;}
 .btn.lg {line-height:40px; padding:0 14px;  height:42px;}
+.btn.act {height:45px; line-height:45px; font-size:16px; min-width:120px;}
+.btn.act+.btn.act {margin-left:10px;}
+
+.btn_load {padding:0 15px 0 37px; display:inline-block; height:32px; line-height:30px; font-size:13px; font-weight:500; color:#0080c6; border:1px solid #0080c6; background:#fff url(../images/ico_folder.svg) no-repeat 10px center; box-sizing:border-box;}
+
 .btn_list {display:inline-block; font-size:0;}
 .btn_list .btn+.btn {margin-left:8px;}
 .btn_list .btn.sm+.btn.sm {margin-left:5px;}
@@ -75,6 +81,12 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 
 .btn_ico {line-height:20px; display:inline-block; font-size:14px; color:#45474e; background-repeat:no-repeat;}
 .btn_ico.excel {padding-left:22px; background-image:url(../images/ico_bn_file.svg);}
+
+.btn_bottom {font-size:0;}
+.btn_bottom:after {content:""; display:block; width:100%; clear:both; }
+.btn_bottom>.left {float:left;}
+.btn_bottom>.right {float:right;}
+
 
 /* icon */
 .ico {display:inline-block;}
