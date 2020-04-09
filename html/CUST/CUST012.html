@@ -29,6 +29,16 @@
       // 스크롤바
       $(".pop_con, .cont_list_wrap>.left").mCustomScrollbar();
 
+      // 상세 팝업
+      $(".track_list .track_box").on("click", function(){
+        $("#popDetail").show();
+      });
+
+      // 팝업 닫기
+      $("#popDetail .btn_closed").on("click", function(){
+        $("#popDetail").hide();
+      });
+
     });
     </script>
   </head>
@@ -435,7 +445,7 @@
 
 
     <!-- layer -->
-    <div class="layer_pop_wrap">
+    <div class="layer_pop_wrap" id="popDetail" style="display:none;">
       <a href="#" class="btn_closed">닫기</a>
       <div class="pop_header">
         <div class="tit">
