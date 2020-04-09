@@ -48,6 +48,13 @@
           </td>
         </tr>
         <tr>
+          <th>고정 텍스트</th>
+          <td>
+            <span class="ip_fixed pr27"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">m</span></span>
+            <span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span>
+          </td>
+        </tr>
+        <tr>
           <th>문장입력</th>
           <td>
             <textarea>문장입력</textarea>
@@ -123,6 +130,28 @@
             </ul>
           </td>
         </tr>
+        <tr>
+          <th>라디오</th>
+          <td>
+            <ul class="radio_group type_freight">
+              <li class="radio_item air">
+                <input type="radio" name="radioEbook" value="" id="radio05" checked="true"><label for="radio05">Air Freight</label>
+              </li>
+              <li class="radio_item ocean">
+                <input type="radio" name="radioEbook" value="" id="radio06"><label for="radio06">Ocean Freight</label>
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>파일</th>
+          <td>
+            <div class="ip_file">
+              <input type="text" name="" value="" placeholder="업로드할 파일을 선택하세요." readonly="true" class="ip_txt">
+              <span class="bn_up"><input type="file" name="" value=""></span>
+            </div>
+          </td>
+        </tr>
       </tbody>
     </table>
 
@@ -131,7 +160,7 @@
     <div class="search_wrap">
       <ul class="search_form">
         <li>
-          <label for="" class="lb_txt">Customer ID</label>
+          <label for="" class="lb_txt req">Customer ID</label>
           <input type="text" name="" value="" class="ip_txt" style="width:200px;">
           <input type="text" name="" value="" class="ip_txt" disabled="true" style="width:150px;">
         </li>
