@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+    <link href="../../script/lib/jquery.bxslider.css" rel="stylesheet">
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/content.css" rel="stylesheet">
+    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery-ui.js"></script>
+    <script src="../../script/ui_common.js"></script>
+    <script type="text/javascript">
+
+    $(function(){
+      // 파일명
+      $(".ip_file").fileReady();
+
+      // 파일추가
+      $(".file_upload_wrap .btn_cir.ico_add").on("click", function(e) {
+        var fileHtml = '<li><div class="ip_file">' +
+          '<input type="text" name="" value="" placeholder="업로드할 파일을 선택하세요." readonly="true" class="ip_txt bold">' +
+          '<span class="bn_up">file..<input type="file" name="" value=""></span>' +
+          '</div> <a href="#" class="btn_cir ico_del"></a></li>';
+        var $file = $(fileHtml);
+
+        //삭제 이벤트추가
+        $file.find(".btn_cir.ico_del").on("click", function(e){
+          $(this).parent().remove();
+          e.preventDefault();
+        });
+        $file.fileReady();
+        $(this).parent().parent().append($file);
+        e.preventDefault();
+      });
+
+      // showhide box
+      $(".tog_box .btn_toggle").on("click", function(e){
+        $(this).parents(".tog_box").toggleClass("open");
+        e.preventDefault();
+      });
+
+      //cargo
+      $(".add_cargo").on("click", function(e){
+        var rowHtml = '<li><ul class="ip_group">' +
+          '<li class="qty"><input type="text" name="" value="" class="ip_txt bold tar"></li><li class="w20 tac">x</li>' +
+          '<li class="len"><span class="ip_fixed pr27"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">m</span></span></li><li class="w20 tac">x</li>' +
+          '<li class="wid"><span class="ip_fixed pr27"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">m</span></span></li><li class="w20 tac">x</li>' +
+          '<li class="hei"><span class="ip_fixed pr27"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">m</span></span></li><li class="w20 tac">=</li>' +
+          '<li class="cbm"><input type="text" name="" value="" class="ip_txt bold tar" disabled="true"></li><li class="w40 tac"><span class="ico line"></span></li>' +
+          '<li class="wei"><span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt bold tar"><span class="ftxt">kg</span></span></li></ul>' +
+          '<input type="text" name="" value="" class="ip_txt bold">' +
+          '<a href="#" class="btn_cir ico_del"></a></li>';
+        var $row = $(rowHtml);
+        //삭제 이벤트추가
+        $row.find(".btn_cir.ico_del").on("click", function(e){
+          $(this).parent().remove();
+          e.preventDefault();
+        });
+
+        $(".cargo_form").append($row);
+
+        e.preventDefault();
+      });
+
+    });
+
+    </script>
+  </head>
+  <body>
+
+    <div class="detail_wrap">
+
+      <div class="ebook_wrap">
+        <div class="left">
+
+          <div class="tit_wrap">
+            <div class="tit_left">
+              <h2>Shipping Request</h2>
+            </div>
+          </div>
+
+          <div class="load_prev">
+            <span>If you want to start from a previous Web Booking, Select ...</span>
+            <a href="#" class="btn_load">Load</a>
+          </div>
+
+          <div class="tit_wrap">
+            <div class="tit_left">
+              <h4>Shipping information</h4>
+            </div>
+          </div>
+          <div class="list_form_wrap">
+            <ul class="list_form">
+              <li>
+                <label for="" class="lb_txt req">Freight Method</label>
+                <ul class="radio_group type_freight">
+                  <li class="radio_item air">
+                    <input type="radio" name="radioEbook" value="" id="radio05"><label for="radio05">Air Freight</label>
+                  </li>
+                  <li class="radio_item ocean">
+                    <input type="radio" name="radioEbook" value="" id="radio06"><label for="radio06">Ocean Freight</label>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="list_form">
+              <li>
+                <label for="" class="lb_txt req">Release Date</label>
+                <span class="ip_date" style="width:312px;"><input type="text" id="datepicker" class="ip_txt bold"></span>
+                <span class="ip_check type1 ml30"><input type="checkbox" name="" value="" id="check01"><label for="check01">Fast Track (Urgent)</label></span>
+              </li>
+            </ul>
+            <ul class="list_form">
+              <li>
+                <label for="" class="lb_txt req">Item</label>
+                <input type="text" name="" value="" placeholder="" class="ip_txt bold" style="width:665px;">
+              </li>
+            </ul>
+          </div>
+
+
+          <div class="tit_wrap">
+            <div class="tit_left">
+              <h4>Person in charge</h4>
+            </div>
+          </div>
+          <div class="list_form_wrap">
+            <ul class="list_form">
+              <li>
+                <label for="" class="lb_txt req">Name of PIC at CJ Logistics</label>
+                <input type="text" name="" value="" placeholder="" class="ip_txt bold" style="width:275px;">
+                <a href="#" class="btn line lg ico_search">검색</a>
+              </li>
+              <li>
+                <label for="" class="lb_txt">E-mail</label>
+                <input type="text" name="" value="" placeholder="" class="ip_txt bold" style="width:321px;">
+              </li>
+            </ul>
+            <ul class="list_form">
+              <li>
+                <label for="" class="lb_txt req">Name of PIC at your company</label>
+                <input type="text" name="" value="" placeholder="" class="ip_txt bold" style="width:321px;">
+              </li>
+              <li>
+                <label for="" class="lb_txt">Phone</label>
+                <input type="text" name="" value="" placeholder="" class="ip_txt bold" style="width:322px;">
+              </li>
+            </ul>
+          </div>
+
+
+          <!-- show/hide 박스 -->
+          <div class="tog_box open">
+            <div class="tit_area">
+              <div class="tit_wrap">
+                <div class="tit_left">
+                  <h4>Cargo Detail</h4>
+                </div>
+                <div class="tit_right">
+                  <div class="tog_btn">
+                    <span><span class="open">Open</span><span class="close">Close</span> to Cargo Detail</span>
+                    <a href="#" class="btn_toggle">열기/닫기</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="con_area">
+              <div class="cargo_wrap">
+                <div class="left">
+                  <img src="../../images/img_cargo.png" alt="" class="img_cargo">
+                </div>
+                <div class="right">
+                  <div class="cargo_list">
+                    <ul class="cargo_hd">
+                      <li class="qty">Item Qty</li>
+                      <li class="len">Length</li>
+                      <li class="wid">Width</li>
+                      <li class="hei">Height</li>
+                      <li class="cbm">CBM</li>
+                      <li class="wei">Weight</li>
+                    </ul>
+                    <ul class="cargo_form">
+                      <li>
+                        <ul class="ip_group">
+                          <li class="qty"><input type="text" name="" value="" class="ip_txt bold tar"></li>
+                          <li class="w20 tac">x</li>
+                          <li class="len"><span class="ip_fixed pr27"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">m</span></span></li>
+                          <li class="w20 tac">x</li>
+                          <li class="wid"><span class="ip_fixed pr27"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">m</span></span></li>
+                          <li class="w20 tac">x</li>
+                          <li class="hei"><span class="ip_fixed pr27"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">m</span></span></li>
+                          <li class="w20 tac">=</li>
+                          <li class="cbm"><input type="text" name="" value="" class="ip_txt bold tar" disabled="true"></li>
+                          <li class="w40 tac"><span class="ico line"></span></li>
+                          <li class="wei"><span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt bold tar"><span class="ftxt">kg</span></span></li>
+                        </ul>
+                        <input type="text" name="" value="" class="ip_txt bold">
+                      </li>
+                    </ul>
+                    <a href="#" class="btn_cir ico_add add_cargo"><span>Add another row </span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- //show/hide 박스 -->
+
+
+          <!-- show/hide 박스 -->
+          <div class="tog_box open">
+            <div class="tit_area">
+              <div class="tit_wrap">
+                <div class="tit_left">
+                  <h4>Document</h4>
+                </div>
+                <div class="tit_right">
+                  <div class="tog_btn">
+                    <span><span class="open">Open</span><span class="close">Close</span> to Document</span>
+                    <a href="#" class="btn_toggle">열기/닫기</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="con_area">
+              <div class="list_form_wrap">
+                <ul class="list_form">
+                  <li>
+                    <label for="" class="lb_txt">S/R</label>
+                    <!-- 파일 리스트 -->
+                    <ul class="file_upload_wrap">
+                      <li>
+                        <div class="ip_file">
+                          <input type="text" name="" value="" placeholder="업로드할 파일을 선택하세요." readonly="true" class="ip_txt bold">
+                          <span class="bn_up">file..<input type="file" name="" value=""></span>
+                        </div>
+                        <a href="#" class="btn_cir ico_add"><span>Add another row </span></a>
+                      </li>
+                    </ul>
+                    <!-- //파일 리스트 -->
+                  </li>
+                </ul>
+                <ul class="list_form">
+                  <li>
+                    <label for="" class="lb_txt">수출신고필증</label>
+                    <!-- 파일 리스트 -->
+                    <ul class="file_upload_wrap">
+                      <li>
+                        <div class="ip_file">
+                          <input type="text" name="" value="" placeholder="업로드할 파일을 선택하세요." readonly="true" class="ip_txt bold">
+                          <span class="bn_up">file..<input type="file" name="" value=""></span>
+                        </div>
+                        <a href="#" class="btn_cir ico_add"><span>Add another row </span></a>
+                      </li>
+                    </ul>
+                    <!-- //파일 리스트 -->
+                  </li>
+                </ul>
+                <ul class="list_form">
+                  <li>
+                    <label for="" class="lb_txt">H.B/L</label>
+                    <!-- 파일 리스트 -->
+                    <ul class="file_upload_wrap">
+                      <li>
+                        <div class="ip_file">
+                          <input type="text" name="" value="" placeholder="업로드할 파일을 선택하세요." readonly="true" class="ip_txt bold">
+                          <span class="bn_up">file..<input type="file" name="" value=""></span>
+                        </div>
+                        <a href="#" class="btn_cir ico_add"><span>Add another row </span></a>
+                      </li>
+                    </ul>
+                    <!-- //파일 리스트 -->
+                  </li>
+                </ul>
+                <ul class="list_form">
+                  <li>
+                    <label for="" class="lb_txt">M.B/L</label>
+                    <!-- 파일 리스트 -->
+                    <ul class="file_upload_wrap">
+                      <li>
+                        <div class="ip_file">
+                          <input type="text" name="" value="" placeholder="업로드할 파일을 선택하세요." readonly="true" class="ip_txt bold">
+                          <span class="bn_up">file..<input type="file" name="" value=""></span>
+                        </div>
+                        <a href="#" class="btn_cir ico_add"><span>Add another row </span></a>
+                      </li>
+                    </ul>
+                    <!-- //파일 리스트 -->
+                  </li>
+                </ul>
+                <ul class="list_form">
+                  <li>
+                    <label for="" class="lb_txt">INVOICE</label>
+                    <!-- 파일 리스트 -->
+                    <ul class="file_upload_wrap">
+                      <li>
+                        <div class="ip_file">
+                          <input type="text" name="" value="" placeholder="업로드할 파일을 선택하세요." readonly="true" class="ip_txt bold">
+                          <span class="bn_up">file..<input type="file" name="" value=""></span>
+                        </div>
+                        <a href="#" class="btn_cir ico_add"><span>Add another row </span></a>
+                      </li>
+                    </ul>
+                    <!-- //파일 리스트 -->
+                  </li>
+                </ul>
+                <ul class="list_form">
+                  <li>
+                    <label for="" class="lb_txt">POD (Proof of Delivery)</label>
+                    <!-- 파일 리스트 -->
+                    <ul class="file_upload_wrap">
+                      <li>
+                        <div class="ip_file">
+                          <input type="text" name="" value="" placeholder="업로드할 파일을 선택하세요." readonly="true" class="ip_txt bold">
+                          <span class="bn_up">file..<input type="file" name="" value=""></span>
+                        </div>
+                        <a href="#" class="btn_cir ico_add"><span>Add another row </span></a>
+                      </li>
+                    </ul>
+                    <!-- //파일 리스트 -->
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- //show/hide 박스 -->
+
+
+          <div class="btn_bottom">
+            <div class="left">
+              <a href="#" class="btn act">Submit</a>
+              <a href="#" class="btn black act">Discard</a>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="right">
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>

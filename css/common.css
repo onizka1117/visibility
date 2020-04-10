@@ -161,7 +161,10 @@ img {border:0;}
 a {text-decoration:none;}
 table {border-collapse:collapse; border-spacing:0; }
 
+/* margin */
 .mt20 {margin-top:20px;}
+.ml30 {margin-left:30px;}
+
 .bold {font-weight:500;}
 .sub_txt {color:#8b919c;}
 

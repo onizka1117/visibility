@@ -45,7 +45,7 @@ body.dark .st_tile2.bg_type4:hover {background-color:#ec8922;}
 body.dark .st_tile2.st_volume:before {background-image:url("../images/dark/ico_static_volume.svg");}
 body.dark .st_tile2.st_schedule:before {background-image:url("../images/dark/ico_static_schedule.svg");}
 body.dark .st_tile2.st_cost:before {background-image:url("../images/dark/ico_static_cost.svg");}
-
+body.dark .st_tile.st_report:before {background-image:url("../images/dark/ico_static_report.svg");}
 
 body.dark .calendar_wrap .ui-datepicker-calendar tbody td a {color:#fff;}
 body.dark .calendar_wrap .ui-datepicker-calendar .ui-state-active {background-color:#242b34;}
@@ -62,3 +62,8 @@ body.dark .event_list>li .txt {color:#fff;}
 body.dark .event_list>li .tit .ctg{color:#8b919c;}
 
 body.dark .sub_box .tit{color:#fff;}
+
+
+body.dark .vendor_main_wrap .tit_area .logo {background-image:url(../images/logo_d.svg);}
+body.dark .vendor_main_wrap .tit_area .sub_tit {color:#fff;}
+body.dark .vendor_main_wrap .search_area {background-color: rgba(51, 60, 72, 0.5);}
