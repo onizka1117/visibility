@@ -154,8 +154,8 @@ body {margin:0; padding:0; font-family:'Gotham', 'Noto Sans KR','dotum'; font-si
 input, select, textarea {font-family:'Gotham','Noto Sans KR','dotum'; vertical-align:middle;  border-radius:0; -webkit-appearance:none;}
 select::-ms-expand {display: none;}
 input::-ms-clear, input::-ms-reveal {display: none;}
-h1,h2,h3,h4,h5,h6 {padding:0; margin:0;}
-ul, ol, li {margin:0; padding:0; list-style:none;}
+h1,h2,h3,h4,h5,h6,p {padding:0; margin:0;}
+ul,ol,li,dl,dt,dd {margin:0; padding:0; list-style:none;}
 iframe {display:block; }
 img {border:0;}
 a {text-decoration:none;}
