@@ -59,7 +59,6 @@
         });
 
         $(".cargo_form").append($row);
-
         e.preventDefault();
       });
 
@@ -236,7 +235,7 @@
                           <input type="text" name="" value="" placeholder="업로드할 파일을 선택하세요." readonly="true" class="ip_txt bold">
                           <span class="bn_up">file..<input type="file" name="" value=""></span>
                         </div>
-                        <a href="#" class="btn_cir ico_add"><span>Add another row </span></a>
+                        <a href="#" class="btn_cir ico_add"><span>Add file</span></a>
                       </li>
                     </ul>
                     <!-- //파일 리스트 -->
@@ -252,7 +251,7 @@
                           <input type="text" name="" value="" placeholder="업로드할 파일을 선택하세요." readonly="true" class="ip_txt bold">
                           <span class="bn_up">file..<input type="file" name="" value=""></span>
                         </div>
-                        <a href="#" class="btn_cir ico_add"><span>Add another row </span></a>
+                        <a href="#" class="btn_cir ico_add"><span>Add file</span></a>
                       </li>
                     </ul>
                     <!-- //파일 리스트 -->
@@ -268,7 +267,7 @@
                           <input type="text" name="" value="" placeholder="업로드할 파일을 선택하세요." readonly="true" class="ip_txt bold">
                           <span class="bn_up">file..<input type="file" name="" value=""></span>
                         </div>
-                        <a href="#" class="btn_cir ico_add"><span>Add another row </span></a>
+                        <a href="#" class="btn_cir ico_add"><span>Add file</span></a>
                       </li>
                     </ul>
                     <!-- //파일 리스트 -->
@@ -284,7 +283,7 @@
                           <input type="text" name="" value="" placeholder="업로드할 파일을 선택하세요." readonly="true" class="ip_txt bold">
                           <span class="bn_up">file..<input type="file" name="" value=""></span>
                         </div>
-                        <a href="#" class="btn_cir ico_add"><span>Add another row </span></a>
+                        <a href="#" class="btn_cir ico_add"><span>Add file</span></a>
                       </li>
                     </ul>
                     <!-- //파일 리스트 -->
@@ -300,7 +299,7 @@
                           <input type="text" name="" value="" placeholder="업로드할 파일을 선택하세요." readonly="true" class="ip_txt bold">
                           <span class="bn_up">file..<input type="file" name="" value=""></span>
                         </div>
-                        <a href="#" class="btn_cir ico_add"><span>Add another row </span></a>
+                        <a href="#" class="btn_cir ico_add"><span>Add file</span></a>
                       </li>
                     </ul>
                     <!-- //파일 리스트 -->
@@ -316,7 +315,7 @@
                           <input type="text" name="" value="" placeholder="업로드할 파일을 선택하세요." readonly="true" class="ip_txt bold">
                           <span class="bn_up">file..<input type="file" name="" value=""></span>
                         </div>
-                        <a href="#" class="btn_cir ico_add"><span>Add another row </span></a>
+                        <a href="#" class="btn_cir ico_add"><span>Add file</span></a>
                       </li>
                     </ul>
                     <!-- //파일 리스트 -->
@@ -339,6 +338,116 @@
 
 
         <div class="right">
+          <!-- ebooking summary -->
+          <div class="summary_wrap">
+              <h2>Summary</h2>
+              <div class="sum_inner01">
+                  <h3>Person in charge</h3>
+                  <div class="box_person">
+                      <ul class='sum_list'>
+                          <li>
+                              <dl>
+                                  <dt>Name of PIC at CJ Logistics</dt>
+                                  <dd>김여경</dd>
+                              </dl>
+                          </li>
+                          <li>
+                              <dl>
+                                  <dt>E-mail</dt>
+                                  <dd>email@cj.net</dd>
+                              </dl>
+                          </li>
+                      </ul>
+                      <ul class='sum_list'>
+                          <li>
+                              <dl>
+                                  <dt>Name of PIC at your company</dt>
+                                  <dd>Loso Kim</dd>
+                              </dl>
+                          </li>
+                          <li>
+                              <dl>
+                                  <dt>Phone</dt>
+                                  <dd>012-345-6789</dd>
+                              </dl>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="sum_inner02">
+                  <h3>Shipping information</h3>
+                  <div class="box_person">
+                      <ul class='sum_list'>
+                          <li>
+                              <dl>
+                                  <dt>Freight Method</dt>
+                                  <dd>Ocean Freight</dd>
+                              </dl>
+                          </li>
+                          <li>
+                              <dl>
+                                  <dt>Release Date</dt>
+                                  <dd>2020-04-04</dd>
+                              </dl>
+                          </li>
+                          <li>
+                              <dl>
+                                  <dt>Origin</dt>
+                                  <dd>
+                                      <p>INC | Incheon National Airport, South Korea</p>
+                                      <p>ETA : 2020-04-05</p>
+                                  </dd>
+                              </dl>
+                          </li>
+                          <li>
+                              <dl>
+                                  <dt>Destination</dt>
+                                  <dd>
+                                      <p>USLAX | Los Angeles CA, USA</p>
+                                      <p>ETD : 2020-04-05</p>
+                                  </dd>
+                              </dl>
+                          </li>
+                          <li>
+                              <dl>
+                                  <dt>Item</dt>
+                                  <dd>Skin care</dd>
+                              </dl>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="sum_inner03">
+                  <h3>Cargo Detail</h3>
+                  <div class="box_person tbl_cargo">
+                      <table>
+                          <thead>
+                              <tr>
+                                  <th>Size(CBM)</th>
+                                  <th>Weight</th>
+                                  <th>Item Qty</th>
+                                  <th>Remark</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>77</td>
+                                  <td>550</td>
+                                  <td>35</td>
+                                  <td></td>
+                              </tr>
+                              <tr>
+                                  <td>25</td>
+                                  <td>30</td>
+                                  <td>55</td>
+                                  <td>small box</td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+          <!-- //ebooking summary -->
         </div>
       </div>
 
