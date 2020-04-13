@@ -8,6 +8,7 @@
 .ip_txt::placeholder {font-size:14px; color:#9298a2; font-weight:400;}
 .ip_txt:-ms-input-placeholder {font-size:14px; color:#9298a2; font-weight:400;}
 .ip_txt:disabled {background-color:#e6ebf1;}
+.ip_txt:focus, textarea:focus, .select:focus {border-color:#0080c6; outline:none;}
 .ip_search {width:100%; display:inline-block; position:relative;}
 .ip_search .ip_txt {width:100%;}
 .ip_search .btn_ip_search {font-size:0; position:absolute; top:0; right:0; width:42px; height:42px; background:url(../images/ip_search.png) no-repeat center center;}
@@ -80,8 +81,8 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 
 .tit_wrap+.search_wrap {margin-top:20px;}
 .search_wrap {font-size:0;}
-.search_form>li {margin-right:15px; padding:21px 0 0 0; height:63px; display:inline-block; position:relative; box-sizing:border-box;}
-.search_form>li .lb_txt {display:block; margin:0; position:absolute; top:0; left:0;}
+.search_form>li {margin-right:15px; padding:0; display:inline-block; position:relative; box-sizing:border-box;}
+.search_form>li .lb_txt {display:block; height:21px; margin:0; }
 .search_form>li .ip_txt+.ip_txt, .search_form>li .select+.ip_txt, .search_form>li .select+.ip_from_to {margin-left:10px;}
 .search_form>li.btns .btn.lg+.btn.lg {margin-left:15px;}
 
@@ -233,6 +234,9 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 .box_select {position: relative;display: inline-block;width: 60px;background-color: #ecf0f5;}
 .box_select .opt_select {position: relative;width: 60px;height: 30px;padding-left:10px;font-size: 14px;letter-spacing: 0.37px;color:#727679;border:0;border-radius: 5px;background-color: #ecf0f5; background: url(../images/ip_select.svg) right 10px center no-repeat; -webkit-appearance:none;-moz-appearance: none;appearance: none;}
 .comm_paging{text-align: right;padding: 10px 0;}
+
+/* grid */
+.search_wrap+.grid_wrap {margin-top:20px;}
 
 /* main */
 .main_wrap {padding-left:120px; width:1920px; box-sizing:border-box;}
@@ -388,11 +392,17 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 .mCSB_inside>.mCSB_container {margin-right:0px;}
 
 /* popup */
-.layer_pop_wrap {position:fixed; top:0; right:0; bottom:0; width:655px; background-color:#fff; z-index:1000; box-shadow:0 0 15px 0 rgba(0, 0, 0, 0.1);}
+.layer_pop_wrap {position:fixed; width:655px; background-color:#fff; z-index:1000; box-shadow:0 0 15px 0 rgba(0, 0, 0, 0.1);}
 .layer_pop_wrap .btn_closed {display:inline-block; width:30px; height:30px; font-size:0; background:url(../images/ico_closed.svg) no-repeat; position:absolute; top:25px; right:26px; }
 .layer_pop_wrap .pop_header {padding:60px 30px 0;  height:101px; box-sizing:border-box;}
 .layer_pop_wrap .pop_header .tit {font-size:25px; color:#313c49; font-weight:500;}
 .layer_pop_wrap .pop_con {padding:0 30px 50px; position:absolute; top:101px; bottom:0; left:0; width:100%; box-sizing:border-box; overflow:auto;}
+
+.layer_pop_wrap.type1 {width:1025px;}
+.layer_pop_wrap.type1 .pop_header {padding:35px 30px 0;  height:60px; box-sizing:border-box;}
+.layer_pop_wrap.type1 .pop_header .tit {font-size:20px;}
+.layer_pop_wrap.type1 .pop_con {position:static; padding:15px 30px 30px;}
+
 
 /* submain */
 .sub_main_wrap {padding-left:120px; width:1920px; box-sizing:border-box;}
@@ -477,6 +487,8 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 {border-color:#0080c6; z-index:3;}
 .track_step.step6 .step_list>li:nth-child(4):before {z-index:0;}
 
+.pop_tracking {top:0; right:0; bottom:0; width:655px; }
+
 /* view_list */
 .book_btns {padding-bottom:13px; margin-top:-10px; text-align:right;}
 .book_btns .btn_view_map {padding:0 0 0 10px; display:inline-block; font-size:11px; color:#6b6e72; background:url(../images/ico_location.svg) no-repeat -2px center; background-size:11px auto;}
@@ -550,7 +562,9 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 
 
 /* ebook */
-.ebook_wrap>.left {width:1025px;}
+.ebook_wrap:before {content:""; clear:both; display:block;}
+.ebook_wrap>.left {width:1025px; float:left;}
+.ebook_wrap>.right {width:690px; float:right;}
 .load_prev {margin:35px 0; font-size:16px; color:#45474e;}
 .load_prev .btn_load {margin-left:18px;}
 
@@ -576,3 +590,21 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 .cargo_form, .cargo_form .ip_txt {font-weight:500;}
 .cargo_form .ip_group {margin-bottom:10px;}
 .cargo_form>li .btn_cir.ico_del {position:absolute; left:0; top:13px;}
+
+.summary_wrap {width:690px;height:100%;padding:45px 35px;border: 1px solid #e6ebf1;box-sizing: border-box;background-color: #fff;}
+.summary_wrap h2{font-size: 25px;font-weight: 500;letter-spacing: 0.57px;color: #000;margin-bottom:21px;}
+.summary_wrap h3{font-size: 12px;font-weight: 500;letter-spacing: 0.57px;color: #4c4c4c;line-height: 1.75;}
+
+.summary_wrap .box_person {margin:7px 0 30px;padding:0 15px;box-sizing: border-box;background-color: #f6f8fa;}
+.summary_wrap .box_person ul + ul {border-top:1px solid #e6ebf1;}
+.summary_wrap .box_person .sum_list {padding:7.5px 0;}
+.summary_wrap .box_person .sum_list li {padding:7.5px 0;}
+.summary_wrap .box_person .sum_list li dt {display:inline-block;font-size: 12px;line-height: 1.75;width:185px;color:#7d7f87;margin-right:11px;vertical-align: top;}
+.summary_wrap .box_person .sum_list li dd {display:inline-block;font-size: 13px;line-height: 1.75;width:385px;color:#333;font-weight: 500;vertical-align: middle;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+.summary_wrap .box_person .sum_list li dd p{line-height: 2;word-break: keep-all;white-space: normal;}
+
+.summary_wrap .box_person.tbl_cargo {padding:15px;box-sizing: border-box;}
+.summary_wrap .box_person table {width:100%;}
+.summary_wrap .box_person table th {font-size: 12px;font-weight: 400;line-height: 1.5;color: #7d7f87;text-align: left;text-indent: 10px;padding-bottom:6px;}
+.summary_wrap .box_person table td {width: 25%;height: 35px;font-size: 12px;text-indent: 10px;line-height: 1.5;color:#333;font-weight: 500;background: #fff;}
+.summary_wrap .box_person table tbody tr + tr {border-top:5px solid #f6f8fa;}
