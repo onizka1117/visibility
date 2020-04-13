@@ -158,7 +158,7 @@ h1,h2,h3,h4,h5,h6,p {padding:0; margin:0;}
 ul,ol,li,dl,dt,dd {margin:0; padding:0; list-style:none;}
 iframe {display:block; }
 img {border:0;}
-a {text-decoration:none;}
+a,i,em {text-decoration:none;font-style:normal;}
 table {border-collapse:collapse; border-spacing:0; }
 
 /* margin */

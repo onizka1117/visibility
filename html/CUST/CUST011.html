@@ -7,6 +7,7 @@
     <link href="../../script/lib/jquery.bxslider.css" rel="stylesheet">
     <link href="../../css/common.css" rel="stylesheet">
     <link href="../../css/content.css" rel="stylesheet">
+    <link href="../../css/yj.css" rel="stylesheet">
     <script src="../../script/lib/jquery-3.4.1.min.js"></script>
     <script src="../../script/lib/jquery-ui.js"></script>
     <script src="../../script/ui_common.js"></script>
@@ -38,6 +39,14 @@
       $(".tog_box .btn_toggle").on("click", function(e){
         $(this).parents(".tog_box").toggleClass("open");
         e.preventDefault();
+      });
+      // 자동완성
+      $(".inp_port").on("change keyup paste input", function(){
+          if($(this).val() == ''){
+              $(this).siblings(".box_auto").removeClass("open");
+          }else{
+              $(this).siblings(".box_auto").addClass("open");
+          }
       });
 
       //cargo
@@ -107,8 +116,74 @@
             <ul class="list_form">
               <li>
                 <label for="" class="lb_txt req">Release Date</label>
-                <span class="ip_date" style="width:312px;"><input type="text" id="datepicker" class="ip_txt bold"></span>
+                <span class="ip_date" style="width:312px;"><input type="text" class="ip_txt bold"></span>
                 <span class="ip_check type1 ml30"><input type="checkbox" name="" value="" id="check01"><label for="check01">Fast Track (Urgent)</label></span>
+              </li>
+            </ul>
+            <ul class="list_form">
+              <li class='port'>
+                <label for="" class="lb_txt req">Origin</label>
+                <div class="box_port">
+                    <input type="text" name="" value="" placeholder="Loading Port" class="ip_txt inp_port bold">
+                    <span class="ip_date"><input type="text" placeholder="YYYY-MM-DD" class="ip_txt inp_date bold"><i>ETD</i></span>
+                    <div class="box_auto">
+                        <ul>
+                            <li>
+                                <a href="javascript:">
+                                    <img src="../../images/ico_airplane_g.svg" alt="Air Freight">
+                                    <span><i>IC</i>N</span>
+                                    <em>Incheon national Airport, South Korea</em>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:">
+                                    <img src="../../images/ico_ship_g.svg" alt="Air Freight">
+                                    <span>KR<i>IC</i>N</span>
+                                    <em>Incheon Port, South Korea</em>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:">
+                                    <img src="../../images/ico_ship_g.svg" alt="Air Freight">
+                                    <span>USLAP</span>
+                                    <em>N<i>IC</i>OIOOKI, USA</em>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+              </li>
+              <li class='port'>
+                <label for="" class="lb_txt req">Destination</label>
+                <div class="box_port">
+                    <input type="text" name="" value="" placeholder="Loading Port" class="ip_txt inp_port bold">
+                    <span class="ip_date"><input type="text" placeholder="YYYY-MM-DD" class="ip_txt inp_date bold"><i>ETA</i></span>
+                    <div class="box_auto">
+                        <ul>
+                            <li>
+                                <a href="javascript:">
+                                    <img src="../../images/ico_airplane_g.svg" alt="Air Freight">
+                                    <span><i>IC</i>N</span>
+                                    <em>Incheon national Airport, South Korea</em>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:">
+                                    <img src="../../images/ico_ship_g.svg" alt="Air Freight">
+                                    <span>KR<i>IC</i>N</span>
+                                    <em>Incheon Port, South Korea</em>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:">
+                                    <img src="../../images/ico_ship_g.svg" alt="Air Freight">
+                                    <span>USLAP</span>
+                                    <em>N<i>IC</i>OIOOKI, USA</em>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
               </li>
             </ul>
             <ul class="list_form">
