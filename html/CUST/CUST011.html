@@ -7,7 +7,6 @@
     <link href="../../script/lib/jquery.bxslider.css" rel="stylesheet">
     <link href="../../css/common.css" rel="stylesheet">
     <link href="../../css/content.css" rel="stylesheet">
-    <link href="../../css/yj.css" rel="stylesheet">
     <script src="../../script/lib/jquery-3.4.1.min.js"></script>
     <script src="../../script/lib/jquery-ui.js"></script>
     <script src="../../script/ui_common.js"></script>
@@ -41,12 +40,22 @@
         e.preventDefault();
       });
       // 자동완성
-      $(".inp_port").on("change keyup paste input", function(){
+      $(".inp_port").on("change keyup paste", function(){
           if($(this).val() == ''){
               $(this).siblings(".box_auto").removeClass("open");
           }else{
               $(this).siblings(".box_auto").addClass("open");
           }
+      });
+
+      $(".inp_port").on("focusin", function() {
+          $(this).siblings(".box_auto").addClass("open");
+      });
+
+      $(".inp_port").on("focusout", function() {
+        if($(this).val() == ''){
+            $(this).siblings(".box_auto").removeClass("open");
+        }
       });
 
       //cargo
@@ -120,9 +129,12 @@
               </li>
             </ul>
             <ul class="list_form">
-              <li class='port'>
+              <li class="port">
                 <label for="" class="lb_txt req">Origin</label>
                 <div class="box_port">
+                  <div class="result" style="display:none;">
+                    <strong>USLAX</strong><span>Incheon national Airport, South Korea</span>
+                  </div>
                     <input type="text" name="" value="" placeholder="Loading Port" class="ip_txt inp_port bold">
                     <span class="ip_date"><input type="text" placeholder="YYYY-MM-DD" class="ip_txt inp_date bold"><i>ETD</i></span>
                     <div class="box_auto">
@@ -152,10 +164,13 @@
                     </div>
                 </div>
               </li>
-              <li class='port'>
+              <li class="port">
                 <label for="" class="lb_txt req">Destination</label>
                 <div class="box_port">
-                    <input type="text" name="" value="" placeholder="Loading Port" class="ip_txt inp_port bold">
+                    <div class="result">
+                      <strong>USLAX</strong><span>Incheon national Airport, South Korea</span>
+                    </div>
+                    <input type="text" name="" value="" placeholder="Loading Port" class="ip_txt inp_port bold" >
                     <span class="ip_date"><input type="text" placeholder="YYYY-MM-DD" class="ip_txt inp_date bold"><i>ETA</i></span>
                     <div class="box_auto">
                         <ul>
