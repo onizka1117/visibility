@@ -40,7 +40,7 @@
         e.preventDefault();
       });
       // 자동완성
-      $(".inp_port").on("change keyup paste", function(){
+      $(".inp_port").on("change keyup paste focusin", function(){
           if($(this).val() == ''){
               $(this).siblings(".box_auto").removeClass("open");
           }else{
@@ -52,10 +52,10 @@
           $(this).siblings(".box_auto").addClass("open");
       });
 
-      $(".inp_port").on("focusout", function() {
-        if($(this).val() == ''){
-            $(this).siblings(".box_auto").removeClass("open");
-        }
+      $(".box_auto li").on("click", function(e) {
+        var $port = $(this).parents(".box_port");
+        $port.find(".result").show();
+        $port.find(".box_auto").removeClass("open");
       });
 
       //cargo
