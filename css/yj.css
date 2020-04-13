@@ -34,5 +34,6 @@
 .box_auto li a img {padding-left: 15px;vertical-align: middle;}
 .box_auto li a span {display: inline-block;font-size: 14px;line-height:40px;color: #45474e;font-weight: 500;margin-left: 7px;}
 .box_auto li a i{display: inline-block;color: #ec8922;}
-.box_auto li a em {position: absolute;left: 110px;top: 50%;margin-top: -8.5px;font-size: 13px;padding:2px 0 2px 5px;color: #8b919c;max-width: 255px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.box_auto li a em {position: absolute;left: 110px;top: 50%;margin-top: -8.5px;font-size: 13px;padding:2px 0 2px 5px;color: #8b919c;width: 255px;overflow: hidden;white-space: nowrap;}
 .box_auto li a em:before {content:'';position: absolute;left:0;top:0;width:1px;height:100%;background: #8b919c;}
+.box_auto li a em:after {content: '';position: absolute;right: 0;top: 0;width: 30px;height: 100%;background: linear-gradient(to right, transparent 5%, #fff 100%);}
