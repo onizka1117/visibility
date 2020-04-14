@@ -1,3 +1,4 @@
+/*
 body.dark {background-color:#181d23; color:#fff;}
 body.dark select, body.dark input, body.dark textarea {color:#fff;}
 body.dark option {background-color:#000;}
@@ -22,7 +23,7 @@ body.dark .mdi_wrapper.ui-tabs .ui-tabs-nav li.ui-state-active .ui-tabs-anchor:a
 body.dark .mdi_wrapper.ui-tabs .ui-tabs-nav li .ui-tabs-anchor {color: #e6ebf1;}
 body.dark .mdi_wrapper.ui-tabs .ui-tabs-nav li .ui-tabs-anchor:after {background: linear-gradient(90deg, rgba(41,50,61,0) 0%, rgba(41,50,61,0) 53%, rgba(41,50,61,0) 100%);}
 body.dark .mdi_wrapper.ui-tabs .ui-tabs-nav li .ui-icon-close{background-position: -30px -270px;}
-
+*/
 body.dark .tit_wrap h2 {color:#fff;}
 body.dark .box {color:#fff;background-color:#333c48;}
 body.dark .box.bg_type1 {background-color: #13161a;}
