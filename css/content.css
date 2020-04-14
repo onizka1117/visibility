@@ -577,7 +577,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 
 
 /* ebook */
-.ebook_wrap:before {content:""; clear:both; display:block;}
+.ebook_wrap:after {content:""; clear:both; display:block;}
 .ebook_wrap>.left {width:1025px; float:left;}
 .ebook_wrap>.right {width:690px; float:right;}
 .load_prev {margin:35px 0; font-size:16px; color:#45474e;}
