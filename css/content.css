@@ -386,11 +386,10 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 .tit_wrap+.scr_box {margin-top:10px;}
 
 .scr_box .mCSB_inside>.mCSB_container {margin-right:10px;}
-.scr_box .mCSB_scrollTools {right:0px; width:3px;}
-.scr_box .mCSB_scrollTools .mCSB_draggerRail {opacity:1 !important; width:3px; background-color: rgba(0, 0, 0, 0.1) !important;}
-.scr_box .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {opacity:1 !important; background-color: rgba(0, 0, 0, 0.3) !important;}
 .mCSB_scrollTools {width:5px;}
+.mCSB_scrollTools .mCSB_draggerRail {background-color:transparent;}
 .mCSB_inside>.mCSB_container {margin-right:0px;}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {border-radius:4px; background-color:rgba(71, 79, 89, 0.15) !important;}
 
 /* popup */
 .layer_pop_wrap {position:fixed; width:655px; background-color:#fff; z-index:1000; box-shadow:0 0 15px 0 rgba(0, 0, 0, 0.1);}
