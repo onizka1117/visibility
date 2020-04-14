@@ -7,7 +7,7 @@ $(function(){
     buttonImage: "../../images/ip_date.png",
     buttonImageOnly: true,
     buttonText: "Select date",
-    dateFormat: "yy/mm/dd",
+    dateFormat: "yy-mm-dd",
     onSelect : function(){
 
       if($(this).siblings("i").length>0) {
