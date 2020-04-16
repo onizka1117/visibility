@@ -51,6 +51,7 @@ body.dark .st_tile2.st_schedule:before {background-image:url("../images/dark/ico
 body.dark .st_tile2.st_cost:before {background-image:url("../images/dark/ico_static_cost.svg");}
 body.dark .st_tile.st_report:before {background-image:url("../images/dark/ico_static_report.svg");}
 
+body.dark .calendar_wrap .ui-datepicker {background-color:transparent;}
 body.dark .calendar_wrap .ui-datepicker-calendar tbody td a {color:#fff;}
 body.dark .calendar_wrap .ui-datepicker-calendar .ui-state-active {background-color:#242b34;}
 
