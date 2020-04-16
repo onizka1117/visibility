@@ -14,12 +14,18 @@
     <script type="text/javascript">
     $(function(){
 
+      //  정렬
       $(".sort_list").on("click", function(){
         $(this).toggleClass("desc");
       });
 
+      // 타일선택
+      $(".list_sub>li").on("click", function(e) {
+        $(this).siblings(".on").removeClass("on").end().addClass("on");
+      });
+
       // 타일 로드 (개발시 삭제)
-      $(".list_sub li").eq(1).load("../tile/sub_live.html");
+      $(".list_sub li:first").load("../tile/sub_live.html");
       $(".sub_main_box").load("CUST004.html");
     });
     </script>
@@ -57,21 +63,7 @@
         <ul class="list_sub">
           <!-- 반복 -->
           <li>
-            <div class="box line">
-              <div class="sub_box">
-                <div class="tit">
-                  <strong>부킹 정시성</strong>
-                  <span>총 157건</span>
-                  <a href="#" class="btn_bell">알림</a>
-                </div>
-                <div class="con">
-                  <div class="result">
-                    <strong>96</strong><span>%</span>
-                  </div>
-                  <div class="chart_area">차트영역</div>
-                </div>
-              </div>
-            </div>
+            <!-- ../tile/sub_live.html -->
           </li>
           <!-- //반복 -->
           <li class="on">
@@ -80,6 +72,7 @@
                 <div class="tit">
                   <strong>부킹 정시성</strong>
                   <span>총 157건</span>
+                  <a href="#" class="btn_setting">설정</a>
                   <a href="#" class="btn_bell">알림</a>
                 </div>
                 <div class="con">
@@ -97,6 +90,25 @@
                 <div class="tit">
                   <strong>부킹 정시성</strong>
                   <span>총 157건</span>
+                  <a href="#" class="btn_setting">설정</a>
+                  <a href="#" class="btn_bell">알림</a>
+                </div>
+                <div class="con">
+                  <div class="result">
+                    <strong>96</strong><span>%</span>
+                  </div>
+                  <div class="chart_area">차트영역</div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="box line warning">
+              <div class="sub_box">
+                <div class="tit">
+                  <strong>부킹 정시성</strong>
+                  <span>총 157건</span>
+                  <a href="#" class="btn_setting">설정</a>
                   <a href="#" class="btn_bell">알림</a>
                 </div>
                 <div class="con">
@@ -114,6 +126,43 @@
                 <div class="tit">
                   <strong>부킹 정시성</strong>
                   <span>총 157건</span>
+                  <a href="#" class="btn_setting">설정</a>
+                  <a href="#" class="btn_bell">알림</a>
+                </div>
+                <div class="con">
+                  <div class="result">
+                    <strong>96</strong><span>%</span>
+                  </div>
+                  <div class="chart_area">차트영역</div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="box line warning">
+              <div class="sub_box">
+                <div class="tit">
+                  <strong>부킹 정시성</strong>
+                  <span>총 157건</span>
+                  <a href="#" class="btn_setting">설정</a>
+                  <a href="#" class="btn_bell">알림</a>
+                </div>
+                <div class="con">
+                  <div class="result">
+                    <strong>96</strong><span>%</span>
+                  </div>
+                  <div class="chart_area">차트영역</div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="box line warning">
+              <div class="sub_box">
+                <div class="tit">
+                  <strong>부킹 정시성</strong>
+                  <span>총 157건</span>
+                  <a href="#" class="btn_setting">설정</a>
                   <a href="#" class="btn_bell">알림</a>
                 </div>
                 <div class="con">
@@ -131,6 +180,7 @@
                 <div class="tit">
                   <strong>부킹 정시성</strong>
                   <span>총 157건</span>
+                  <a href="#" class="btn_setting">설정</a>
                   <a href="#" class="btn_bell">알림</a>
                 </div>
                 <div class="con">
@@ -148,51 +198,13 @@
                 <div class="tit">
                   <strong>부킹 정시성</strong>
                   <span>총 157건</span>
+                  <a href="#" class="btn_setting">설정</a>
                   <a href="#" class="btn_bell">알림</a>
                 </div>
                 <div class="con">
-                  <div class="chart_area">차트영역</div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="box line">
-              <div class="sub_box">
-                <div class="tit">
-                  <strong>부킹 정시성</strong>
-                  <span>총 157건</span>
-                  <a href="#" class="btn_bell">알림</a>
-                </div>
-                <div class="con">
-                  <div class="chart_area">차트영역</div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="box line">
-              <div class="sub_box">
-                <div class="tit">
-                  <strong>부킹 정시성</strong>
-                  <span>총 157건</span>
-                  <a href="#" class="btn_bell">알림</a>
-                </div>
-                <div class="con">
-                  <div class="chart_area">차트영역</div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="box line">
-              <div class="sub_box">
-                <div class="tit">
-                  <strong>부킹 정시성</strong>
-                  <span>총 157건</span>
-                  <a href="#" class="btn_bell">알림</a>
-                </div>
-                <div class="con">
+                  <div class="result">
+                    <strong>96</strong><span>%</span>
+                  </div>
                   <div class="chart_area">차트영역</div>
                 </div>
               </div>

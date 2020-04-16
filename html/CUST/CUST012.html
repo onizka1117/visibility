@@ -14,13 +14,15 @@
     <script type="text/javascript">
     $(function(){
       // 정렬
-      $(".sort_list").on("click", function(){
+      $(".sort_list").on("click", function(e){
         $(this).toggleClass("desc");
+        e.preventDefault();
       });
 
       // 아코디언
-      $(".view_item .btn_toggle").on("click", function(){
+      $(".view_item .btn_toggle").on("click", function(e){
         $(this).parent().toggleClass("open");
+        e.preventDefault();
       });
 
       $(".cont_tab a").on("click", function() {
@@ -38,6 +40,7 @@
       // 팝업 닫기
       $("#popDetail .btn_closed").on("click", function(e){
         $("#popDetail").hide();
+        e.preventDefault();
       });
 
       //viewmap, download 선택
