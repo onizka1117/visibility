@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/content.css" rel="stylesheet">
+    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery-ui.js"></script>
+    <script src="../../script/ui_common.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        // 선택
+        $(".type_alarm input:checkbox").on("change", function(e){
+          var $item = $(this);
+          if($item.is(":checked")){
+            if($item.val() == "under" || $item.val() == "over") {
+              $("#check02").prop("checked", false);
+            }else if($item.val() == "between") {
+              $("#check01").prop("checked", false);
+              $("#check03").prop("checked", false);
+            }
+          }
+          alaramCheck();
+        });
+
+        function alaramCheck() {
+          if($("#check01").is(":checked") && !$("#check03").is(":checked")) {
+            $(".alarm_input .ip_txt").eq(0).prop("disabled", false).parent().removeClass("disabled");
+            $(".alarm_input .ip_txt").eq(1).prop("disabled", true).val("").parent().addClass("disabled");
+          }else if($("#check01").is(":checked") && $("#check03").is(":checked")){
+            $(".alarm_input .ip_txt").eq(0).prop("disabled", false).parent().removeClass("disabled");
+            $(".alarm_input .ip_txt").eq(1).prop("disabled", false).parent().removeClass("disabled");
+          }else if(!$("#check01").is(":checked") && $("#check03").is(":checked")){
+            $(".alarm_input .ip_txt").eq(0).prop("disabled", true).val("").parent().addClass("disabled");
+            $(".alarm_input .ip_txt").eq(1).prop("disabled", false).parent().removeClass("disabled");
+          }else if($("#check02").is(":checked")){
+            $(".alarm_input .ip_txt").eq(0).prop("disabled", false).parent().removeClass("disabled");
+            $(".alarm_input .ip_txt").eq(1).prop("disabled", false).parent().removeClass("disabled");
+          }else {
+            $(".alarm_input .ip_txt").eq(0).prop("disabled", true).val("").parent().addClass("disabled");
+            $(".alarm_input .ip_txt").eq(1).prop("disabled", true).val("").parent().addClass("disabled");
+          }
+        }alaramCheck();
+
+      });
+    </script>
+  </head>
+  <body>
+
+
+    <!-- layer -->
+    <div class="layer_pop_wrap type1" style="width:560px; ">
+      <a href="#" class="btn_closed">닫기</a>
+      <div class="pop_header">
+        <div class="tit">
+          Range Setting the Alarm
+        </div>
+      </div>
+      <div class="pop_con">
+
+        <div class="alarm_wrap">
+          <div class="inner">
+            <ul class="check_group type_alarm">
+              <li class="check_item under">
+                <input type="checkbox" name="check1" value="under" id="check01"><label for="check01">Under</label>
+              </li>
+              <li class="check_item between">
+                <input type="checkbox" name="check1" value="between" id="check02"><label for="check02">Between</label>
+              </li>
+              <li class="check_item over">
+                <input type="checkbox" name="check1" value="over" id="check03"><label for="check03">Over</label>
+              </li>
+            </ul>
+            <div class="alarm_input">
+              <ul class="ip_group">
+                <li><span class="ip_fixed pr27"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">%</span></span></li>
+                <li class="w40 tac">~</li>
+                <li><span class="ip_fixed pr27"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">%</span></span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="alarm_txt">
+            Let me know when the indicator value is
+            <span class="bold point">between 30% ~ 68%.</span>
+            <!--
+            <span class="bold point">under 30% or over 68%.</span>
+            <span class="bold point">under 30%.</span>
+            <span class="bold point">over 68%.</span>
+            -->
+          </div>
+        </div>
+
+        <div class="btn_pop_bottom">
+          <div class="btn_list">
+            <a href="#" class="btn gray sm">Reset</a>
+            <a href="#" class="btn sm">Set</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- //layer -->
+
+
+  </body>
+</html>

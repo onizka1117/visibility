@@ -165,7 +165,11 @@ table {border-collapse:collapse; border-spacing:0; }
 .mt20 {margin-top:20px;}
 .ml30 {margin-left:30px;}
 
+/* font */
 .bold {font-weight:500;}
+
+/* color */
+.point {color:#238cd0;}
 .sub_txt {color:#8b919c;}
 
 .tar {text-align:right;}
