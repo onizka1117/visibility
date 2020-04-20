@@ -48,7 +48,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 .radio_group.type_box>li {margin-right:10px;}
 .radio_group.type_box>li label {width:125px; height:45px; line-height:43px; font-size:15px; color:#8b919c; text-align:center;border:1px solid #8b919c; }
 .radio_group.type_freight {}
-.radio_group.type_freight>li {}
+.radio_group.type_freight>li+li {margin-left:10px;}
 .radio_group.type_freight>li label {padding:51px 0 0 0; width:150px; height:80px; line-height:1; font-size:14px; text-align:center; border:solid 1px #dde2ea; background-color:#fff; background-repeat:no-repeat; background-position:center 13px; background-size:28px;}
 .radio_group.type_freight>li.air label {background-image:url(../images/ico_airplane_g.svg);}
 .radio_group.type_freight>li.ocean label {background-image:url(../images/ico_ship_g.svg);}
