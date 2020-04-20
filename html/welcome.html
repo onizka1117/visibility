@@ -9,12 +9,12 @@
     <script src="../script/lib/jquery-3.4.1.min.js"></script>
     <script src="../script/lib/jquery-ui.js"></script>
     <style type="text/css">
-    .welcome_wrap {position:relative; width:1031px; height:599px; background:#e6ebf1; box-sizing:border-box;}
+    .welcome_wrap {position:relative; width:1030px; height:600px; background:#ffffff; box-sizing:border-box;}
     .welcome_wrap>.tit {padding:45px 40px 0; font-size:30px; font-weight:500; line-height:1.2;}
     .welcome_wrap .form_wrap {position:absolute; top:135px; right:45px; padding:0; width:395px;}
     .welcome_wrap .tbl_form td {padding:17px 0 0;}
     .welcome_wrap .lb_txt {font-size:14px; height:24px; margin:0;}
-    .welcome_wrap .select {height:45px; border-color:#8b919c; background-color:transparent;}
+    .welcome_wrap .select {height:45px; border-color:#dde2ea; background-color:transparent;}
     .welcome_wrap .btn_area {margin-top:30px; text-align:right;}
     .welcome_wrap .btn_area .btn_set {width:100px; height:45px; line-height:45px; font-size:15px; background-color:#3c5067;}
 
@@ -23,12 +23,13 @@
     /* dark */
     body.dark .welcome_wrap {background-color:#313c49; box-shadow:2px 2px 10px 0 rgba(0, 0, 0, 0.15);}
     body.dark .welcome_wrap>.tit {}
-    body.dark .welcome_wrap .lb_txt {color:#fff;}
+    body.dark .welcome_wrap .lb_txt {color:#cad0d7;}
+    body.dark .welcome_wrap .select {border-color:#8b919c;}
     </style>
 
 
   </head>
-  <body class="dark">
+  <body>
 
     <div class="welcome_wrap">
       <div class="tit">
@@ -65,7 +66,7 @@
             <tr>
               <td>
                 <label for="" class="lb_txt">Date Format</label>
-                <ul class="radio_group">
+                <ul class="radio_group type_box">
                   <li class="radio_item">
                     <input type="radio" name="radio1" value="" id="radio01" checked="true"><label for="radio01">YYYY-MM-DD</label>
                   </li>
@@ -81,7 +82,7 @@
             <tr>
               <td>
                 <label for="" class="lb_txt">Decimal Maker</label>
-                <ul class="radio_group">
+                <ul class="radio_group type_box">
                   <li class="radio_item">
                     <input type="radio" name="radio2" value="" id="radio04" checked="true"><label for="radio04">1,000,000.99</label>
                   </li>
