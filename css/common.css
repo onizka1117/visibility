@@ -26,6 +26,67 @@
 }
 
 
+@font-face {
+	font-family: 'CJONLYONENEWTitle';
+	font-style: normal;
+	font-weight: 400;
+	src: url(font/cj/CJONLYONENEWtitleMedium.eot);
+	src: url(font/cj/CJONLYONENEWtitleMedium.eot?#iefix) format('embedded-opentype'),
+		url(font/cj/CJONLYONENEWtitleMedium.woff) format('woff'),
+		url(font/cj/CJONLYONENEWtitleMedium.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'CJONLYONENEWTitle';
+	font-style: normal;
+	font-weight: 500;
+	src: url(font/cj/CJONLYONENEWtitleBold.eot);
+	src: url(font/cj/CJONLYONENEWtitleBold.eot?#iefix) format('embedded-opentype'),
+		url(font/cj/CJONLYONENEWtitleBold.woff) format('woff'),
+		url(font/cj/CJONLYONENEWtitleBold.ttf) format('truetype');
+}
+
+
+@font-face {
+	font-family: 'CJONLYONENEWbodyOTF';
+	font-style: normal;
+  font-weight:300;
+  src: url(font/cj/CJONLYONENEWbodyOTFLight.eot);
+	src: url(font/cj/CJONLYONENEWbodyOTFLight.eot?#iefix) format('embedded-opentype'),
+		url(font/cj/CJONLYONENEWbodyOTFLight.woff) format('woff'),
+		url(font/cj/CJONLYONENEWbodyOTFLight.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'CJONLYONENEWbodyOTF';
+	font-style: normal;
+  font-weight:400;
+  src: url(font/cj/CJONLYONENEWbodyOTFRegular.eot);
+	src: url(font/cj/CJONLYONENEWbodyOTFRegular.eot?#iefix) format('embedded-opentype'),
+		url(font/cj/CJONLYONENEWbodyOTFRegular.woff) format('woff'),
+		url(font/cj/CJONLYONENEWbodyOTFRegular.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'CJONLYONENEWTitleOTF';
+	font-style: normal;
+  font-weight: 400;
+  src: url(font/cj/CJONLYONENEWtitleOTFMedium.eot);
+	src: url(font/cj/CJONLYONENEWtitleOTFMedium.eot?#iefix) format('embedded-opentype'),
+		url(font/cj/CJONLYONENEWtitleOTFMedium.woff) format('woff'),
+		url(font/cj/CJONLYONENEWtitleOTFMedium.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'CJONLYONENEWTitleOTF';
+	font-style: normal;
+  font-weight: 500;
+  src: url(font/cj/CJONLYONENEWtitleOTFBold.eot);
+	src: url(font/cj/CJONLYONENEWtitleOTFBold.eot?#iefix) format('embedded-opentype'),
+		url(font/cj/CJONLYONENEWtitleOTFBold.woff) format('woff'),
+		url(font/cj/CJONLYONENEWtitleOTFBold.ttf) format('truetype');
+}
+
+
 /* Gotham */
 
 @font-face {

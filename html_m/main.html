@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+    <link href="../css/style_m.css" rel="stylesheet">
+    <link href="../script/lib/jquery.bxslider.css" rel="stylesheet">
+    <script src="../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../script/lib/jquery.bxslider.js"></script>
+    <script type="text/javascript">
+    $(function(){
+      // 타일 로드 (개발시 삭제)
+      $(".live_slider li").each(function(i){
+        $(this).load("tile/live.html", function() {
+          if(i==3) {
+            // live 슬라이드
+            $("#liveSlider").bxSlider({
+              slideWidth: 900,
+              minSlides: 1,
+              maxSlides: 2,
+              moveSlides: 1,
+              slideMargin:20
+            });
+          }
+        });
+      });
+
+
+
+
+
+
+    });
+    </script>
+    <style type="text/css">
+      div.bxslider {
+          margin-left: 25%;
+          margin-right: 25%;
+          color:red;
+      }
+    </style>
+  </head>
+  <body>
+
+
+    <div class="main_wrap">
+
+      <div class="welcome">
+        <span class="sub_txt">WELCOME</span>
+        <span class="name">AMORE PACIFIC</span>
+      </div>
+
+      <div class="live_tile_list">
+        <ul class="live_slider" id="liveSlider">
+          <!-- 반복 -->
+          <li><!-- ../tile/live.html 파일 영역 --></li>
+          <!-- //반복 -->
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+
+
+      <!-- Static Tiles -->
+      <div class="static_tile_list">
+        <ul class="main_cols_2">
+          <li>
+            <a href="#" class="st_tile box bg_type2 st_tracking">Tracking</a>
+            <a href="#" class="st_tile box bg_type3 st_ebooking">E-Booking</a>
+          </li>
+          <li>
+            <a href="#" class="st_tile2 box bg_type4 st_analytics"><span>Analytics Tool</span></a>
+            <a href="#" class="st_tile2 box st_quotaion"><span>New Quotation</span></a>
+            <a href="#" class="st_tile2 box st_kpi"><span>KPI</span></a>
+            <a href="#" class="st_tile2 box st_dashboard"><span>Dashboard</span></a>
+          </li>
+        </ul>
+      </div>
+      <!-- //Static Tiles -->
+
+
+    </div>
+
+  </body>
+</html>

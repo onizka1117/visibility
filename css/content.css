@@ -375,7 +375,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 .sched_wrap {height:440px;}
 .sched_wrap .location {display:block; text-align:right;color:#45474e; font-size:16px; letter-spacing:0.55px; }
 .sched_wrap .location:before {content:""; margin-right:5px; vertical-align:middle; display:inline-block; width:16px; height:16px; background:url(../images/ico_location.svg) no-repeat 0 0;}
-.sched_wrap .tit_month {font-family:'CJONLYONENEWtitleBold'; font-size:28px; color:#000;}
+.sched_wrap .tit_month {font-family:'CJONLYONENEWtitle'; font-weight:500; font-size:28px; color:#000;}
 .sched_wrap .tit_month>span {display:block;}
 .sched_wrap .tit_month>span+span {margin-top:6px;}
 .calendar_wrap .ui-datepicker {width:100%; padding:0; box-shadow:none;}
