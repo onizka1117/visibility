@@ -7,6 +7,21 @@
     <title>모바일</title>
     <link href="../../css/style_m.css" rel="stylesheet">
     <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+      //메뉴
+      $(".btn_nav").on("click", function(e){
+        $(".m_nav").show("slide");
+        e.preventDefault();
+      });
+
+      $(".m_nav .btn_close").on("click", function(e){
+        $(".m_nav").hide("slide");
+        e.preventDefault();
+      });
+
+    });
+    </script>
   </head>
   <body>
 
@@ -27,6 +42,14 @@
 
       <nav class="m_nav">
         <a href="#" class="btn_close">닫기</a>
+        <div class="user_info">
+          <strong class="name">Loso Kim</strong>
+          <span class="comp">Amore Pacific</span>
+          <div class="search">
+            <input type="text" name="" value="" placeholder="PO#, BKG# or B/L#">
+            <a href="#" class="btn_search">검색</a>
+          </div>
+        </div>
     		<ul class="nav_list">
     			<li><a href="#customer_main" class="nav01" data-url="customer/customer_main.html">물동</a></li>
     			<li><a href="#customer_sub_main" class="nav02" data-url="customer/customer_sub_main.html">금액</a></li>
@@ -45,6 +68,9 @@
             </ul>
           </li>
     		</ul>
+        <div class="nav_bott">
+          <a href="#" class="btn_signout">Sign Out</a>
+        </div>
     	</nav>
 
     </div>
