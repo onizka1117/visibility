@@ -1,6 +1,4 @@
-@charset "utf-8";
-/* ################# Dark ################# */
-@import url("dark.css");
+@charset "UTF-8";
 
 
 /* font */
@@ -125,10 +123,9 @@
 }
 
 
-
 html, body {height:100%; width:100%;}
 html {margin:0; padding:0;}
-body {margin:0; padding:0; font-family:'Gotham', 'Noto Sans KR','dotum'; font-size:14px; line-height:1; font-weight:400; color:#45474e; background-color:#f0f4f8;}
+body {margin:0; padding:0; font-family:'Gotham', 'Noto Sans KR','dotum'; font-size:14px; line-height:1; font-weight:400; background-color:#181d23; color:#fff;}
 input, select, textarea {font-family:'Gotham','Noto Sans KR','dotum'; vertical-align:middle;  border-radius:0; -webkit-appearance:none;}
 select::-ms-expand {display: none;}
 input::-ms-clear, input::-ms-reveal {display: none;}
@@ -138,6 +135,7 @@ iframe {display:block; }
 img {border:0;}
 a,i,em {text-decoration:none;font-style:normal;}
 table {border-collapse:collapse; border-spacing:0; }
+a {color:#fff;}
 
 /* margin */
 .mt20 {margin-top:20px;}
@@ -153,3 +151,18 @@ table {border-collapse:collapse; border-spacing:0; }
 .tar {text-align:right;}
 .tal {text-align:left;}
 .tac {text-align:center;}
+
+
+/* layout */
+.m_wrap {}
+.m_header {height:40px; text-align:center; position:relative;}
+.m_header .logo {margin-top:11px; vertical-align:middle; display:inline-block; width:77px; height:27px;}
+.m_header .logo a {display:block; height:27px; font-size:0; background:url(../images/logo_d.svg) no-repeat; background-size:cover;}
+.m_header .left {position:absolute; top:0; left:0;}
+.m_header .right {position:absolute; top:0; right:0;}
+.m_header .btn_nav {display:inline-block; vertical-align:middle; font-size:0; width:40px; height:40px; background:url(../images/dark/nav_menu_over.svg) no-repeat center center; background-size:cover;}
+.m_header .hd_btns, .m_header .hd_btns>li {display:inline-block; vertical-align:middle;}
+.m_header .hd_notice {position:relative; vertical-align:middle; display:inline-block; width:40px; height:40px; font-size:0; background:url(../images/ico_alarm_w.svg) no-repeat center center; background-size:24px;}
+.m_header .hd_notice.on:after {content:""; display:inline-block; position:absolute; top:50%; left:50%; margin:-10px 0 0 8px; width:5px; height:5px; background-color:#0080c6; border-radius:50%;}
+
+.m_nav {position:fixed; top:0; left:0; right:34px; min-height:100%; background-color:#000;}
