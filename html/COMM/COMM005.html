@@ -1,0 +1,119 @@
+<script type="text/javascript">
+var eventList = [
+  {date:"2020-03-01", eventClass:"work meet msg"},
+  {date:"2020-03-02", eventClass:"work"},
+  {date:"2020-03-05", eventClass:"meet"},
+  {date:"2020-03-17", eventClass:"meet msg"},
+  {date:"2020-03-20", eventClass:"work meet"},
+  {date:"2020-03-25", eventClass:"work msg"},
+  {date:"2020-03-30", eventClass:"msg"}
+];
+
+$(function(){
+
+  // 스크롤바
+  $(".scr_box").mCustomScrollbar();
+
+  // 캘린더
+  $("#datacalendar").datepicker({
+    beforeShowDay : addEvents
+  });
+
+  function addEvents(date) {
+    for(i=0 ; i<eventList.length ; i++) {
+      if(getDate(date) == eventList[i].date) {
+        return [true, eventList[i].eventClass , ""];
+      }
+    }
+    return [true, "", ""];
+  }
+
+  function getDate(date) {
+    var year = date.getFullYear();
+    var month = date.getMonth()+1;
+    var month2 = month < 10 ? "0"+month : month;
+    var day = date.getDate() < 10 ? "0"+date.getDate() : date.getDate();
+    return year +"-"+ month2 + "-" + day;
+  }
+
+
+});
+</script>
+
+
+<div class="schedule_box box shadow">
+
+  <div class="sched_wrap">
+    <span class="location">Seoul, South Korea</span>
+    <div class="tit_month">
+      <span>Monday,</span>
+      <span>17 January</span>
+    </div>
+    <div class="calendar_wrap">
+      <div id="datacalendar"></div>
+    </div>
+
+  </div>
+
+  <!-- title -->
+  <div class="tit_wrap">
+    <div class="tit_left">
+      <span class="tit">Reminder</span>
+    </div>
+    <div class="tit_right">
+      <span class="ip_check sm"><input type="checkbox" name="" value="" id="check01"><label for="check01">To do <span class="bold sub_txt">3</span></label></span>
+      <span class="ip_check sm"><input type="checkbox" name="" value="" id="check02"><label for="check02">Message <span class="bold sub_txt">3</span></label></span>
+    </div>
+  </div>
+  <!-- //title -->
+
+  <div class="scr_box">
+    <ul class="event_list">
+      <!-- 반복 -->
+      <li class="work">
+        <a href="#">
+          <div class="tit">
+            <span class="ctg">Work</span>
+            <span class="date">by 2020.01.20 16:00</span>
+          </div>
+          <div class="txt">
+            Send email to Loso Kim
+          </div>
+        </a>
+      </li>
+      <!-- //반복 -->
+      <li class="msg">
+        <a href="#">
+          <div class="tit">
+            <span class="ctg">Loso Kim</span>
+            <span class="date">by 2020.01.20 16:00</span>
+          </div>
+          <div class="txt">
+            Send email to Loso Kim
+          </div>
+        </a>
+      </li>
+      <li class="meeting">
+        <a href="#">
+          <div class="tit">
+            <span class="ctg">meeting</span>
+            <span class="date">by 2020.01.20 16:00</span>
+          </div>
+          <div class="txt">
+            Send email to Loso Kim
+          </div>
+        </a>
+      </li>
+      <li class="meeting">
+        <div class="tit">
+          <span class="ctg">meeting</span>
+          <span class="date">by 2020.01.20 16:00</span>
+        </div>
+        <div class="txt">
+          Send email to Loso Kim
+        </div>
+      </li>
+    </ul>
+  </div>
+
+</div>

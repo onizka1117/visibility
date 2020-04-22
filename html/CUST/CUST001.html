@@ -14,44 +14,7 @@
     <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="../../script/ui_common.js"></script>
     <script type="text/javascript">
-
-      var eventList = [
-        {date:"2020-03-01", eventClass:"work meet msg"},
-        {date:"2020-03-02", eventClass:"work"},
-        {date:"2020-03-05", eventClass:"meet"},
-        {date:"2020-03-17", eventClass:"meet msg"},
-        {date:"2020-03-20", eventClass:"work meet"},
-        {date:"2020-03-25", eventClass:"work msg"},
-        {date:"2020-03-30", eventClass:"msg"}
-      ];
-
       $(function(){
-
-        // 스크롤바
-        $(".scr_box").mCustomScrollbar();
-
-        // 캘린더
-        $("#datacalendar").datepicker({
-          beforeShowDay : addEvents
-        });
-
-        function addEvents(date) {
-          for(i=0 ; i<eventList.length ; i++) {
-            if(getDate(date) == eventList[i].date) {
-              return [true, eventList[i].eventClass , ""];
-            }
-          }
-          return [true, "", ""];
-        }
-
-        function getDate(date) {
-          var year = date.getFullYear();
-          var month = date.getMonth()+1;
-          var month2 = month < 10 ? "0"+month : month;
-          var day = date.getDate() < 10 ? "0"+date.getDate() : date.getDate();
-          return year +"-"+ month2 + "-" + day;
-        }
-
         // indicator 슬라이드
         $("#indiSlider").bxSlider({
           minSlides: 4,
@@ -71,6 +34,7 @@
         // 타일 로드 (개발시 삭제)
         $(".indicator_wrap li").load("../tile/ic.html");
         $(".live_slider li").load("../tile/live.html");
+        $(".main_right").load("../COMM/COMM005.html");
 
       });
 
@@ -144,19 +108,47 @@
           <li>
             <ul class="main_cols_4">
               <li>
-                <a href="#" class="st_tile box bg_type2 st_tracking">Tracking</a>
+                <a href="#" class="st_tile box bg_type2">
+                  <span class="img"><img src="../../images/ico_static_tracking.svg" alt=""></span>
+                  <span class="txt">Tracking</span>
+                </a>
               </li>
-              <li><a href="#" class="st_tile box bg_type3 st_ebooking">E-Booking</a></li>
+              <li>
+                <a href="#" class="st_tile box bg_type3">
+                  <span class="img"><img src="../../images/ico_static_ebook.svg" alt=""></span>
+                  <span class="txt">E-Booking</span>
+                </a>
+              </li>
             </ul>
           </li>
           <li>
             <ul class="main_cols_4">
-              <li><a href="#" class="st_tile2 box bg_type4 st_analytics"><span>Analytics Tool</span></a></li>
-              <li><a href="#" class="st_tile2 box st_quotaion"><span>New Quotation</span></a></li>
+              <li>
+                <a href="#" class="st_tile2 box bg_type4">
+                  <span class="img"><img src="../../images/ico_static_analytics.svg" alt=""></span>
+                  <span class="txt">Analytics Tool</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="st_tile2 box">
+                  <span class="img"><img src="../../images/ico_static_quotation.svg" alt="" class="img_w"><img src="../../images/dark/ico_static_quotation.svg" alt=""  class="img_d"></span>
+                  <span class="txt">New Quotation</span>
+                </a>
+              </li>
             </ul>
             <ul class="main_cols_4 mt20">
-              <li><a href="#" class="st_tile2 box st_kpi"><span>KPI</span></a></li>
-              <li><a href="#" class="st_tile2 box st_dashboard"><span>Dashboard</span></a></li>
+              <li>
+                <a href="#" class="st_tile2 box">
+                  <span class="img"><img src="../../images/ico_static_kpi.svg" alt="" class="img_w"><img src="../../images/dark/ico_static_kpi.svg" alt=""  class="img_d"></span>
+                  <span class="txt">KPI</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="st_tile2 box">
+                  <span class="img"><img src="../../images/ico_static_dashboard.svg" alt="" class="img_w"><img src="../../images/dark/ico_static_dashboard.svg" alt=""  class="img_d"></span>
+                  <span class="txt">Dashboard</span>
+                </a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -165,82 +157,7 @@
       </div>
 
       <div class="main_right">
-        <div class="schedule_box box shadow">
-
-          <div class="sched_wrap">
-            <span class="location">Seoul, South Korea</span>
-            <div class="tit_month">
-              <span>Monday,</span>
-              <span>17 January</span>
-            </div>
-            <div class="calendar_wrap">
-              <div id="datacalendar"></div>
-            </div>
-
-          </div>
-
-          <!-- title -->
-          <div class="tit_wrap">
-            <div class="tit_left">
-              <span class="tit">Reminder</span>
-            </div>
-            <div class="tit_right">
-              <span class="ip_check sm"><input type="checkbox" name="" value="" id="check01"><label for="check01">To do <span class="bold sub_txt">3</span></label></span>
-              <span class="ip_check sm"><input type="checkbox" name="" value="" id="check02"><label for="check02">Message <span class="bold sub_txt">3</span></label></span>
-            </div>
-          </div>
-          <!-- //title -->
-
-          <div class="scr_box">
-            <ul class="event_list">
-              <!-- 반복 -->
-              <li class="work">
-                <a href="#">
-                  <div class="tit">
-                    <span class="ctg">Work</span>
-                    <span class="date">by 2020.01.20 16:00</span>
-                  </div>
-                  <div class="txt">
-                    Send email to Loso Kim
-                  </div>
-                </a>
-              </li>
-              <!-- //반복 -->
-              <li class="msg">
-                <a href="#">
-                  <div class="tit">
-                    <span class="ctg">Loso Kim</span>
-                    <span class="date">by 2020.01.20 16:00</span>
-                  </div>
-                  <div class="txt">
-                    Send email to Loso Kim
-                  </div>
-                </a>
-              </li>
-              <li class="meeting">
-                <a href="#">
-                  <div class="tit">
-                    <span class="ctg">meeting</span>
-                    <span class="date">by 2020.01.20 16:00</span>
-                  </div>
-                  <div class="txt">
-                    Send email to Loso Kim
-                  </div>
-                </a>
-              </li>
-              <li class="meeting">
-                <div class="tit">
-                  <span class="ctg">meeting</span>
-                  <span class="date">by 2020.01.20 16:00</span>
-                </div>
-                <div class="txt">
-                  Send email to Loso Kim
-                </div>
-              </li>
-            </ul>
-          </div>
-
-        </div>
+        <!-- ../COMM05/COMM05.html 파일 영역 -->
       </div>
 
     </div>
