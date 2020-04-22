@@ -24,7 +24,7 @@ label.blind {display:block;width:0;height:0;font-size:0;text-indent:100%;white-s
 .login_wrap .login_inner .box_login.on:before {transform:rotateY(180deg);}
 .login_wrap .login_inner .box_login.on:after {transform:rotateY(180deg);}
 .login_wrap .login_inner .box_login .tabs {position:relative; z-index:1; margin:20px 20px 0;}
-.login_wrap .login_inner .box_login .tabs li{display: inline-block;float:left;width:50%;height:68px;margin-top:12px;}
+.login_wrap .login_inner .box_login .tabs li{display: inline-block;float:left;width:50%;height:78px;margin-top:12px;}
 .login_wrap .login_inner .box_login .tabs li.current{margin-top:0;height:80px;box-sizing: border-box;}
 .login_wrap .login_inner .box_login .tabs li a{font-weight:700; position: relative;display:block;width: calc(100% - 12px);height: 100%;font-size:16px;color:#38424e;padding-left: 8px;padding-top: 38px;box-sizing: border-box; text-align: center;}
 .login_wrap .login_inner .box_login .tabs li a.current{display:block;width:100%;font-size: 24px;color: #fff;padding-top: 46px;box-sizing: border-box;}
@@ -264,7 +264,7 @@ input:-webkit-autofill:active {font-family: 'Gotham';transition: background-colo
 .login_wrap.normal.bright .login_bg .bg.s_orange      {top:140px;left:430px;}
 
 /* /////////// popup ///////////// */
-.login_wrap .login_popup {display:none;z-index: 10;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(0, 0, 0, .6);overflow: hidden;}
+/* .login_wrap .login_popup {display:none;z-index: 10;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(0, 0, 0, .6);overflow: hidden;}
 .login_wrap .login_popup.open {display:block;}
 .login_wrap .login_popup .cont_popup {position:relative;top: 50%;left: 50%;margin-left: -240px;margin-top: -247px;width: 480px;min-height:494px;box-shadow: 3px 3px 15px 0 rgba(0, 0, 0, 0.15);overflow:hidden;}
 .login_wrap .login_popup .cont_popup .btn_close {position: absolute;right:20px;top:20px;width: 30px;height: 30px;text-indent: -9999px;font-size:0;background: url(../images/close.svg);background-size:contain;}
@@ -298,4 +298,4 @@ input:-webkit-autofill:active {font-family: 'Gotham';transition: background-colo
 .login_wrap .login_popup .track_step.step4 .bar {width:3px;height:162px;}
 .login_wrap .login_popup .track_step.step5 .bar {width:3px;height:200px;}
 .login_wrap .login_popup .track_step.step6 .bar {width:3px;height:235px;}
-.login_wrap .login_popup .track_step .bar:after {right: -11px;bottom:-4px;top: auto;transform: rotate(90deg);}
+.login_wrap .login_popup .track_step .bar:after {right: -11px;bottom:-4px;top: auto;transform: rotate(90deg);} */
