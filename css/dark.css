@@ -39,8 +39,9 @@ body.dark .indi_tile .num {color:#cdcdce;}
 body.dark .indi_tile .txt {color:#8b919c;}
 body.dark .sched_wrap .location{color:#cdcdce;}
 body.dark .sched_wrap .tit_month {color:#fff;}
-body.dark .sched_wrap .location:before{background: url(../images/dark/point.svg) no-repeat 0 0;}
+body.dark .sched_wrap .location:before{background: url("../images/dark/point.svg") no-repeat 0 0;}
 
+body.dark .st_tile.st_quotation:before {background-image:url("../images/dark/ico_static_quotation2.svg");}
 body.dark .st_tile2.st_quotaion:before {background-image:url("../images/dark/ico_static_quotation.svg");}
 body.dark .st_tile2.st_kpi:before {background-image:url("../images/dark/ico_static_kpi.svg");}
 body.dark .st_tile2.st_dashboard:before {background-image:url("../images/dark/ico_static_dashboard.svg");}

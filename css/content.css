@@ -344,6 +344,12 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; border:solid 
 .st_tile.st_order:before {background-image:url(../images/ico_static_order.svg);}
 .st_tile.st_kpi:before {background-image:url(../images/ico_static_kpi_w.svg);}
 .st_tile.st_report:before {background-image:url(../images/ico_static_report.svg);}
+.st_tile.st_performance:before {background-image:url(../images/ico_static_perform.svg);}
+.st_tile.st_cust_kpi:before {background-image:url(../images/ico_static_cust_kpi.svg);}
+.st_tile.st_schedule:before {background-image:url(../images/ico_static_schedule2_w.svg);}
+.st_tile.st_quotation:before {background-image:url(../images/ico_static_quotation2.svg);}
+
+
 .st_tile2 {position:relative; padding:61px 0 0 30px; height:115px; color:#45474e; font-size:20px; font-weight:500; line-height:1.2; text-decoration:none; box-sizing:border-box;}
 .st_tile2>span {position:absolute; left:30px; bottom:30px; width:190px; overflow:hidden;}
 .st_tile2:before {content:""; width:60px; height:60px; top:10px; right:10px; position:absolute; display:inline-block; background-repeat:no-repeat;}
