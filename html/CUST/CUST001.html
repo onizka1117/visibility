@@ -36,131 +36,136 @@
         $(".live_slider li").load("../tile/live.html");
         $(".main_right").load("../COMM/COMM005.html");
 
+
+
+
       });
 
 
 
     </script>
   </head>
-  <body>
+  <body class="scrollBody">
 
-    <div class="main_wrap">
-      <div class="main_left">
-        <!-- title -->
-        <div class="tit_wrap">
-          <div class="tit_left">
-            <h2>Operation Board</h2>
-          </div>
-        </div>
-        <!-- //title -->
 
-        <!-- indicator -->
-        <div class="indicator_wrap">
-          <ul id="indiSlider" class="indicator_list">
-            <!--  반복 -->
-            <li>
-                <!-- ../tile/ic.html 파일 영역 -->
-            </li>
-            <!--  //반복 -->
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
-        <!-- //indicator -->
-
-        <!-- Live Tiles -->
-        <ul class="live_wrap">
-          <li>
-            <div class="live_tile box bg_type1">
-              <div class="tit_area">
-                <strong class="tit">Market Update : March 18, 2020</strong>
-              </div>
-              <div class="con">
-
-                <div class="market_update">
-                  <img src="../../images/@img_market_update.png" alt="">
-                  <div class="txt">
-                    How will businesses recover from COVID-19?<br>
-                    When will factories start running again? And how can you ensure your cargo is moving when they do?
-                  </div>
-                  <a href="#" class="more">View More</a>
-                </div>
-
-              </div>
+      <div class="main_wrap">
+        <div class="main_left">
+          <!-- title -->
+          <div class="tit_wrap">
+            <div class="tit_left">
+              <h2>Operation Board</h2>
             </div>
-          </li>
-          <li>
-            <ul class="live_slider" id="liveSlider">
-              <!-- 반복 -->
-              <li><!-- ../tile/live.html 파일 영역 --></li>
-              <!-- //반복 -->
+          </div>
+          <!-- //title -->
+
+          <!-- indicator -->
+          <div class="indicator_wrap">
+            <ul id="indiSlider" class="indicator_list">
+              <!--  반복 -->
+              <li>
+                  <!-- ../tile/ic.html 파일 영역 -->
+              </li>
+              <!--  //반복 -->
+              <li></li>
+              <li></li>
               <li></li>
               <li></li>
             </ul>
-          </li>
-        </ul>
-        <!-- //Live Tiles -->
+          </div>
+          <!-- //indicator -->
 
-        <!-- Static Tiles -->
-        <ul class="main_cols_2 mt20">
-          <li>
-            <ul class="main_cols_4">
-              <li>
-                <a href="#" class="st_tile box bg_type2">
-                  <span class="img"><img src="../../images/ico_static_tracking.svg" alt=""></span>
-                  <span class="txt">Tracking</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="st_tile box bg_type3">
-                  <span class="img"><img src="../../images/ico_static_ebook.svg" alt=""></span>
-                  <span class="txt">E-Booking</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <ul class="main_cols_4">
-              <li>
-                <a href="#" class="st_tile2 box bg_type4">
-                  <span class="img"><img src="../../images/ico_static_analytics.svg" alt=""></span>
-                  <span class="txt">Analytics Tool</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="st_tile2 box">
-                  <span class="img"><img src="../../images/ico_static_quotation.svg" alt="" class="img_w"><img src="../../images/dark/ico_static_quotation.svg" alt=""  class="img_d"></span>
-                  <span class="txt">New Quotation</span>
-                </a>
-              </li>
-            </ul>
-            <ul class="main_cols_4 mt20">
-              <li>
-                <a href="#" class="st_tile2 box">
-                  <span class="img"><img src="../../images/ico_static_kpi.svg" alt="" class="img_w"><img src="../../images/dark/ico_static_kpi.svg" alt=""  class="img_d"></span>
-                  <span class="txt">KPI</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="st_tile2 box">
-                  <span class="img"><img src="../../images/ico_static_dashboard.svg" alt="" class="img_w"><img src="../../images/dark/ico_static_dashboard.svg" alt=""  class="img_d"></span>
-                  <span class="txt">Dashboard</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <!-- //Static Tiles -->
+          <!-- Live Tiles -->
+          <ul class="live_wrap">
+            <li>
+              <div class="live_tile box bg_type1">
+                <div class="tit_area">
+                  <strong class="tit">Market Update : March 18, 2020</strong>
+                </div>
+                <div class="con">
+
+                  <div class="market_update">
+                    <img src="../../images/@img_market_update.png" alt="">
+                    <div class="txt">
+                      How will businesses recover from COVID-19?<br>
+                      When will factories start running again? And how can you ensure your cargo is moving when they do?
+                    </div>
+                    <a href="#" class="more">View More</a>
+                  </div>
+
+                </div>
+              </div>
+            </li>
+            <li>
+              <ul class="live_slider" id="liveSlider">
+                <!-- 반복 -->
+                <li><!-- ../tile/live.html 파일 영역 --></li>
+                <!-- //반복 -->
+                <li></li>
+                <li></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- //Live Tiles -->
+
+          <!-- Static Tiles -->
+          <ul class="main_cols_2 mt20">
+            <li>
+              <ul class="main_cols_4">
+                <li>
+                  <a href="#" class="st_tile box bg_type2">
+                    <span class="img"><img src="../../images/ico_static_tracking.svg" alt=""></span>
+                    <span class="txt">Tracking</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="st_tile box bg_type3">
+                    <span class="img"><img src="../../images/ico_static_ebook.svg" alt=""></span>
+                    <span class="txt">E-Booking</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul class="main_cols_4">
+                <li>
+                  <a href="#" class="st_tile2 box bg_type4">
+                    <span class="img"><img src="../../images/ico_static_analytics.svg" alt=""></span>
+                    <span class="txt">Analytics Tool</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="st_tile2 box">
+                    <span class="img"><img src="../../images/ico_static_quotation.svg" alt="" class="img_w"><img src="../../images/dark/ico_static_quotation.svg" alt=""  class="img_d"></span>
+                    <span class="txt">New Quotation</span>
+                  </a>
+                </li>
+              </ul>
+              <ul class="main_cols_4 mt20">
+                <li>
+                  <a href="#" class="st_tile2 box">
+                    <span class="img"><img src="../../images/ico_static_kpi.svg" alt="" class="img_w"><img src="../../images/dark/ico_static_kpi.svg" alt=""  class="img_d"></span>
+                    <span class="txt">KPI</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="st_tile2 box">
+                    <span class="img"><img src="../../images/ico_static_dashboard.svg" alt="" class="img_w"><img src="../../images/dark/ico_static_dashboard.svg" alt=""  class="img_d"></span>
+                    <span class="txt">Dashboard</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <!-- //Static Tiles -->
+
+        </div>
+
+        <div class="main_right">
+          <!-- ../COMM05/COMM05.html 파일 영역 -->
+        </div>
 
       </div>
 
-      <div class="main_right">
-        <!-- ../COMM05/COMM05.html 파일 영역 -->
-      </div>
-
-    </div>
 
   </body>
 </html>

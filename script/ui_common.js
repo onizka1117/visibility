@@ -18,6 +18,25 @@ $(function(){
   });
 
 
+  // body scroll
+  $("body.scrollBody").mCustomScrollbar({
+     axis:"xy",
+     callbacks:{
+      onScroll:function(){
+        var left = this.mcs.left;
+        $("body").attr("scr_left", left);
+      },
+      whileScrolling: function(e){
+        if(this.mcs.left<0) {
+          $(top.document).find("nav .btn_nav").addClass("shadow");
+        }else {
+          $(top.document).find("nav .btn_nav").removeClass("shadow");
+        }
+        console.log("ing.." + this.mcs.left);
+      }
+    }
+  });
+
 
 });
 
