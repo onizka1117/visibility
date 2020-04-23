@@ -12,11 +12,12 @@
 .ip_search {width:100%; display:inline-block; position:relative;}
 .ip_search .ip_txt {width:100%;}
 .ip_search .btn_ip_search {font-size:0; position:absolute; top:0; right:0; width:42px; height:42px; background:url(../images/ip_search.png) no-repeat center center;}
+.ip_del {width:100%; display:inline-block; position:relative;}
 .ip_filter {display:inline-block; position:relative; width:100%; }
 .ip_filter:before {content:""; display:inline-block; width:24px; height:24px; position:absolute; top:8px; left:8px; background:url(../images/ico_filter.svg) no-repeat;}
 .ip_filter .ip_txt {padding-left:38px;}
-.ip_filter .btn_txt_del {display:none; width:16px; height:16px; margin-top:-8px; font-size:0; position:absolute; top:50%; right:10px; background:url(../images/ico_txt_del.svg) no-repeat;}
-.ip_filter.focus .btn_txt_del {display:inline-block;}
+.ip_filter .btn_txt_del, .ip_del .btn_txt_del {display:none; width:16px; height:16px; margin-top:-8px; font-size:0; position:absolute; top:50%; right:10px; background:url(../images/ico_txt_del.svg) no-repeat;}
+.ip_filter.focus .btn_txt_del, .ip_del.focus .btn_txt_del {display:inline-block;}
 .ip_fixed {position:relative; width:100%; display:inline-block;}
 .ip_fixed .ftxt {color:#cad0d7; line-height:42px; position:absolute; top:0; right:10px;}
 .ip_fixed.pr27 .ip_txt {padding-right:27px;}

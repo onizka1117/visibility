@@ -7,6 +7,7 @@
     <link href="../../css/content.css" rel="stylesheet">
     <script src="../../script/lib/jquery-3.4.1.min.js"></script>
     <script src="../../script/lib/jquery-ui.js"></script>
+    <script src="../../script/ui_common.js"></script>
 
     <style type="text/css">
     </style>
@@ -21,6 +22,8 @@
         buttonText: "Select date",
         dateFormat: "yy/mm/dd"
       });
+
+      $(".ip_del").inputTextFocus();
 
     });
     </script>
@@ -39,6 +42,7 @@
           <td>
             <input type="text" name="" value="" placeholder="placeholder" class="ip_txt">
             <input type="text" name="" value="가나다라마바사" disabled="true" class="ip_txt">
+            <span class="ip_del"><input type="text" class="ip_txt" value="삭제버튼"><a href="#" class="btn_txt_del">삭제</a></span>
           </td>
         </tr>
         <tr>

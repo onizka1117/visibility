@@ -36,15 +36,19 @@ $(function(){
   $.fn.inputTextFocus = function() {
     var $el = $(this);
     var $ip = $el.find(".ip_txt");
+    valCheck($ip.val());
     $ip.on("change keyup paste", function(e){
       var val = $(this).val();
-      val == "" ? $el.removeClass("focus") : $el.addClass("focus");
+      valCheck(val);
     });
     $el.find(".btn_txt_del").on("click", function(e){
       $ip.val("");
       $el.removeClass("focus");
       e.preventDefault();
     });
+    function valCheck(val){
+      val == "" ? $el.removeClass("focus") : $el.addClass("focus");
+    }
   };
 
 })(jQuery);
