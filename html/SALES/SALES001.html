@@ -14,43 +14,7 @@
     <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="../../script/ui_common.js"></script>
     <script type="text/javascript">
-
-      var eventList = [
-        {date:"2020-03-01", eventClass:"work meet msg"},
-        {date:"2020-03-02", eventClass:"work"},
-        {date:"2020-03-05", eventClass:"meet"},
-        {date:"2020-03-17", eventClass:"meet msg"},
-        {date:"2020-03-20", eventClass:"work meet"},
-        {date:"2020-03-25", eventClass:"work msg"},
-        {date:"2020-03-30", eventClass:"msg"}
-      ];
-
       $(function(){
-
-        // 스크롤바
-        $(".scr_box").mCustomScrollbar();
-
-        // 캘린더
-        $("#datacalendar").datepicker({
-          beforeShowDay : addEvents
-        });
-
-        function addEvents(date) {
-          for(i=0 ; i<eventList.length ; i++) {
-            if(getDate(date) == eventList[i].date) {
-              return [true, eventList[i].eventClass , ""];
-            }
-          }
-          return [true, "", ""];
-        }
-
-        function getDate(date) {
-          var year = date.getFullYear();
-          var month = date.getMonth()+1;
-          var month2 = month < 10 ? "0"+month : month;
-          var day = date.getDate() < 10 ? "0"+date.getDate() : date.getDate();
-          return year +"-"+ month2 + "-" + day;
-        }
 
         // indicator 슬라이드
         $("#indiSlider").bxSlider({
@@ -79,7 +43,7 @@
 
     </script>
   </head>
-  <body>
+  <body class="scrollBody">
 
     <div class="main_wrap">
       <div class="main_left">
