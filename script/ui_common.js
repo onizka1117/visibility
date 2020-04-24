@@ -14,6 +14,17 @@ $(function(){
         $(this).siblings("i").addClass("on");
       }
 
+    },
+    beforeShow : function(input, inst) {
+      // mcs 스크롤 사용 시 캘린더 위치 조정
+      if($("body").hasClass("scrollBody")) {
+          var $this = $(this);
+          var scrTop = parseInt($("body .mCSB_container").css("top"))*-1;
+          var top = $this.offset().top + scrTop + $this.height()+2;
+          setTimeout(function(){
+            inst.dpDiv.css({"top": top + 'px'});
+          });
+      }
     }
   });
 
@@ -70,13 +81,12 @@ var uiCommon = {
        whileScrolling: function(e){
          this.mcs.left<0 ? $(top.document).find("nav").addClass("shadow") : $(top.document).find("nav").removeClass("shadow");
          this.mcs.top<0 ? $(top.document).find("header").css("margin-top", this.mcs.top) : $(top.document).find("header").css("margin-top", 0);
-
          //console.log("ing.." + this.mcs.left);
        }
      }
    };
    $.extend(options, opt);
-   $("body.scrollBody").mCustomScrollbar(options);
+   return $("body.scrollBody").mCustomScrollbar(options);
  }
 
 };
