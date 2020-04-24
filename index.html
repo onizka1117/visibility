@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title></title>
     <link href="css/common.css" rel="stylesheet">
+    <script src="script/lib/jquery-3.4.1.min.js"></script>
     <style type="text/css">
       table {border-collapse: collapse}
       td, th {height:20px; padding:5px; font-size:14px; border:1px solid #ccc; background-color:#fff;}
@@ -19,20 +20,27 @@
       .tbl_guide tbody tr:hover td a {color:#fff;}
 
     </style>
+    <script type="text/javascript">
+    $(function(){
+      $("#tbGuide tbody tr").each(function(i){
+        $(this).find("td").eq(0).text(i+1).css("text-align", "center");
+      });
+    });
+    </script>
   </head>
   <body>
 
     <div class="guide_wrap">
       <h1>화면목록</h1>
-      <table class="tbl_guide">
+      <table class="tbl_guide" id="tbGuide">
         <colgroup>
           <col style="width:50px;">
-          <col style="width:100px;">
-          <col style="width:200px;">
+          <col style="width:150px;">
+          <col style="width:250px;">
           <col style="width:;">
           <col style="width:100px;">
           <col style="width:;">
-          <col style="width:100px;">
+          <col style="width:150px;">
           <col style="width:120px;">
           <col style="width:;">
         </colgroup>
