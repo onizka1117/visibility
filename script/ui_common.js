@@ -18,27 +18,6 @@ $(function(){
   });
 
 
-  // body scroll
-  if($("body.scrollBody").length>0) {
-    $("body.scrollBody").mCustomScrollbar({
-       axis:"xy",
-       callbacks:{
-        onScroll:function(){
-          var left = this.mcs.left;
-          var top = this.mcs.top;
-          $("body").attr("scr_left", left);
-          $("body").attr("scr_top", top);
-        },
-        whileScrolling: function(e){
-          this.mcs.left<0 ? $(top.document).find("nav").addClass("shadow") : $(top.document).find("nav").removeClass("shadow");
-          this.mcs.top<0 ? $(top.document).find("header").css("margin-top", this.mcs.top) : $(top.document).find("header").css("margin-top", 0);
-
-          console.log("ing.." + this.mcs.left);
-        }
-      }
-    });
-  }
-
 
 
 });
@@ -74,3 +53,30 @@ $(function(){
   };
 
 })(jQuery);
+
+
+var uiCommon = {
+  // 스크롤 스타일 적용
+  bodyScroll : function(opt) {
+    var options = {
+      axis:"xy",
+      callbacks:{
+       onScroll:function(){
+         var left = this.mcs.left;
+         var top = this.mcs.top;
+         $("body").attr("scr_left", left);
+         $("body").attr("scr_top", top);
+       },
+       whileScrolling: function(e){
+         this.mcs.left<0 ? $(top.document).find("nav").addClass("shadow") : $(top.document).find("nav").removeClass("shadow");
+         this.mcs.top<0 ? $(top.document).find("header").css("margin-top", this.mcs.top) : $(top.document).find("header").css("margin-top", 0);
+
+         //console.log("ing.." + this.mcs.left);
+       }
+     }
+   };
+   $.extend(options, opt);
+   $("body.scrollBody").mCustomScrollbar(options);
+ }
+
+};

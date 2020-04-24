@@ -13,6 +13,9 @@
     <script src="../../script/ui_common.js"></script>
     <script type="text/javascript">
     $(function(){
+      // 스크롤
+      uiCommon.bodyScroll();
+
       // tab select
       $('ul.tab_list li').click(function(){
         $(this).parent().find(".on").removeClass("on").end().end().addClass("on");
