@@ -201,9 +201,7 @@ a,i,em {text-decoration:none;font-style:normal;}
 table {border-collapse:collapse; border-spacing:0; }
 
 
-body::-webkit-scrollbar {width:4px; height:4px;}
-body::-webkit-scrollbar-thumb {width:4px; border-radius: 4px; background-color: rgba(71, 79, 89, 0.15) !important;}
-body::-webkit-scrollbar-track {background-color:transparent;}
+
 /* margin */
 .mt20 {margin-top:20px;}
 .ml30 {margin-left:30px;}
