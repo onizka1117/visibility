@@ -13,6 +13,9 @@
     <script src="../../script/ui_common.js"></script>
     <script type="text/javascript">
     $(function(){
+      //input
+      $(".ip_del").inputTextFocus();
+
       // 정렬
       $(".sort_list").on("click", function(e){
         $(this).toggleClass("desc");
@@ -83,7 +86,7 @@
               <option value="">H.B/L</option>
               <option value="">type1</option>
             </select>
-            <input type="text" name="" value="" placeholder="" class="ip_txt" style="width:220px">
+            <span class="ip_del" style="width:220px;"><input type="text" class="ip_txt" ><a href="#" class="btn_txt_del">삭제</a></span>
           </li>
           <li class="btns">
             <a href="#" class="btn lg ico_search">검색</a>

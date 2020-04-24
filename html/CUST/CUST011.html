@@ -15,8 +15,14 @@
 
     $(function(){
 
+      //input
+      $(".ip_del").inputTextFocus();
+
+
       // 파일명
       $(".ip_file").fileReady();
+
+
 
       // 파일추가
       $(".file_upload_wrap .btn_cir.ico_add").on("click", function(e) {
@@ -205,7 +211,7 @@
             <ul class="list_form">
               <li>
                 <label for="" class="lb_txt req">Item</label>
-                <input type="text" name="" value="" placeholder="" class="ip_txt bold" style="width:665px;">
+                <span class="ip_del" style="width:665px;"><input type="text" class="ip_txt bold" ><a href="#" class="btn_txt_del">삭제</a></span>
               </li>
             </ul>
           </div>
@@ -220,22 +226,22 @@
             <ul class="list_form">
               <li>
                 <label for="" class="lb_txt req">Name of PIC at CJ Logistics</label>
-                <input type="text" name="" value="" placeholder="" class="ip_txt bold" style="width:275px;">
+                <span class="ip_del" style="width:275px;"><input type="text" class="ip_txt bold" ><a href="#" class="btn_txt_del">삭제</a></span>
                 <a href="#" class="btn line lg ico_search">검색</a>
               </li>
               <li>
                 <label for="" class="lb_txt">E-mail</label>
-                <input type="text" name="" value="" placeholder="" class="ip_txt bold" style="width:321px;">
+                <span class="ip_del" style="width:321px;"><input type="text" class="ip_txt bold" ><a href="#" class="btn_txt_del">삭제</a></span>
               </li>
             </ul>
             <ul class="list_form">
               <li>
                 <label for="" class="lb_txt req">Name of PIC at your company</label>
-                <input type="text" name="" value="" placeholder="" class="ip_txt bold" style="width:321px;">
+                <span class="ip_del" style="width:321px;"><input type="text" class="ip_txt bold" ><a href="#" class="btn_txt_del">삭제</a></span>
               </li>
               <li>
                 <label for="" class="lb_txt">Phone</label>
-                <input type="text" name="" value="" placeholder="" class="ip_txt bold" style="width:322px;">
+                <span class="ip_del" style="width:322px;"><input type="text" class="ip_txt bold" ><a href="#" class="btn_txt_del">삭제</a></span>
               </li>
             </ul>
           </div>

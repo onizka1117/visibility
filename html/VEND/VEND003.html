@@ -13,6 +13,9 @@
     <script src="../../script/ui_common.js"></script>
     <script type="text/javascript">
     $(function(){
+      // input
+      $(".ip_del").inputTextFocus();
+
       // tab select
       $('ul.tab_list li').click(function(){
         $(this).parent().find(".on").removeClass("on").end().end().addClass("on");
@@ -41,7 +44,7 @@
         <ul class="search_form">
           <li>
             <label for="" class="lb_txt">Customer ID</label>
-            <input type="text" name="" value="" class="ip_txt" style="width:200px;">
+            <span class="ip_del" style="width:200px;"><input type="text" class="ip_txt" value=""><a href="#" class="btn_txt_del">삭제</a></span>
             <input type="text" name="" value="" class="ip_txt" disabled="true" style="width:150px;">
           </li>
           <li>
@@ -58,7 +61,7 @@
           </li>
           <li>
             <label for="" class="lb_txt">M. B/L No.</label>
-            <input type="text" name="" value="" class="ip_txt" style="width:220px;">
+            <span class="ip_del" style="width:200px;"><input type="text" class="ip_txt" value=""><a href="#" class="btn_txt_del">삭제</a></span>
           </li>
           <li class="btns">
             <a href="#" class="btn lg ico_search">검색</a>
