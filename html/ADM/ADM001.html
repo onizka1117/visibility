@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+    <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/content.css" rel="stylesheet">
+    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery-ui.js"></script>
+    <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../script/ui_common.js"></script>
+    <script type="text/javascript">
+    $(function(){
+
+      // input
+      $(".ip_del").inputTextFocus();
+    });
+    </script>
+  </head>
+  <body>
+
+    <div class="detail_wrap">
+
+      <div class="tit_wrap">
+        <div class="tit_left">
+          <h2>고객사별 지표 관리</h2>
+        </div>
+      </div>
+
+      <!-- 검색 -->
+      <div class="search_wrap">
+        <ul class="search_form">
+          <li>
+            <label for="" class="lb_txt">고객사</label>
+            <span class="ip_del" style="width:300px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+          </li>
+          <li class="btns">
+            <a href="#" class="btn lg line ico_search">검색</a>
+          </li>
+        </ul>
+      </div>
+      <!-- //검색 -->
+
+      <!-- shuttle -->
+      <div class="shuttle_wrap admin_cust_shutt">
+        <div class="left">
+          <div class="grid_wrap type_admin" style="height:610px;">
+            그리드 : height:610px;
+          </div>
+        </div>
+        <div class="btns">
+          <a href="#" class="btn_move ico_all_right">이동</a>
+          <a href="#" class="btn_move ico_right">이동</a>
+          <a href="#" class="btn_move ico_left">이동</a>
+          <a href="#" class="btn_move ico_all_left">이동</a>
+        </div>
+        <div class="right">
+          <div class="grid_wrap type_admin" style="height:610px;">
+            그리드 : height:610px;
+          </div>
+        </div>
+      </div>
+      <!-- //shuttle -->
+
+
+
+    </div>
+
+  </body>
+</html>

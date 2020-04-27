@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#0080C6" d="M9.62 0v16.667L0 14.9V1.696L9.62 0zm7.047 1.942v12.82h-6.634V13.51h2.405v-1.72h-2.405v-.517h2.405V9.55h-2.405v-.516h2.405V7.314h-2.405v-.516h2.405V5.077h-2.405V4.56h2.405V2.84h-2.405v-.898h6.634zm-.995 9.846h-2.737v1.721h2.737v-1.72zm0-2.237h-2.737v1.72h2.737v-1.72zm0-2.237h-2.737v1.72h2.737v-1.72zm0-2.237h-2.737v1.72h2.737v-1.72zm0-2.238h-2.737V4.56h2.737V2.84z" transform="translate(1.667 1.667)"/>
+        <text fill="#FFF" font-family="Times-Roman, Times" font-size="9.167" transform="translate(1.667 1.667)">
+            <tspan x="2.264" y="11.84">X</tspan>
+        </text>
+    </g>
+</svg>
