@@ -27,12 +27,16 @@ body.dark .header .logo a {background: url(../images/logo_bright.svg) no-repeat;
 body.dark .header .ctg {color:#fff;}
 
 
-body.dark .tit_wrap h2 {color:#fff;}
+body.dark .tit_wrap h2, body.dark .tit_wrap h4 {color:#fff;}
 body.dark .box {color:#fff;background-color:#333c48;}
 body.dark .box.bg_type1 {background-color: #13161a;}
 body.dark .box.bg_type2 {background-color: #0080c6;}
 body.dark .box.bg_type3 {background-color: #e42f44;}
 body.dark .box.bg_type4 {background-color: #ec8922;}
+
+
+
+
 
 /* main */
 body.dark .indi_tile .num {color:#cdcdce;}

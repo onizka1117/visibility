@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+    <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/content.css" rel="stylesheet">
+    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery-ui.js"></script>
+    <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../script/ui_common.js"></script>
+    <title></title>
+    <script type="text/javascript">
+      $(function(){
+
+        $(".ip_del").inputTextFocus();
+
+      });
+    </script>
+  </head>
+  <body>
+
+
+    <!-- layer -->
+    <div class="layer_pop_wrap type1" style="">
+      <a href="#" class="btn_closed">닫기</a>
+      <div class="pop_header">
+        <div class="tit">
+          Market Update Management
+        </div>
+      </div>
+      <div class="pop_con">
+
+
+        <div class="list_form_wrap type_full">
+          <ul class="list_form">
+            <li>
+              <label for="" class="lb_txt">Market Update Date</label>
+              <span class="ip_date"><input type="text" id="datepicker" class="ip_txt"></span>
+            </li>
+          </ul>
+          <ul class="list_form">
+            <li>
+              <label for="" class="lb_txt">Market Update Title</label>
+              <span class="ip_del"><input type="text" class="ip_txt" ><a href="#" class="btn_txt_del">삭제</a></span>
+            </li>
+          </ul>
+          <ul class="list_form">
+            <li>
+              <label for="" class="lb_txt">Reservation Time</label>
+              <span class="ip_date"><input type="text" id="datepicker" class="ip_txt"></span>
+            </li>
+          </ul>
+          <ul class="list_form">
+            <li>
+              <label for="" class="lb_txt">Use YN</label>
+              <ul class="radio_group type1">
+                <li class="radio_item">
+                  <input type="radio" name="radio0" value="" id="radio0" checked="true"><label for="radio0">YES</label>
+                </li>
+                <li class="radio_item">
+                  <input type="radio" name="radio0" value="" id="radio1"><label for="radio1">NO</label>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="list_form">
+            <li>
+              <label for="" class="lb_txt">Market Update Content</label>
+              <textarea rows="8" cols="80" style="height:200px;"></textarea>
+            </li>
+          </ul>
+        </div>
+
+        <div class="btn_pop_bottom">
+          <div class="btn_list">
+            <a href="#" class="btn sm">Save</a>
+            <a href="#" class="btn gray sm">Close</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- //layer -->
+
+
+
+  </body>
+</html>

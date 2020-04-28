@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>List</title>
+    <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/content.css" rel="stylesheet">
+    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery-ui.js"></script>
+    <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../script/ui_common.js"></script>
+    <script type="text/javascript">
+    $(function(){
+      // 아코디언
+      $(".view_item .btn_toggle").on("click", function(e){
+        $(this).parent().toggleClass("open");
+        e.preventDefault();
+      });
+    });
+    </script>
+  </head>
+  <body>
+
+    <div class="detail_wrap">
+      <div class="tit_wrap">
+        <div class="tit_left">
+          <h2>List</h2>
+        </div>
+      </div>
+
+
+      <div class="view_list mt20">
+        <!-- 반복 -->
+        <div class="view_item open">
+          <a href="#" class="btn_toggle">열기/닫기</a>
+          <ul class="row">
+            <li class="tit">Shipper</li>
+            <li class="txt"><span class="bold">Innispree Corporation</span></li>
+          </ul>
+          <div class="view_sub">
+            <div class="addr">111-520, Mapo-gu, Seoul, South Korea</div>
+            <div class="tel">+82 2 5879 5784</div>
+          </div>
+        </div>
+        <!-- //반복 -->
+        <div class="view_item open">
+          <a href="#" class="btn_toggle">열기/닫기</a>
+          <ul class="row">
+            <li class="tit">Consignee </li>
+            <li class="txt"><span class="bold">Amorepacific, Singapore</span></li>
+          </ul>
+          <div class="view_sub">
+            <div class="addr">111-520, Mapo-gu, Seoul, South Korea</div>
+            <div class="tel">+82 2 5879 5784</div>
+          </div>
+        </div>
+        <div class="view_item">
+          <a href="#" class="btn_toggle">열기/닫기</a>
+          <ul class="row">
+            <li class="tit">Notify</li>
+            <li class="txt"><span class="bold">Amorepacific, Seoul</span></li>
+          </ul>
+          <div class="view_sub">
+            <div class="addr">111-520, Mapo-gu, Seoul, South Korea</div>
+            <div class="tel">+82 2 5879 5784</div>
+          </div>
+        </div>
+        <div class="view_item">
+          <ul class="row">
+            <li class="tit">Operator</li>
+            <li class="txt">
+              <span class="bold">Air Busan</span>
+              <span class="sub">ABL8809</span>
+            </li>
+          </ul>
+        </div>
+        <div class="view_item">
+          <ul class="row">
+            <li class="tit">Commodity</li>
+            <li class="txt">
+              <span>Skin care cosmetics</span>
+            </li>
+          </ul>
+        </div>
+        <div class="view_item">
+          <ul class="row">
+            <li class="tit">Package</li>
+            <li class="txt">
+              <span>49</span>
+            </li>
+          </ul>
+        </div>
+        <div class="view_item">
+          <ul class="row">
+            <li class="tit">Weight</li>
+            <li class="txt">
+              <span>68,247</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

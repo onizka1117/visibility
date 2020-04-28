@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>폼</title>
+    <title>input</title>
     <link href="../../css/common.css" rel="stylesheet">
     <link href="../../css/content.css" rel="stylesheet">
     <script src="../../script/lib/jquery-3.4.1.min.js"></script>
@@ -24,6 +24,9 @@
       });
 
       $(".ip_del").inputTextFocus();
+      $(".ip_filter").inputTextFocus();
+
+      $(".ip_file").fileReady();
 
     });
     </script>
@@ -31,74 +34,243 @@
   <body>
 
 
-    <table>
-      <colgroup>
-        <col style="width:20%;">
-        <col style="width:auto;">
-      </colgroup>
-      <tbody>
-        <tr>
-          <th>텍스트입력</th>
-          <td>
-            <input type="text" name="" value="" placeholder="placeholder" class="ip_txt">
-            <input type="text" name="" value="가나다라마바사" disabled="true" class="ip_txt">
-            <span class="ip_del"><input type="text" class="ip_txt" value="삭제버튼"><a href="#" class="btn_txt_del">삭제</a></span>
-          </td>
-        </tr>
-        <tr>
-          <th>검색</th>
-          <td>
-            <span class="ip_search"><input type="text" name="" value="" placeholder="" class="ip_txt"><a href="#" class="btn_ip_search">검색</a></span>
-          </td>
-        </tr>
-        <tr>
-          <th>고정 텍스트</th>
-          <td>
-            <span class="ip_fixed pr27"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">m</span></span>
-            <span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span>
-          </td>
-        </tr>
-        <tr>
-          <th>필터</th>
-          <td>
-            <span class="ip_filter"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
-            <span class="ip_filter focus"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
-          </td>
-        </tr>
-        <tr>
-          <th>문장입력</th>
-          <td>
-            <textarea>문장입력</textarea>
-          </td>
-        </tr>
-        <tr>
-          <th>날짜입력</th>
-          <td>
-            <span class="ip_date"><input type="text" id="datepicker" class="ip_txt"></span>
-          </td>
-        </tr>
-        <tr>
-          <th>기간</th>
-          <td>
-            <span class="ip_from_to">
-              <input type="text" name="" value="" placeholder="YYYY-MM-DD" class="ip_txt"><span class="line">~</span><input type="text" name="" value="" placeholder="YYYY-MM-DD"  class="ip_txt">
-              <a href="#" class="btn_cal">기간선택</a>
-            </span>
-          </td>
-        </tr>
-        <tr>
-          <th>셀렉트</th>
-          <td>
-            <select class="select" name="">
+    <div class="detail_wrap">
+
+      <div class="tit_wrap">
+        <div class="tit_left">
+          <h2>Input / Form</h2>
+        </div>
+      </div>
+
+
+      <!--  타이틀 박스 -->
+      <div class="tit_box mt20">
+        <div class="tit_area">
+          <div class="tit_left">
+            <span class="tit">Input</span>
+          </div>
+        </div>
+        <div class="con_area">
+          <!-- form -->
+          <div class="form_wrap">
+            <table class="tbl_form">
+              <colgroup>
+                <col style="width:;">
+                <col style="width:;">
+                <col style="width:;">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td>
+                    <label for="" class="lb_txt">Input</label>
+                    <input type="text" name="" value="" class="ip_txt">
+                  </td>
+                  <td>
+                    <label for="" class="lb_txt">Input+del</label>
+                    <span class="ip_del"><input type="text" class="ip_txt" value="입력"><a href="#" class="btn_txt_del">삭제</a></span>
+                  </td>
+                  <td>
+                    <label for="" class="lb_txt">input + del + search</label>
+                    <span class="ip_search"><span class="ip_del"><input type="text" class="ip_txt" value=""><a href="#" class="btn_txt_del">삭제</a></span><a href="#" class="btn_ip_search">검색</a></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="" class="lb_txt">filter</label>
+                    <span class="ip_filter"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                  </td>
+                  <td>
+                    <label for="" class="lb_txt">고정 텍스트 m</label>
+                    <span class="ip_fixed pr27"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">m</span></span>
+                  </td>
+                  <td>
+                    <label for="" class="lb_txt">고정 텍스트 kg</label>
+                    <span class="ip_fixed pr34"><input type="text" name="" value="" placeholder="" class="ip_txt tar"><span class="ftxt">kg</span></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="3">
+                    <label for="" class="lb_txt">문장입력</label>
+                    <textarea>문장입력</textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="" class="lb_txt">날짜</label>
+                    <span class="ip_date"><input type="text" id="datepicker" class="ip_txt"></span>
+                  </td>
+                  <td>
+                    <label for="" class="lb_txt">기간</label>
+                    <ul class="ip_group">
+                      <li><span class="ip_date"><input type="text" class="ip_txt"></span></li>
+                      <li class="w30 tac">-</li>
+                      <li><span class="ip_date"><input type="text" class="ip_txt"></span></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <label for="" class="lb_txt">기간(삭제예정)</label>
+                    <span class="ip_from_to" style="width:100%;">
+                      <input type="text" name="" value="" placeholder="YYYY-MM-DD" class="ip_txt"><span class="line">~</span><input type="text" name="" value="" placeholder="YYYY-MM-DD"  class="ip_txt">
+                      <a href="#" class="btn_cal">기간선택</a>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="" class="lb_txt">셀렉트</label>
+                    <select class="select" name="">
+                      <option value="">사과</option>
+                      <option value="">바나나</option>
+                      <option value="">딸기</option>
+                    </select>
+                  </td>
+                  <td>
+                    <label for="" class="lb_txt">셀렉트 small</label>
+                    <select class="select sm" name="">
+                      <option value="">사과</option>
+                      <option value="">바나나</option>
+                      <option value="">딸기</option>
+                    </select>
+                  </td>
+                  <td>
+                    <label for="" class="lb_txt">셀렉트 그룹 small</label>
+                    <span class="select_group">
+                      <span class="label">Regions</span>
+                      <select name="">
+                        <option value="">All</option>
+                        <option value="">바나나</option>
+                        <option value="">딸기</option>
+                      </select>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="" class="lb_txt">체크박스(기본)</label>
+                    <div class="">
+                      <span class="ip_check"><input type="checkbox" name="" value="" id="check05"><label for="check05">Checkbox</label></span>
+                    </div>
+                  </td>
+                  <td>
+                    <label for="" class="lb_txt">리스트 타이틀 오른쪽</label>
+                    <div class="">
+                      <span class="ip_check type1"><input type="checkbox" name="" value="" id="check03"><label for="check03">View red items(2) only</label></span>
+                    </div>
+                  </td>
+                  <td>
+                    <label for="" class="lb_txt">체크박스 강조</label>
+                    <div class="">
+                      <span class="ip_check type2"><input type="checkbox" name="" value="" id="check04"><label for="check04">Check</label></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="" class="lb_txt">라디오(기본)</label>
+                    <ul class="radio_group type1">
+                      <li class="radio_item">
+                        <input type="radio" name="radio0" value="" id="radio0" checked="true"><label for="radio0">라디오1</label>
+                      </li>
+                      <li class="radio_item">
+                        <input type="radio" name="radio0" value="" id="radio1"><label for="radio1">라디오2</label>
+                      </li>
+                    </ul>
+                  </td>
+                  <td>
+                    <label for="" class="lb_txt">라디오 박스</label>
+                    <ul class="radio_group type_box">
+                      <li class="radio_item">
+                        <input type="radio" name="radio1" value="" id="radio01" checked="true"><label for="radio01">YYYY-MM-DD</label>
+                      </li>
+                      <li class="radio_item">
+                        <input type="radio" name="radio1" value="" id="radio02"><label for="radio02">MM-DD-YYYY</label>
+                      </li>
+                      <li class="radio_item">
+                        <input type="radio" name="radio1" value="" id="radio03"><label for="radio03">DD-MM-YYYY</label>
+                      </li>
+                    </ul>
+                  </td>
+                  <td>
+                    <label for="" class="lb_txt">라디오 freight</label>
+                    <ul class="radio_group type_freight">
+                      <li class="radio_item air">
+                        <input type="radio" name="radioEbook" value="" id="radio05" checked="true"><label for="radio05">Air Freight</label>
+                      </li>
+                      <li class="radio_item ocean">
+                        <input type="radio" name="radioEbook" value="" id="radio06"><label for="radio06">Ocean Freight</label>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="3">
+                    <label for="" class="lb_txt">파일</label>
+                    <div class="ip_file">
+                      <input type="text" name="" value="" placeholder="업로드할 파일을 선택하세요." readonly="true" class="ip_txt">
+                      <span class="bn_up">file..<input type="file" name="" value=""></span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //form -->
+
+        </div>
+      </div>
+      <!--  //타이틀 박스 -->
+
+
+      <div class="tit_wrap mt20">
+        <div class="tit_left">
+          <h4>상단 검색 영역</h4>
+        </div>
+      </div>
+
+      <!-- 검색 -->
+      <div class="search_wrap">
+        <ul class="search_form">
+          <li>
+            <label for="" class="lb_txt req">Customer ID</label>
+            <input type="text" name="" value="" class="ip_txt" style="width:200px;">
+            <input type="text" name="" value="" class="ip_txt" disabled="true" style="width:150px;">
+          </li>
+          <li>
+            <label for="" class="lb_txt">EX/IM</label>
+            <select class="select" name="" style="width:220px;">
               <option value="">사과</option>
               <option value="">바나나</option>
               <option value="">딸기</option>
             </select>
-          </td>
-        </tr>
-        <tr>
-          <th>셀렉트</th>
-          <td>
+          </li>
+          <li>
+            <label for="" class="lb_txt">Period</label>
+            <span class="ip_date" style="width:220px;"><input type="text" class="ip_txt"></span>
+          </li>
+          <li>
+            <label for="" class="lb_txt">M. B/L No.</label>
+            <input type="text" name="" value="" class="ip_txt" style="width:220px;">
+          </li>
+          <li class="btns">
+            <a href="#" class="btn lg ico_search">검색</a>
+            <a href="#" class="btn lg line ico_reset">초기화</a>
+          </li>
+        </ul>
+      </div>
+      <!-- //검색 -->
+
+
+
+      <div class="tit_wrap mt20">
+        <div class="tit_left">
+          <h4>서브메인 상세 검색영역</h4>
+        </div>
+      </div>
+
+      <!-- 서브 메인 검색 -->
+      <div class="sub_search_form">
+        <ul>
+          <li>
             <span class="select_group">
               <span class="label">Regions</span>
               <select name="">
@@ -107,269 +279,244 @@
                 <option value="">딸기</option>
               </select>
             </span>
-          </td>
-        </tr>
-        <tr>
-          <th>셀렉트</th>
-          <td>
-            <select name="" class="select sm">
-              <option value="">All</option>
-              <option value="">바나나</option>
-              <option value="">딸기</option>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <th>체크박스</th>
-          <td>
-            <span class="ip_check"><input type="checkbox" name="" value="" id="check03"><label for="check03">View red items(2) only</label></span>
-          </td>
-        </tr>
-        <tr>
-          <th>체크박스 type1</th>
-          <td>
-            <span class="ip_check type1"><input type="checkbox" name="" value="" id="check04"><label for="check04">Check</label></span>
-          </td>
-        </tr>
-        <tr>
-          <th>라디오 박스</th>
-          <td>
-            <ul class="radio_group type1">
-              <li class="radio_item">
-                <input type="radio" name="radio0" value="" id="radio0" checked="true"><label for="radio0">라디오1</label>
+          </li>
+          <li>
+            <ul class="ip_group type1">
+              <li style="width:86px;">
+                <select name="" class="select sm">
+                  <option value="">ETD</option>
+                  <option value="">바나나</option>
+                  <option value="">딸기</option>
+                </select>
               </li>
-              <li class="radio_item">
-                <input type="radio" name="radio0" value="" id="radio1"><label for="radio1">라디오2</label>
+              <li>
+                <select name="" class="select sm">
+                  <option value="">2020-01</option>
+                  <option value="">바나나</option>
+                  <option value="">딸기</option>
+                </select>
               </li>
             </ul>
-          </td>
-        </tr>
-        <tr>
-          <th>라디오 박스</th>
-          <td>
-            <ul class="radio_group type_box">
-              <li class="radio_item">
-                <input type="radio" name="radio1" value="" id="radio01" checked="true"><label for="radio01">YYYY-MM-DD</label>
-              </li>
-              <li class="radio_item">
-                <input type="radio" name="radio1" value="" id="radio02"><label for="radio02">MM-DD-YYYY</label>
-              </li>
-              <li class="radio_item">
-                <input type="radio" name="radio1" value="" id="radio03"><label for="radio03">DD-MM-YYYY</label>
-              </li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <th>라디오</th>
-          <td>
-            <ul class="radio_group type_freight">
-              <li class="radio_item air">
-                <input type="radio" name="radioEbook" value="" id="radio05" checked="true"><label for="radio05">Air Freight</label>
-              </li>
-              <li class="radio_item ocean">
-                <input type="radio" name="radioEbook" value="" id="radio06"><label for="radio06">Ocean Freight</label>
-              </li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <th>파일</th>
-          <td>
-            <div class="ip_file">
-              <input type="text" name="" value="" placeholder="업로드할 파일을 선택하세요." readonly="true" class="ip_txt">
-              <span class="bn_up">file..<input type="file" name="" value=""></span>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
-
-    <!-- 검색 -->
-    <div class="search_wrap">
-      <ul class="search_form">
-        <li>
-          <label for="" class="lb_txt req">Customer ID</label>
-          <input type="text" name="" value="" class="ip_txt" style="width:200px;">
-          <input type="text" name="" value="" class="ip_txt" disabled="true" style="width:150px;">
-        </li>
-        <li>
-          <label for="" class="lb_txt">EX/IM</label>
-          <select class="select" name="" style="width:220px;">
-            <option value="">사과</option>
-            <option value="">바나나</option>
-            <option value="">딸기</option>
-          </select>
-        </li>
-        <li>
-          <label for="" class="lb_txt">Period</label>
-          <span class="ip_date" style="width:220px;"><input type="text" class="ip_txt"></span>
-        </li>
-        <li>
-          <label for="" class="lb_txt">M. B/L No.</label>
-          <input type="text" name="" value="" class="ip_txt" style="width:220px;">
-        </li>
-        <li class="btns">
-          <a href="#" class="btn lg ico_search">검색</a>
-          <a href="#" class="btn lg line ico_reset">초기화</a>
-        </li>
-      </ul>
-    </div>
-    <!-- //검색 -->
-
-
-    <!-- 서브 메인 검색 -->
-    <div class="sub_search_form">
-      <ul>
-        <li>
-          <span class="select_group">
-            <span class="label">Regions</span>
-            <select name="">
-              <option value="">All</option>
-              <option value="">바나나</option>
-              <option value="">딸기</option>
-            </select>
-          </span>
-        </li>
-        <li>
-          <ul class="ip_group type1">
-            <li style="width:86px;">
-              <select name="" class="select sm">
-                <option value="">ETD</option>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <span class="select_group">
+              <span class="label">Department</span>
+              <select name="">
+                <option value="">All</option>
                 <option value="">바나나</option>
                 <option value="">딸기</option>
               </select>
-            </li>
-            <li>
-              <select name="" class="select sm">
-                <option value="">2020-01</option>
+            </span>
+          </li>
+          <li>
+            <span class="select_group">
+              <span class="label">EX/IM</span>
+              <select name="">
+                <option value="">All</option>
                 <option value="">바나나</option>
                 <option value="">딸기</option>
               </select>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <span class="select_group">
-            <span class="label">Department</span>
-            <select name="">
-              <option value="">All</option>
-              <option value="">바나나</option>
-              <option value="">딸기</option>
-            </select>
-          </span>
-        </li>
-        <li>
-          <span class="select_group">
-            <span class="label">EX/IM</span>
-            <select name="">
-              <option value="">All</option>
-              <option value="">바나나</option>
-              <option value="">딸기</option>
-            </select>
-          </span>
-        </li>
-      </ul>
-      <a href="#" class="btn line ico_search">검색</a>
-    </div>
-    <!-- //서브 메인 검색 -->
+            </span>
+          </li>
+        </ul>
+        <a href="#" class="btn line ico_search">검색</a>
+      </div>
+      <!-- //서브 메인 검색 -->
 
 
 
-    <!--  타이틀 박스 -->
-    <div class="tit_box">
-      <div class="tit_area">
+      <div class="tit_wrap mt20">
         <div class="tit_left">
-          <span class="tit">Invoice Information</span>
+          <h4>인풋요소</h4>
         </div>
-        <div class="tit_right">
-          <div class="btn_list">
-            <a href="#" class="btn sm line ico_add">추가</a>
-            <a href="#" class="btn sm line ico_remove">삭제</a>
-            <a href="#" class="btn sm">Save</a>
+      </div>
+
+      <!--  타이틀 박스 -->
+      <div class="tit_box">
+        <div class="tit_area">
+          <div class="tit_left">
+            <span class="tit">Invoice Information</span>
+          </div>
+          <div class="tit_right">
+            <div class="btn_list">
+              <a href="#" class="btn sm line ico_add">추가</a>
+              <a href="#" class="btn sm line ico_remove">삭제</a>
+              <a href="#" class="btn sm">Save</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="con_area">
-        <!-- form -->
-        <div class="form_wrap">
-          <table class="tbl_form">
-            <colgroup>
-              <col style="width:;">
-              <col style="width:;">
-              <col style="width:;">
-            </colgroup>
-            <tbody>
-              <tr>
-                <td>
-                  <label for="" class="lb_txt">취급선사</label>
-                  <input type="text" name="" value="" class="ip_txt">
-                </td>
-                <td>
-                  <label for="" class="lb_txt">담당자</label>
-                  <input type="text" name="" value="" class="ip_txt">
-                </td>
-                <td>
-                  <label for="" class="lb_txt">BK NO.</label>
-                  <input type="text" name="" value="" class="ip_txt">
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <label for="" class="lb_txt">PORT</label>
-                  <ul class="ip_group">
-                    <li><span class="ip_search"><input type="text" name="" value="" placeholder="" class="ip_txt"><a href="#" class="btn_ip_search">검색</a></span></li>
-                    <li class="w30 tac">-</li>
-                    <li><span class="ip_search"><input type="text" name="" value="" placeholder="" class="ip_txt"><a href="#" class="btn_ip_search">검색</a></span></li>
-                  </ul>
-                </td>
-                <td>
-                  <label for="" class="lb_txt">담당자</label>
-                  <input type="text" name="" value="" class="ip_txt">
-                </td>
-                <td>
-                  <label for="" class="lb_txt">BK NO.</label>
-                  <ul class="ip_group">
-                    <li><span class="ip_date"><input type="text" class="ip_txt"></span></li>
-                    <li class="w30 tac">-</li>
-                    <li><span class="ip_date"><input type="text" class="ip_txt"></span></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <label for="" class="lb_txt">PORT</label>
-                  <input type="text" name="" value="" placeholder="" class="ip_txt">
-                </td>
-                <td>
-                  <label for="" class="lb_txt">담당자</label>
-                  <ul class="ip_group">
-                    <li><input type="text" name="" value="" placeholder="" class="ip_txt"></li>
-                    <li class="w30 tac">X</li>
-                    <li><input type="text" name="" value="" placeholder="" class="ip_txt"></li>
-                  </ul>
-                </td>
-                <td>
-                  <label for="" class="lb_txt">BK NO.</label>
-                  <span class="ip_date"><input type="text" class="ip_txt"></span>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="3">
-                  <label for="" class="lb_txt">PORT</label>
-                  <textarea name="" rows="8" cols="80"></textarea>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="con_area">
+          <!-- form -->
+          <div class="form_wrap">
+            <table class="tbl_form">
+              <colgroup>
+                <col style="width:;">
+                <col style="width:;">
+                <col style="width:;">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td>
+                    <label for="" class="lb_txt">취급선사</label>
+                    <input type="text" name="" value="" class="ip_txt">
+                  </td>
+                  <td>
+                    <label for="" class="lb_txt">담당자</label>
+                    <input type="text" name="" value="" class="ip_txt">
+                  </td>
+                  <td>
+                    <label for="" class="lb_txt">BK NO.</label>
+                    <input type="text" name="" value="" class="ip_txt">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="" class="lb_txt">PORT</label>
+                    <ul class="ip_group">
+                      <li><span class="ip_search"><input type="text" name="" value="" placeholder="" class="ip_txt"><a href="#" class="btn_ip_search">검색</a></span></li>
+                      <li class="w30 tac">-</li>
+                      <li><span class="ip_search"><input type="text" name="" value="" placeholder="" class="ip_txt"><a href="#" class="btn_ip_search">검색</a></span></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <label for="" class="lb_txt">담당자</label>
+                    <input type="text" name="" value="" class="ip_txt">
+                  </td>
+                  <td>
+                    <label for="" class="lb_txt">BK NO.</label>
+                    <ul class="ip_group">
+                      <li><span class="ip_date"><input type="text" class="ip_txt"></span></li>
+                      <li class="w30 tac">-</li>
+                      <li><span class="ip_date"><input type="text" class="ip_txt"></span></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="" class="lb_txt">PORT</label>
+                    <input type="text" name="" value="" placeholder="" class="ip_txt">
+                  </td>
+                  <td>
+                    <label for="" class="lb_txt">담당자</label>
+                    <ul class="ip_group">
+                      <li><input type="text" name="" value="" placeholder="" class="ip_txt"></li>
+                      <li class="w30 tac">X</li>
+                      <li><input type="text" name="" value="" placeholder="" class="ip_txt"></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <label for="" class="lb_txt">BK NO.</label>
+                    <span class="ip_date"><input type="text" class="ip_txt"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="3">
+                    <label for="" class="lb_txt">PORT</label>
+                    <textarea name="" rows="8" cols="80"></textarea>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //form -->
         </div>
-        <!-- //form -->
       </div>
+      <!--  //타이틀 박스 -->
+
+
+
+      <div class="tit_wrap mt20">
+        <div class="tit_left">
+          <h4>폼</h4>
+        </div>
+      </div>
+
+
+      <div class="list_form_wrap">
+        <ul class="list_form">
+          <li>
+            <label for="" class="lb_txt">E-mail</label>
+            <span class="ip_del" style="width:360px;"><input type="text" class="ip_txt" ><a href="#" class="btn_txt_del">삭제</a></span>
+          </li>
+        </ul>
+        <ul class="list_form">
+          <li>
+            <label for="" class="lb_txt">Tel</label>
+            <span class="ip_del" style="width:360px;"><input type="text" class="ip_txt" ><a href="#" class="btn_txt_del">삭제</a></span>
+          </li>
+          <li>
+            <label for="" class="lb_txt">Fax No</label>
+            <span class="ip_del" style="width:360px;"><input type="text" class="ip_txt" ><a href="#" class="btn_txt_del">삭제</a></span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="list_form_wrap line">
+        <ul class="list_form">
+          <li>
+            <label for="" class="lb_txt">Status</label>
+            <ul class="radio_group type1" style="width:360px;">
+              <li class="radio_item">
+                <input type="radio" name="radio0" value="" id="radio2" checked="true"><label for="radio2">라디오1</label>
+              </li>
+              <li class="radio_item">
+                <input type="radio" name="radio0" value="" id="radio3"><label for="radio3">라디오2</label>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="list_form">
+          <li>
+            <label for="" class="lb_txt">Reset Password</label>
+            <a href="#" class="btn lg line" style="width:120px;">Reset</a>
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="tit_wrap mt20">
+        <div class="tit_left">
+          <h4>폼 100%</h4>
+        </div>
+      </div>
+
+
+      <div class="list_form_wrap type_full">
+        <ul class="list_form">
+          <li>
+            <label for="" class="lb_txt">E-mail</label>
+            <span class="ip_del"><input type="text" class="ip_txt" ><a href="#" class="btn_txt_del">삭제</a></span>
+          </li>
+        </ul>
+        <ul class="list_form">
+          <li>
+            <label for="" class="lb_txt">Tel</label>
+            <span class="ip_del" ><input type="text" class="ip_txt" ><a href="#" class="btn_txt_del">삭제</a></span>
+          </li>
+        </ul>
+        <ul class="list_form">
+          <li>
+            <label for="" class="lb_txt">Tel</label>
+            <span class="ip_del" ><input type="text" class="ip_txt" ><a href="#" class="btn_txt_del">삭제</a></span>
+          </li>
+        </ul>
+      </div>
+
+
     </div>
-    <!--  //타이틀 박스 -->
+
+
+
+
+
+
+
+
+
+
+
 
 
   </body>

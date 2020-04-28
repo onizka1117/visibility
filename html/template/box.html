@@ -5,150 +5,105 @@
     <title>박스</title>
     <link href="../../css/common.css" rel="stylesheet">
     <link href="../../css/content.css" rel="stylesheet">
+    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery-ui.js"></script>
+    <script src="../../script/ui_common.js"></script>
+    <script type="text/javascript">
+    $(function(){
+      $(".tog_box .btn_toggle").on("click", function(e){
+        $(this).parents(".tog_box").toggleClass("open");
+        e.preventDefault();
+      });
+    });
+    </script>
   </head>
   <body>
 
-
-    <!-- static tile -->
-    <ul class="main_cols_4">
-      <li>
-        <a href="#" class="st_tile box bg_type2 st_tracking">Tracking</a>
-      </li>
-      <li><a href="#" class="st_tile box bg_type3 st_ebooking">E-Booking</a></li>
-      <li><a href="#" class="st_tile box bg_type3 st_ebooking">Sales KPI</a></li>
-      <li><a href="#" class="st_tile box bg_type4 st_ebooking">Costomer KPI</a></li>
-      <li><a href="#" class="st_tile box st_ebooking">Schedule</a></li>
-    </ul>
+    <div class="detail_wrap">
 
 
-
-    <ul class="main_cols_4">
-      <li><a href="#" class="st_tile2 box bg_type4 st_analytics"><span>Analytics Tool</span></a></li>
-      <li><a href="#" class="st_tile2 box st_quotaion"><span>New Quotation</span></a></li>
-      <li><a href="#" class="st_tile2 box st_kpi"><span>KPI</span></a></li>
-      <li><a href="#" class="st_tile2 box st_dashboard"><span>Dashboard</span></a></li>
-      <li><a href="#" class="st_tile2 box st_volume"><span>Monthly Volume<br> by Region</span></a></li>
-      <li><a href="#" class="st_tile2 box st_schedule"><span>Shipping Schedule</span></a></li>
-      <li><a href="#" class="st_tile2 box st_cost"><span>Monthly Costbr<br> by Region</span></a></li>
-      <li><a href="#" class="st_tile2 box bg_type4 st_biz_closed"><span>New Biz Closed</span></a></li>
-      <li><a href="#" class="st_tile2 box st_schedule2"><span>Schedule</span></a></li>
-      <li><a href="#" class="st_tile2 box st_crm"><span>CRM</span></a></li>
-      <li><a href="#" class="st_tile2 box st_"><span></span></a></li>
-      <li><a href="#" class="st_tile2 box st_"><span></span></a></li>
-    </ul>
-    <!-- //static tile -->
-
-
-
-
-
-
-
-
-
-
-
-    <!-- 기본박스 -->
-    <div class="box">
-    </div>
-
-    <div class="box bg_type1">
-    </div>
-
-    <div class="box bg_type2">
-    </div>
-
-    <div class="box bg_type3">
-    </div>
-
-    <div class="box bg_type4">
-    </div>
-
-    <!-- 박스셰도우  -->
-    <div class="box shadow">
-    </div>
-
-
-    <!-- 라인 박스 -->
-    <div class="box line">
-    </div>
-
-
-
-
-    <!--  타이틀 박스 -->
-    <div class="tit_box">
-      <div class="tit_area">
-        <div class="tit_left">
-          <span class="tit">Invoice Information</span>
-        </div>
-        <div class="tit_right">
-          <div class="btn_list">
-            <a href="#" class="btn sm line ico_add">추가</a>
-            <a href="#" class="btn sm line ico_remove">삭제</a>
-            <a href="#" class="btn sm">Save</a>
-          </div>
-        </div>
-      </div>
-      <div class="con_area">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-      </div>
-      <div class="foot_area">
-        <div class="comm_paging">
-            <!-- select -->
-            <div class="box_select">
-                <select class='opt_select'>
-                    <option>5</option>
-                    <option>4</option>
-                    <option>3</option>
-                    <option>2</option>
-                    <option>1</option>
-                </select>
-            </div>
-            <!--// select -->
-            <!-- pagination -->
-            <div class="pagination">
-                <a href="javascript:" class="arr prev first"></a>
-                <a href="javascript:" class="active">1</a>
-                <a href="javascript:" class="">2</a>
-                <a href="javascript:" class="">3</a>
-                <a href="javascript:" class="">4</a>
-                <a href="javascript:" class="">5</a>
-                <a href="javascript:" class="arr next"></a>
-            </div>
-            <!--// pagination -->
-        </div>
-      </div>
-    </div>
-    <!--  //타이틀 박스 -->
-
-
-    <!-- show/hide 박스 -->
-    <div class="tog_box">
-      <div class="tit_area">
-        <div class="tit_wrap">
+      <!--  타이틀 박스 -->
+      <div class="tit_box">
+        <div class="tit_area">
           <div class="tit_left">
-            <h4>Cargo Detail</h4>
+            <span class="tit">Invoice Information</span>
           </div>
           <div class="tit_right">
-            <div class="tog_btn">
-              <span><span class="open">Open</span><span class="close">Close</span> to Cargo Detail</span>
-              <a href="#" class="btn_toggle">열기/닫기</a>
+            <div class="btn_list">
+              <a href="#" class="btn sm line ico_add">추가</a>
+              <a href="#" class="btn sm line ico_remove">삭제</a>
+              <a href="#" class="btn sm">Save</a>
             </div>
           </div>
         </div>
+        <div class="con_area">
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        </div>
+        <div class="foot_area">
+          <div class="comm_paging">
+              <!-- select -->
+              <div class="box_select">
+                  <select class='opt_select'>
+                      <option>5</option>
+                      <option>4</option>
+                      <option>3</option>
+                      <option>2</option>
+                      <option>1</option>
+                  </select>
+              </div>
+              <!--// select -->
+              <!-- pagination -->
+              <div class="pagination">
+                  <a href="javascript:" class="arr prev first"></a>
+                  <a href="javascript:" class="active">1</a>
+                  <a href="javascript:" class="">2</a>
+                  <a href="javascript:" class="">3</a>
+                  <a href="javascript:" class="">4</a>
+                  <a href="javascript:" class="">5</a>
+                  <a href="javascript:" class="arr next"></a>
+              </div>
+              <!--// pagination -->
+          </div>
+        </div>
       </div>
+      <!--  //타이틀 박스 -->
 
-      <div class="con_area">
+
+      <br>
+      <br>
+      <br>
+
+      <!-- show/hide 박스 -->
+      <div class="tog_box">
+        <div class="tit_area">
+          <div class="tit_wrap">
+            <div class="tit_left">
+              <h4>Show / Hide Box</h4>
+            </div>
+            <div class="tit_right">
+              <div class="tog_btn">
+                <span><span class="open">Open</span><span class="close">Close</span> to Cargo Detail</span>
+                <a href="#" class="btn_toggle">열기/닫기</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="con_area">
+          내용
+        </div>
       </div>
+      <!-- //show/hide 박스 -->
+
     </div>
-    <!-- //show/hide 박스 -->
+
+
 
   </body>
 </html>

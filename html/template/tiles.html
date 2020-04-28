@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <link href="../../script/lib/jquery.bxslider.css" rel="stylesheet">
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/content.css" rel="stylesheet">
+    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery-ui.js"></script>
+    <script src="../../script/lib/jquery.bxslider.js"></script>
+    <script src="../../script/ui_common.js"></script>
+    <script type="text/javascript">
+    $(function(){
+      $("#btnTheme").on("click", function(){
+        $("body").toggleClass("dark");
+      });
+
+    });
+    </script>
+  </head>
+  <body>
+
+    <div class="detail_wrap">
+
+      <div class="tit_wrap">
+        <div class="tit_left">
+          <h2>Tiles</h2>
+        </div>
+        <div class="tit_right">
+          <div class="btn_list">
+            <a href="#" class="btn" id="btnTheme">Theme</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="tit_wrap mt20">
+        <div class="tit_left">
+          <h4>Indicator</h4>
+        </div>
+      </div>
+
+      <!-- indicator -->
+      <div class="indicator_wrap">
+        <ul id="indiSlider" class="indicator_list">
+          <!--  반복 -->
+          <li>
+            <a href="#">
+              <div class="indi_tile box bg_type1">
+                <img src="../../images/img_indi01.png" alt="" class="img_indi">
+                <strong class="num">5</strong>
+                <span class="txt">Booking</span>
+              </div>
+            </a>
+          </li>
+          <!--  //반복 -->
+          <li>
+            <a href="#">
+              <div class="indi_tile box bg_type1">
+                <img src="../../images/img_indi01.png" alt="" class="img_indi">
+                <strong class="num">5</strong>
+                <span class="txt">Booking</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="indi_tile box bg_type1">
+                <img src="../../images/img_indi01.png" alt="" class="img_indi">
+                <strong class="num">5</strong>
+                <span class="txt">Booking</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="indi_tile box bg_type1">
+                <img src="../../images/img_indi01.png" alt="" class="img_indi">
+                <strong class="num">5</strong>
+                <span class="txt">Booking</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="indi_tile box bg_type1">
+                <img src="../../images/img_indi01.png" alt="" class="img_indi">
+                <strong class="num">5</strong>
+                <span class="txt">Booking</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- //indicator -->
+
+      <div class="tit_wrap mt20">
+        <div class="tit_left">
+          <h4>Live</h4>
+        </div>
+      </div>
+
+      <!-- Live Tiles -->
+      <ul class="live_wrap">
+        <li>
+          <div class="live_tile box bg_type1">
+            <div class="tit_area">
+              <strong class="tit">Market Update : March 18, 2020</strong>
+            </div>
+            <div class="con">
+              <div class="market_update">
+                <img src="../../images/@img_market_update.png" alt="">
+                <div class="txt">
+                  How will businesses recover from COVID-19?<br>
+                  When will factories start running again? And how can you ensure your cargo is moving when they do?
+                </div>
+                <a href="#" class="more">View More</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="live_tile box bg_type1">
+            <div class="tit_area">
+              <strong class="tit">This Month Volume</strong>
+            </div>
+            <div class="con">
+              차트영역
+            </div>
+          </div>
+        </li>
+      </ul>
+      <!-- //Live Tiles -->
+
+
+
+      <div class="tit_wrap mt20">
+        <div class="tit_left">
+          <h4>Static</h4>
+        </div>
+      </div>
+
+
+      <!-- Static Tiles -->
+      <ul class="main_cols_2 mt20">
+        <li>
+          <ul class="main_cols_4">
+            <li>
+              <a href="#" class="st_tile box bg_type2">
+                <span class="img"><img src="../../images/ico_static_tracking.svg" alt=""></span>
+                <span class="txt">Tracking</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="st_tile box bg_type3">
+                <span class="img"><img src="../../images/ico_static_ebook.svg" alt=""></span>
+                <span class="txt">E-Booking</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul class="main_cols_4">
+            <li>
+              <a href="#" class="st_tile2 box bg_type4">
+                <span class="img"><img src="../../images/ico_static_analytics.svg" alt=""></span>
+                <span class="txt">Analytics Tool</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="st_tile2 box">
+                <span class="img"><img src="../../images/ico_static_quotation.svg" alt="" class="img_w"><img src="../../images/dark/ico_static_quotation.svg" alt=""  class="img_d"></span>
+                <span class="txt">New Quotation</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="main_cols_4 mt20">
+            <li>
+              <a href="#" class="st_tile2 box">
+                <span class="img"><img src="../../images/ico_static_kpi.svg" alt="" class="img_w"><img src="../../images/dark/ico_static_kpi.svg" alt=""  class="img_d"></span>
+                <span class="txt">KPI</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="st_tile2 box">
+                <span class="img"><img src="../../images/ico_static_dashboard.svg" alt="" class="img_w"><img src="../../images/dark/ico_static_dashboard.svg" alt=""  class="img_d"></span>
+                <span class="txt">Dashboard</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <!-- //Static Tiles -->
+
+      <br>
+
+      <ul class="main_cols_4">
+        <li>
+          <a href="#" class="st_tile box bg_type2">
+            <span class="img"><img src="../../images/ico_static_tracking.svg" alt=""></span>
+            <span class="txt">Tracking</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="st_tile box bg_type3">
+            <span class="img"><img src="../../images/ico_static_order.svg" alt=""></span>
+            <span class="txt">Order <br>Management</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="st_tile box bg_type4">
+            <span class="img"><img src="../../images/ico_static_kpi_w.svg" alt=""></span>
+            <span class="txt">KPI</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="st_tile box">
+            <span class="img"><img src="../../images/ico_static_report.svg" alt="" class="img_w"><img src="../../images/dark/ico_static_report.svg" alt=""  class="img_d"></span>
+            <span class="txt">report</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Static Tiles -->
+      <ul class="main_cols_4 mt20">
+        <li>
+          <a href="#" class="st_tile box bg_type2">
+            <span class="img"><img src="../../images/ico_static_perform.svg" alt=""></span>
+            <span class="txt">Performance</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="st_tile box bg_type3">
+            <span class="img"><img src="../../images/ico_static_cust_kpi.svg" alt=""></span>
+            <span class="txt">Customer KPI</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="st_tile box bg_type4">
+            <span class="img"><img src="../../images/ico_static_schedule2_w.svg" alt=""></span>
+            <span class="txt">Schedule</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="st_tile box">
+            <span class="img"><img src="../../images/ico_static_quotation2.svg" alt="" class="img_w"><img src="../../images/dark/ico_static_quotation2.svg" alt=""  class="img_d"></span>
+            <span class="txt">Quotation</span>
+          </a>
+        </li>
+      </ul>
+      <!-- //Static Tiles -->
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

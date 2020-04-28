@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+    <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/content.css" rel="stylesheet">
+    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery-ui.js"></script>
+    <script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../script/ui_common.js"></script>
+    <title></title>
+    <script type="text/javascript">
+      $(function(){
+
+        $(".ip_del").inputTextFocus();
+
+      });
+    </script>
+  </head>
+  <body>
+
+
+    <!-- layer -->
+    <div class="layer_pop_wrap type1" style="">
+      <a href="#" class="btn_closed">닫기</a>
+      <div class="pop_header">
+        <div class="tit">
+          고객사 선택
+        </div>
+      </div>
+      <div class="pop_con">
+
+        <!-- 검색 -->
+        <div class="search_wrap">
+          <ul class="search_form">
+            <li>
+              <label for="" class="lb_txt">고객유형</label>
+              <ul class="radio_group type1">
+                <li class="radio_item">
+                  <input type="radio" name="radio0" value="" id="radio0" checked="true"><label for="radio0">고객사 유저</label>
+                </li>
+                <li class="radio_item">
+                  <input type="radio" name="radio0" value="" id="radio1"><label for="radio1">협력사 유저</label>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <label for="" class="lb_txt">고객사</label>
+              <span class="ip_del" style="width:300px;"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+              <select class="select" name="" style="width:120px;">
+                <option value="">All</option>
+                <option value="">바나나</option>
+                <option value="">딸기</option>
+              </select>
+            </li>
+            <li class="btns">
+              <a href="#" class="btn lg line ico_search">검색</a>
+            </li>
+          </ul>
+        </div>
+        <!-- //검색 -->
+
+        <div class="grid_wrap type_sm">
+          그리드영역 height:365px
+        </div>
+
+        <div class="btn_pop_bottom">
+          <div class="btn_list">
+            <a href="#" class="btn sm">Save</a>
+            <a href="#" class="btn gray sm">Close</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- //layer -->
+
+
+
+  </body>
+</html>
