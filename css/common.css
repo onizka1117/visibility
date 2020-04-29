@@ -203,16 +203,20 @@ table {border-collapse:collapse; border-spacing:0; }
 
 
 /* margin */
-.mt20 {margin-top:20px;}
-.ml30 {margin-left:30px;}
+.mt20 {margin-top:20px !important;}
+.mt30 {margin-top:30px !important;}
+.mt40 {margin-top:40px !important;}
+
+.ml30 {margin-left:30px !important;}
+
 
 /* font */
-.bold {font-weight:500;}
+.bold {font-weight:500 !important;}
 
 /* color */
-.point {color:#238cd0;}
-.sub_txt {color:#8b919c;}
+.point {color:#238cd0 !important;}
+.sub_txt {color:#8b919c !important;}
 
-.tar {text-align:right;}
-.tal {text-align:left;}
-.tac {text-align:center;}
+.tar {text-align:right !important;}
+.tal {text-align:left !important;}
+.tac {text-align:center !important;}
