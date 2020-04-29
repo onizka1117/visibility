@@ -8,11 +8,23 @@
     <link href="../css/style_m.css" rel="stylesheet">
     <link href="../script/lib/jquery.bxslider.css" rel="stylesheet">
     <script src="../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery-ui.js"></script>
     <script src="../script/lib/jquery.bxslider.js"></script>
+
     <script type="text/javascript">
+    var eventList = [
+      {date:"2020-04-01", eventClass:"work meet msg"},
+      {date:"2020-04-02", eventClass:"work"},
+      {date:"2020-04-05", eventClass:"meet"},
+      {date:"2020-04-17", eventClass:"meet msg"},
+      {date:"2020-04-20", eventClass:"work meet"},
+      {date:"2020-04-25", eventClass:"work msg"},
+      {date:"2020-04-30", eventClass:"msg"}
+    ];
     $(function(){
 
-    
+
       // 타일 로드 (개발시 삭제)
       $(".live_slider li").each(function(i){
         $(this).load("tile/live.html", function() {
@@ -26,6 +38,28 @@
         });
       });
 
+
+      // 캘린더
+      $("#datacalendar").datepicker({
+        beforeShowDay : addEvents
+      });
+
+      function addEvents(date) {
+        for(i=0 ; i<eventList.length ; i++) {
+          if(getDate(date) == eventList[i].date) {
+            return [true, eventList[i].eventClass , ""];
+          }
+        }
+        return [true, "", ""];
+      }
+
+      function getDate(date) {
+        var year = date.getFullYear();
+        var month = date.getMonth()+1;
+        var month2 = month < 10 ? "0"+month : month;
+        var day = date.getDate() < 10 ? "0"+date.getDate() : date.getDate();
+        return year +"-"+ month2 + "-" + day;
+      }
 
 
 
@@ -87,10 +121,111 @@
           </li>
         </ul>
       </div>
+
+      <div class="static_tile_list">
+        <ul class="main_cols_2">
+          <li>
+            <a href="#" class="st_tile box bg_type2">
+              <span class="img"><img src="../images/ico_static_perform.svg" alt=""></span>
+              <span class="txt">Performance</span>
+            </a>
+            <a href="#" class="st_tile box bg_type4">
+              <span class="img"><img src="../../images/ico_static_schedule2_w.svg" alt=""></span>
+              <span class="txt">Schedule</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="st_tile box bg_type3">
+              <span class="img"><img src="../../images/ico_static_cust_kpi.svg" alt=""></span>
+              <span class="txt">Customer KPI</span>
+            </a>
+            <a href="#" class="st_tile box">
+              <span class="img"><img src="../../images/dark/ico_static_quotation2.svg" alt=""></span>
+              <span class="txt">Quotation</span>
+            </a>
+          </li>
+        </ul>
+      </div>
       <!-- //Static Tiles -->
 
 
     </div>
+
+
+    <div class="">
+      <div class="schedule_box box shadow">
+
+        <div class="sched_wrap">
+          <div class="tit_month">
+            <span>Monday,</span>
+            <span>17 January</span>
+          </div>
+          <div class="calendar_wrap">
+            <div id="datacalendar"></div>
+          </div>
+
+        </div>
+
+        <!-- title -->
+        <div class="tit_wrap">
+          <div class="tit_left">
+            <span class="tit">Reminder</span>
+          </div>
+          <div class="tit_right">
+            <span class="ip_check sm"><input type="checkbox" name="" value="" id="check01"><label for="check01">To do <span class="bold sub_txt">3</span></label></span>
+            <span class="ip_check sm"><input type="checkbox" name="" value="" id="check02"><label for="check02">Message <span class="bold sub_txt">3</span></label></span>
+          </div>
+        </div>
+        <!-- //title -->
+
+        <div class="scr_box">
+          <ul class="event_list">
+            <!-- 반복 -->
+            <li class="work">
+              <a href="#">
+                <div class="tit">
+                  <span class="date">2020.01.20</span>
+                </div>
+                <div class="txt">
+                  Send email to Loso Send email to Loso Kim
+                </div>
+              </a>
+            </li>
+            <!-- //반복 -->
+            <li class="msg">
+              <a href="#">
+                <div class="tit">
+                  <span class="date">2020.01.20</span>
+                </div>
+                <div class="txt">
+                  Send email to Loso Kim
+                </div>
+              </a>
+            </li>
+            <li class="meeting">
+              <a href="#">
+                <div class="tit">
+                  <span class="date">2020.01.20</span>
+                </div>
+                <div class="txt">
+                  Send email to Loso Kim
+                </div>
+              </a>
+            </li>
+            <li class="meeting">
+              <div class="tit">
+                <span class="date">2020.01.20</span>
+              </div>
+              <div class="txt">
+                Send email to Loso Kim
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
 
   </body>
 </html>

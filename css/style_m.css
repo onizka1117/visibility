@@ -244,8 +244,6 @@ a {color:#fff;}
 .m_nav .btn_signout {font-size:15px; font-family:'CJONLYONENEWbodyOTF'; color:#575f6b;}
 
 
-/* input */
-input {height:42px; border:1px solid red; width:300px;}
 
 
 /* main */
@@ -296,25 +294,46 @@ input {height:42px; border:1px solid red; width:300px;}
 .st_tile2 .img {content:""; text-align:center; width:55px; vertical-align:middle; display:table-cell; background-repeat:no-repeat; background-size:40px; }
 .st_tile2 .img img {width:40px;}
 .st_tile2>span {display:table-cell; vertical-align:middle;}
-/*
-.st_tile:before {content:""; top:25px; left:50%; margin-left:-35px; position:absolute; display:inline-block; width:70px; height:70px; background-repeat:no-repeat; background-size:cover;}
-.st_tile.st_tracking:before {background-image:url(../images/ico_static_tracking.svg);}
-.st_tile.st_ebooking:before {background-image:url(../images/ico_static_ebook.svg);}
-.st_tile.st_order:before {background-image:url(../images/ico_static_order.svg);}
-.st_tile.st_kpi:before {background-image:url(../images/ico_static_kpi_w.svg);}
-.st_tile.st_report:before {background-image:url(../images/ico_static_report.svg);}
-.st_tile2 {position:relative; display:table; table-layout:fixed; width:100%; height:75px; font-size:13px; font-weight:500; line-height:1.2; text-decoration:none; box-sizing:border-box;}
-.st_tile2>span {display:table-cell; vertical-align:middle;}
-.st_tile2:before {content:""; width:55px; display:table-cell; background-repeat:no-repeat; background-size:40px; background-position:center center; }
-.st_tile2.bg_type4 {color:#fff;}
-.st_tile2.st_analytics:before {background-image:url("../images/ico_static_analytics.svg");}
-.st_tile2.st_quotaion:before {background-image:url("../images/dark/ico_static_quotation.svg");}
-.st_tile2.st_kpi:before {background-image:url("../images/dark/ico_static_kpi.svg");}
-.st_tile2.st_dashboard:before {background-image:url("../images/dark/ico_static_dashboard.svg");}
-.st_tile2.st_volume:before {background-image:url("../images/ico_static_volume.svg");}
-.st_tile2.st_schedule:before {background-image:url("../images/ico_static_schedule.svg");}
-.st_tile2.st_cost:before {background-image:url("../images/ico_static_cost.svg");}
-*/
 
 .main_cols_2>li .st_tile+.st_tile {margin-top:10px;}
 .main_cols_2>li .st_tile2+.st_tile2 {margin-top:10px;}
+
+
+
+
+.schedule_box {padding:46px 17px 0; box-sizing:border-box; background-color:#181d23;}
+.sched_wrap {}
+.sched_wrap .tit_month {font-family:'CJONLYONENEWtitle'; font-weight:500; font-size:20px; color:#fff;}
+.sched_wrap .tit_month>span {display:block;}
+.sched_wrap .tit_month>span+span {margin-top:6px;}
+.calendar_wrap .ui-datepicker {width:100%; padding:0; box-shadow:none;}
+.calendar_wrap .ui-datepicker-calendar {width:100%;}
+.calendar_wrap .ui-datepicker-title {display:none;}
+.calendar_wrap .ui-datepicker-header {text-align:right; margin-top:-25px;}
+.calendar_wrap .ui-datepicker-prev, .calendar_wrap .ui-datepicker-next {font-size:0; display:inline-block; width:40px; height:40px; position:static;}
+.calendar_wrap .ui-datepicker-prev {background:url(../images/btn_prev_40.svg) no-repeat;}
+.calendar_wrap .ui-datepicker-next {background:url(../images/btn_next_40.svg) no-repeat; transform:none;}
+.calendar_wrap .ui-datepicker-calendar thead th {font-size:8px; font-weight:500; color:#8b919c;}
+.calendar_wrap .ui-datepicker-calendar tbody td {height:40px; text-align:center; position:relative;}
+.calendar_wrap .ui-datepicker-calendar tbody td a {display:inline-block; width:32px; height:32px; line-height:32px; font-size:14px; font-weight:500; text-decoration:none; color:#fff; letter-spacing:0.49px; }
+.calendar_wrap .ui-datepicker-calendar tbody td:nth-child(1) a, .calendar_wrap .ui-datepicker-calendar tbody td:nth-child(7) a {color:#99a1b2;}
+.calendar_wrap .ui-datepicker-calendar tbody td:after {content:""; left:50%; bottom:7px; display:inline-block; position:absolute; background-image:url(../images/mo/spr_work.png); background-repeat:no-repeat; background-size:30px;}
+.calendar_wrap .ui-datepicker-calendar tbody td.work:after {width:4px; height:4px; margin-left:-2px; background-position:0px 0px;}
+.calendar_wrap .ui-datepicker-calendar tbody td.msg:after {width:4px; height:4px; margin-left:-2px; background-position:-8px 0px;}
+.calendar_wrap .ui-datepicker-calendar tbody td.meet:after {width:4px; height:4px; margin-left:-2px; background-position:-16px 0px;}
+.calendar_wrap .ui-datepicker-calendar tbody td.work.meet:after {width:12px; margin-left:-6px; background-position:0 0;}
+.calendar_wrap .ui-datepicker-calendar tbody td.work.msg:after {width:12px; margin-left:-6px; background-position:0 -4px;}
+.calendar_wrap .ui-datepicker-calendar tbody td.meet.msg:after {width:12px; margin-left:-6px; background-position:-8px 0px;}
+.calendar_wrap .ui-datepicker-calendar tbody td.work.meet.msg:after {width:20px;  margin-left:-10px; background-position:0 0;}
+.calendar_wrap .ui-datepicker-calendar .ui-state-active {background-color:#12161a; border-radius:0;}
+.calendar_wrap .ui-datepicker-calendar .ui-datepicker-today a {color:#0080c6 !important;}
+
+.event_list {padding-left:19px; }
+.event_list>li {position:relative; padding:15px 70px 15px 0; border-bottom:1px solid rgba(147, 152, 163, 0.1); }
+.event_list>li:before {content:""; position:absolute; top:16px; left:-20px; display:inline-block; width:10px; height:10px;}
+.event_list>li.work:before {background:url(../images/ico_rm_work.svg) no-repeat 0 0; background-size:10px; }
+.event_list>li.msg:before {background:url(../images/ico_rm_msg.svg) no-repeat 0 0; background-size:10px; }
+.event_list>li.meeting:before {background:url(../images/ico_rm_meeting.svg) no-repeat 0 0; background-size:10px; }
+.event_list>li .tit {overflow:hidden; position:absolute; right:0; top:15px;}
+.event_list>li .tit .date {font-size:10px; color:#8b919c;}
+.event_list>li .txt {font-size:13px; }
