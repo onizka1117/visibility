@@ -10,22 +10,18 @@
     <script src="../../script/ui_common.js"></script>
 
     <style type="text/css">
+
+    .code {padding:10px; margin-top:5px; background:#fffce4;}
+
     </style>
 
     <script type="text/javascript">
 
     $(function(){
-      $( ".ip_date input" ).datepicker({
-        showOn: "button",
-        buttonImage: "../../images/ip_date.png",
-        buttonImageOnly: true,
-        buttonText: "Select date",
-        dateFormat: "yy/mm/dd"
-      });
 
+      $(".ip_date input" ).datepicker(uiCommon.datepickerOption);
       $(".ip_del").inputTextFocus();
       $(".ip_filter").inputTextFocus();
-
       $(".ip_file").fileReady();
 
     });
@@ -68,16 +64,25 @@
                   <td>
                     <label for="" class="lb_txt">Input+del</label>
                     <span class="ip_del"><input type="text" class="ip_txt" value="입력"><a href="#" class="btn_txt_del">삭제</a></span>
+                    <div class="code">
+                      $("선택자").inputTextFocus();
+                    </div>
                   </td>
                   <td>
                     <label for="" class="lb_txt">input + del + search</label>
                     <span class="ip_search"><span class="ip_del"><input type="text" class="ip_txt" value=""><a href="#" class="btn_txt_del">삭제</a></span><a href="#" class="btn_ip_search">검색</a></span>
+                    <div class="code">
+                      $("선택자").inputTextFocus();
+                    </div>
                   </td>
                 </tr>
                 <tr>
                   <td>
                     <label for="" class="lb_txt">filter</label>
                     <span class="ip_filter"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
+                    <div class="code">
+                      $("선택자").inputTextFocus();
+                    </div>
                   </td>
                   <td>
                     <label for="" class="lb_txt">고정 텍스트 m</label>
@@ -98,21 +103,26 @@
                   <td>
                     <label for="" class="lb_txt">날짜</label>
                     <span class="ip_date"><input type="text" id="datepicker" class="ip_txt"></span>
+                    <div class="code">
+                      $("선택자").datepicker(uiCommon.datepickerOption);
+                    </div>
                   </td>
                   <td>
                     <label for="" class="lb_txt">기간</label>
-                    <ul class="ip_group">
+                    <ul class="ip_group ip_from_to">
                       <li><span class="ip_date"><input type="text" class="ip_txt"></span></li>
-                      <li class="w30 tac">-</li>
+                      <li class="line">~</li>
                       <li><span class="ip_date"><input type="text" class="ip_txt"></span></li>
                     </ul>
                   </td>
                   <td>
                     <label for="" class="lb_txt">기간(삭제예정)</label>
+                    <!--
                     <span class="ip_from_to" style="width:100%;">
                       <input type="text" name="" value="" placeholder="YYYY-MM-DD" class="ip_txt"><span class="line">~</span><input type="text" name="" value="" placeholder="YYYY-MM-DD"  class="ip_txt">
                       <a href="#" class="btn_cal">기간선택</a>
                     </span>
+                  -->
                   </td>
                 </tr>
                 <tr>
@@ -209,6 +219,9 @@
                       <input type="text" name="" value="" placeholder="업로드할 파일을 선택하세요." readonly="true" class="ip_txt">
                       <span class="bn_up">file..<input type="file" name="" value=""></span>
                     </div>
+                    <div class="code">
+                      $("선택자").fileReady();
+                    </div>
                   </td>
                 </tr>
               </tbody>
@@ -245,7 +258,13 @@
           </li>
           <li>
             <label for="" class="lb_txt">Period</label>
-            <span class="ip_date" style="width:220px;"><input type="text" class="ip_txt"></span>
+            <div class="inblock">
+              <ul class="ip_group ip_from_to" style="width:300px;">
+                <li><span class="ip_date"><input type="text" class="ip_txt"></span></li>
+                <li class="line">~</li>
+                <li><span class="ip_date"><input type="text" class="ip_txt"></span></li>
+              </ul>
+            </div>
           </li>
           <li>
             <label for="" class="lb_txt">M. B/L No.</label>

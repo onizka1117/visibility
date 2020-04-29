@@ -22,6 +22,15 @@
       // 파일명
       $(".ip_file").fileReady();
 
+      // 캘린더
+      var dateOption = {
+        onSelect : function(){
+          if($(this).siblings("i").length>0) {
+            $(this).siblings("i").addClass("on");
+          }
+        }
+      };
+      $(".ip_date input").datepicker($.extend(uiCommon.datepickerOption, dateOption));
 
 
       // 파일추가

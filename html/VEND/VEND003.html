@@ -16,6 +16,8 @@
       // input
       $(".ip_del").inputTextFocus();
 
+      $(".ip_date input").datepicker(uiCommon.datepickerOption);
+
       // tab select
       $('ul.tab_list li').click(function(){
         $(this).parent().find(".on").removeClass("on").end().end().addClass("on");

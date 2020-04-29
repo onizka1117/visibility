@@ -70,13 +70,13 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 
 
 
-.check_group {display:block; font-size:0;}
+.check_group {display:block; font-size:0; }
 .check_group>li {display:inline-block; vertical-align:middle; position:relative; font-size:14px;}
 .check_group>li:last-child {margin-right:0;}
 .check_group>li input {position:absolute; opacity:0;}
 .check_group>li label {display:block; box-sizing:border-box;}
 .check_group>li input:checked+label {color:#fff; border-color:#0080c6; background-color:#0080c6;}
-.check_group.type_alarm {text-align:center;}
+.check_group.type_alarm {text-align:center; background-#fff;}
 .check_group.type_alarm>li {position:relative;}
 .check_group.type_alarm>li label {width:80px; height:32px; line-height:32px; text-align:center; font-size:12px; color:#8b919c; background-color:#dde2ea;}
 .check_group.type_alarm>li input:checked+label {font-weight:500;}
@@ -93,9 +93,9 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .check_group.type_alarm>li.over label:before {content:""; display:block; height:32px; position:absolute; z-index:0; top:0; left:-5px; background-color:#dde2ea; border-style:solid; border-width:16px 0 16px 10px; border-color:transparent transparent transparent #fff; box-sizing:border-box;}
 .check_group.type_alarm>li.over input:checked+label:before {background-color:#0080c6;}
 
-.ip_from_to {position:relative; display:inline-block; width:280px; height:42px; border:solid 1px #dde2ea; background-color:#fff; box-sizing:border-box;}
-.ip_from_to .ip_txt {border:0; height:40px; width:120px;}
-.ip_from_to .line {color:#8b919c; font-size:14px; line-height:40px; vertical-align:middle;}
+.ip_from_to {position:relative; display:inline-block;box-sizing:border-box;}
+.ip_from_to .ip_txt {}
+.ip_from_to .line {text-align:center; width:16px; color:#8b919c; font-size:14px; line-height:40px; vertical-align:middle;}
 .ip_from_to .btn_cal {position:absolute; top:0; right:0; display:inline-block; font-size:0; width:40px; height:40px; background:url(../images/ip_date.png) no-repeat center center;}
 
 .ip_group {display:table; table-layout:fixed; width:100%; font-size:12px; color:#727679;}
@@ -121,9 +121,10 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 
 .tit_wrap+.search_wrap {margin-top:20px;}
 .search_wrap {font-size:0;}
-.search_form>li {margin-right:15px; padding:0; display:inline-block; position:relative; box-sizing:border-box;}
+.search_form>li {margin-right:15px; padding:0; display:inline-block; position:relative; vertical-align:top; box-sizing:border-box;}
 .search_form>li .lb_txt {display:block; height:21px; margin:0; }
-.search_form>li .ip_txt+.ip_txt, .search_form>li .select+.ip_txt, .search_form>li .select+.ip_from_to, .search_form>li .select+.ip_del, .search_form>li .ip_del+.ip_del, .search_form>li .ip_del+.ip_txt, .ip_del+.select {margin-left:10px;}
+.search_form>li .ip_txt+.ip_txt, .search_form>li .select+.ip_txt, .search_form>li .select+.ip_from_to, .search_form>li .select+.ip_del, .search_form>li .ip_del+.ip_del, .search_form>li .ip_del+.ip_txt, .ip_del+.select, .select+.inblock {margin-left:10px;}
+.search_form>li.btns {padding-top:21px;}
 .search_form>li.btns .btn.lg+.btn.lg {margin-left:15px;}
 
 .tit_wrap + .list_form_wrap {margin-top:25px;}

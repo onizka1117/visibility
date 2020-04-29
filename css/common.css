@@ -220,3 +220,5 @@ table {border-collapse:collapse; border-spacing:0; }
 .tar {text-align:right !important;}
 .tal {text-align:left !important;}
 .tac {text-align:center !important;}
+
+.inblock {display:inline-block !important; vertical-align:middle;}
