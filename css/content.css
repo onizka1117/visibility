@@ -460,7 +460,6 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {border-radius:4px; background-color:rgba(71, 79, 89, 0.15) !important;}
 
 /* popup */
-
 .pop_wrap {position:absolute;z-index:10001; }
 .dim {position:absolute; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5); z-index:10000;}
 .layer_pop_wrap {position:fixed; width:655px; background-color:#fff; z-index:1000; box-shadow:0 0 15px 0 rgba(0, 0, 0, 0.1);}
