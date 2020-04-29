@@ -235,13 +235,17 @@ a {color:#fff;}
 .m_nav .user_info .search input {padding:0 35px 0 10px; width:100%; height:35px; color:#fff; font-size:15px; border:0; background-color:#30373e; box-sizing:border-box;}
 .m_nav .user_info .search .btn_search {font-size:0; position:absolute; right:0; top:0; width:35px; height:35px; background:url(../images/ico_search_g.svg) no-repeat center center; background-size:20px;}
 .m_nav .nav_list {padding:0 20px;}
-.m_nav .nav_list>li {border-bottom:1px solid rgba(49,60,73,0.3);}
+.m_nav .nav_list>li {main-width:200px; border-bottom:1px solid rgba(49,60,73,0.3);}
 .m_nav .nav_list>li>a, .m_nav .nav_list>li>span {display:block; height:45px; line-height:45px; font-size:15px; font-family:'CJONLYONENEWbodyOTF'; color:#fff; }
 .m_nav .sub_list {border-top:1px solid rgba(49,60,73,0.3);}
 .m_nav .sub_list>li>a {padding-left:14px; display:block; height:45px; line-height:45px; font-size:15px; font-family:'CJONLYONENEWbodyOTF'; color:#8a919d;}
 .m_nav .nav_list a {background:url(../images/ico_arrow_40.svg) no-repeat right center;}
 .m_nav .nav_bott {padding:25px 24px;}
 .m_nav .btn_signout {font-size:15px; font-family:'CJONLYONENEWbodyOTF'; color:#575f6b;}
+
+
+/* input */
+input {height:42px; border:1px solid red; width:300px;}
 
 
 /* main */
