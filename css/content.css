@@ -213,7 +213,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 
 
 /* title */
-.search_wrap+.tit_wrap, .tit_wrap+.tit_wrap {margin-top:30px;}
+.search_wrap+.tit_wrap, .tit_h1+.tit_h2 {margin-top:30px;}
 .tit_wrap {display:table; width:100%; table-layout:fixed;}
 .tit_wrap>div {display:table-cell; vertical-align:top;}
 .tit_wrap>div.tit_left {}
