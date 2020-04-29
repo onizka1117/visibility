@@ -13,6 +13,7 @@
     <script src="../../script/ui_common.js"></script>
     <script type="text/javascript">
     $(function(){
+      $(".ip_date input").datepicker(uiCommon.datepickerOption);
     });
     </script>
   </head>
@@ -35,10 +36,13 @@
               <option value="">ETD</option>
               <option value="">ABC</option>
             </select>
-            <span class="ip_from_to">
-              <input type="text" name="" value="" placeholder="YYYY-MM-DD" class="ip_txt"><span class="line">~</span><input type="text" name="" value="" placeholder="YYYY-MM-DD"  class="ip_txt">
-              <a href="#" class="btn_cal">기간선택</a>
-            </span>
+            <div class="inblock">
+              <ul class="ip_group ip_from_to" style="width:300px;">
+                <li><span class="ip_date"><input type="text" class="ip_txt"></span></li>
+                <li class="line">~</li>
+                <li><span class="ip_date"><input type="text" class="ip_txt"></span></li>
+              </ul>
+            </div>
           </li>
           <li>
             <label for="" class="lb_txt">Department</label>
