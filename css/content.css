@@ -139,7 +139,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .list_form_wrap.type_full .list_form>li {display:block; margin-right:0;}
 
 
-.desc {margin-top:20px; padding-left:5px; font-weight:500;}
+.txt_desc {margin-top:20px; padding-left:5px; font-weight:500;}
 
 /* button */
 .btn {vertical-align:middle; text-align:center; display:inline-block; text-decoration:none; line-height:36px; font-size:14px; font-weight:500; padding:0 22px; color:#fff; height:36px; background-color:#0080c6; box-sizing:border-box;}
