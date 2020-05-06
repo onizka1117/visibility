@@ -266,9 +266,10 @@ a {color:#fff;}
 
 
 /* title */
-.tit_wrap:after {content:""; display:block; clear:both; witH:100%;}
-.tit_wrap>.tit_left {float:left;}
-.tit_wrap>.tit_right {float:right;}
+.tit_wrap {width:100%;}
+.tit_wrap:after {content:""; display:block; clear:both; width:100%;}
+.tit_wrap>.tit_left {float:left; background:red;}
+.tit_wrap>.tit_right {float:right; background:green;}
 .tit_wrap>.tit_left .tit {font-size:18px; font-weight:500;}
 
 
