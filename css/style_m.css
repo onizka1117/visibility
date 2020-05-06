@@ -273,7 +273,7 @@ a {color:#fff;}
 
 
 /* input */
-.ip_check {position:relative;}
+.ip_check {position:relative; display:inline-block;}
 .ip_check input {opacity:0; position:absolute; top:0; left:0;}
 .ip_check label {padding-left:22px; line-height:16px; display:inline-block; font-size:14px; background-image:url(../images/check16.svg); background-repeat:no-repeat; background-size:16px;}
 .ip_check input:checked+label {background-image:url(../images/checked_g.svg); }
