@@ -1,8 +1,5 @@
 @charset "UTF-8";
 
-/* icon */
-.calendar_wrap .ui-datepicker-calendar tbody td:after
-{background-image:url(../images/spr_icon.png);}
 /* input */
 .ip_txt {padding:0 11px; width:100%; height:42px; color:#45474e; font-size:14px; border:solid 1px #dde2ea; background-color:#fff; box-sizing:border-box;}
 .ip_txt::placeholder {font-size:14px; color:#9298a2; font-weight:400;}
@@ -426,14 +423,14 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .calendar_wrap .ui-datepicker-calendar tbody td {height:50px; text-align:center; position:relative;}
 .calendar_wrap .ui-datepicker-calendar tbody td a {display:inline-block; width:42px; height:42px; line-height:42px; font-size:16px; font-weight:500; text-decoration:none; color:#45474e; letter-spacing:0.49px; }
 .calendar_wrap .ui-datepicker-calendar tbody td:nth-child(1) a, .calendar_wrap .ui-datepicker-calendar tbody td:nth-child(7) a {color:#99a1b2;}
-.calendar_wrap .ui-datepicker-calendar tbody td:after {content:""; left:50%; bottom:10px; display:inline-block; position:absolute;}
-.calendar_wrap .ui-datepicker-calendar tbody td.work:after {width:4px; height:4px; margin-left:-2px; background-position:-180px -270px;}
-.calendar_wrap .ui-datepicker-calendar tbody td.msg:after {width:4px; height:4px; margin-left:-2px; background-position:-188px -270px;}
-.calendar_wrap .ui-datepicker-calendar tbody td.meet:after {width:4px; height:4px; margin-left:-2px; background-position:-196px -270px;}
-.calendar_wrap .ui-datepicker-calendar tbody td.work.meet:after {width:12px; margin-left:-6px; background-position:-180px -270px;}
-.calendar_wrap .ui-datepicker-calendar tbody td.work.msg:after {width:12px; margin-left:-6px; background-position:-188px -270px;}
-.calendar_wrap .ui-datepicker-calendar tbody td.meet.msg:after {width:12px; margin-left:-6px; background-position:-180px -274px;}
-.calendar_wrap .ui-datepicker-calendar tbody td.work.meet.msg:after {width:20px;  margin-left:-10px; background-position:-180px -270px;}
+.calendar_wrap .ui-datepicker-calendar tbody td:after {content:""; left:50%; bottom:10px; display:inline-block; position:absolute;  background-image:url(../images/mo/spr_work.png); background-repeat:no-repeat; background-size:30px;}
+.calendar_wrap .ui-datepicker-calendar tbody td.work:after {width:4px; height:4px; margin-left:-2px; background-position:0px 0px;}
+.calendar_wrap .ui-datepicker-calendar tbody td.msg:after {width:4px; height:4px; margin-left:-2px; background-position:-8px 0px;}
+.calendar_wrap .ui-datepicker-calendar tbody td.meet:after {width:4px; height:4px; margin-left:-2px; background-position:-16px 0px;}
+.calendar_wrap .ui-datepicker-calendar tbody td.work.meet:after {width:12px; margin-left:-6px; background-position:0 0;}
+.calendar_wrap .ui-datepicker-calendar tbody td.work.msg:after {width:12px; margin-left:-6px; background-position:0 -4px;}
+.calendar_wrap .ui-datepicker-calendar tbody td.meet.msg:after {width:12px; margin-left:-6px; background-position:-8px 0px;}
+.calendar_wrap .ui-datepicker-calendar tbody td.work.meet.msg:after {width:20px;  margin-left:-10px; background-position:0 0;}
 .calendar_wrap .ui-datepicker-calendar .ui-state-active {background-color:#dde2ea; border-radius:0;}
 .calendar_wrap .ui-datepicker-calendar .ui-datepicker-today a {color:#0080c6 !important;}
 
@@ -759,3 +756,11 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 /* admin */
 .admin_cust_shutt {width:1370px;}
 .admin_cust_shutt>.left {width:360px;}
+
+
+/* division */
+.tit_h1+.division {margin-top: 40px;}
+.division {display:table; width:100%; table-layout:fixed;}
+.division>div {display:table-cell; vertical-align:top;}
+.division>div.left {padding-right:10px;}
+.division>div.right {padding-left:10px;}
