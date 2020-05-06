@@ -12,12 +12,12 @@
       //메뉴
 
       $(".btn_nav").on("click", function(e){
-        $(".m_nav").show("slide");
+        $(".m_nav").addClass("open");
         e.preventDefault();
       });
 
       $(".m_nav .btn_close").on("click", function(e){
-        $(".m_nav").hide("slide");
+        $(".m_nav").removeClass("open");
         e.preventDefault();
       });
 
@@ -73,21 +73,168 @@
     	</nav>
 
 
-      <div class="m_content" style="background:red;">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+      <div class="m_content">
 
-        <input type="time" name="" value="">
-        <input type="date" name="" value="">
+
+        <div class="main_wrap">
+
+          <div class="welcome">
+            <span class="sub_txt">WELCOME</span>
+            <span class="name">AMORE PACIFIC</span>
+          </div>
+
+          <div class="live_tile_list">
+            <ul class="live_slider" id="liveSlider">
+              <!-- 반복 -->
+              <li><!-- ../tile/live.html 파일 영역 --></li>
+              <!-- //반복 -->
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+
+
+          <!-- Static Tiles -->
+          <div class="static_tile_list">
+            <ul class="main_cols_2">
+              <li>
+                <a href="#" class="st_tile box bg_type2">
+                  <span class="img"><img src="../images/ico_static_tracking.svg" alt=""></span>
+                  <span class="txt">Tracking</span>
+                </a>
+                <a href="#" class="st_tile box bg_type3">
+                  <span class="img"><img src="../images/ico_static_ebook.svg" alt=""></span>
+                  <span class="txt">E-Booking</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="st_tile2 box bg_type4">
+                  <span class="img"><img src="../images/ico_static_analytics.svg" alt=""></span>
+                  <span class="txt">Analytics Tool</span>
+                </a>
+                <a href="#" class="st_tile2 box">
+                  <span class="img"><img src="../images/dark/ico_static_quotation.svg" alt=""></span>
+                  <span class="txt">New Quotation</span>
+                </a>
+                <a href="#" class="st_tile2 box">
+                  <span class="img"><img src="../images/dark/ico_static_kpi.svg" alt=""></span>
+                  <span class="txt">KPI</span>
+                </a>
+                <a href="#" class="st_tile2 box">
+                  <span class="img"><img src="../images/dark/ico_static_dashboard.svg" alt=""></span>
+                  <span class="txt">Dashboard</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="static_tile_list">
+            <ul class="main_cols_2">
+              <li>
+                <a href="#" class="st_tile box bg_type2">
+                  <span class="img"><img src="../images/ico_static_perform.svg" alt=""></span>
+                  <span class="txt">Performance</span>
+                </a>
+                <a href="#" class="st_tile box bg_type4">
+                  <span class="img"><img src="../images/ico_static_schedule2_w.svg" alt=""></span>
+                  <span class="txt">Schedule</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="st_tile box bg_type3">
+                  <span class="img"><img src="../images/ico_static_cust_kpi.svg" alt=""></span>
+                  <span class="txt">Customer KPI</span>
+                </a>
+                <a href="#" class="st_tile box">
+                  <span class="img"><img src="../images/dark/ico_static_quotation2.svg" alt=""></span>
+                  <span class="txt">Quotation</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- //Static Tiles -->
+
+
+        </div>
+
+
+        <div class="">
+          <div class="schedule_box box shadow">
+            <a href="#" class="btn_close">닫기</a>
+
+            <div class="sched_wrap">
+              <div class="tit_month">
+                <span>Monday,</span>
+                <span>17 January</span>
+              </div>
+              <div class="calendar_wrap">
+                <div id="datacalendar"></div>
+              </div>
+
+            </div>
+
+            <!-- title -->
+            <div class="tit_wrap">
+              <div class="tit_left">
+                <span class="tit">Reminder</span>
+              </div>
+              <div class="tit_right">
+                <span class="ip_check sm"><input type="checkbox" name="" value="" id="check01"><label for="check01">To do <span class="bold sub_txt">3</span></label></span>
+                <span class="ip_check sm"><input type="checkbox" name="" value="" id="check02"><label for="check02">Message <span class="bold sub_txt">3</span></label></span>
+              </div>
+            </div>
+            <!-- //title -->
+
+            <div class="scr_box">
+              <ul class="event_list">
+                <!-- 반복 -->
+                <li class="work">
+                  <a href="#">
+                    <div class="tit">
+                      <span class="date">2020.01.20</span>
+                    </div>
+                    <div class="txt">
+                      Send email to Loso Send email to Loso Kim
+                    </div>
+                  </a>
+                </li>
+                <!-- //반복 -->
+                <li class="msg">
+                  <a href="#">
+                    <div class="tit">
+                      <span class="date">2020.01.20</span>
+                    </div>
+                    <div class="txt">
+                      Send email to Loso Kim
+                    </div>
+                  </a>
+                </li>
+                <li class="meeting">
+                  <a href="#">
+                    <div class="tit">
+                      <span class="date">2020.01.20</span>
+                    </div>
+                    <div class="txt">
+                      Send email to Loso Kim
+                    </div>
+                  </a>
+                </li>
+                <li class="meeting">
+                  <div class="tit">
+                    <span class="date">2020.01.20</span>
+                  </div>
+                  <div class="txt">
+                    Send email to Loso Kim
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
       </div>
-
-
-
 
 
     </div>
