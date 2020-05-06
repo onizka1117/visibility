@@ -423,7 +423,7 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .calendar_wrap .ui-datepicker-calendar tbody td {height:50px; text-align:center; position:relative;}
 .calendar_wrap .ui-datepicker-calendar tbody td a {display:inline-block; width:42px; height:42px; line-height:42px; font-size:16px; font-weight:500; text-decoration:none; color:#45474e; letter-spacing:0.49px; }
 .calendar_wrap .ui-datepicker-calendar tbody td:nth-child(1) a, .calendar_wrap .ui-datepicker-calendar tbody td:nth-child(7) a {color:#99a1b2;}
-.calendar_wrap .ui-datepicker-calendar tbody td:after {content:""; left:50%; bottom:10px; display:inline-block; position:absolute;  background-image:url(../images/mo/spr_work.png); background-repeat:no-repeat; background-size:30px;}
+.calendar_wrap .ui-datepicker-calendar tbody td:after {content:""; left:50%; bottom:10px; display:inline-block; position:absolute;  background-image:url(../images/spr_work.png); background-repeat:no-repeat; background-size:30px;}
 .calendar_wrap .ui-datepicker-calendar tbody td.work:after {width:4px; height:4px; margin-left:-2px; background-position:0px 0px;}
 .calendar_wrap .ui-datepicker-calendar tbody td.msg:after {width:4px; height:4px; margin-left:-2px; background-position:-8px 0px;}
 .calendar_wrap .ui-datepicker-calendar tbody td.meet:after {width:4px; height:4px; margin-left:-2px; background-position:-16px 0px;}
