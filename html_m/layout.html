@@ -6,11 +6,25 @@
     <meta name="format-detection" content="telephone=no" />
     <title>모바일</title>
     <link href="../css/style_m.css" rel="stylesheet">
+    <link href="../script/lib/jquery.bxslider.css" rel="stylesheet">
     <script src="../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../script/lib/jquery-ui.js"></script>
+    <script src="../script/lib/jquery.bxslider.js"></script>
     <script type="text/javascript">
+    var eventList = [
+      {date:"2020-05-01", eventClass:"work meet msg"},
+      {date:"2020-05-02", eventClass:"work"},
+      {date:"2020-05-05", eventClass:"meet"},
+      {date:"2020-05-17", eventClass:"meet msg"},
+      {date:"2020-05-20", eventClass:"work meet"},
+      {date:"2020-05-25", eventClass:"work msg"},
+      {date:"2020-05-30", eventClass:"msg"}
+    ];
+
+
     $(function(){
       //메뉴
-
       $(".btn_nav").on("click", function(e){
         $(".m_nav").addClass("open");
         e.preventDefault();
@@ -20,6 +34,44 @@
         $(".m_nav").removeClass("open");
         e.preventDefault();
       });
+
+
+      // 타일 로드 (개발시 삭제)
+      $(".live_slider li").each(function(i){
+        $(this).load("tile/live.html", function() {
+          if(i==3) {
+            // live 슬라이드
+            $("#liveSlider").bxSlider({
+              slideMargin:20,
+              speed : 100
+            });
+          }
+        });
+      });
+
+
+      // 캘린더
+      $("#datacalendar").datepicker({
+        beforeShowDay : addEvents
+      });
+
+      function addEvents(date) {
+        for(i=0 ; i<eventList.length ; i++) {
+          if(getDate(date) == eventList[i].date) {
+            return [true, eventList[i].eventClass , ""];
+          }
+        }
+        return [true, "", ""];
+      }
+
+      function getDate(date) {
+        var year = date.getFullYear();
+        var month = date.getMonth()+1;
+        var month2 = month < 10 ? "0"+month : month;
+        var day = date.getDate() < 10 ? "0"+date.getDate() : date.getDate();
+        return year +"-"+ month2 + "-" + day;
+      }
+
 
     });
     </script>
