@@ -262,6 +262,29 @@ a {color:#fff;}
 .live_tile_list .bx-wrapper .bx-pager.bx-default-pager a.active {width:9px; background-color:#fff;}
 
 
+
+
+/* title */
+.tit_wrap:after {content:""; display:block; clear:both; witH:100%;}
+.tit_wrap>.tit_left {float:left;}
+.tit_wrap>.tit_right {float:right;}
+.tit_wrap>.tit_left .tit {font-size:18px; font-weight:500;}
+
+
+/* input */
+.ip_check {position:relative;}
+.ip_check input {opacity:0; position:absolute; top:0; left:0;}
+.ip_check label {padding-left:22px; line-height:16px; display:inline-block; font-size:14px; background-image:url(../images/check16.svg); background-repeat:no-repeat; background-size:16px;}
+.ip_check input:checked+label {background-image:url(../images/checked_g.svg); }
+.ip_check.sm label {line-height:12px; background-size:12px; background-image:url(../images/dark/not_checked.svg);}
+.ip_check.sm input:checked+label {background-image:url(../images/checked.svg); }
+.ip_check.sm+.ip_check.sm {margin-left:20px;}
+.ip_check.type1 label {padding-left:26px; color:#13161a; background-size:16px;}
+.ip_check.type1 input:checked+label {background-image:url(../images/checked.svg); }
+.ip_check.type2 label {padding-left:26px; font-size:16px; color:#13161a; background-image:url(../images/check.svg); background-size:16px;}
+.ip_check.type2 input:checked+label {background-image:url(../images/checked.svg); }
+
+
 /* box */
 .box {display:block; background-color:#333c48; box-sizing:border-box;}
 .box.bg_type1 {background-color:#12161a;}
@@ -301,11 +324,13 @@ a {color:#fff;}
 
 
 
-.schedule_box {padding:46px 17px 0; box-sizing:border-box; background-color:#181d23;}
+.schedule_box {padding:46px 17px 0; box-sizing:border-box; background-color:#181d23; position:relative;}
+.schedule_box>.btn_close {display:inline-block; width:30px; height:30px; font-size:0; position:absolute; top:10px; right:15px; background:url(../images/ico_closed_g.svg) no-repeat 0 0;}
 .sched_wrap {}
 .sched_wrap .tit_month {font-family:'CJONLYONENEWtitle'; font-weight:500; font-size:20px; color:#fff;}
 .sched_wrap .tit_month>span {display:block;}
 .sched_wrap .tit_month>span+span {margin-top:6px;}
+.calendar_wrap {margin-bottom:35px;}
 .calendar_wrap .ui-datepicker {width:100%; padding:0; box-shadow:none;}
 .calendar_wrap .ui-datepicker-calendar {width:100%;}
 .calendar_wrap .ui-datepicker-title {display:none;}
@@ -328,6 +353,8 @@ a {color:#fff;}
 .calendar_wrap .ui-datepicker-calendar .ui-state-active {background-color:#12161a; border-radius:0;}
 .calendar_wrap .ui-datepicker-calendar .ui-datepicker-today a {color:#0080c6 !important;}
 
+.schedule_box .scr_box {margin-top:20px;}
+
 .event_list {padding-left:19px; }
 .event_list>li {position:relative; padding:15px 70px 15px 0; border-bottom:1px solid rgba(147, 152, 163, 0.1); }
 .event_list>li:before {content:""; position:absolute; top:16px; left:-20px; display:inline-block; width:10px; height:10px;}
@@ -336,4 +363,4 @@ a {color:#fff;}
 .event_list>li.meeting:before {background:url(../images/ico_rm_meeting.svg) no-repeat 0 0; background-size:10px; }
 .event_list>li .tit {overflow:hidden; position:absolute; right:0; top:15px;}
 .event_list>li .tit .date {font-size:10px; color:#8b919c;}
-.event_list>li .txt {font-size:13px; }
+.event_list>li .txt {font-size:13px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
