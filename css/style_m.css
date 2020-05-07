@@ -245,6 +245,29 @@ a {color:#fff;}
 .m_nav .btn_signout {font-size:15px; font-family:'CJONLYONENEWbodyOTF'; color:#575f6b;}
 
 
+/* login */
+.login_wrap {background-color:#192029;}
+.login_wrap .login_inner {padding:0 30px; }
+.login_wrap .logo {margin:0 auto; font-size:0; width:111px; height:39px; background:url(../images/logo_d.svg) no-repeat; background-size:111px auto;}
+.login_wrap .tit_logo {margin:12px 0 0 0; font-size:25px; font-weight:bold; text-align:center;}
+.login_wrap .txt_forgot {text-align:center; margin-top:20px;}
+.login_wrap .txt_forgot a {text-decoration:underline; font-size:13px; color:#8c94a0;}
+.login_wrap .box_sign {margin-top:40px;}
+.login_wrap .box_sign a {height:50px; line-height:50px; display:block; color:#fff; font-size:16px; font-weight:500; text-align:center; background-color:#0080c6; position:relative;}
+.login_wrap .box_sign a:after {content:""; position:absolute; bottom:0; right:0; display:inline-block; border-width:5px 10px; border-style:solid; border-color:transparent #192029 #192029 transparent;}
+.box_login {margin-top:56px;}
+.box_login .login_ip {padding-left:42px; height:44px; border-bottom:1px solid #656f7e; position:relative;}
+.box_login .login_ip+.login_ip {margin-top:20px;}
+.box_login .login_ip:before {content:""; position:absolute; left:10px; bottom:10px; display:inline-block; width:20px; height:20px; }
+.box_login .login_id:before {background:url(../images/id_default.svg) no-repeat; background-size:cover;}
+.box_login .login_id.focus:before {background-image:url(../images/id_on.svg);}
+.box_login .login_pw:before {background:url(../images/pw_default.svg) no-repeat; background-size:cover;}
+.box_login .login_pw.focus:before {background-image:url(../images/pw_on.svg);}
+.box_login .login_ip input {display:block; height:44px; padding:0; border:0; width:100%; font-size:16px; font-weight:500; color:#fff; background-color:transparent;}
+.box_login .login_ip input::-webkit-input-placeholder {font-size:14px; font-weight:400; color:#656f7e;}
+.box_login .inp_chk {display:inline-block; margin-top:25px; color:#656f7e; font-size:13px; font-weight:500;}
+.login_wrap address {margin-top:70px; text-align:center; font-style:normal; font-size:10px; font-weight:300; color:rgba(255, 255, 255, 0.5);}
+.login_wrap address>div {margin-top:6px;}
 
 
 /* main */

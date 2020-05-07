@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+    <link href="../css/style_m.css" rel="stylesheet">
+    <link href="../script/lib/jquery.bxslider.css" rel="stylesheet">
+    <script src="../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../script/lib/jquery-ui.js"></script>
+    <script src="../script/lib/jquery.bxslider.js"></script>
+    <script type="text/javascript">
+
+    $(function(){
+
+      $(".login_ip input").on("change keyup paste", function(e){
+        var val = $(this).val();
+        val == "" ? $(this).parent().removeClass("focus") : $(this).parent().addClass("focus");
+      });
+
+    });
+    </script>
+  </head>
+  <body>
+
+
+    <div class="login_wrap">
+
+      <div class="login_inner">
+        <div class='logo'>CJ LOGISTICS</div>
+        <h1 class='tit_logo'>VISIBILITY PORTAL</h1>
+
+        <div class="box_login">
+          <div class="login_ip login_id">
+            <input type="text" name="" value="" placeholder="ID">
+          </div>
+          <div class="login_ip login_pw">
+            <input type="password" name="" value="" placeholder="PASSWORD">
+          </div>
+
+          <label class="inp_chk" for="saveLogin">
+              <input type="checkbox" id="saveLogin">
+              <span>Remember me</span>
+          </label>
+          <div class="box_sign"><a href="javascript:">SIGN IN</a></div>
+          <div class="txt_forgot"><a href="javascript:" class='btn_forgot'>Forgot your password ?</a></div>
+        </div>
+
+        <address>
+          Only the customers of CJ Logistics can use this system. <br>Any illegal access may be punishable under applicable laws.
+          <div>Copyright 2015 by CJ Logistics Corporation. All rights reserved.</div>
+        </address>
+
+      </div>
+
+    </div>
+
+
+  </body>
+</html>
