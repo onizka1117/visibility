@@ -265,7 +265,7 @@ a {color:#fff;}
 .box_login .login_pw:before {background:url(../images/pw_default.svg) no-repeat; background-size:cover;}
 .box_login .login_pw.focus:before {background-image:url(../images/pw_on.svg);}
 .box_login .login_id.focus, .box_login .login_pw.focus {border-color:#fff;}
-.box_login .login_ip input {display:block; height:44px; padding:0; border:0; width:100%; font-size:16px; font-weight:500; color:#fff; background-color:transparent;}
+.box_login .login_ip input {display:block; height:44px; padding:0; border:0; width:100%; font-size:16px; font-weight:500; color:#fff; background-color:transparent; outline:none;}
 .box_login .login_ip input::-webkit-input-placeholder {font-size:14px; font-weight:400; color:#656f7e;}
 .box_login .inp_chk {position:relative; display:inline-block; margin-top:25px; color:#656f7e; font-size:13px; font-weight:500; }
 .box_login .inp_chk>span {padding-left:39px; display:inline-block; height:18px; line-height:18px; background:url(../images/btn_check_g.svg) no-repeat left 13px center;}
