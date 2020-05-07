@@ -13,25 +13,46 @@
     <script type="text/javascript">
       $(function(){
 
-
-
-        var height = 500;
-        var width = 500;
-
-
-        var dimHtml = '<div class="dim"></div>';
-        var html = '<div class="pop_wrap" style="width:'+ width +'px; height:' + height + 'px"></div>';
+        $(".ip_del").inputTextFocus();
 
 
 
-
-        $("body").append(dimHtml);
-        $("body").append(html);
-        $(".pop_wrap").load("../ADM/ADM017.html");
-
-
+        $("#btnOpenPopup").on("click", function(e){
+          layerPopup($("#ipUrl").val(), $("#ipId").val(), $("#ipWidth").val(), $("#ipHeight").val());
+          e.preventDefault();
+        });
 
       });
+
+
+      function layerPopup(url, popId, width, height) {
+        console.log($(window).scrollTop());
+        var left = ($(document).width()/2) - (width/2);
+        var top = ($(document).height()/2) - (height/2) + $(window).scrollTop();
+        var dimHtml = '<div class="dim"></div>';
+        var popHtml = '<div class="pop_wrap" id="'+popId+'" style="width:'+ width +'px; height:' + height + 'px; left:'+left+'px; top:'+top+'px;"></div>';
+        var $dimHtml = $(dimHtml);
+        var $popHtml = $(popHtml);
+
+
+        $popHtml.load(url + " .layer_pop_wrap", function() {
+
+         // ready
+          $popHtml.find(".ip_del").inputTextFocus();
+
+          // 닫기
+          $popHtml.find(".btn_closed").on("click", function(){
+            $popHtml.remove();
+            $dimHtml.remove();
+          });
+        });
+
+        $("body").append($dimHtml).append($popHtml);
+      }
+
+
+
+
     </script>
   </head>
   <body>
@@ -44,9 +65,38 @@
       </div>
 
 
+      <div class="list_form_wrap w665">
+        <ul class="list_form">
+          <li>
+            <label for="" class="lb_txt req">URL</label>
+            <span class="ip_del"><input type="text" class="ip_txt" value="../ADM/ADM017.html" id="ipUrl"><a href="#" class="btn_txt_del">삭제</a></span>
+          </li>
+        </ul>
+        <ul class="list_form">
+          <li>
+            <label for="" class="lb_txt req">POPUP ID</label>
+            <span class="ip_del"><input type="text" class="ip_txt" value="id01" id="ipId"><a href="#" class="btn_txt_del">삭제</a></span>
+          </li>
+        </ul>
+        <ul class="list_form">
+          <li>
+            <label for="" class="lb_txt req">Width</label>
+            <span class="ip_del"><input type="text" class="ip_txt" value="500" id="ipWidth"><a href="#" class="btn_txt_del">삭제</a></span>
+          </li>
+          <li>
+            <label for="" class="lb_txt">Height</label>
+            <span class="ip_del"><input type="text" class="ip_txt"  value="500"  id="ipHeight"><a href="#" class="btn_txt_del">삭제</a></span>
+          </li>
+        </ul>
+      </div>
 
-
-
+      <div class="btn_bottom">
+        <div class="left">
+          <a href="#" class="btn act" id="btnOpenPopup">Popup</a>
+        </div>
+        <div class="right">
+        </div>
+      </div>
 
     </div>
 
