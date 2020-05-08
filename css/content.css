@@ -114,12 +114,15 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .tag_box .item span { vertical-align:middle;}
 .tag_box .item .btn_del {display:inline-block; vertical-align:middle; font-size:0; width:14px; height:14px; background:url(../images/ico_txt_del.svg) no-repeat center center; background-size:14px;}
 
+.txt_out {line-height:1.2; display:inline-block; vertical-align:middle;}
+
 /* form */
 .form_wrap {padding:5px 15px 35px;}
 .tbl_form {width:100%; table-layout:fixed;}
 .tbl_form td {padding:20px 20px 0; height:40px; vertical-align:top;}
 .lb_txt {height:20px; display:inline-block; font-size:12px; color:#6b6e72; font-weight:500;}
 .lb_txt.req:after {content:"*"; color:#e42f44; font-family:'Noto Sans KR';}
+.tbl_form .lb_txt {width:100%; }
 
 .tit_wrap+.search_wrap {margin-top:20px;}
 .search_wrap {font-size:0;}
