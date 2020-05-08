@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* ################# Dark ################# */
-@import url("dark.css");
+/*@import url("dark.css");*/
 
 
 /* font */
@@ -203,10 +203,15 @@ table {border-collapse:collapse; border-spacing:0; }
 
 
 /* margin */
+.mt10 {margin-top:10px !important;}
 .mt20 {margin-top:20px !important;}
 .mt30 {margin-top:30px !important;}
 .mt40 {margin-top:40px !important;}
+.mt50 {margin-top:50px !important;}
 
+.ml5 {margin-left:5px !important;}
+.ml10 {margin-left:10px !important;}
+.ml15 {margin-left:15px !important;}
 .ml30 {margin-left:30px !important;}
 
 

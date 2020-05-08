@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no" />
-    <title></title>
+    <title>Login</title>
     <link href="../css/style_m.css" rel="stylesheet">
     <link href="../script/lib/jquery.bxslider.css" rel="stylesheet">
     <script src="../script/lib/jquery-3.4.1.min.js"></script>
@@ -14,18 +14,38 @@
 
     $(function(){
 
-      $(".login_ip input").on("change keyup paste", function(e){
+      $(".login_ip input").on("focusin", function(e) {
+        $(this).parent().addClass("focus");
+      });
+
+      $(".login_ip input").on("focusout", function(e) {
         var val = $(this).val();
         val == "" ? $(this).parent().removeClass("focus") : $(this).parent().addClass("focus");
+      });
+
+
+      $('.btn_quick').click(function(){
+         $('.quick_wrap').toggleClass('on');
       });
 
     });
     </script>
   </head>
-  <body>
+  <body class="login_body">
 
 
     <div class="login_wrap">
+
+      <div class="bg_wrap">
+        <span class="lbg bg_orange"></span>
+        <span class="lbg bg_gray"></span>
+        <span class="lbg bg_gray gray2"></span>
+        <span class="lbg bg_gray2"></span>
+        <span class="lbg bg_gray2 gray3"></span>
+        <span class="lbg bg_red"></span>
+        <span class="lbg bg_line"></span>
+        <span class="lbg bg_line bg_line2"></span>
+      </div>
 
       <div class="login_inner">
         <div class='logo'>CJ LOGISTICS</div>
@@ -54,6 +74,68 @@
 
       </div>
 
+    </div>
+
+
+    <div class="quick_wrap">
+        <a href="javascript:" class="btn_quick"><span>QUICK SEARCH</span></a>
+        <div class="quick_inner">
+            <!-- 조회정보입력 -->
+            <div class="quick_top">
+                <div class="box_search">
+                    <select class='quick_select'>
+                        <option>H.B/L No.</option>
+                        <option>M.B/L No.</option>
+                        <option>Container No.</option>
+                        <option>PO No.</option>
+                        <option>WayBill No.</option>
+                    </select>
+                </div>
+                <div class="box_find">
+                    <input type="text" class="form_login form_find" placeholder="Enter Number">
+                    <a href="javascript:" class="btn_search">검색</a>
+                </div>
+            </div>
+            <!--// 조회정보입력 -->
+            <!-- 조회결과 -->
+            <div class="quick_bot">
+                <div class="tit_quick">
+                    <span>H. B/L No. 9981475</span>
+                    <h2>In transit <br>arrival airport</h2>
+                    <h4>Weather delay : Air Busan ABL8809</h4>
+                </div>
+                <div class="track_step step1">
+                  <ul class="step_list">
+                    <li>
+                      <div class="txt_area">
+                        <strong class="tit">Innispree Corporation</strong>
+                        <span class="txt">ATD 2020-03-20 20:10</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="txt_area">
+                        <strong class="tit">Busan, Korea</strong>
+                        <span class="txt">ATD 2020-03-20 20:10</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="txt_area">
+                        <strong class="tit">Shanghai, China</strong>
+                        <span class="txt">ETA 2020-03-20 20:10</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="txt_area">
+                        <strong class="tit">Amore pacific, Singapore</strong>
+                        <span class="txt">ETA : 2020-03-25</span>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="bar"></div>
+                </div>
+                <!-- 조회결과 -->
+            </div>
+        </div>
     </div>
 
 

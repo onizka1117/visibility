@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ko" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>input</title>
+    <link href="../../script/lib/jquery-ui-timepicker-addon.css" rel="stylesheet">
     <link href="../../css/common.css" rel="stylesheet">
     <link href="../../css/content.css" rel="stylesheet">
     <script src="../../script/lib/jquery-3.4.1.min.js"></script>
     <script src="../../script/lib/jquery-ui.js"></script>
+    <script src="../../script/lib/jquery-ui-timepicker-addon.js"></script>
     <script src="../../script/ui_common.js"></script>
 
     <style type="text/css">
@@ -19,10 +21,21 @@
 
     $(function(){
 
-      $(".ip_date input" ).datepicker(uiCommon.datepickerOption);
+      $(".ip_date input").not(".type_time").datepicker(uiCommon.datepickerOption);
       $(".ip_del").inputTextFocus();
       $(".ip_filter").inputTextFocus();
       $(".ip_file").fileReady();
+
+
+      // 시간선택
+      var timeOpt = $.extend(uiCommon.datepickerOption , {
+        // timepicker 설정
+        timeFormat:'HH:mm:ss',
+        controlType:'select',
+        oneLine:true
+      });
+      $(".ip_date input.type_time").datetimepicker(timeOpt);
+
 
     });
     </script>
@@ -59,7 +72,7 @@
                 <tr>
                   <td>
                     <label for="" class="lb_txt">Input</label>
-                    <input type="text" name="" value="" class="ip_txt">
+                    <input type="text" name="" value="" class="ip_txt" id="regdate">
                   </td>
                   <td>
                     <label for="" class="lb_txt">Input+del</label>
@@ -71,6 +84,7 @@
                   <td>
                     <label for="" class="lb_txt">input + del + search</label>
                     <span class="ip_search"><span class="ip_del"><input type="text" class="ip_txt" value=""><a href="#" class="btn_txt_del">삭제</a></span><a href="#" class="btn_ip_search">검색</a></span>
+                    <span class="ip_search type_people"><span class="ip_del"><input type="text" class="ip_txt" value=""><a href="#" class="btn_txt_del">삭제</a></span><a href="#" class="btn_ip_search">검색</a></span>
                     <div class="code">
                       $("선택자").inputTextFocus();
                     </div>
@@ -116,13 +130,11 @@
                     </ul>
                   </td>
                   <td>
-                    <label for="" class="lb_txt">기간(삭제예정)</label>
-                    <!--
-                    <span class="ip_from_to" style="width:100%;">
-                      <input type="text" name="" value="" placeholder="YYYY-MM-DD" class="ip_txt"><span class="line">~</span><input type="text" name="" value="" placeholder="YYYY-MM-DD"  class="ip_txt">
-                      <a href="#" class="btn_cal">기간선택</a>
-                    </span>
-                  -->
+                    <label for="" class="lb_txt">시간선택</label>
+                    <span class="ip_date"><input type="text" class="ip_txt type_time"></span>
+                    <div class="code">
+                      $(선택자).datetimepicker(옵션);
+                    </div>
                   </td>
                 </tr>
                 <tr>
@@ -227,6 +239,55 @@
                     <div class="code">
                       $("선택자").fileReady();
                     </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="" class="lb_txt">태그</label>
+                    <div class="tag_box">
+                      <div class="item">
+                        <span>홍길동</span>
+                        <a href="#" class="btn_del">삭제</a>
+                      </div>
+                      <div class="item">
+                        <span>정검순</span>
+                        <a href="#" class="btn_del">삭제</a>
+                      </div>
+                      <div class="item">
+                        <span>김이름</span>
+                        <a href="#" class="btn_del">삭제</a>
+                      </div>
+                      <div class="item">
+                        <span>홍길동</span>
+                        <a href="#" class="btn_del">삭제</a>
+                      </div>
+                      <div class="item">
+                        <span>정검순</span>
+                        <a href="#" class="btn_del">삭제</a>
+                      </div>
+                      <div class="item">
+                        <span>김이름</span>
+                        <a href="#" class="btn_del">삭제</a>
+                      </div>
+                      <div class="item">
+                        <span>홍길동</span>
+                        <a href="#" class="btn_del">삭제</a>
+                      </div>
+                      <div class="item">
+                        <span>정검순</span>
+                        <a href="#" class="btn_del">삭제</a>
+                      </div>
+                      <div class="item">
+                        <span>김이름</span>
+                        <a href="#" class="btn_del">삭제</a>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <label for="" class="lb_txt">텍스트</label>
+                    <span class="txt_out">Text Text TextText Text</span>
+                  </td>
+                  <td>
                   </td>
                 </tr>
               </tbody>
