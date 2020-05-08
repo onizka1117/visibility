@@ -282,6 +282,8 @@ a {color:#fff;}
 .login_wrap .lbg.bg_gray2.gray3 {width:100px; height:95px; bottom:67px; left:auto; right:-40px; }
 .login_wrap .lbg.bg_red {width:101px; height:98px; bottom:-70px; left:-44px; background:url(../images/mo/login_bg_red.png) no-repeat;  background-size:cover;}
 .login_wrap .lbg.bg_orange {width:130px; height:125px; top:-58px; right:-92px; background:url(../images/mo/login_bg_orange.png) no-repeat;  background-size:cover;}
+.login_wrap .lbg.bg_line {width:97px; height:88px; top:68px; left:0; background:url(../images/mo/login_bg_line.png) no-repeat;  background-size:cover; opacity:0.8; }
+.login_wrap .lbg.bg_line.bg_line2 {top:68px; left:auto; right:-31px; opacity:0.3;}
 
 .quick_wrap {z-index: 5;position: fixed;left:0;bottom:0;width:100%;height: 62px;border-top-left-radius: 10px;border-top-right-radius: 10px;background-color: #27303c;-ms-overflow-style: none;transition: all 0.3s;}
 .quick_wrap::-webkit-scrollbar {display:none;}
