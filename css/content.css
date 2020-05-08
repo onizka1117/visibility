@@ -10,7 +10,8 @@
 .ip_search .ip_del {width:100%; box-sizing:border-box;}
 .ip_search .ip_txt {padding-right:50px;}
 .ip_search .ip_del .btn_txt_del {right:40px;}
-.ip_search .btn_ip_search {font-size:0; position:absolute; top:0; right:0; width:42px; height:42px; background:url(../images/ip_search.png) no-repeat center center;}
+.ip_search .btn_ip_search {font-size:0; position:absolute; top:0; right:0; width:42px; height:42px; background:url(../images/ico_search_g.svg) no-repeat center center; background-size:17px;}
+.ip_search.type_people .btn_ip_search {background-image:url(../images/ico_people.svg); }
 .ip_del {width:100%; display:inline-block; position:relative;}
 .ip_filter {display:inline-block; position:relative; width:100%; }
 .ip_filter:before {content:""; display:inline-block; width:24px; height:24px; position:absolute; top:8px; left:8px; background:url(../images/ico_filter.svg) no-repeat;}
@@ -108,6 +109,10 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .ip_file .bn_up {width:101px; height:42px; line-height:42px; color:#45474e; font-weight:500;  text-align:center; overflow:hidden; display:inline-block; position:absolute; top:0; right:0; border:1px solid #dde2ea; background-color:#fff; box-sizing:border-box;}
 .ip_file .bn_up input {width:100%; height:42px; position:absolute; left:0; top:0; opacity:0;}
 
+.tag_box {padding:4px 15px; min-height:42px; border:1px solid #dde2ea; box-sizing:border-box;}
+.tag_box .item {height:36px; line-height:36px; display:inline-block; margin-right:15px;}
+.tag_box .item span { vertical-align:middle;}
+.tag_box .item .btn_del {display:inline-block; vertical-align:middle; font-size:0; width:14px; height:14px; background:url(../images/ico_txt_del.svg) no-repeat center center; background-size:14px;}
 
 /* form */
 .form_wrap {padding:5px 15px 35px;}
