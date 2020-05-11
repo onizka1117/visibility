@@ -10,7 +10,7 @@
     <script src="../script/lib/jquery-3.4.1.min.js"></script>
     <script src="../script/lib/jquery-3.4.1.min.js"></script>
     <script src="../script/lib/jquery-ui.js"></script>
-    <script src="../script/lib/jquery.bxslider.js"></script>
+    <script src="../script/lib/jquery.bxslider.js?v=0.1"></script>
     <style type="text/css">
       .test_item {height:190px;}
       .test_item:nth-child(1) {background-color:red;}
@@ -26,7 +26,7 @@
 
       $(".test_sd").bxSlider({
         speed : 100,
-        useCSS : false
+        swipeThreshold : 10
       });
 
     });
@@ -57,6 +57,8 @@
     <div id="slidResult">
 
     </div>
+
+
 
 
 
