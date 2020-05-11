@@ -353,7 +353,7 @@ a {color:#fff;}
 
 
 /* main */
-.main_wrap {}
+.main_wrap {padding-top:30px;}
 .main_wrap .welcome {padding:0 30px; font-family:'CJONLYONENEWtitle';}
 .main_wrap .welcome .sub_txt {display:block; color:#8a919d; font-size:12px;}
 .main_wrap .welcome .name {margin-top:4px; display:block; font-weight:500; font-size:20px;}
