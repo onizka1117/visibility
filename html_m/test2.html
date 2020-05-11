@@ -14,7 +14,7 @@
     <style type="text/css">
 
       .test_wrap {width:100%; height:100%; overflow:hidden; position:relative;}
-      .test_sd {height:100%; width:5000px; position:absolute; top:0; left:0;  transition:all 0.1s; }
+      .test_sd {height:100%; width:5000px; position:absolute; top:0; left:0;  transition:all 0.2s; }
       .test_item {float:left; height:100%; overflow:auto;}
       .test_item .inner {}
       .test_item:nth-child(1) {background-color:red;}
@@ -37,6 +37,10 @@
       console.log(size);
 
       $(".test_item").width(width);
+
+      $(window).on("resize", function() {
+
+      });
 
       $(".test_wrap").on("touchstart", function(e) {
         console.log("start");
