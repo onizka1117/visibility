@@ -1159,6 +1159,7 @@
       setPositionProperty(slider.touch.originalPos.left, 'reset', 0);
 
       //remove handlers
+      /*
       slider.controls.el.removeClass('disabled');
       slider.viewport.off('MSPointerCancel pointercancel', onPointerCancel);
       slider.viewport.off('touchmove MSPointerMove pointermove', onTouchMove);
@@ -1166,6 +1167,7 @@
       if (slider.viewport.get(0).releasePointerCapture) {
         slider.viewport.get(0).releasePointerCapture(slider.pointerId);
       }
+      */
     };
 
     /**
@@ -1200,11 +1202,12 @@
       }
 
       if (slider.settings.mode !== 'fade' && slider.settings.oneToOneTouch) {
-        $("#move").text("slider.settings.mode !== 'fade' && slider.settings.oneToOneTouch");
         // if horizontal, drag along x axis
         if (slider.settings.mode === 'horizontal') {
           change = touchPoints[0].pageX - slider.touch.start.x;
           value = slider.touch.originalPos.left + change;
+          $("#move").text("change : " + change + " / value : " + value);
+
         // if vertical, drag along y axis
         } else {
           change = touchPoints[0].pageY - slider.touch.start.y;
