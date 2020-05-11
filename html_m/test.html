@@ -10,7 +10,7 @@
     <script src="../script/lib/jquery-3.4.1.min.js"></script>
     <script src="../script/lib/jquery-3.4.1.min.js"></script>
     <script src="../script/lib/jquery-ui.js"></script>
-    <script src="../script/lib/jquery.bxslider.js?v=0.5"></script>
+    <script src="../script/lib/jquery.bxslider.js?v=0.6"></script>
     <style type="text/css">
       .test_item {height:190px;}
       .test_item:nth-child(1) {background-color:red;}
@@ -22,38 +22,102 @@
     </style>
     <script type="text/javascript">
 
+    function checkMobile(){
+        var varUA = navigator.userAgent.toLowerCase(); //userAgent
+        if ( varUA.indexOf('android') > -1) {
+            //안드로이드
+            return "android";
+        } else if ( varUA.indexOf("iphone") > -1||varUA.indexOf("ipad") > -1||varUA.indexOf("ipod") > -1 ) {
+            //IOS
+            return "ios";
+        } else {
+            //아이폰, 안드로이드 외
+            return "other";
+        }
+    }
+
+
     $(function(){
 
-      $(".test_sd").bxSlider({
+
+      var touchEnabled = checkMobile() == "ios" ? false : true;
+      var slider = $(".test_sd").bxSlider({
         speed : 100,
         swipeThreshold : 10,
-        oneToOneTouch :false
+        touchEnabled : touchEnabled
       });
 
+      if(checkMobile() == "ios") {
+        slidePage(slider);
+      }
     });
+
+
+    function slidePage(slider) {
+      console.log(slider);
+      var touchFlag = false;
+      var startX, startY, endX, endY;
+
+      $(".test_wrap").on("touchstart", function(e) {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        touchFlag = true;
+
+      });
+
+      $(".test_wrap").on("touchmove", function(e) {
+        endX = e.touches[0].clientX;
+        endY = e.touches[0].clientY;
+        touchFlag = true;
+
+      });
+
+      $(".test_wrap").on("touchend", function(e) {
+        var resultX = startX - endX;
+        var resultY = startY - endY;
+        if(Math.abs(resultY) < 100 && Math.abs(resultX) > 50) {
+          if(resultX>0 && touchFlag) {
+            // left
+            slider.goToNextSlide();
+          }else if(resultX<0 && touchFlag){
+            // right
+            slider.goToPrevSlide();
+          }
+        }
+
+        touchFlag = false;
+        startX = 0;
+        startY = 0;
+        endX = 0;
+        endY = 0;
+      });
+
+    }
     </script>
   </head>
   <body>
 
 
-
-    <div class="test_sd">
-      <div class="test_item">
-        TEst1
-      </div>
-      <div class="test_item">
-        TEst2
-      </div>
-      <div class="test_item">
-        TEst3
-      </div>
-      <div class="test_item">
-        TEst4
-      </div>
-      <div class="test_item">
-        TEst5
+    <div class="test_wrap">
+      <div class="test_sd">
+        <div class="test_item">
+          TEst1
+        </div>
+        <div class="test_item">
+          TEst2
+        </div>
+        <div class="test_item">
+          TEst3
+        </div>
+        <div class="test_item">
+          TEst4
+        </div>
+        <div class="test_item">
+          TEst5
+        </div>
       </div>
     </div>
+
 
     <div id="slidResult">
 
