@@ -1175,6 +1175,7 @@
      *  - DOM event object
      */
     var onTouchMove = function(e) {
+      $("#move").text($("#move").text()+"TouchMove");
       var orig = e.originalEvent,
       touchPoints = (typeof orig.changedTouches !== 'undefined') ? orig.changedTouches : [orig],
       // if scrolling on y axis, do not prevent default
@@ -1230,8 +1231,6 @@
       // record end x, y positions
       slider.touch.end.x = touchPoints[0].pageX;
       slider.touch.end.y = touchPoints[0].pageY;
-
-
 
       // if fade mode, check if absolute x distance clears the threshold
       if (slider.settings.mode === 'fade') {
