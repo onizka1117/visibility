@@ -1208,6 +1208,7 @@
           value = slider.touch.originalPos.left + change;
           $("#move").text("change : " + change + " / value : " + value);
           console.log(orig.changedTouches);
+          slider.viewport.off('touchmove MSPointerMove pointermove', onTouchMove);
           //slider.viewport.trigger("touchend");
         // if vertical, drag along y axis
         } else {
