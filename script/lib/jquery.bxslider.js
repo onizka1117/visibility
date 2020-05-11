@@ -1175,7 +1175,7 @@
      *  - DOM event object
      */
     var onTouchMove = function(e) {
-      $("#move").text($("#move").text()+"TouchMove");
+
       var orig = e.originalEvent,
       touchPoints = (typeof orig.changedTouches !== 'undefined') ? orig.changedTouches : [orig],
       // if scrolling on y axis, do not prevent default
@@ -1188,9 +1188,11 @@
 
       // x axis swipe
       if ((xMovement * 3) > yMovement && slider.settings.preventDefaultSwipeX) {
+        $("#move").text("(xMovement * 3) > yMovement && slider.settings.preventDefaultSwipeX)");
         e.preventDefault();
       // y axis swipe
       } else if ((yMovement * 3) > xMovement && slider.settings.preventDefaultSwipeY) {
+        $("#move").text("(yMovement * 3) > xMovement && slider.settings.preventDefaultSwipeY");
         e.preventDefault();
       }
       if (e.type !== 'touchmove') {
@@ -1198,6 +1200,7 @@
       }
 
       if (slider.settings.mode !== 'fade' && slider.settings.oneToOneTouch) {
+        $("#move").text("slider.settings.mode !== 'fade' && slider.settings.oneToOneTouch");
         // if horizontal, drag along x axis
         if (slider.settings.mode === 'horizontal') {
           change = touchPoints[0].pageX - slider.touch.start.x;
@@ -1219,7 +1222,6 @@
      */
     var onTouchEnd = function(e) {
       console.log("TouchEnd");
-      $("body").append("<div>TouchEnd</div>");
       e.preventDefault();
       slider.viewport.off('touchmove MSPointerMove pointermove', onTouchMove);
       //enable slider controls as soon as user stops interacing with slides
