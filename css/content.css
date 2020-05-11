@@ -778,8 +778,9 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .division>div.left {padding-right:10px;}
 .division>div.right {padding-left:10px;}
 
-
-
+/* ////// event popup ////// */
+.btn_join {display: block;text-align: center;position: absolute;right: 0;top: 1px;width: 40px;height: 40px;}
+.btn_join img {margin-top:10px;}
 
 
 
