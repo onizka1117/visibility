@@ -483,7 +483,7 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 
 .layer_pop_wrap.type1 {position:absolute; top:0; left:0; width:100%; min-width:100%; height:100%;}
 .layer_pop_wrap.type1 .pop_header {padding:35px 30px 0;  height:60px; box-sizing:border-box;}
-.layer_pop_wrap.type1 .pop_header .tit {font-size:20px;}
+.layer_pop_wrap.type1 .pop_header .tit {font-size:22px;}
 .layer_pop_wrap.type1 .pop_con {position:absolute; top:75px; padding:15px 30px 30px; box-sizing:border-box;}
 
 .layer_pop_wrap.type2 {position:absolute; top:0; left:0; width:100%; min-width:100%; height:100%;}
