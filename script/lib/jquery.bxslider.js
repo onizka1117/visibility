@@ -1189,16 +1189,13 @@
 
       // x axis swipe
       if ((xMovement * 3) > yMovement && slider.settings.preventDefaultSwipeX) {
-        $("#move").text("(xMovement * 3) > yMovement && slider.settings.preventDefaultSwipeX)");
         e.preventDefault();
       // y axis swipe
       } else if ((yMovement * 3) > xMovement && slider.settings.preventDefaultSwipeY) {
-        $("#move").text("(yMovement * 3) > xMovement && slider.settings.preventDefaultSwipeY");
         e.preventDefault();
       }
       if (e.type !== 'touchmove') {
         e.preventDefault();
-        $("#move").text("(e.type !== 'touchmove')");
       }
 
       if (slider.settings.mode !== 'fade' && slider.settings.oneToOneTouch) {
@@ -1206,9 +1203,6 @@
         if (slider.settings.mode === 'horizontal') {
           change = touchPoints[0].pageX - slider.touch.start.x;
           value = slider.touch.originalPos.left + change;
-          $("#move").text("change : " + change + " / value : " + value);
-          console.log(orig.changedTouches);
-          slider.viewport.off('touchmove MSPointerMove pointermove', onTouchMove);
           //slider.viewport.trigger("touchend");
         // if vertical, drag along y axis
         } else {
@@ -1226,7 +1220,6 @@
      *  - DOM event object
      */
     var onTouchEnd = function(e) {
-      console.log("TouchEnd");
       e.preventDefault();
       slider.viewport.off('touchmove MSPointerMove pointermove', onTouchMove);
       //enable slider controls as soon as user stops interacing with slides
@@ -1256,11 +1249,6 @@
         if (slider.settings.mode === 'horizontal') {
           distance = slider.touch.end.x - slider.touch.start.x;
           value = slider.touch.originalPos.left;
-          console.log(slider.viewport.offset().top + slider.viewport.height());
-          console.log("x : " + slider.touch.end.x);
-          console.log("y : " + slider.touch.end.y);
-          console.log('distance : ' + distance);
-          $("#slidResult").text("distance : " + distance +" / x : " + slider.touch.end.x + " / y : "+slider.touch.end.y);
         } else {
           distance = slider.touch.end.y - slider.touch.start.y;
           value = slider.touch.originalPos.top;

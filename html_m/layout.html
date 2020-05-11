@@ -10,7 +10,7 @@
     <script src="../script/lib/jquery-3.4.1.min.js"></script>
     <script src="../script/lib/jquery-3.4.1.min.js"></script>
     <script src="../script/lib/jquery-ui.js"></script>
-    <script src="../script/lib/jquery.bxslider.js"></script>
+    <script src="../script/lib/jquery.bxslider.js?v=1"></script>
     <script type="text/javascript">
     var eventList = [
       {date:"2020-05-01", eventClass:"work meet msg"},
@@ -44,7 +44,8 @@
             $("#liveSlider").bxSlider({
               slideMargin:20,
               speed : 100,
-              controls : false
+              controls : false,
+              oneToOneTouch :false
             });
           }
         });
