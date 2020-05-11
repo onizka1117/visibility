@@ -1217,6 +1217,7 @@
      *  - DOM event object
      */
     var onTouchEnd = function(e) {
+      console.log("TouchEnd");
       e.preventDefault();
       slider.viewport.off('touchmove MSPointerMove pointermove', onTouchMove);
       //enable slider controls as soon as user stops interacing with slides
