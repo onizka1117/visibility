@@ -257,11 +257,11 @@
       // if video is true, set up the fitVids plugin
       if (slider.settings.video) { el.fitVids(); }
 	  //preloadImages
-	  if (slider.settings.preloadImages === 'none') { 
-		  preloadSelector = null; 
+	  if (slider.settings.preloadImages === 'none') {
+		  preloadSelector = null;
 	  }
-      else if (slider.settings.preloadImages === 'all' || slider.settings.ticker) { 
-		  preloadSelector = slider.children; 
+      else if (slider.settings.preloadImages === 'all' || slider.settings.ticker) {
+		  preloadSelector = slider.children;
 	  }
       // only check for control addition if not in "ticker" mode
       if (!slider.settings.ticker) {
@@ -1117,11 +1117,11 @@
         slider.touch.originalPos = el.position();
         var orig = e.originalEvent,
         touchPoints = (typeof orig.changedTouches !== 'undefined') ? orig.changedTouches : [orig];
-		var chromePointerEvents = typeof PointerEvent === 'function'; 
-		if (chromePointerEvents) { 
-			if (orig.pointerId === undefined) { 
+		var chromePointerEvents = typeof PointerEvent === 'function';
+		if (chromePointerEvents) {
+			if (orig.pointerId === undefined) {
 				return;
-			} 
+			}
 		}
         // record the starting touch x, y coordinates
         slider.touch.start.x = touchPoints[0].pageX;
@@ -1228,6 +1228,9 @@
       // record end x, y positions
       slider.touch.end.x = touchPoints[0].pageX;
       slider.touch.end.y = touchPoints[0].pageY;
+
+
+
       // if fade mode, check if absolute x distance clears the threshold
       if (slider.settings.mode === 'fade') {
         distance = Math.abs(slider.touch.start.x - slider.touch.end.x);
@@ -1245,6 +1248,11 @@
         if (slider.settings.mode === 'horizontal') {
           distance = slider.touch.end.x - slider.touch.start.x;
           value = slider.touch.originalPos.left;
+          console.log(slider.viewport.offset().top + slider.viewport.height());
+          console.log("x : " + slider.touch.end.x);
+          console.log("y : " + slider.touch.end.y);
+          console.log('distance : ' + distance);
+          $("#slidResult").text("distance : " + distance +" / x : " + slider.touch.end.x + " / y : "+slider.touch.end.y);
         } else {
           distance = slider.touch.end.y - slider.touch.start.y;
           value = slider.touch.originalPos.top;
