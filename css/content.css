@@ -784,13 +784,11 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .btn_join {display: block;text-align: center;position: absolute;right: 0;top: 1px;width: 40px;height: 40px;}
 .btn_join img {margin-top:10px;}
 .list_form_wrap.chk_form .list_form .ip_txt {background: #f6f8fa;border:none;}
-.list_form_wrap.chk_form .list_form textarea {background: #f6f8fa;border:none;}
+.list_form_wrap.chk_form .list_form .chk_div {background: #f6f8fa;border:none;}
 
-.event_pop .btns {width: 32px;text-align: center;vertical-align: middle;}
 .event_pop>div.btns {padding:0 14px;}
 .event_pop .left {width:700px;}
 .event_pop .right .tit_pop {font-size:14px;font-weight: 500;color: #45474e;margin-bottom:9px;}
-.event_pop+.grid_wrap {margin-top:10px;}
 
 
 /* welcome */
