@@ -132,9 +132,12 @@ input[type="number"]::-webkit-inner-spin-button {-webkit-appearance: none;margin
 .login_wrap.type1 .btn_quick_quot {border-radius:0; position:relative;}
 .login_wrap.type1 .btn_quick_quot:after {content:""; position:absolute; bottom:0; right:0; display:inline-block; border-style:solid; border-width:5px 10px; border-color:transparent #181d23 #181d23 transparent;}
 
+
 .login_wrap.type1.bright .login_inner .box_login:before {background-image:url(../images/login/bg_back_type1_wh.svg);}
 .login_wrap.type1.bright .login_inner .box_login:after {background-image:url(../images/login/bg_type1_wh.svg);}
-.login_wrap.type1.bright .login_inner .box_login.on:after {background-position:-5px 0; transform:rotateY(0); background-image:url(../images/login/bg2_type1_wh.svg);}
+.login_wrap.type1.bright .login_inner .box_login.on:after {background-position:1px 0; transform:rotateY(0); background-image:url(../images/login/bg2_type1_wh.svg);}
+.login_wrap.type1.bright .login_inner .box_login.on .tabs li:nth-child(1) {width:45%;}
+.login_wrap.type1.bright .login_inner .box_login.on .tabs li:nth-child(2) {width:55%;}
 .login_wrap.type1.bright .btn_quick_quot {margin:0; width:512px; height:87px; line-height:80px; background:url(../images/login/btn_quotation.svg) no-repeat; box-shadow:none;}
 .login_wrap.type1.bright .btn_quick_quot:after {display:none;}
 
