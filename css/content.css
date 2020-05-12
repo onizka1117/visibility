@@ -11,7 +11,7 @@
 .ip_search .ip_txt {padding-right:50px;}
 .ip_search .ip_del .btn_txt_del {right:40px;}
 .ip_search .btn_ip_search {font-size:0; position:absolute; top:0; right:0; width:42px; height:42px; background:url(../images/ico_search_g.svg) no-repeat center center; background-size:17px;}
-.ip_search.type_people .btn_ip_search {background-image:url(../images/ico_people.svg); }
+.ip_search.type_people .btn_ip_search {background-size: 20px;background-image:url(../images/ico_people.svg); }
 .ip_del {width:100%; display:inline-block; position:relative;}
 .ip_filter {display:inline-block; position:relative; width:100%; }
 .ip_filter:before {content:""; display:inline-block; width:24px; height:24px; position:absolute; top:8px; left:8px; background:url(../images/ico_filter.svg) no-repeat;}
@@ -783,8 +783,8 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 /* ////// event popup ////// */
 .btn_join {display: block;text-align: center;position: absolute;right: 0;top: 1px;width: 40px;height: 40px;}
 .btn_join img {margin-top:10px;}
-
-
+.list_form_wrap.chk_form .list_form .ip_txt {background: #f6f8fa;border:none;}
+.list_form_wrap.chk_form .list_form textarea {background: #f6f8fa;border:none;}
 
 
 /* welcome */
