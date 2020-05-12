@@ -97,11 +97,11 @@
             var slider = $("#liveSlider").bxSlider({
               slideMargin:20,
               speed : 100,
-              touchEnabled : uiCommon.checkOS() == "ios" ? false : true
+              touchEnabled : true// uiCommon.checkOS() == "ios" ? false : true
             });
             // ios인 경우
             if (uiCommon.checkOS()=="ios") {
-              slidePage(slider);
+              //slidePage(slider);
             }
           }
         });
