@@ -14,57 +14,6 @@
     <script src="../script/ui_common_m.js?"></script>
     <script type="text/javascript">
 
-    // ios인 경우 터치이벤트 체크
-    function slidePage(slider) {
-      var touchFlag = false;
-      var startX, startY, endX, endY;
-
-      $(".live_tile_list").on("touchstart", function(e) {
-        e.stopPropagation();
-        startX = e.touches[0].clientX;
-        startY = e.touches[0].clientY;
-        touchFlag = true;
-      });
-
-      $(".live_tile_list").on("scroll touchmove", function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        return false;
-      });
-
-
-      $(".live_tile_list").on("touchmove", function(e) {
-        e.stopPropagation();
-        endX = e.touches[0].clientX;
-        endY = e.touches[0].clientY;
-        touchFlag = true;
-      });
-
-      $(".live_tile_list").on("touchend", function(e) {
-        e.stopPropagation();
-        var resultX = startX - endX;
-        var resultY = startY - endY;
-        if(Math.abs(resultY) < 100 && Math.abs(resultX) > 50) {
-          if(resultX>0 && touchFlag) {
-            // left
-            slider.goToNextSlide();
-          }else if(resultX<0 && touchFlag){
-            // right
-            slider.goToPrevSlide();
-          }
-        }
-        touchFlag = false;
-        startX = 0;
-        startY = 0;
-        endX = 0;
-        endY = 0;
-      });
-
-    }
-
-
-
-
     var eventList = [
       {date:"2020-05-01", eventClass:"work meet msg"},
       {date:"2020-05-02", eventClass:"work"},
@@ -96,13 +45,8 @@
             // live 슬라이드
             var slider = $("#liveSlider").bxSlider({
               slideMargin:20,
-              speed : 100,
-              touchEnabled : true// uiCommon.checkOS() == "ios" ? false : true
+              speed : 100
             });
-            // ios인 경우
-            if (uiCommon.checkOS()=="ios") {
-              //slidePage(slider);
-            }
           }
         });
       });
