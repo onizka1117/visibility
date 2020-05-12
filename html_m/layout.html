@@ -26,8 +26,15 @@
         startX = e.touches[0].clientX;
         startY = e.touches[0].clientY;
         touchFlag = true;
-
       });
+
+      $(".live_tile_list").on("scroll touchmove", function(e) {
+        console.log(e.type);
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      });
+
 
       $(".live_tile_list").on("touchmove", function(e) {
         //e.preventDefault();
