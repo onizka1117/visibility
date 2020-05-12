@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+    <link href="../css/style_m.css" rel="stylesheet">
+    <link href="../script/lib/jquery.bxslider.css" rel="stylesheet">
+    <script src="../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../script/lib/jquery-ui.js"></script>
+    <script src="../script/lib/jquery.bxslider.js"></script>
+    <script src="../script/ui_common_m.js?"></script>
+    <script type="text/javascript">
+
+
+    var eventList = [
+      {date:"2020-05-01", eventClass:"work meet msg"},
+      {date:"2020-05-02", eventClass:"work"},
+      {date:"2020-05-05", eventClass:"meet"},
+      {date:"2020-05-17", eventClass:"meet msg"},
+      {date:"2020-05-20", eventClass:"work meet"},
+      {date:"2020-05-25", eventClass:"work msg"},
+      {date:"2020-05-30", eventClass:"msg"}
+    ];
+    $(function(){
+
+
+      // 타일 로드 (개발시 삭제)
+      $(".live_slider li").each(function(i){
+        $(this).load("tile/live.html", function() {
+          if(i==3) {
+            // live 슬라이드
+            var slider = $("#liveSlider").bxSlider({
+              slideMargin:20,
+              speed : 100
+            });
+
+          }
+        });
+      });
+
+
+      // 캘린더
+      $("#datacalendar").datepicker({
+        beforeShowDay : addEvents
+      });
+
+      function addEvents(date) {
+        for(i=0 ; i<eventList.length ; i++) {
+          if(getDate(date) == eventList[i].date) {
+            return [true, eventList[i].eventClass , ""];
+          }
+        }
+        return [true, "", ""];
+      }
+
+      function getDate(date) {
+        var year = date.getFullYear();
+        var month = date.getMonth()+1;
+        var month2 = month < 10 ? "0"+month : month;
+        var day = date.getDate() < 10 ? "0"+date.getDate() : date.getDate();
+        return year +"-"+ month2 + "-" + day;
+      }
+
+
+
+    });
+    </script>
+  </head>
+  <body>
+
+
+    <div class="main_wrap">
+
+      <div class="welcome">
+        <span class="sub_txt">WELCOME</span>
+        <span class="name">AMORE PACIFIC</span>
+      </div>
+
+      <div class="live_tile_list">
+        <ul class="live_slider" id="liveSlider">
+          <!-- 반복 -->
+          <li><!-- ../tile/live.html 파일 영역 --></li>
+          <!-- //반복 -->
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+
+
+      <!-- Static Tiles -->
+      <div class="static_tile_list">
+        <ul class="main_cols_2">
+          <li>
+            <a href="#" class="st_tile box bg_type2">
+              <span class="img"><img src="../images/ico_static_tracking.svg" alt=""></span>
+              <span class="txt">Tracking</span>
+            </a>
+            <a href="#" class="st_tile box bg_type3">
+              <span class="img"><img src="../images/ico_static_ebook.svg" alt=""></span>
+              <span class="txt">E-Booking</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="st_tile2 box bg_type4">
+              <span class="img"><img src="../images/ico_static_analytics.svg" alt=""></span>
+              <span class="txt">Analytics Tool</span>
+            </a>
+            <a href="#" class="st_tile2 box">
+              <span class="img"><img src="../images/dark/ico_static_quotation.svg" alt=""></span>
+              <span class="txt">New Quotation</span>
+            </a>
+            <a href="#" class="st_tile2 box">
+              <span class="img"><img src="../images/dark/ico_static_kpi.svg" alt=""></span>
+              <span class="txt">KPI</span>
+            </a>
+            <a href="#" class="st_tile2 box">
+              <span class="img"><img src="../images/dark/ico_static_dashboard.svg" alt=""></span>
+              <span class="txt">Dashboard</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- //Static Tiles -->
+
+
+    </div>
+
+
+  </body>
+</html>

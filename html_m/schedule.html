@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+    <link href="../css/style_m.css" rel="stylesheet">
+    <link href="../script/lib/jquery.bxslider.css" rel="stylesheet">
+    <script src="../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../script/lib/jquery-ui.js"></script>
+    <script src="../script/lib/jquery.bxslider.js"></script>
+    <script src="../script/ui_common_m.js?"></script>
+    <script type="text/javascript">
+
+
+    var eventList = [
+      {date:"2020-05-01", eventClass:"work meet msg"},
+      {date:"2020-05-02", eventClass:"work"},
+      {date:"2020-05-05", eventClass:"meet"},
+      {date:"2020-05-17", eventClass:"meet msg"},
+      {date:"2020-05-20", eventClass:"work meet"},
+      {date:"2020-05-25", eventClass:"work msg"},
+      {date:"2020-05-30", eventClass:"msg"}
+    ];
+    $(function(){
+
+      // 캘린더
+      $("#datacalendar").datepicker({
+        beforeShowDay : addEvents
+      });
+
+      function addEvents(date) {
+        for(i=0 ; i<eventList.length ; i++) {
+          if(getDate(date) == eventList[i].date) {
+            return [true, eventList[i].eventClass , ""];
+          }
+        }
+        return [true, "", ""];
+      }
+
+      function getDate(date) {
+        var year = date.getFullYear();
+        var month = date.getMonth()+1;
+        var month2 = month < 10 ? "0"+month : month;
+        var day = date.getDate() < 10 ? "0"+date.getDate() : date.getDate();
+        return year +"-"+ month2 + "-" + day;
+      }
+
+
+
+    });
+    </script>
+  </head>
+  <body>
+
+
+    <div class="">
+      <div class="schedule_box box shadow">
+        <a href="#" class="btn_close">닫기</a>
+
+        <div class="sched_wrap">
+          <div class="tit_month">
+            <span>Monday,</span>
+            <span>17 January</span>
+          </div>
+          <div class="calendar_wrap">
+            <div id="datacalendar"></div>
+          </div>
+
+        </div>
+
+        <!-- title -->
+        <div class="tit_wrap">
+          <div class="tit_left">
+            <span class="tit">Reminder</span>
+          </div>
+          <div class="tit_right">
+            <span class="ip_check sm"><input type="checkbox" name="" value="" id="check01"><label for="check01">To do <span class="bold sub_txt">3</span></label></span>
+            <span class="ip_check sm"><input type="checkbox" name="" value="" id="check02"><label for="check02">Message <span class="bold sub_txt">3</span></label></span>
+          </div>
+        </div>
+        <!-- //title -->
+
+        <div class="scr_box">
+          <ul class="event_list">
+            <!-- 반복 -->
+            <li class="work">
+              <a href="#">
+                <div class="tit">
+                  <span class="date">2020.01.20</span>
+                </div>
+                <div class="txt">
+                  Send email to Loso Send email to Loso Kim
+                </div>
+              </a>
+            </li>
+            <!-- //반복 -->
+            <li class="msg">
+              <a href="#">
+                <div class="tit">
+                  <span class="date">2020.01.20</span>
+                </div>
+                <div class="txt">
+                  Send email to Loso Kim
+                </div>
+              </a>
+            </li>
+            <li class="meeting">
+              <a href="#">
+                <div class="tit">
+                  <span class="date">2020.01.20</span>
+                </div>
+                <div class="txt">
+                  Send email to Loso Kim
+                </div>
+              </a>
+            </li>
+            <li class="meeting">
+              <div class="tit">
+                <span class="date">2020.01.20</span>
+              </div>
+              <div class="txt">
+                Send email to Loso Kim
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+
+  </body>
+</html>
