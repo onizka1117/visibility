@@ -20,8 +20,6 @@
       var startX, startY, endX, endY;
 
       $(".live_tile_list").on("touchstart", function(e) {
-        console.log(e.type);
-        //e.preventDefault();
         e.stopPropagation();
         startX = e.touches[0].clientX;
         startY = e.touches[0].clientY;
@@ -29,7 +27,6 @@
       });
 
       $(".live_tile_list").on("scroll touchmove", function(e) {
-        console.log(e.type);
         e.preventDefault();
         e.stopPropagation();
         return false;
@@ -37,7 +34,6 @@
 
 
       $(".live_tile_list").on("touchmove", function(e) {
-        //e.preventDefault();
         e.stopPropagation();
         endX = e.touches[0].clientX;
         endY = e.touches[0].clientY;
@@ -45,7 +41,6 @@
       });
 
       $(".live_tile_list").on("touchend", function(e) {
-        //e.preventDefault();
         e.stopPropagation();
         var resultX = startX - endX;
         var resultY = startY - endY;
