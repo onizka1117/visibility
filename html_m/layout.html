@@ -10,32 +10,19 @@
     <script src="../script/lib/jquery-3.4.1.min.js"></script>
     <script src="../script/lib/jquery-3.4.1.min.js"></script>
     <script src="../script/lib/jquery-ui.js"></script>
-    <script src="../script/lib/jquery.bxslider.js?v=3"></script>
+    <script src="../script/lib/jquery.bxslider.js?"></script>
+    <script src="../script/ui_common_m.js?"></script>
     <script type="text/javascript">
-
-    // ios 체크
-    function checkMobile(){
-        var varUA = navigator.userAgent.toLowerCase(); //userAgent
-        if ( varUA.indexOf('android') > -1) {
-            //안드로이드
-            return "android";
-        } else if ( varUA.indexOf("iphone") > -1||varUA.indexOf("ipad") > -1||varUA.indexOf("ipod") > -1 ) {
-            //IOS
-            return "ios";
-        } else {
-            //아이폰, 안드로이드 외
-            return "other";
-        }
-    }
 
     // ios인 경우 터치이벤트 체크
     function slidePage(slider) {
-      console.log(slider);
       var touchFlag = false;
       var startX, startY, endX, endY;
 
       $(".live_tile_list").on("touchstart", function(e) {
-        e.preventDefault();
+        console.log(e.type);
+        //e.preventDefault();
+        e.stopPropagation();
         startX = e.touches[0].clientX;
         startY = e.touches[0].clientY;
         touchFlag = true;
@@ -43,14 +30,16 @@
       });
 
       $(".live_tile_list").on("touchmove", function(e) {
-        e.preventDefault();
+        //e.preventDefault();
+        e.stopPropagation();
         endX = e.touches[0].clientX;
         endY = e.touches[0].clientY;
         touchFlag = true;
       });
 
       $(".live_tile_list").on("touchend", function(e) {
-        e.preventDefault();
+        //e.preventDefault();
+        e.stopPropagation();
         var resultX = startX - endX;
         var resultY = startY - endY;
         if(Math.abs(resultY) < 100 && Math.abs(resultX) > 50) {
@@ -62,7 +51,6 @@
             slider.goToPrevSlide();
           }
         }
-
         touchFlag = false;
         startX = 0;
         startY = 0;
@@ -71,6 +59,8 @@
       });
 
     }
+
+
 
 
     var eventList = [
@@ -105,11 +95,10 @@
             var slider = $("#liveSlider").bxSlider({
               slideMargin:20,
               speed : 100,
-              controls : false,
-              touchEnabled : checkMobile() == "ios" ? false : true
+              touchEnabled : uiCommon.checkOS() == "ios" ? false : true
             });
             // ios인 경우
-            if (checkMobile()=="ios") {
+            if (uiCommon.checkOS()=="ios") {
               slidePage(slider);
             }
           }
