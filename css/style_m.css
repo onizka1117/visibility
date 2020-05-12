@@ -357,8 +357,8 @@ a {color:#fff;}
 .main_wrap .welcome {padding:0 30px; font-family:'CJONLYONENEWtitle';}
 .main_wrap .welcome .sub_txt {display:block; color:#8a919d; font-size:12px;}
 .main_wrap .welcome .name {margin-top:4px; display:block; font-weight:500; font-size:20px;}
-.live_tile_list {overflow:hidden; margin-top:20px;}
-.live_tile_list .live_slider {display:block;}
+.live_tile_list {overflow:hidden; margin-top:20px; height:220px;}
+.live_tile_list .live_slider {display:block; height:190px;}
 .live_tile_list .live_slider>li {display:block;}
 .live_tile_list .bx-wrapper {margin-bottom:30px; box-shadow:none; border:0; background:transparent;}
 .live_tile_list .bx-viewport {width:72% !important; margin:0 auto; overflow:visible !important; height:190px !important;}
