@@ -40,9 +40,6 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .ip_check.type2 label {padding-left:26px; font-size:16px; color:#13161a; background-image:url(../images/check.svg); background-size:16px;}
 .ip_check.type2 input:checked+label {background-image:url(../images/checked.svg); }
 
-.select_group {width:100%; position:relative; text-align:right; height:38px; display:inline-block; border:1px solid #dde2ea; background-color:#fff; box-sizing:border-box;}
-.select_group .label {position:absolute; text-align:left; left:15px; line-height:38px; color:#8b919c;}
-.select_group select {text-align:left; padding:0 15px; width:60%; font-size:14px; border:0; height:36px; color:#45474e; background:#fff url(../images/ip_select.png) no-repeat right 15px center; box-sizing:border-box; appearance:none; -webkit-appearance:none; }
 .select.sm {padding:0 15px; height:38px;}
 .radio_group {display:block; font-size:0;}
 .radio_group>li {display:inline-block; vertical-align:middle; position:relative; font-size:14px;}
@@ -115,6 +112,12 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .tag_box .item .btn_del {display:inline-block; vertical-align:middle; font-size:0; width:14px; height:14px; background:url(../images/ico_txt_del.svg) no-repeat center center; background-size:14px;}
 
 .txt_out {line-height:1.2; display:inline-block; vertical-align:middle;}
+
+.ip_lb_group {padding-left:120px; display:inline-block; width:100%; position:relative; height:38px; border:1px solid #dde2ea; box-sizing:border-box; background-color:#fff;}
+.ip_lb_group .label {position:absolute; top:0; left:0; padding:0 15px; line-height:36px; color:#8b919c;}
+.ip_lb_group .ip_txt {border:0; height:36px; line-height:36px;}
+.ip_lb_group .ip_search .btn_ip_search {width:36px; height:36px;}
+.ip_lb_group .select {border:0; height:36px;}
 
 /* form */
 .form_wrap {padding:5px 15px 35px;}
@@ -235,6 +238,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .tit_wrap .total_items {color:#8b919c; font-size:14px;}
 .tit_wrap .total_items.indent {padding-left:10px;}
 .tit_wrap h4 {vertical-align:middle; color:#000; font-stretch:normal; font-weight:500; font-size:20px; line-height:30px; display:inline-block;}
+.tit_wrap h5 {vertical-align:middle; color:#45474e; font-stretch:normal; font-weight:500; font-size:14px; line-height:30px; display:inline-block;}
 
 .tit_list>div {height:50px; vertical-align:middle;}
 
@@ -801,8 +805,9 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .welcome_wrap .btn_area {margin-top:30px; text-align:right;}
 .welcome_wrap .btn_area .btn_set {width:100px; height:45px; line-height:45px; font-size:15px; background-color:#3c5067;}
 
-
-
+.profile_box {padding:15px 15px 12px; background-color:#f6f8fa;}
+.profile_box .user_name {display:block; font-size:16px; font-weight:500;}
+.profile_box .user_email {margin-top:8px; display:block; font-size:14px; color:#8b919c; }
 
 
 
