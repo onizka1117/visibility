@@ -36,6 +36,7 @@
 
       $(".slide_page_wrap").on("touchstart", function(e) {
         console.log("start");
+        e.stopPropagation();
         startX = e.touches[0].clientX;
         startY = e.touches[0].clientY;
         touchFlag = true;
@@ -44,6 +45,7 @@
 
       $(".slide_page_wrap").on("touchmove", function(e) {
         console.log("move");
+        e.stopPropagation();
         endX = e.touches[0].clientX;
         endY = e.touches[0].clientY;
         touchFlag = false;
@@ -51,7 +53,7 @@
       });
 
       $(".slide_page_wrap").on("touchend", function(e) {
-
+        e.stopPropagation();
         var resultX = startX - endX;
         var resultY = startY - endY;
         if(Math.abs(resultY) < 100 && Math.abs(resultX) > 50) {
@@ -98,6 +100,19 @@
       slidePage();
 
 
+      var slider = $("#liveSlider").bxSlider({
+        slideMargin:20,
+        speed : 100,
+        preventDefaultSwipeX : false
+      });
+
+      $(".scr_x").on("scroll touchmove", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      });
+
+
     });
     </script>
   </head>
@@ -136,6 +151,58 @@
           test <br>
           test <br>
           test <br>
+
+          <div class="scr_x">
+            <div class="live_tile_list">
+              <ul class="live_slider" id="liveSlider">
+                <!-- 반복 -->
+                <li>
+                  <div class="live_tile box bg_type1">
+                    <div class="tit_area">
+                      <strong class="tit">This Month Volume</strong>
+                    </div>
+                    <div class="con">
+                      차트영역
+                    </div>
+                  </div>
+                </li>
+                <!-- //반복 -->
+                <li>
+                  <div class="live_tile box bg_type1">
+                    <div class="tit_area">
+                      <strong class="tit">This Month Volume</strong>
+                    </div>
+                    <div class="con">
+                      차트영역
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="live_tile box bg_type1">
+                    <div class="tit_area">
+                      <strong class="tit">This Month Volume</strong>
+                    </div>
+                    <div class="con">
+                      차트영역
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="live_tile box bg_type1">
+                    <div class="tit_area">
+                      <strong class="tit">This Month Volume</strong>
+                    </div>
+                    <div class="con">
+                      차트영역
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+
+
         </div>
         <div class="item">
           page2
