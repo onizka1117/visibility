@@ -468,11 +468,7 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .tit_wrap+.scr_box {margin-top:10px;}
 
 .scr_box .mCSB_inside>.mCSB_container {margin-right:10px;}
-.mCSB_container_wrapper {margin:0;}
-.mCSB_scrollTools {width:5px;}
-.mCSB_scrollTools .mCSB_draggerRail {background-color:transparent;}
-.mCSB_inside>.mCSB_container {margin-right:0px;}
-.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {border-radius:4px; background-color:rgba(71, 79, 89, 0.15) !important;}
+
 
 /* popup */
 .pop_wrap {position:absolute;z-index:10001; }

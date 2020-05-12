@@ -227,3 +227,11 @@ table {border-collapse:collapse; border-spacing:0; }
 .tac {text-align:center !important;}
 
 .inblock {display:inline-block !important; vertical-align:middle;}
+
+
+/* scroll */
+.mCSB_container_wrapper {margin:0;}
+.mCSB_scrollTools {width:5px;}
+.mCSB_scrollTools .mCSB_draggerRail {background-color:transparent;}
+.mCSB_inside>.mCSB_container {margin-right:0px;}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {border-radius:4px; background-color:rgba(71, 79, 89, 0.15) !important;}
