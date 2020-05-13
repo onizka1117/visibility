@@ -378,6 +378,8 @@ a {color:#fff;}
 .tit_wrap>.tit_right {float:right;}
 .tit_wrap>.tit_left .tit {font-size:18px; font-weight:500;}
 
+.tit_wrap.type_special .tit {font-size:25px; font-family:'CJONLYONENEWtitle'; font-weight:500;}
+
 
 /* input */
 .ip_check {position:relative; display:inline-block;}
