@@ -11,70 +11,48 @@
     <script src="../../script/lib/jquery-3.4.1.min.js"></script>
     <script src="../../script/lib/jquery-ui.js"></script>
     <script src="../../script/ui_common.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('.yj_wrap .btn_yj1').click(function(){
+                if($('.pop1').hasClass('on')){
+                    $('.pop').removeClass('on');
+                }else{
+                    $('.pop').removeClass('on');
+                    $('.pop1').addClass('on');
+                }
+            });
+            $('.yj_wrap .btn_yj2').click(function(){
+                if($('.pop2').hasClass('on')){
+                    $('.pop').removeClass('on');
+                }else{
+                    $('.pop').removeClass('on');
+                    $('.pop2').addClass('on');
+                }
+            });
+            $('.yj_wrap .btn_yj3').click(function(){
+                if($('.pop3').hasClass('on')){
+                    $('.pop').removeClass('on');
+                }else{
+                    $('.pop').removeClass('on');
+                    $('.pop3').addClass('on');
+                }
+            });
+        });
+    </script>
   </head>
   <body>
 
-    <!-- layer -->
-    <div class="layer_pop_wrap type1" style="">
-      <a href="#" class="btn_closed">닫기</a>
-      <div class="pop_header">
-        <div class="tit">
-          New Event
-        </div>
-      </div>
-      <div class="pop_con">
-
-        <div class="list_form_wrap">
-          <ul class="list_form">
-            <li style="width:250px">
-                <label for="" class="lb_txt">이벤트 유형</label>
-                <select class="select" name="">
-                  <option value="">Meeting</option>
-                  <option value="">바나나</option>
-                  <option value="">딸기</option>
-                </select>
-            </li>
-            <li>
-              <label for="" class="lb_txt">참여 인원</label>
-              <span class="ip_date"><input type="text" class="ip_txt"><a href="javascript:" class="btn_join"><img src="../../images/ico_people.svg" alt="참여인원 선택"></a></span>
-            </li>
-          </ul>
-          <ul class="list_form">
-            <li style="width:250px">
-              <label for="" class="lb_txt">일시</label>
-              <span class="ip_del"><input type="text" class="ip_txt" ><a href="#" class="btn_txt_del">삭제</a></span>
-            </li>
-            <li>
-              <label for="" class="lb_txt">장소</label>
-              <span class="ip_del"><input type="text" class="ip_txt" ><a href="#" class="btn_txt_del">삭제</a></span>
-            </li>
-          </ul>
-          <ul class="list_form">
-            <li>
-              <label for="" class="lb_txt">제목</label>
-              <span class="ip_del"><input type="text" class="ip_txt" ><a href="#" class="btn_txt_del">삭제</a></span>
-            </li>
-          </ul>
-          <ul class="list_form">
-            <li>
-              <label for="" class="lb_txt">내용</label>
-              <textarea rows="8" cols="80" style="height:200px;"></textarea>
-            </li>
-          </ul>
-        </div>
-
-        <div class="btn_pop_bottom">
-          <div class="btn_list">
-            <a href="#" class="btn sm">Save</a>
-            <a href="#" class="btn gray sm">Cancel</a>
-          </div>
-        </div>
-
-      </div>
+    <div class="yj_wrap">
+        <a href="javascript:" class="btn_yj1">111111111111</a>
+        <a href="javascript:" class="btn_yj2">2222222</a>
+        <a href="javascript:" class="btn_yj3">3333333</a>
     </div>
-    <!-- //layer -->
 
-
+    <div class="pop_wrap">
+        <div class="pop pop1"></div>
+        <div class="pop pop2"></div>
+        <div class="pop pop3"></div>
+    </div>
 
   </body>
 </html>
