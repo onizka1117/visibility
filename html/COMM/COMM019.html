@@ -7,10 +7,15 @@
     <link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
     <link href="../../css/common.css" rel="stylesheet">
     <link href="../../css/content.css" rel="stylesheet">
-    <link href="../../css/yj.css" rel="stylesheet">
     <script src="../../script/lib/jquery-3.4.1.min.js"></script>
     <script src="../../script/lib/jquery-ui.js"></script>
     <script src="../../script/ui_common.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".ip_date input").datepicker(uiCommon.datepickerOption);
+            $(".ip_del").inputTextFocus();
+        });
+    </script>
   </head>
   <body>
 
@@ -42,7 +47,7 @@
           <ul class="list_form">
             <li style="width:250px">
               <label for="" class="lb_txt">일시</label>
-              <span class="ip_del"><input type="text" class="ip_txt" ><a href="#" class="btn_txt_del">삭제</a></span>
+              <span class="ip_date"><input type="text" class="ip_txt"></span>
             </li>
             <li>
               <label for="" class="lb_txt">장소</label>
