@@ -32,7 +32,6 @@
 
     function slidePage() {
       var width = $(document).width();
-      var touchFlag = false;
       var startX, startY, endX, endY;
       var index = 0;
       var size = $(".slide_page_wrap .slide_page_item").length -1;
@@ -44,7 +43,6 @@
         e.stopPropagation();
         startX = e.touches[0].clientX;
         startY = e.touches[0].clientY;
-        touchFlag = true;
 
       });
 
@@ -52,8 +50,6 @@
         e.stopPropagation();
         endX = e.touches[0].clientX;
         endY = e.touches[0].clientY;
-        touchFlag = false;
-
       });
 
       $(".slide_page_wrap").on("touchend", function(e) {
@@ -61,25 +57,17 @@
         var resultX = startX - endX;
         var resultY = startY - endY;
 
-        if(!resultX || !resultY) return false;
-
         if(Math.abs(resultY) < 100 && Math.abs(resultX) > 50) {
-          if(resultX>0 && index<size) {
+          if(resultX>50 && index<size) {
             // left
             index++;
             movePage();
-          }else if(resultX<0 && index > 0){
+          }else if(resultX<-50 && index > 0){
             // right
             index--;
             movePage();
           }
         }
-
-        touchFlag = false;
-        startX = 0;
-        startY = 0;
-        endX = 0;
-        endY = 0;
 
       });
 
