@@ -12,6 +12,7 @@
     <script type="text/javascript">
       $(function(){
 
+        $(".ip_del").inputTextFocus();
 
       });
     </script>
@@ -35,22 +36,16 @@
         </div>
 
 
-        <div class="tit_wrap tit_h3">
+        <div class="tit_wrap tit_h3 mt30">
           <div class="tit_left">
             <h5>Language &amp; Time Zone</h5>
           </div>
         </div>
 
-        <ul class="">
+        <ul class="form_simple">
           <li>
-            <span class="ip_lb_group">
-              <span class="label">Time Zone</span>
-              <span class="ip_search"><span class="ip_del"><input type="text" class="ip_txt" value=""><a href="#" class="btn_txt_del">삭제</a></span><a href="#" class="btn_ip_search">검색</a></span>
-            </span>
-          </li>
-          <li>
-            <span class="ip_lb_group">
-              <span class="label">Time Zone</span>
+            <span class="ip_lb_group lb_160">
+              <span class="label">Language</span>
               <select name="" class="select">
                 <option value="">Korean</option>
                 <option value="">바나나</option>
@@ -58,11 +53,43 @@
               </select>
             </span>
           </li>
+          <li>
+            <span class="ip_lb_group lb_160">
+              <span class="label">Time Zone</span>
+              <span class="ip_search"><span class="ip_del"><input type="text" class="ip_txt" value="(UTC+09:00) Seoul"><a href="#" class="btn_txt_del">삭제</a></span><a href="#" class="btn_ip_search">검색</a></span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="tit_wrap tit_h3 mt30">
+          <div class="tit_left">
+            <h5>Change Password</h5>
+          </div>
+        </div>
+
+        <ul class="form_simple">
+          <li>
+            <span class="ip_lb_group lb_160">
+              <span class="label">Current password</span>
+              <input type="password" class="ip_txt" >
+            </span>
+          </li>
+          <li>
+            <span class="ip_lb_group lb_160">
+              <span class="label">New password</span>
+              <input type="password" class="ip_txt" >
+            </span>
+          </li>
+          <li>
+            <span class="ip_lb_group lb_160">
+              <span class="label">Verify password</span>
+              <input type="password" class="ip_txt" >
+            </span>
+          </li>
         </ul>
 
 
-
-        <div class="btn_pop_bottom">
+        <div class="btn_pop_bottom mt40">
           <div class="btn_list">
             <a href="#" class="btn sm">Save</a>
             <a href="#" class="btn gray sm">Cancel</a>

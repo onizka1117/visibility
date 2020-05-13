@@ -119,6 +119,8 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .ip_lb_group .ip_search .btn_ip_search {width:36px; height:36px;}
 .ip_lb_group .select {border:0; height:36px;}
 
+.ip_lb_group.lb_160 {padding-left:160px;}
+
 /* form */
 .form_wrap {padding:5px 15px 35px;}
 .tbl_form {width:100%; table-layout:fixed;}
@@ -146,8 +148,11 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .layer_pop_wrap.type1 .list_form+.list_form {margin-top:20px;}
 .list_form>li .lb_txt {display:block; height:26px; font-size:14px; font-weight:400;}
 .list_form_wrap.line {margin-top:50px; padding-top:20px; border-top:1px solid #cad0d7;}
-
 .list_form_wrap.type_full .list_form>li {display:block; margin-right:0;}
+
+.tit_wrap.tit_h3+.form_simple {margin-top:12px;}
+.form_simple>li+li {margin-top:10px}
+
 
 
 .txt_desc {margin-top:20px; padding-left:5px; font-weight:500;}
@@ -238,7 +243,7 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .tit_wrap .total_items {color:#8b919c; font-size:14px;}
 .tit_wrap .total_items.indent {padding-left:10px;}
 .tit_wrap h4 {vertical-align:middle; color:#000; font-stretch:normal; font-weight:500; font-size:20px; line-height:30px; display:inline-block;}
-.tit_wrap h5 {vertical-align:middle; color:#45474e; font-stretch:normal; font-weight:500; font-size:14px; line-height:30px; display:inline-block;}
+.tit_wrap h5 {vertical-align:middle; color:#45474e; font-stretch:normal; font-weight:500; font-size:14px; display:inline-block;}
 
 .tit_list>div {height:50px; vertical-align:middle;}
 
