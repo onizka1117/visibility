@@ -21,6 +21,12 @@
         speed : 100
       });
 
+      $(".prospect_slider_wrap").on("scroll touchmove", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      });
+
     });
 
 
@@ -114,7 +120,7 @@
             <!-- //title -->
 
             <div class="list_options">
-              <a href="#" class="btn_filter">Last 7 Days</a>
+              <a href="javascript:" class="btn_filter">Last 7 Days</a>
             </div>
 
             <div class="dash_module">
