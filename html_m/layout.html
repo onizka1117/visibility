@@ -37,6 +37,11 @@
         e.preventDefault();
       });
 
+      $('.m_nav').bind( "mouseup touchend", function(e){
+          if($(this).has(e.target).length === 0){
+              $('.m_nav').removeClass('open');
+          }
+      });
 
       // 타일 로드 (개발시 삭제)
       $(".live_slider li").each(function(i){
@@ -120,41 +125,41 @@
       </header>
 
       <nav class="m_nav">
-        <a href="#" class="btn_close">닫기</a>
-        <div class="user_info">
-          <strong class="name">Loso Kim</strong>
-          <span class="comp">Amore Pacific</span>
-          <div class="search">
-            <input type="text" name="" value="" placeholder="PO#, BKG# or B/L#">
-            <a href="#" class="btn_search">검색</a>
+          <div class="nav_inner">
+              <a href="#" class="btn_close">닫기</a>
+              <div class="user_info">
+                  <strong class="name">Loso Kim</strong>
+                  <span class="comp">Amore Pacific</span>
+                  <div class="search">
+                      <input type="text" name="" value="" placeholder="PO#, BKG# or B/L#">
+                      <a href="#" class="btn_search">검색</a>
+                  </div>
+              </div>
+              <ul class="nav_list">
+                  <li><a href="#customer_main" class="nav01" data-url="customer/customer_main.html">물동</a></li>
+                  <li><a href="#customer_sub_main" class="nav02" data-url="customer/customer_sub_main.html">금액</a></li>
+                  <li><a href="#" class="nav03">KPI</a></li>
+                  <li><a href="#" class="nav04">리포트</a></li>
+                  <li><a href="#" class="nav05">고객맞춤</a></li>
+                  <li><a href="#" class="nav06">미니WMS</a></li>
+                  <li><a href="#" class="nav07">대시보드</a></li>
+                  <li><span class="nav08">업무</span>
+                      <ul class="sub_list">
+                          <li><a href="#tab1">Booking</a></li>
+                          <li><a href="#tab2">Service Request</a></li>
+                          <li><a href="#tab3">EDMS</a></li>
+                          <li><a href="#tab4">B/L 출력</a></li>
+                          <li><a href="#tab5">정산</a></li>
+                      </ul>
+                  </li>
+              </ul>
+              <div class="nav_bott">
+                  <a href="#" class="btn_signout">Sign Out</a>
+              </div>
           </div>
-        </div>
-    		<ul class="nav_list">
-    			<li><a href="#customer_main" class="nav01" data-url="customer/customer_main.html">물동</a></li>
-    			<li><a href="#customer_sub_main" class="nav02" data-url="customer/customer_sub_main.html">금액</a></li>
-    			<li><a href="#" class="nav03">KPI</a></li>
-    			<li><a href="#" class="nav04">리포트</a></li>
-    			<li><a href="#" class="nav05">고객맞춤</a></li>
-          <li><a href="#" class="nav06">미니WMS</a></li>
-          <li><a href="#" class="nav07">대시보드</a></li>
-    			<li><span class="nav08">업무</span>
-            <ul class="sub_list">
-              <li><a href="#tab1">Booking</a></li>
-        			<li><a href="#tab2">Service Request</a></li>
-        			<li><a href="#tab3">EDMS</a></li>
-        			<li><a href="#tab4">B/L 출력</a></li>
-        			<li><a href="#tab5">정산</a></li>
-            </ul>
-          </li>
-    		</ul>
-        <div class="nav_bott">
-          <a href="#" class="btn_signout">Sign Out</a>
-        </div>
     	</nav>
 
-
       <div class="m_content">
-
 
         <div class="main_wrap">
 
