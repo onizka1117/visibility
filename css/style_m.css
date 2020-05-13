@@ -396,6 +396,10 @@ a {color:#fff;}
 .ip_check.type2 input:checked+label {background-image:url(../images/checked.svg); }
 
 
+/* button */
+.btn_filter {display:inline-block; line-height:20px; padding-right:25px; color:#8a919d; font-size:12px; background:url(../images/ico_filter.svg) no-repeat right 0; background-size:20px;}
+
+
 /* box */
 .box {display:block; background-color:#333c48; box-sizing:border-box;}
 .box.bg_type1 {background-color:#12161a;}
@@ -482,10 +486,9 @@ a {color:#fff;}
 
 /* dashboard */
 .dash_module+.dash_module {margin-top:35px;}
-
+.list_options+.dash_module {margin-top:15px;}
 .tit_dash {font-size:18px; font-weight:500; line-height:25px; vertical-align:middle; }
 .tit_dash .tit_img {width:25px; height:25px; margin-right:8px; vertical-align:middle;}
-
 .dash_items {margin:18px -5px 0;}
 .dash_items>ul+ul {margin-top:10px;}
 .dash_items>ul {display:table; width:100%; table-layout:fixed;}
@@ -524,3 +527,12 @@ a {color:#fff;}
 .prospect_slider_wrap .bx-wrapper .bx-prev {left:0; }
 .prospect_slider_wrap .bx-wrapper .bx-prev:before {transform:rotate(180deg);}
 .prospect_slider_wrap .bx-wrapper .bx-next {right:0;}
+
+
+.list_options {text-align:right;}
+
+
+/* slide page */
+.slide_page_wrap {width:100%; height:100%; overflow:hidden; position:relative;}
+.slide_page {height:100%; width:5000px; position:absolute; top:0; left:0;  transition:all 0.2s; }
+.slide_page_item {float:left; height:100%; overflow:auto; position:relative;}

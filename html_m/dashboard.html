@@ -15,254 +15,339 @@
     <script type="text/javascript">
 
     $(function(){
-
+      slidePage();
       // 슬라이더
       $(".prospect_slider").bxSlider({
         speed : 100
       });
 
     });
+
+
+    function slidePage() {
+      var width = $(document).width();
+      var touchFlag = false;
+      var startX, startY, endX, endY;
+      var index = 0;
+      var size = $(".slide_page_wrap .slide_page_item").length -1;
+
+      // width
+      $(".slide_page_wrap .slide_page_item").width(width);
+
+      $(".slide_page_wrap").on("touchstart", function(e) {
+        console.log("start");
+        e.stopPropagation();
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        touchFlag = true;
+
+      });
+
+      $(".slide_page_wrap").on("touchmove", function(e) {
+        console.log("move");
+        e.stopPropagation();
+        endX = e.touches[0].clientX;
+        endY = e.touches[0].clientY;
+        touchFlag = false;
+
+      });
+
+      $(".slide_page_wrap").on("touchend", function(e) {
+        e.stopPropagation();
+        var resultX = startX - endX;
+        var resultY = startY - endY;
+        if(Math.abs(resultY) < 100 && Math.abs(resultX) > 50) {
+          if(resultX>0 && index<size) {
+            // left
+            index++;
+            movePage();
+          }else if(resultX<0 && index > 0){
+            // right
+            index--;
+            movePage();
+          }
+        }
+
+        touchFlag = false;
+        startX = 0;
+        startY = 0;
+        endX = 0;
+        endY = 0;
+
+      });
+
+
+      function movePage() {
+        var left = index * width *-1;
+        $(".slide_page").css("left", left +"px");
+      }
+
+      function refresh() {
+        width = $(document).width();
+        $(".slide_page .slide_page_item").width(width);
+        movePage();
+      }
+
+      $(window).on("resize", function() {
+        refresh();
+      });
+
+    }
     </script>
   </head>
   <body>
 
 
-    <div class="content_wrap">
+    <div class="slide_page_wrap">
+      <div class="slide_page">
+        <div class="slide_page_item">
 
-      <!-- title -->
-      <div class="tit_wrap type_special">
-        <div class="tit_left">
-          <span class="tit">Dashboard</span>
+          <!-- dashboard -->
+          <div class="content_wrap">
+
+            <!-- title -->
+            <div class="tit_wrap type_special">
+              <div class="tit_left">
+                <span class="tit">Dashboard</span>
+              </div>
+            </div>
+            <!-- //title -->
+
+            <div class="list_options">
+              <a href="#" class="btn_filter">Last 7 Days</a>
+            </div>
+
+            <div class="dash_module">
+              <div class="tit_dash">
+                <img src="../images/mo/ico_dash_activity.svg" alt="" class="tit_img"><span>Activity</span>
+              </div>
+              <div class="dash_items type1">
+                <ul>
+                  <li>
+                    <div class="item_box type_on">
+                      <span class="tit">Scheduled</span>
+                      <strong class="num">11</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item_box">
+                      <span class="tit">Completed</span>
+                      <strong class="num">3</strong>
+                    </div>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <div class="item_box">
+                      <span class="tit">Initial Call</span>
+                      <strong class="num">11</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item_box">
+                      <span class="tit">Retention Call</span>
+                      <strong class="num">3</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item_box">
+                      <span class="tit">New Call</span>
+                      <strong class="num">3</strong>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="dash_module">
+              <div class="tit_dash">
+                <img src="../images/mo/ico_dash_action.svg" alt="" class="tit_img"><span>Action Item</span>
+              </div>
+              <div class="dash_items type2">
+                <ul>
+                  <li>
+                    <div class="item_box">
+                      <span class="tit">Assigned</span>
+                      <strong class="num">11</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item_box">
+                      <span class="tit">In progress</span>
+                      <strong class="num">3</strong>
+                    </div>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <div class="item_box">
+                      <span class="tit">Completed</span>
+                      <strong class="num">11</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item_box type_on">
+                      <span class="tit">In progress</span>
+                      <strong class="num">3</strong>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="dash_module">
+              <div class="tit_dash">
+                <img src="../images/mo/ico_dash_keyup.svg" alt="" class="tit_img"><span>Key Update</span>
+              </div>
+              <div class="dash_items type3">
+                <ul>
+                  <li>
+                    <div class="item_box">
+                      <span class="tit">Compliment</span>
+                      <strong class="num">11</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item_box type_on">
+                      <span class="tit">Complaint</span>
+                      <strong class="num">3</strong>
+                    </div>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <div class="item_box">
+                      <span class="tit">Company News</span>
+                      <strong class="num">11</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item_box">
+                      <span class="tit">OS & D</span>
+                      <strong class="num">3</strong>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="dash_module">
+              <div class="tit_dash">
+                <img src="../images/mo/ico_dash_opp.svg" alt="" class="tit_img"><span>Opportunity</span>
+              </div>
+              <div class="dash_items type4">
+                <ul>
+                  <li>
+                    <div class="item_box">
+                      <span class="tit">Active</span>
+                      <strong class="num">11</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item_box">
+                      <span class="tit">Completed</span>
+                      <strong class="num">3</strong>
+                    </div>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <div class="item_box type_on">
+                      <span class="tit">Pending</span>
+                      <strong class="num">11</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item_box">
+                      <span class="tit">Lost Drop</span>
+                      <strong class="num">3</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item_box type_on">
+                      <span class="tit">Past Due</span>
+                      <strong class="num">3</strong>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+
+            <div class="dash_module">
+              <div class="tit_dash">
+                <img src="../images/mo/ico_dash_opp_pip.svg" alt="" class="tit_img"><span>Opportunity Pipeline</span>
+              </div>
+
+
+              <div class="prospect_slider_wrap">
+                <ul class="prospect_slider">
+                  <!-- 반복 -->
+                  <li>
+                    <div class="prospect_wrap">
+                      <div class="tit">
+                        Prospect
+                      </div>
+                      <div class="detail">
+                        <ul>
+                          <li><span class="tit">Opporunities</span><strong class="txt">3</strong></li>
+                        </ul>
+                        <ul>
+                          <li><span class="tit">Est. G.Revenue</span><strong class="txt">$3,000</strong></li>
+                          <li><span class="tit">Est. G.Profit</span><strong class="txt">$300</strong></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- //반복 -->
+                  <li>
+                    <div class="prospect_wrap">
+                      <div class="tit">
+                        Prospect
+                      </div>
+                      <div class="detail">
+                        <ul>
+                          <li><span class="tit">Opporunities</span><strong class="txt">3</strong></li>
+                        </ul>
+                        <ul>
+                          <li><span class="tit">Est. G.Revenue</span><strong class="txt">$3,000</strong></li>
+                          <li><span class="tit">Est. G.Profit</span><strong class="txt">$300</strong></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="prospect_wrap">
+                      <div class="tit">
+                        Prospect
+                      </div>
+                      <div class="detail">
+                        <ul>
+                          <li><span class="tit">Opporunities</span><strong class="txt">3</strong></li>
+                        </ul>
+                        <ul>
+                          <li><span class="tit">Est. G.Revenue</span><strong class="txt">$3,000</strong></li>
+                          <li><span class="tit">Est. G.Profit</span><strong class="txt">$300</strong></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+          </div>
+          <!-- //dashboard -->
+
+        </div>
+        <div class="slide_page_item">
+          음하하
         </div>
       </div>
-      <!-- //title -->
-
-      <div class="">
-        <a href="#" class="btn_filter">Last 7 Days</a>
-      </div>
-
-      <div class="dash_module">
-        <div class="tit_dash">
-          <img src="../images/mo/ico_dash_activity.svg" alt="" class="tit_img"><span>Activity</span>
-        </div>
-        <div class="dash_items type1">
-          <ul>
-            <li>
-              <div class="item_box type_on">
-                <span class="tit">Scheduled</span>
-                <strong class="num">11</strong>
-              </div>
-            </li>
-            <li>
-              <div class="item_box">
-                <span class="tit">Completed</span>
-                <strong class="num">3</strong>
-              </div>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <div class="item_box">
-                <span class="tit">Initial Call</span>
-                <strong class="num">11</strong>
-              </div>
-            </li>
-            <li>
-              <div class="item_box">
-                <span class="tit">Retention Call</span>
-                <strong class="num">3</strong>
-              </div>
-            </li>
-            <li>
-              <div class="item_box">
-                <span class="tit">New Call</span>
-                <strong class="num">3</strong>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="dash_module">
-        <div class="tit_dash">
-          <img src="../images/mo/ico_dash_action.svg" alt="" class="tit_img"><span>Action Item</span>
-        </div>
-        <div class="dash_items type2">
-          <ul>
-            <li>
-              <div class="item_box">
-                <span class="tit">Assigned</span>
-                <strong class="num">11</strong>
-              </div>
-            </li>
-            <li>
-              <div class="item_box">
-                <span class="tit">In progress</span>
-                <strong class="num">3</strong>
-              </div>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <div class="item_box">
-                <span class="tit">Completed</span>
-                <strong class="num">11</strong>
-              </div>
-            </li>
-            <li>
-              <div class="item_box type_on">
-                <span class="tit">In progress</span>
-                <strong class="num">3</strong>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="dash_module">
-        <div class="tit_dash">
-          <img src="../images/mo/ico_dash_keyup.svg" alt="" class="tit_img"><span>Key Update</span>
-        </div>
-        <div class="dash_items type3">
-          <ul>
-            <li>
-              <div class="item_box">
-                <span class="tit">Compliment</span>
-                <strong class="num">11</strong>
-              </div>
-            </li>
-            <li>
-              <div class="item_box type_on">
-                <span class="tit">Complaint</span>
-                <strong class="num">3</strong>
-              </div>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <div class="item_box">
-                <span class="tit">Company News</span>
-                <strong class="num">11</strong>
-              </div>
-            </li>
-            <li>
-              <div class="item_box">
-                <span class="tit">OS & D</span>
-                <strong class="num">3</strong>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="dash_module">
-        <div class="tit_dash">
-          <img src="../images/mo/ico_dash_opp.svg" alt="" class="tit_img"><span>Opportunity</span>
-        </div>
-        <div class="dash_items type4">
-          <ul>
-            <li>
-              <div class="item_box">
-                <span class="tit">Active</span>
-                <strong class="num">11</strong>
-              </div>
-            </li>
-            <li>
-              <div class="item_box">
-                <span class="tit">Completed</span>
-                <strong class="num">3</strong>
-              </div>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <div class="item_box type_on">
-                <span class="tit">Pending</span>
-                <strong class="num">11</strong>
-              </div>
-            </li>
-            <li>
-              <div class="item_box">
-                <span class="tit">Lost Drop</span>
-                <strong class="num">3</strong>
-              </div>
-            </li>
-            <li>
-              <div class="item_box type_on">
-                <span class="tit">Past Due</span>
-                <strong class="num">3</strong>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-
-      <div class="dash_module">
-        <div class="tit_dash">
-          <img src="../images/mo/ico_dash_opp_pip.svg" alt="" class="tit_img"><span>Opportunity Pipeline</span>
-        </div>
-
-
-        <div class="prospect_slider_wrap">
-          <ul class="prospect_slider">
-            <!-- 반복 -->
-            <li>
-              <div class="prospect_wrap">
-                <div class="tit">
-                  Prospect
-                </div>
-                <div class="detail">
-                  <ul>
-                    <li><span class="tit">Opporunities</span><strong class="txt">3</strong></li>
-                  </ul>
-                  <ul>
-                    <li><span class="tit">Est. G.Revenue</span><strong class="txt">$3,000</strong></li>
-                    <li><span class="tit">Est. G.Profit</span><strong class="txt">$300</strong></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <!-- //반복 -->
-            <li>
-              <div class="prospect_wrap">
-                <div class="tit">
-                  Prospect
-                </div>
-                <div class="detail">
-                  <ul>
-                    <li><span class="tit">Opporunities</span><strong class="txt">3</strong></li>
-                  </ul>
-                  <ul>
-                    <li><span class="tit">Est. G.Revenue</span><strong class="txt">$3,000</strong></li>
-                    <li><span class="tit">Est. G.Profit</span><strong class="txt">$300</strong></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="prospect_wrap">
-                <div class="tit">
-                  Prospect
-                </div>
-                <div class="detail">
-                  <ul>
-                    <li><span class="tit">Opporunities</span><strong class="txt">3</strong></li>
-                  </ul>
-                  <ul>
-                    <li><span class="tit">Est. G.Revenue</span><strong class="txt">$3,000</strong></li>
-                    <li><span class="tit">Est. G.Profit</span><strong class="txt">$300</strong></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-
-
     </div>
+
+
 
 
   </body>

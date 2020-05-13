@@ -15,7 +15,7 @@
 
       .slide_page_wrap {width:100%; height:100%; overflow:hidden; position:relative;}
       .slide_page {height:100%; width:5000px; position:absolute; top:0; left:0;  transition:all 0.2s; }
-      .item {float:left; height:100%; overflow:auto; position:relative;}
+      .slide_page_item {float:left; height:100%; overflow:auto; position:relative;}
 
       .item:nth-child(1) {background-color:red;}
       .item:nth-child(2) {background-color:green;}
@@ -29,7 +29,7 @@
       var touchFlag = false;
       var startX, startY, endX, endY;
       var index = 0;
-      var size = $(".slide_page_wrap .item").length -1;
+      var size = $(".slide_page_wrap .slide_page_item").length -1;
 
       // width
       $(".slide_page_wrap .item").width(width);
@@ -84,7 +84,7 @@
 
       function refresh() {
         width = $(document).width();
-        $(".slide_page .item").width(width);
+        $(".slide_page .slide_page_item").width(width);
         movePage();
       }
 
@@ -118,7 +118,7 @@
 
     <div class="slide_page_wrap">
       <div class="slide_page">
-        <div class="item">
+        <div class="slide_page_item">
           page1
           <div class="" style="height:1000px; background:yellow; width:100px;">
 
@@ -177,7 +177,7 @@
 
 
         </div>
-        <div class="item">
+        <div class="slide_page_item">
           page2
         </div>
       </div>
