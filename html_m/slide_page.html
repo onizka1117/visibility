@@ -56,6 +56,9 @@
         e.stopPropagation();
         var resultX = startX - endX;
         var resultY = startY - endY;
+        
+        if(!resultX || !resultY) return false;
+
         if(Math.abs(resultY) < 100 && Math.abs(resultX) > 50) {
           if(resultX>0 && index<size) {
             // left
