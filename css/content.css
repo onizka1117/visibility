@@ -436,6 +436,7 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .sched_wrap {position: relative;height:420px;}
 .sched_wrap .sched_more {z-index: 1;position: absolute;right: 0;top: 35px;}
 .sched_wrap .sched_more a {display: block;}
+
 .sched_wrap .tit_month {font-family:'CJONLYONENEWtitle'; font-weight:500; font-size:28px; color:#000;}
 .sched_wrap .tit_month>span {display: inline-block;font-family: 'CJONLYONENEWtitle';font-size: 40px;}
 .sched_wrap .tit_month>span+span {margin-top:6px;font-size:20px;}
@@ -491,6 +492,7 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .calendar_btns a {display:inline-block; font-size:0; display:inline-block; width:40px; height:40px;}
 .calendar_btns .btn_prev_month {background:url(../images/btn_prev_40.svg) no-repeat;}
 .calendar_btns .btn_next_month {background:url(../images/btn_next_40.svg) no-repeat;}
+.calendar_btns .btn_add {background:url(../images/ico_plus_dark.svg) no-repeat;}
 
 
 
