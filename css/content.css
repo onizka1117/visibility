@@ -27,6 +27,14 @@ textarea {width:100%; padding:15px; color:#45474e; font-size:14px; line-height:1
 .ip_date {width:100%; display:inline-block; position:relative; }
 .ip_date .ip_txt {width:100%;}
 .ip_date .ui-datepicker-trigger {position:absolute; top:13px; right:13px;}
+
+.ip_date_group {display:inline-block; vertical-align:middle; position:relative;}
+.ip_date_group .ip_txt {padding-right:40px; }
+.ip_date_group .btn_calendar, .ip_date_period .btn_calendar {font-size:0; display:inline-block; width:40px; height:40px; position:absolute; top:0; right:0; background:url(../../images/ico_calendar.svg) no-repeat center center; background-size:23px;}
+.ip_date_period {padding-right:40px; display:inline-block; width:100%; border:solid 1px #dde2ea; position:relative; background-color:#fff; box-sizing:border-box;}
+.ip_date_period .ip_txt {border:0; height:40px;}
+.ip_date_period .line {width:20px; text-align:center;}
+
 .select {padding:0 11px; width:100%; height:42px; color:#45474e; font-size:14px; border:solid 1px #dde2ea; background:#fff url(../images/ip_select.svg) no-repeat right 15px center; box-sizing:border-box; appearance:none; -webkit-appearance:none; }
 .ip_check {position:relative;}
 .ip_check input {opacity:0; position:absolute; top:0; left:0;}
@@ -431,6 +439,10 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .sched_wrap .tit_month {font-family:'CJONLYONENEWtitle'; font-weight:500; font-size:28px; color:#000;}
 .sched_wrap .tit_month>span {display: inline-block;font-family: 'CJONLYONENEWtitle';font-size: 40px;}
 .sched_wrap .tit_month>span+span {margin-top:6px;font-size:20px;}
+.sched_wrap .tit_month>span {display:inline-block;}
+.sched_wrap .tit_month>span.month {font-size:40px;}
+.sched_wrap .tit_month>span.year {font-size:20px;}
+
 .calendar_wrap .ui-datepicker {width:100%; padding:0; box-shadow:none;}
 .calendar_wrap .ui-datepicker-calendar {width:100%;}
 .calendar_wrap .ui-datepicker-header {text-align:left; margin-top:-25px;}
