@@ -411,16 +411,18 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .st_tile2.bg_type4:hover {background-color:#ec8922;}
 
 
-.event_list {padding-left:33px; }
-.event_list>li {position:relative; padding:12px 0 12px 0;}
-.event_list>li:before {content:""; position:absolute; top:12px; left:-33px; display:inline-block; width:16px; height:16px; }
+.event_list {padding-left:33px;}
+.event_list>li {position:relative;margin:30px 0;}
+.event_list>li:first-child {margin:0 0 15px 0;}
+.event_list>li:before {content:""; position:absolute; top:0; left:-33px; display:inline-block; width:16px; height:16px; }
 .event_list>li.work:before {background:url(../images/ico_rm_work.svg) no-repeat 0 0;}
 .event_list>li.msg:before {background:url(../images/ico_rm_msg.svg) no-repeat 0 0;}
+.event_list>li.alert:before {background:url(../images/ico_rm_alert.svg) no-repeat 0 0;}
 .event_list>li.meeting:before {background:url(../images/ico_rm_meeting.svg) no-repeat 0 0;}
 .event_list>li .tit {overflow:hidden;}
-.event_list>li .tit .ctg {float:left;color:#45474e;}
-.event_list>li .tit .date {float:right; color:#8b919c;}
-.event_list>li .txt {margin-top:7px; font-size:18px; color:#45474e;}
+.event_list>li .tit .ctg {float:left;color:#8b919c;}
+.event_list>li .tit .date {float:right;color:#8b919c;font-size:12px;}
+.event_list>li .txt {margin-top:7px;font-size:16px;line-height: 1.2;color:#45474e;}
 
 .schedule_box {padding:38px 30px 0 35px; height:778px; box-sizing:border-box;}
 .sched_wrap {position: relative;height:420px;}
@@ -457,7 +459,7 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 
 .reminer_wrap {padding:13px 0;border-top:1px solid #f0f4f8;}
 .reminer_wrap .tit_wrap {display: inline-block;position:absolute;width: auto;vertical-align: top;}
-.reminer_wrap .scr_box {display: inline-block;position: relative;left:185px;width: 360px;height:140px;}
+.reminer_wrap .scr_box {display: inline-block;position: relative;left:185px;top:3px;width: 360px;height:140px;}
 .reminer_wrap .scr_box .mCSB_inside>.mCSB_container {margin-right:10px;}
 
 .tbl_calendar {margin-top:30px; width:100%; table-layout:fixed; border-collaspe:collapse; }
@@ -816,6 +818,37 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .profile_box .user_name {display:block; font-size:16px; font-weight:500;}
 .profile_box .user_email {margin-top:8px; display:block; font-size:14px; color:#8b919c; }
 
+/* ****************** 헨켈 ******************* */
+.humidity_wrap {padding:80px 10px 30px 120px; width:1900px; box-sizing:border-box;}
+.humidity_inner {position: relative;width:100%;margin-top:30px;background: #fff;}
+.humidity_inner .txt_date {position: absolute;left: 50%;top: -68px;margin-left: -100px;width: 200px;font-size: 35px;text-align: center;color: #13161a;}
+.humidity_inner .prevNext {position: absolute;right: 0;top:-70px;width: 150px;height: 40px;text-align: center;}
+.humidity_inner .prevNext .btn_prev {position: absolute;left:0;width: 40px;height: 40px;background: url(../images/btn_prev_40.svg) no-repeat;background-size: 100%;}
+.humidity_inner .prevNext .btn_next {position: absolute;right:0;width: 40px;height: 40px;background: url(../images/btn_next_40.svg) no-repeat;background-size: 100%;}
+.humidity_inner .prevNext span {font-size: 14px;font-weight: 500;color: #45474e;line-height: 40px;}
+
+.humidity_inner .hum_calender {width:100%;table-layout: fixed;}
+.humidity_inner .hum_calender thead tr {text-align: left;width:100%;height: 42px;box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.03);border: 1px solid #dde2ea;}
+.humidity_inner .hum_calender thead tr th {padding-left: 20px;font-size: 13px;font-weight: 500;color: #8b919c;}
+.humidity_inner .hum_calender thead tr th.sun {color:#e42f44;}
+.humidity_inner .hum_calender thead tr th.sat {color:#0080c6;}
+.humidity_inner .hum_calender tbody tr td {height:140px;vertical-align: top;font-size: 14px;font-weight: 500;color: #45474e;border: solid 1px #dde2ea;}
+.humidity_inner .hum_calender tbody tr td.off {opacity: 0.3;}
+.humidity_inner .hum_calender tbody tr td.today {outline:1px solid #8b919c;}
+.humidity_inner .hum_calender tbody tr td .date {display: block;padding:15px 20px 7px 20px;box-sizing:border-box;}
+.humidity_inner .hum_calender tbody tr td .flag {width:100%;background: #e6ebf1;margin-bottom:1px;}
+.humidity_inner .hum_calender tbody tr td .flag .close {z-index: 1;position:absolute;right:10px;top:10px;width:14px;height:14px;background: url(../images/ico_closed.svg) no-repeat;background-size:100%;}
+.humidity_inner .hum_calender tbody tr td .temp {position: relative;display: block;font-size: 14px;font-weight: 400;padding: 10px 0 10px 41px;box-sizing: border-box;color: #45474e;}
+.humidity_inner .hum_calender tbody tr td .hum {position: relative;display: block;font-size: 14px;font-weight: 400;padding: 10px 0 10px 41px;box-sizing: border-box;color: #45474e;}
+.humidity_inner .hum_calender tbody tr td .note {position: relative;display: block;font-size: 14px;font-weight: 400;padding: 10px 0 10px 41px;box-sizing: border-box;color: #45474e;white-space: nowrap;overflow: hidden;}
+.humidity_inner .hum_calender tbody tr td .temp:before {content:'';position: absolute;left:10px;top:5px;width:24px;height:24px;background: url(../images/henkel/ico_temperature.svg) no-repeat;background-size: 100%;}
+.humidity_inner .hum_calender tbody tr td .hum:before {content:'';position: absolute;left:10px;top:5px;width:24px;height:24px;background: url(../images/henkel/ico_humidity.svg) no-repeat;background-size: 100%;}
+.humidity_inner .hum_calender tbody tr td .note:before {content:'';position: absolute;left:10px;top:5px;width:24px;height:24px;background: url(../images/henkel/ico_note.svg) no-repeat;background-size: 100%;}
+.humidity_inner .hum_calender tbody tr td .note span:before {content: "";display: block;position: absolute;top: 0;right: 0;width: 49px;height: 32px;background-image: linear-gradient(to right, rgba(244, 247, 249, 0) 0%, #e6ebf1 45%);}
+
+.humidity_inner .hum_calender tbody tr td:first-child {color:#e42f44;}
+.humidity_inner .hum_calender tbody tr td:last-child {color:#0080c6;}
+.humidity_inner .hum_calender tbody tr td:hover, .humidity_inner .hum_calender tbody tr td:focus {background-color: #edf7ff;outline:1px solid #0080c6;}
 
 
 

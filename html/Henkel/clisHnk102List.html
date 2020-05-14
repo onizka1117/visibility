@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no" />
+<title>Henkel</title>
+<link href="../../script/lib/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+<link href="../../css/common.css" rel="stylesheet">
+<link href="../../css/content.css" rel="stylesheet">
+<script src="../../script/lib/jquery-3.4.1.min.js"></script>
+<script src="../../script/lib/jquery-ui.js"></script>
+<script src="../../script/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../../script/ui_common.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".close").on("click", function(){
+          $(this).parent().css({display:'none'});
+        });
+    });
+</script>
+</head>
+
+<body>
+
+    <div class="humidity_wrap">
+        <div class="tit_wrap tit_h1">
+          <div class="tit_left">
+            <h2>헨켈 온습도관리</h2>
+          </div>
+          <div class="tit_right">
+              <div class="btn_list">
+                  <a href="javascript:" class="btn line ico_excel">Excel</a>
+              </div>
+          </div>
+        </div>
+        <!-- 검색 -->
+        <div class="search_wrap">
+          <ul class="search_form">
+            <li>
+              <label for="" class="lb_txt">Year</label>
+              <select class="select" name="" style="width:100px;">
+                <option value="">2020</option>
+                <option value="">2019</option>
+                <option value="">2018</option>
+              </select>
+            </li>
+            <li>
+              <label for="" class="lb_txt">Month</label>
+              <select class="select" name="" style="width:80px;">
+                <option value="">05</option>
+                <option value="">06</option>
+                <option value="">07</option>
+              </select>
+            </li>
+            <li class="btns">
+                <a href="javascript:" class="btn lg line ico_search">검색</a>
+            </li>
+          </ul>
+        </div>
+        <!-- //검색 -->
+        <!-- 달력 -->
+        <div class="humidity_inner">
+            <div class="txt_date">2020.05</div>
+            <div class="prevNext">
+                <a href="javascript:" class="btn_prev"></a>
+                <a href="javascript:" class="btn_next"></a>
+                <span>오늘</span>
+            </div>
+            <div class="">
+                <table class="hum_calender">
+                    <colgroup>
+                        <col style="width:14%;">
+                        <col style="width:14%;">
+                        <col style="width:14%;">
+                        <col style="width:14%;">
+                        <col style="width:14%;">
+                        <col style="width:14%;">
+                        <col style="width:14%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope='col' class="week sun">Sunday</th>
+                            <th scope='col' class="week">Monday</th>
+                            <th scope='col' class="week">Tuesday</th>
+                            <th scope='col' class="week">Wednesday</th>
+                            <th scope='col' class="week">Thursday</th>
+                            <th scope='col' class="week">Friday</th>
+                            <th scope='col' class="week sat">Saturday</th>
+                        </tr>
+                    </thead>
+                    <!-- 이전달,다음달 class="off", 오늘 class="today"-->
+                    <tbody>
+                        <tr>
+                            <td class="off"><span class="date">26</span></td>
+                            <td class="off"><span class="date">27</span></td>
+                            <td class="off"><span class="date">28</span></td>
+                            <td class="off"><span class="date">29</span></td>
+                            <td class="off"><span class="date">30</span></td>
+                            <td class=""><span class="date">1</span></td>
+                            <td class=""><span class="date">2</span></td>
+                        </tr>
+                        <tr>
+                            <td class=""><span class="date">3</span></td>
+                            <td class=""><span class="date">4</span></td>
+                            <td class="">
+                                <span class="date">5</span>
+                                <a href="javascript:" class="flag temp">온도 : <span>23</span><button class="close"></button></a>
+                                <a href="javascript:" class="flag hum">습도 : <span>23</span><button class="close"></button></a>
+                                <a href="javascript:" class="flag note">비고 : <span>remark remark remark</span><button class="close"></button></a>
+                            </td>
+                            <td class=""><span class="date">6</span></td>
+                            <td class="">
+                                <span class="date">7</span>
+                                <a href="javascript:" class="flag temp">온도 : <span>23</span><button class="close"></button></a>
+                                <a href="javascript:" class="flag hum">습도 : <span>23</span><button class="close"></button></a>
+                            </td>
+                            <td class=""><span class="date">8</span></td>
+                            <td class=""><span class="date">9</span></td>
+                        </tr>
+                        <tr>
+                            <td class=""><span class="date">10</span></td>
+                            <td class=""><span class="date">11</span></td>
+                            <td class=""><span class="date">12</span></td>
+                            <td class=""><span class="date">13</span></td>
+                            <td class="today"><span class="date">14</span></td>
+                            <td class=""><span class="date">15</span></td>
+                            <td class=""><span class="date">16</span></td>
+                        </tr>
+                        <tr>
+                            <td class=""><span class="date">17</span></td>
+                            <td class=""><span class="date">18</span></td>
+                            <td class="">
+                                <span class="date">19</span>
+                                <a href="javascript:" class="flag temp">온도 : <span>23</span><button class="close"></button></a>
+                                <a href="javascript:" class="flag note">비고 : <span>remark remark remark</span><button class="close"></button></a>
+                            </td>
+                            <td class=""><span class="date">20</span></td>
+                            <td class=""><span class="date">21</span></td>
+                            <td class=""><span class="date">22</span></td>
+                            <td class=""><span class="date">23</span></td>
+                        </tr>
+                        <tr>
+                            <td class=""><span class="date">24</span></td>
+                            <td class=""><span class="date">25</span></td>
+                            <td class=""><span class="date">26</span></td>
+                            <td class=""><span class="date">27</span></td>
+                            <td class=""><span class="date">28</span></td>
+                            <td class=""><span class="date">29</span></td>
+                            <td class=""><span class="date">30</span></td>
+                        </tr>
+                        <tr>
+                            <td class=""><span class="date">31</span></td>
+                            <td class="off"><span class="date">1</span></td>
+                            <td class="off"><span class="date">2</span></td>
+                            <td class="off"><span class="date">3</span></td>
+                            <td class="off"><span class="date">4</span></td>
+                            <td class="off"><span class="date">5</span></td>
+                            <td class="off"><span class="date">6</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--// 달력 -->
+    </div>
+
+</body>
+
+</html>
