@@ -828,11 +828,12 @@ body.dark .st_tile .img_w, body.dark .st_tile2 .img_w {display:none;}
 .humidity_inner .prevNext span {font-size: 14px;font-weight: 500;color: #45474e;line-height: 40px;}
 
 .humidity_inner .hum_calender {width:100%;table-layout: fixed;}
+.humidity_inner .hum_calender thead {box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.03);}
 .humidity_inner .hum_calender thead tr {text-align: left;width:100%;height: 42px;box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.03);border: 1px solid #dde2ea;}
 .humidity_inner .hum_calender thead tr th {padding-left: 20px;font-size: 13px;font-weight: 500;color: #8b919c;}
 .humidity_inner .hum_calender thead tr th.sun {color:#e42f44;}
 .humidity_inner .hum_calender thead tr th.sat {color:#0080c6;}
-.humidity_inner .hum_calender tbody tr td {height:140px;vertical-align: top;font-size: 14px;font-weight: 500;color: #45474e;border: solid 1px #dde2ea;}
+.humidity_inner .hum_calender tbody tr td {height:140px;padding:0;vertical-align: top;font-size: 14px;font-weight: 500;color: #45474e;border: solid 1px #dde2ea;}
 .humidity_inner .hum_calender tbody tr td.off {opacity: 0.3;}
 .humidity_inner .hum_calender tbody tr td.today {outline:1px solid #8b919c;}
 .humidity_inner .hum_calender tbody tr td .date {display: block;padding:15px 20px 7px 20px;box-sizing:border-box;}
