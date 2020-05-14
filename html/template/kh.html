@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="../../script/lib/jquery-ui-timepicker-addon.css" rel="stylesheet">
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/content.css" rel="stylesheet">
+    <script src="../../script/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../script/lib/jquery-ui.js"></script>
+    <script src="../../script/lib/jquery-ui-timepicker-addon.js"></script>
+    <script src="../../script/ui_common.js"></script>
+    <style type="text/css">
+    .sched_wrap .tit_month>span {display:inline-block;}
+    .sched_wrap .tit_month>span.month {font-size:40px;}
+    .sched_wrap .tit_month>span.year {font-size:20px;}
+
+
+    .ip_date {position:relative;}
+    .ip_date .ip_txt {padding-right:40px; }
+    .ip_date .btn_calendar, .ip_date_period .btn_calendar {font-size:0; display:inline-block; width:40px; height:40px; position:absolute; top:0; right:0; background:url(../../images/ico_calendar.svg) no-repeat center center; background-size:23px;}
+
+    .ip_date_period {padding-right:40px; display:inline-block; width:100%; border:solid 1px #dde2ea; position:relative; background-color:#fff; box-sizing:border-box;}
+    .ip_date_period .ip_txt {border:0; height:40px;}
+    .ip_date_period .line {width:20px; text-align:center;}
+    </style>
+
+    <script type="text/javascript">
+    $(function(){
+
+
+
+    });
+
+
+    </script>
+
+  </head>
+  <body>
+
+    <div class="detail_wrap" style="width:800px">
+
+
+      <div class="tit_wrap tit_h2">
+        <div class="tit_left">
+          <h4>날짜 입력(jquery datepicker 사용 안하는 경우)</h4>
+        </div>
+      </div>
+
+      <!-- 검색 -->
+      <div class="search_wrap">
+        <ul class="search_form">
+          <li>
+            <label for="" class="lb_txt req">날짜</label>
+            <span class="ip_date"  style="width:200px;"><input type="text" class="ip_txt" value=""><a href="#" class="btn_calendar">날짜선택</a></span>
+          </li>
+          <li>
+            <label for="" class="lb_txt">기간</label>
+            <div class="ip_date_period" style="width:350px;">
+              <ul class="ip_group">
+                <li><input type="text" class="ip_txt" value=""></li>
+                <li class="line">~</li>
+                <li><input type="text" class="ip_txt" value=""></li>
+              </ul>
+              <a href="#" class="btn_calendar">날짜선택</a>
+            </div>
+          </li>
+          <li class="btns">
+            <a href="#" class="btn lg ico_search">검색</a>
+          </li>
+        </ul>
+      </div>
+      <!-- //검색 -->
+
+
+
+
+
+
+      <div class="tit_wrap tit_h2 mt30">
+        <div class="tit_left">
+          <h4>달력 테이블(jquery datepicker 사용 안하는 경우)</h4>
+        </div>
+      </div>
+
+
+
+      <div class="sched_wrap">
+        <div class="tit_month">
+          <span class="month">05</span>
+          <span class="year">2020</span>
+        </div>
+        <div class="calendar_btns">
+          <a href="#" class="btn_prev_month">이전달</a>
+          <a href="#" class="btn_next_month">다음달</a>
+          <a href="#" class="btn_add">이벤트추가</a>
+        </div>
+        <div class="calendar_wrap">
+          <table class="tbl_calendar">
+            <colgroup>
+              <col style="width:;">
+              <col style="width:;">
+              <col style="width:;">
+              <col style="width:;">
+              <col style="width:;">
+              <col style="width:;">
+              <col style="width:;">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>SUN</th>
+                <th>MON</th>
+                <th>TUE</th>
+                <th>WED</th>
+                <th>THU</th>
+                <th>FRI</th>
+                <th>SAT</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td><a href="#">1</a></td>
+                <td><a href="#">2</a></td>
+                <td><a href="#">3</a>
+                  <div class="events">
+                    <span class="meet"></span>
+                    <span class="work"></span>
+                    <span class="msg"></span>
+                  </div>
+                </td>
+                <td><a href="#">4</a>
+                  <div class="events">
+                  </div>
+                </td>
+                <td><a href="#">5</a></td>
+              </tr>
+              <tr>
+                <td><a href="#">6</a></td>
+                <td><a href="#">7</a></td>
+                <td><a href="#">8</a></td>
+                <td><a href="#">9</a></td>
+                <td><a href="#">10</a></td>
+                <td><a href="#">11</a></td>
+                <td><a href="#">12</a></td>
+              </tr>
+              <tr>
+                <td><a href="#">13</a></td>
+                <td><a href="#">14</a></td>
+                <td><a href="#">15</a></td>
+                <td><a href="#">16</a></td>
+                <td><a href="#">17</a></td>
+                <td><a href="#">18</a></td>
+                <td><a href="#">19</a></td>
+              </tr>
+              <tr>
+                <td class="on"><a href="#">20</a>
+                  <div class="events">
+                    <span class="meet"></span>
+                  </div>
+                </td>
+                <td><a href="#">21</a></td>
+                <td><a href="#">22</a></td>
+                <td><a href="#">23</a></td>
+                <td class="today"><a href="#">24</a></td>
+                <td><a href="#">25</a></td>
+                <td><a href="#">26</a></td>
+              </tr>
+              <tr>
+                <td><a href="#">27</a></td>
+                <td><a href="#">28</a></td>
+                <td><a href="#">29</a></td>
+                <td><a href="#">30</a></td>
+                <td><a href="#">31</a></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+  </body>
+</html>
