@@ -1,22 +1,25 @@
 <script type="text/javascript">
 var eventList = [
-  {date:"2020-03-01", eventClass:"work meet msg"},
-  {date:"2020-03-02", eventClass:"work"},
-  {date:"2020-03-05", eventClass:"meet"},
-  {date:"2020-03-17", eventClass:"meet msg"},
-  {date:"2020-03-20", eventClass:"work meet"},
-  {date:"2020-03-25", eventClass:"work msg"},
-  {date:"2020-03-30", eventClass:"msg"}
+  {date:"2020-05-01", eventClass:"work meet msg"},
+  {date:"2020-05-02", eventClass:"work"},
+  {date:"2020-05-05", eventClass:"meet"},
+  {date:"2020-05-17", eventClass:"meet msg"},
+  {date:"2020-05-20", eventClass:"work meet"},
+  {date:"2020-05-25", eventClass:"work msg"},
+  {date:"2020-05-30", eventClass:"msg"}
 ];
 
 $(function(){
 
   // 스크롤바
-  $(".scr_box").mCustomScrollbar();
+  $(".scr_box").mCustomScrollbar({
+      scrollInertia : 350
+  });
 
   // 캘린더
   $("#datacalendar").datepicker({
-    beforeShowDay : addEvents
+    beforeShowDay : addEvents,
+    monthNames : ["01","02","03","04","05","06","07","08","09","10","11","12"]
   });
 
   function addEvents(date) {
@@ -44,57 +47,59 @@ $(function(){
 <div class="schedule_box box shadow">
 
   <div class="sched_wrap">
-    <span class="location">Seoul, South Korea</span>
-    <div class="tit_month">
-      <span>Monday,</span>
-      <span>17 January</span>
-    </div>
+    <span class="sched_more"><a href="javascript:"><img src="../../images/ico_plus_dark.svg" alt="더보기"></a></span>
     <div class="calendar_wrap">
       <div id="datacalendar"></div>
     </div>
 
   </div>
 
-  <!-- title -->
-  <div class="tit_wrap">
-    <div class="tit_left">
-      <span class="tit">Reminder</span>
+<div class="reminer_wrap">
+    <!-- title -->
+    <div class="tit_wrap">
+      <div class="tit_left">
+        <span class="tit">Alert</span>
+      </div>
     </div>
-    <div class="tit_right">
-      <span class="ip_check sm"><input type="checkbox" name="" value="" id="check01"><label for="check01">To do <span class="bold sub_txt">3</span></label></span>
-      <span class="ip_check sm"><input type="checkbox" name="" value="" id="check02"><label for="check02">Message <span class="bold sub_txt">3</span></label></span>
-    </div>
-  </div>
-  <!-- //title -->
-
-  <div class="scr_box">
-    <ul class="event_list">
-      <!-- 반복 -->
-      <li class="work">
-        <a href="#">
-          <div class="tit">
-            <span class="ctg">Work</span>
-            <span class="date">by 2020.01.20 16:00</span>
-          </div>
-          <div class="txt">
-            Send email to Loso Kim
-          </div>
-        </a>
-      </li>
-      <!-- //반복 -->
-      <li class="msg">
-        <a href="#">
-          <div class="tit">
-            <span class="ctg">Loso Kim</span>
-            <span class="date">by 2020.01.20 16:00</span>
-          </div>
-          <div class="txt">
-            Send email to Loso Kim
-          </div>
-        </a>
-      </li>
-      <li class="meeting">
-        <a href="#">
+    <!-- //title -->
+    <div class="scr_box">
+      <ul class="event_list">
+        <!-- 반복 -->
+        <li class="work">
+          <a href="#">
+            <div class="tit">
+              <span class="ctg">Work</span>
+              <span class="date">by 2020.01.20 16:00</span>
+            </div>
+            <div class="txt">
+              Send email to Loso Kim
+            </div>
+          </a>
+        </li>
+        <!-- //반복 -->
+        <li class="msg">
+          <a href="#">
+            <div class="tit">
+              <span class="ctg">Loso Kim</span>
+              <span class="date">by 2020.01.20 16:00</span>
+            </div>
+            <div class="txt">
+              Send email to Loso Kim
+            </div>
+          </a>
+        </li>
+        <li class="meeting">
+          <a href="#">
+            <div class="tit">
+              <span class="ctg">meeting</span>
+              <span class="date">by 2020.01.20 16:00</span>
+            </div>
+            <div class="txt">
+              Send email to Loso Kim
+            </div>
+          </a>
+        </li>
+        <li class="meeting">
           <div class="tit">
             <span class="ctg">meeting</span>
             <span class="date">by 2020.01.20 16:00</span>
@@ -102,18 +107,69 @@ $(function(){
           <div class="txt">
             Send email to Loso Kim
           </div>
-        </a>
-      </li>
-      <li class="meeting">
-        <div class="tit">
-          <span class="ctg">meeting</span>
-          <span class="date">by 2020.01.20 16:00</span>
-        </div>
-        <div class="txt">
-          Send email to Loso Kim
-        </div>
-      </li>
-    </ul>
-  </div>
+        </li>
+      </ul>
+    </div>
+</div>
+<div class="reminer_wrap">
+    <!-- title -->
+    <div class="tit_wrap">
+      <div class="tit_left">
+        <span class="tit">Reminder</span>
+      </div>
+    </div>
+    <!-- //title -->
+    <div class="scr_box">
+      <ul class="event_list">
+        <!-- 반복 -->
+        <li class="work">
+          <a href="#">
+            <div class="tit">
+              <span class="ctg">Work</span>
+              <span class="date">by 2020.01.20 16:00</span>
+            </div>
+            <div class="txt">
+              Send email to Loso Kim
+            </div>
+          </a>
+        </li>
+        <!-- //반복 -->
+        <li class="msg">
+          <a href="#">
+            <div class="tit">
+              <span class="ctg">Loso Kim</span>
+              <span class="date">by 2020.01.20 16:00</span>
+            </div>
+            <div class="txt">
+              Send email to Loso Kim
+            </div>
+          </a>
+        </li>
+        <li class="meeting">
+          <a href="#">
+            <div class="tit">
+              <span class="ctg">meeting</span>
+              <span class="date">by 2020.01.20 16:00</span>
+            </div>
+            <div class="txt">
+              Send email to Loso Kim
+            </div>
+          </a>
+        </li>
+        <li class="meeting">
+          <div class="tit">
+            <span class="ctg">meeting</span>
+            <span class="date">by 2020.01.20 16:00</span>
+          </div>
+          <div class="txt">
+            Send email to Loso Kim
+          </div>
+        </li>
+      </ul>
+    </div>
+</div>
+
+
+
 
 </div>

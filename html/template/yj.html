@@ -59,7 +59,7 @@
         });
 
 
-        
+
         function popOtherClick (selector, selector2) {
           $(document).on("click", function(e){
             if(!($(selector).is(e.target) || $(selector).has(e.target).length>0) && !($(selector2).is(e.target))) {
