@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="110" height="110" viewBox="0 0 110 110">
+    <defs>
+        <linearGradient id="prefix__b" x1="62.552%" x2="60.7%" y1="67.848%" y2="0%">
+            <stop offset="0%" stop-color="#0080C6"/>
+            <stop offset="100%" stop-color="#29A776"/>
+        </linearGradient>
+        <linearGradient id="prefix__c" x1="50%" x2="50%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#FFF" stop-opacity=".5"/>
+            <stop offset="100%" stop-color="#FFF" stop-opacity=".5"/>
+        </linearGradient>
+        <linearGradient id="prefix__e" x1="60.165%" x2="58.666%" y1="67.848%" y2="0%">
+            <stop offset="0%" stop-color="#0080C6"/>
+            <stop offset="100%" stop-color="#29A776"/>
+        </linearGradient>
+        <linearGradient id="prefix__f" x1="50%" x2="50%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#FFF" stop-opacity=".5"/>
+            <stop offset="100%" stop-color="#FFF" stop-opacity=".5"/>
+        </linearGradient>
+        <path id="prefix__a" d="M89.809 31.812c-6.015-11.482-19.598-21.16-34.842-21.06-22.556 0-37.99 17.8-42.333 35.163-.298 1.19-1.334 2.03-2.538 2.03H4.49c-1.634 0-2.874-1.51-2.572-3.146C6.63 19.295 28.604 0 55 0c19.06-.064 34.809 12.194 42.226 24.254l3.85-3.924c3.293-3.356 8.924-.98 8.924 3.767v16.746c0 2.942-2.34 5.327-5.228 5.327h-15.45c-4.657 0-6.99-5.738-3.696-9.094l4.183-5.264zM20.191 78.188c6.015 11.482 19.598 21.16 34.842 21.06 22.556 0 37.99-17.8 42.333-35.163.298-1.19 1.334-2.03 2.538-2.03h5.606c1.634 0 2.874 1.51 2.572 3.146C103.37 90.705 81.396 110 55 110c-19.06.064-34.809-12.194-42.226-24.254l-3.85 3.924C5.63 93.026 0 90.65 0 85.903V69.157c0-2.942 2.34-5.327 5.228-5.327h15.45c4.657 0 6.99 5.738 3.696 9.094l-4.183 5.264z"/>
+        <path id="prefix__d" d="M73.068 49.36h-2.464v-7.187C70.604 33.808 63.602 27 54.998 27s-15.606 6.808-15.606 15.173v7.188h-2.464c-2.72 0-4.928 2.146-4.928 4.792v19.166c0 2.645 2.207 4.792 4.928 4.792h36.14c2.72 0 4.928-2.147 4.928-4.792V54.153c0-2.646-2.208-4.792-4.928-4.792zm-10.678 0H47.606v-7.187c0-3.963 3.316-7.187 7.392-7.187 4.076 0 7.392 3.224 7.392 7.187v7.188z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g fill-rule="nonzero">
+            <use fill="#006ECD" xlink:href="#prefix__a"/>
+            <use fill="url(#prefix__b)" xlink:href="#prefix__a"/>
+            <use fill="url(#prefix__c)" fill-opacity=".5" xlink:href="#prefix__a"/>
+        </g>
+        <g fill-rule="nonzero">
+            <use fill="#006ECD" xlink:href="#prefix__d"/>
+            <use fill="url(#prefix__e)" xlink:href="#prefix__d"/>
+            <use fill="url(#prefix__f)" fill-opacity=".5" xlink:href="#prefix__d"/>
+        </g>
+    </g>
+</svg>
