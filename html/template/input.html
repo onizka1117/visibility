@@ -15,6 +15,13 @@
 
     .code {padding:10px; margin-top:5px; background:#fffce4;}
 
+
+    /* contents.css로 이동 필요 */
+    .ip_txt.readonly, textarea.readonly {background-color:#e6ebf1;}
+    .ip_txt:disabled, textarea:disabled, .select:disabled {color:#9298a2; background-color:#e6ebf1;}
+    .ip_check input:disabled+label {color:#9298a2; }
+    .radio_item input:disabled+label {color:#9298a2; }
+
     </style>
 
     <script type="text/javascript">
@@ -92,6 +99,19 @@
                 </tr>
                 <tr>
                   <td>
+                    <label for="" class="lb_txt">Input Readonly</label>
+                    <input type="text" name="" value="Readonly" class="ip_txt readonly" readonly="readonly">
+                  </td>
+                  <td>
+                    <label for="" class="lb_txt">Input Disabled</label>
+                    <input type="text" name="" value="Disabled" class="ip_txt" disabled="true">
+                  </td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td>
                     <label for="" class="lb_txt">filter</label>
                     <span class="ip_filter"><input type="text" class="ip_txt"><a href="#" class="btn_txt_del">삭제</a></span>
                     <div class="code">
@@ -111,6 +131,10 @@
                   <td colspan="3">
                     <label for="" class="lb_txt">문장입력</label>
                     <textarea>문장입력</textarea>
+                    <br><br>
+                    <textarea disabled="disabled">Disabled</textarea>
+                    <br><br>
+                    <textarea readonly="readonly" class="readonly">readonly (class=readonly)</textarea>
                   </td>
                 </tr>
                 <tr>
@@ -189,6 +213,31 @@
                     <div class="">
                       <span class="ip_check type2"><input type="checkbox" name="" value="" id="check04"><label for="check04">Check</label></span>
                     </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="" class="lb_txt">체크박스(disabled)</label>
+                    <div class="">
+                      <span class="ip_check"><input type="checkbox" name="" value="" id="check05_disabled" disabled="disabled"><label for="check05_disabled">Checkbox</label></span>
+                    </div>
+                  </td>
+                  <td>
+                    <label for="" class="lb_txt">라디오(disabled)</label>
+                    <div class="">
+                      <ul class="radio_group type1">
+                        <li class="radio_item">
+                          <input type="radio" name="radio0" value="" id="radio0_disabled" checked="true" disabled="disabled"><label for="radio0_disabled">라디오1</label>
+                        </li>
+                        <li class="radio_item">
+                          <input type="radio" name="radio0" value="" id="radio1_disabled" disabled="disabled"><label for="radio1_disabled">라디오2</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>
+                    <label for="" class="lb_txt"></label>
+
                   </td>
                 </tr>
                 <tr>
